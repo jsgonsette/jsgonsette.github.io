@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Jean-Sébastien Gonsette  | 5. Qu’est-ce qu’un électron ?</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://jsgonsette.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/jsg.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="5. Qu’est-ce qu’un électron ?" />
+<meta property="og:description" content="Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jsgonsette.github.io/42/chap5/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="5. Qu’est-ce qu’un électron ?">
+<meta itemprop="description" content="Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions">
+
+
+
+<meta itemprop="wordCount" content="5752">
+
+
+
+<meta itemprop="keywords" content="42," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="5. Qu’est-ce qu’un électron ?"/>
+<meta name="twitter:description" content="Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jsgonsette.github.io/images/Chap5.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jsgonsette.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Jean-Sébastien Gonsette
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/42/" title="42 page">
+              42
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/ipendulum/" title="iPendulum page">
+              iPendulum
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="À propos page">
+              À propos
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">5. Qu’est-ce qu’un électron ?</h1>
+        
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions
+          </h2>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          
+            42: La question de la vie de l&#39;univers et du reste, en moins de 7,5 millions d&#39;années
+          
+        </p>
+        <h1 class="f1">
+          5. Qu’est-ce qu’un électron ?
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        <span class="justified">
+        
+
+
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<p><a href="../chap4">Chapitre précédent</a></p>
+
+<p>La question de la nature de la réalité se montre particulièrement ardue. Bien sûr, les scientifiques travaillent d’arrache-pied pour nous dévoiler l’intimité la plus profonde de la matière. Mais sur quoi cela peut-il bien déboucher de concret, de tangible ? Si les briques de l’univers peuvent être décomposées à l’infini, nous n’aurons jamais fini d’en boucler le tour. Mais dans le cas contraire, tout ce que nous pourrons jamais en connaître se limite à un ensemble d’équations et de paramètres sous-tendant le meilleur modèle mathématique que l’on pourra en élaborer. Or, il existe un saut conceptuel ineffable entre une équation sur papier et la réalité de ce qu’elle représente. L’un n’est pas l’autre. Une équation peut-elle s’extraire d’elle-même pour engendrer une quelconque réalité ? En fait, de façon assez surprenante, la réponse se veut partiellement affirmative : comme nous allons le voir, cette capacité tient à la notion d’information.</p>
+
+<h2 id="semaison-d-un-électron">Semaison d’un électron</h2>
+
+<p>Comme beaucoup d’autres, lorsque j’ai entamé mes études, j’étais angoissé à l’idée de passer mes premiers examens oraux. Se faire interroger oralement n’est évidemment jamais plaisant. Mais quand pour la première fois de votre vie vous devez vous présenter devant un professeur d’université, vous ne pouvez vous empêcher de vous demander à quelle sauce vous allez être mangé. Et comme partout bien sûr, la réputation de certains enseignants empreignait les couloirs du campus de rumeurs poisseuses et de statistiques de réussite hivernales. À mon époque, les bêtes noires de première candidature à la faculté Polytechnique de Mons concernaient le cours d’algèbre et celui de chimie.</p>
+
+<p>Heureusement, les étudiants ne se contentaient pas de propager de sombres augures concernant l’issue de ces épreuves. La solidarité estudiantine jouait beaucoup et il était ainsi de coutume de faire bénéficier directement les autres élèves de son expérience, qu’elle se soit avérée malheureuse ou pas. Aussi de grands posters étaient-ils collés sur les vitres du bar estudiantin en période d’examens. Les personnes sortant de leur oral avaient la possibilité d’y noter toutes les questions pièges avec lesquelles ils avaient été cuisinés 
+
+	
+		
+			
+				<span class="tooltip"> &#91;20&#93;<span class="tooltiptext">En plus de l’opportunité de boire une petite bière au passage pour se remettre de leurs émotions.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. En ce qui concerne le cours de chimie, je me souviens particulièrement de l’une de ces questions 
+
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;21&#93;<span class="tooltiptext">En fait, une seconde question était également particulièrement cocasse. Celle-ci était: « comment font les poissons pour respirer ? ». La rumeur raconte qu’un étudiant y aurait répondu en pivotant ses mains le long de ses oreilles, tout en ouvrant et fermant sa bouche en « O », afin de mimer ledit poisson. L’histoire ne dit malheureusement pas si cette explication a été validée.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Tout comme l’intitulé de ce chapitre, celle-ci demandait : <em>« qu’est-ce qu’un électron ? »</em></p>
+
+<p>Cette question m’a vraiment intrigué. Personne ne semblait effectivement avoir réussi à y répondre correctement. Certains avaient habilement tenté de réciter la masse, la charge électrique ou le spin de l’électron, mais aucune de ces réponses ne paraissait satisfaire le professeur de chimie. Ce problème restait donc en suspens. Je ne sais pas vraiment si j’aurais aimé être interrogé à ce sujet lorsqu’est finalement venu mon tour de monter sur l’échafaud. J’avais dix-neuf ans à l’époque et j’y aurais certainement moins bien répondu qu’après avoir mûri la réflexion durant les années qui ont suivies. Mais quoi qu’il en soit, une graine avait été plantée dans mon esprit et ce qui en a germé a parfois beaucoup accaparé mes pensées ; pas seulement concernant ce fameux électron, mais également toutes sortes d’interrogations métaphysiques qui en découlaient.</p>
+
+<p>Ce qu’il faut d’abord remarquer, c’est que l’électron n’est pas l’élément le plus important de la question. Elle aurait semblablement pu être posée en demandant <em>« qu’est-ce qu’un neutrino ? »</em> Mais à moins de s’intéresser de près à la physique nucléaire, la plupart des gens n’ont probablement jamais entendu parler de ces particules. Les électrons se conçoivent plus facilement puisque c’est leur déplacement dans les fils électriques qui engendre l’électricité.</p>
+
+<p>Le piège de cette question provient du fait que, d’après la théorie la plus aboutie de la physique à ce jour, un électron appartient au cercle fermé des particules élémentaires. En conséquence, demander ce qu’est un électron n’a pas de sens. Il y a en effet deux cas de figure. Premièrement, il se peut qu’il y ait erreur sur son statut actuel de particule élémentaire, et il reste alors encore à découvrir ce dont il est constitué. Ou alors, l’électron jouit bel et bien de cette propriété et se poser la question de ce qu’il est, au sens ontologique du terme, est vide de sens. Cela ne veut pas dire qu’il n’y a pas de réponse, mais que cette réponse se trouve hors de notre portée et au-delà de la raison.</p>
+
+<h2 id="descente-dans-une-strate-de-réalité-inférieure">Descente dans une strate de réalité inférieure</h2>
+
+<p>Il peut être déroutant d’essayer de se représenter mentalement une particule élémentaire. Nous avons tendance à penser intuitivement que tout bloc de matière peut être scindé en deux et que, moyennant de disposer des outils adéquats, ce processus puisse être répété autant que nécessaire. Mais tout le monde sait qu’au bout d’un moment il ne restera plus qu’un seul atome et que la notion de matière, en tant que substance uniforme, perd son sens. Pourtant, il est quand même toujours possible de progresser en cassant l’atome en composants plus petits, pour obtenir protons, neutrons et électrons. Encore un pas de plus permet de scinder les protons et neutrons en quarks 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;22&#93;<span class="tooltiptext">Sur le papier tout du moins, car il n’est pas possible d’isoler un quark. L’énergie à fournir est telle que celle-ci permettra d’engendrer de nouveaux quarks avec lesquels il pourra instantanément se recombiner.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Ensuite, et bien, vous vous heurtez à un mur. Les quarks et les électrons, en tant que particules élémentaires, ne vous autorisent pas à continuer cette décomposition.</p>
+
+<p>Se représenter un électron comme une petite bille, même minuscule, n’aide pas du tout à comprendre la notion de particule élémentaire. Votre esprit vous hurlerait qu’il doit quand même bien y avoir un moyen de casser cette petite bille en deux ! Pour vous aider à conceptualiser l’idée, je vais me baser sur un monde hypothétique simulé dans un ordinateur. <em>« Ordinateur »</em> est peut-être usurpé, car aucun d’entre eux à l’heure actuelle ne peut réaliser ce que je m’apprête à décrire. Il faut toutefois bien comprendre que, aussi compliquée que cette expérience puisse paraître, aucune loi physique n’empêcherait de concrétiser mon expérience de pensée.</p>
+
+<p>Je pars donc du principe que j’ai la capacité de réaliser une simulation numérique d’une telle ampleur que le monde que j’y ai créé virtuellement voit l’éclosion d’êtres dotés d’intelligence. Le résultat ressemblerait à un jeu vidéo, mais en beaucoup plus élaboré. Pour faire simple, disons que les lois gouvernant cette simulation permettraient la naissance d’un univers un peu analogue au nôtre. Aussi, celui-ci serait intrinsèquement constitué d’un bouillonnement de particules élémentaires, mais ces particules se nommeraient des <em>« bits »</em>. Dans cet univers, il se trouve que la nature aurait aussi trouvé un moyen d’engendrer des structures éminemment complexes à partir de ces bits élémentaires. L’une de ces structures élaborées prendrait ainsi la forme d’un étudiant en train de passer son examen de chimie. Le professeur qui l’interrogerait lui poserait alors la question suivante : <em>« qu’est-ce qu’un bit ? »</em></p>
+
+<p>Tous les habitants de mon monde virtuel qui ont suivi des études scientifiques connaissent naturellement les propriétés des <em>« bits »</em>. Les <em>« bits »</em> sont des particules qui s’assemblent toujours par paquets de huit, pour former des <em>« bytes »</em>. Ces derniers ont également une forte propension à se regrouper pour donner naissance à des <em>« mots »</em>. Les <em>« bits »</em> peuvent prendre deux valeurs qui sont notées arbitrairement « 0 » et « 1 ». Ils peuvent également interagir entre eux selon des règles de composition bien précises. Par exemple, l’opération <em>« NAND »</em> produit un bit à « 0 » en combinant deux bits à « 1 ». Il existe finalement un postulat de base stipulant que la quantité totale de <em>« bits »</em> d’un système isolé ne varie pas au cours du temps.</p>
+
+<p>Mais de quoi est composé un <em>« bit »</em> ? Pourquoi ne pouvons-nous pas les casser en <em>« demi-bits »</em> comme il est possible d’y parvenir avec les <em>« bytes »</em> ? Comment révéler sa vraie nature ? Le malheureux étudiant est désarçonné et ne sait quoi répondre. La réponse se veut pourtant simple : si un <em>« bit »</em> se révèle être une particule élémentaire, alors sa vraie nature dépasse l’entendement. La seule chose qui compte vient de l’information qu’il porte et des propriétés qui caractérisent les <em>« bits »</em>. Ces deux éléments suffisent entièrement pour décrire comment un « bit » doit interagir avec le reste du monde. Mais la réalité sous-jacente au <em>« bit »</em>, elle, demeure tout bonnement inaccessible aux êtres qui peuplent ma simulation. Penser le contraire reviendrait à imaginer un personnage de jeu vidéo sortir de l’ordinateur qui l’a engendré pour prendre vie dans le monde réel. Une telle prouesse semble insensée.</p>
+
+<p>Pour moi qui observe la scène de l’examen de chimie au travers de mon écran, la réponse m’apparaît plus tangible. Un bit correspond tout simplement à l’information portée par l’un des milliards de transistors de mon super ordinateur dans lequel a lieu cette simulation. Toutefois, le transistor en lui-même ne présente aucune importance. Ils pourraient tout aussi bien être remplacés par des trucmuches supraluminiques ou bien encore par des bonbons Carambars 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;23&#93;<span class="tooltiptext">Comment réaliser une simulation avec des Carambars ? En les déballant et en les remballant, des heures de plaisir en perspective ! Mais le plus difficile resterait alors de trouver le moyen d’expliquer aux petits êtres intelligents de ma simulation que leur monde est fait de caramel.</span></span>
+			
+		
+	
+		
+			
+		
+	
+
+
+. Le seul point qui s’avère indispensable se réduit à disposer d’éléments porteurs d’information pouvant être positionnés dans deux états différents (0 et 1).</p>
+
+<p>Mon parallèle entre une particule et un bit peut vous sembler outrageusement simpliste, dans la mesure où concevoir la réalité sous-terraine d’un électron requiert beaucoup plus d’imagination conceptuelle. En effet, les <em>bizarreries</em> quantiques laissent celui-ci se manifester tantôt comme une onde, tantôt comme un corpuscule, et notre esprit se trouve bien en peine de saisir la portée de cette dualité. Mais je n’ai pas ici pour but de percer le mystère ontologique de l’électron, ou de toute autre particule élémentaire. Que l’électron dispose ou pas d’une réalité plus fondamentale et que celle-ci puisse ou pas nous apparaître intelligible ne change rien au problème. Toute décomposition doit un jour s’arrêter, soit parce qu’il n’y a plus rien après (comme dans le cas d’un bit), soit parce que ce qu’il vient ensuite est inaccessible, imperméable à toute expérience physique qui tenterait de le révéler. C’est peut-être le cas de l’électron.</p>
+
+<p>Cette petite excursion dans une strate de réalité inférieure, très instructive, nous aide à questionner la nature de l’électron. Un électron <em>« n’est que »</em> l’information qu’il porte, couplé aux lois fondamentales qui décrivent comment celui-ci doit interagir avec toutes les autres particules élémentaires. Toute la réalité des choses tient, ultimement, dans l’information qu’elle contient. Je pense que cette façon de voir permet de mieux saisir la limite nous empêchant de progresser. Une fois arrivés à un certain niveau, nous ne pouvons que buter contre l’essence même de ce qui constitue notre réalité.</p>
+
+<h2 id="le-monde-des-programmes-simples">Le monde des programmes simples</h2>
+
+<p>Vous pensez peut-être que je pousse un peu trop le bouchon avec mon histoire (drôle) de Carambars servant de briques élémentaires pour la simulation de mon univers hypothétique. Pourtant, fondamentalement, tout ce qu’accomplit un ordinateur consiste à manipuler de l’information. Un vaste répertoire de 0 et de 1 qui évolue selon une succession de manipulations simples. Les seules opérations que peut effectuer un ordinateur sont en effet déterminées par ce qui s’appelle son jeu d’instructions. Et il faut effectivement reconnaître que cet ensemble n’affiche rien de très expressif : addition, multiplication, comparaison, etc., le tout se passe vite en revue et il y a plus passionnant.</p>
+
+<p>Mais, me direz-vous, comment quelque chose d’intéressant peut-il finalement émerger d’un ensemble d’opérations simples comme des additions ? Je vais essayer d’y répondre de deux façons. Tout d’abord, en vous montrant que la complexité peut surgir très vite d’une petite collection de règles, même élémentaires. Ensuite, j’établirai le lien avec le phénomène d’équivalence en calculabilité.</p>
+
+<p>Je vais me baser sur le concept <em>d’automates cellulaires</em> pour illustrer mon premier point. Un tel automate correspond à un programme minimaliste qui opère sur une grille régulière de cellules. Chaque cellule contient un état parmi un ensemble fini de valeurs possibles. L’état d’une cellule au temps t+1 se détermine par une fonction de l’état au temps t des cellules dans son voisinage.</p>
+
+<p>L’automate cellulaire que je vais considérer se veut extrêmement basique : il est constitué d’une rangée unidimensionnelle finie de cellules et la règle d’évolution s’appuie uniquement sur l’état courant de chacune d’elles et de ses deux voisines. De plus, les cellules ne peuvent prendre que la valeur 0 ou 1. État initial des cellules mis à part, un tel automate cellulaire est entièrement défini en fixant l’évolution d’une cellule sur base des huit combinaisons possibles d’elle-même et de ses deux voisines. Par exemple, une règle pourrait être représentée par l’image ci-dessous (Figure 4).</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Rule.png" alt="Figure 4 : Exemple de règle fixant l’évolution d’un automate cellulaire. Elle spécifie, pour chaque configuration d’une case et de ses deux voisines, quel doit être l’évolution de la case dans la rangée qui suit."/>
+    </div>
+    <a href="/images/Rule.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Figure 4 : Exemple de règle fixant l’évolution d’un automate cellulaire. Elle spécifie, pour chaque configuration d’une case et de ses deux voisines, quel doit être l’évolution de la case dans la rangée qui suit.</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+<p>Celle-ci doit se lire de la manière suivante : prenons le troisième cas en partant de la gauche, il signifie que si une cellule est blanche alors que ses deux voisines sont noires, cette cellule doit devenir noire dans la rangée qui suit. Pour chacune des huit configurations envisageables, une règle fixe donc si une cellule doit basculer sur la valeur 0 ou 1 à l’instant suivant. Il s’en suit que le nombre de règles pouvant être construites de la sorte se limite à 256. Certaines n’affichent aucune propriété intéressante, car elles ont pour seul effet que toutes les cellules de l’automate prennent rapidement une couleur uniforme. D’autres encore conduisent à des situations où l’automate se fige, chaque nouvelle rangée devenant identique à la précédente. Certaines règles génèrent des comportements comme de la périodicité ou des structures fractales. C’est le cas de la règle 126, ci-dessous (Figure 5). Un tel schéma de comportement est dit simple, ou réductible, car il est possible de prédire l’état d’une cellule à n’importe quel emplacement de la grille sans devoir dérouler toute la dynamique de l’évolution des cellules jusque-là. La réalisation d’un calcul plus simple permet de court-circuiter le long chemin qui mène à l’état de n’importe quelle cellule de la grille.</p>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/cellular_126.png" alt="Figure 5 : Évolution de l’automate cellulaire 126, au départ d’une seule case noire. Son évolution présente une structure périodique fractale."/>
+    </div>
+    <a href="/images/cellular_126.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Figure 5 : Évolution de l’automate cellulaire 126, au départ d’une seule case noire. Son évolution présente une structure périodique fractale.</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+<p>Une dernière catégorie de règles induit enfin un comportement qui semble intrinsèquement aléatoire. C’est le cas de la règle 110 pour laquelle il n’existe pas de moyen simple de prédire l’état d’une cellule, hormis celui consistant à dérouler tous les calculs jusqu’à elle (Figure 6). Aussi la règle 110 est-elle dite irréductible. Le terme aléatoire utilisé plus haut n’est pas tout à fait correct, car l’évolution de l’automate demeure purement déterministe. Il souligne plutôt l’idée qu’il n’est pas possible de prévoir comment va se développer le système, si ce n’est en réalisant le calcul complet.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/cellular_110.png" alt="Figure 6 : Evolution de l’automate cellulaire 110 au départ d’une seule case noire. Son évolution se révèle irréductible."/>
+    </div>
+    <a href="/images/cellular_110.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Figure 6 : Evolution de l’automate cellulaire 110 au départ d’une seule case noire. Son évolution se révèle irréductible.</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+<p>L’automate cellulaire constitue un bon moyen de faire percevoir à quel point un comportement riche et complexe peut émerger d’une poignée de règles qui semblent anecdotiques. Dans son livre <em>« A New Kind of Science »</em>, le fondateur de Wolfram Research étudie en long et en large les propriétés des automates cellulaires. Celui que j’ai présenté est l’un des plus simples qu’il est possible d’imaginer. Mais il y a moyen d’en inventer beaucoup d’autres en modifiant les principes de base et les mécanismes d’évolution. Wolfram envisage de nombreuses possibilités pour tenter d’augmenter la complexité des systèmes engendrés. Par exemple, les règles de l’automate cellulaire peuvent être améliorées pour qu’une cellule puisse être placée dans plus que deux états seulement. Les processus d’évolution peuvent aussi tenir compte de plusieurs voisins plutôt que des deux plus proches, ou bien encore, il est possible de passer à des grilles à plus de deux dimensions. Il est également faisable de construire l’équivalent de machines de Turing ou encore de définir des mécanismes de substitution selon lesquels des séquences complètes sont remplacées par d’autres. Les machines à registres reproduisent le fonctionnement de bas niveau d’un ordinateur en interprétant le contenu des cellules comme des instructions. Les systèmes basés sur les nombres, eux, interprètent le contenu de toute une rangée de cellules comme un nombre afin de le traiter par une opération mathématique dont le résultat produit la rangée qui suit. Wolfram en présente encore d’autres, dotés de toutes sortes de règles plus ou moins élaborées. Ce qu’il faut finalement en retenir c’est que, bien que tous ces systèmes s’assimilent à des programmes simples basés sur des mécanismes élémentaires, ils ont tous la capacité d’engendrer un grand niveau de complexité. Celle-ci se traduit principalement dans l’irréductibilité du résultat.</p>
+
+<p>Toutefois, ce que Wolfram veut surtout attester en élaborant des règles d’automates cellulaires de plus en plus sophistiquées, c’est que la complexité des réponses générées par ces automates, elle, n’augmente pas. En fait, l’une des démonstrations remarquables de son livre consiste à montrer que le simple automate de départ avec la règle 110 est Turing-complet. Il est important de rappeler ce que cette notion signifie pour bien comprendre l’impact renversant de cette démonstration. Elle exprime en substance que si un quelconque automate traitant de l’information jouit de cette propriété, alors il possède une stricte équivalence avec tous les autres automates Turing-complets. En d’autres termes, dès qu’une machine manipulant de l’information a atteint un certain degré de complexité, il n’y a plus aucune complexité à gagner, car celle-ci pourra simuler n’importe quel autre système Turing-complet.</p>
+
+<p>L’exemple par excellence d’automate Turing-complet provient de la machine de Turing. Cette dernière constitue en fait une conceptualisation mécanique épurée formalisant ce qui est calculable. Elle est définie comme une bande sur laquelle elle lit et écrit de l’information (des 1 et des 0). Une table d’actions finie indique à la machine la façon de déplacer sa tête de lecture-écriture, ainsi que le moment où il faut extraire ou déposer une nouvelle information sur la bande. Aussi simple soit-il, ce modèle est celui sur lequel repose n’importe quel processeur tournant dans votre ordinateur ou dans votre téléphone. Qu’importe le jeu ou le programme qui s’y exécute, les processeurs de ces machines se contentent finalement d’aller lire de l’information en mémoire, de calculer de nouvelles valeurs en utilisant les opérations disponibles dans leur jeu d’instructions, puis d’écrire les résultats dans cette même mémoire. Étant Turing-complet, n’importe quel processeur peut émuler le comportement de n’importe quel autre processeur. C’est ainsi que vous pouvez rejouer aux anciens jeux de votre Game Boy sur PC, en faisant tourner l’émulateur approprié sur ce dernier. Mais l’inverse peut tout autant se concevoir. En ignorant le manque flagrant de mémoire dont dispose une Game Boy, ainsi que la lenteur catastrophique du processus, cette dernière pourrait très bien émuler votre tout nouveau MacBook Pro. En définitive, s’élever au niveau Turing-complet signifie disposer de la faculté de calculer tout ce qui peut être calculé par un humain ou une machine et il n’y a pas d’échelons supérieurs permettant de gagner plus de capacité d’expression.</p>
+
+<p>Le fait que l’automate cellulaire doté de la règle 110 soit Turing-complet implique que, moyennant de soigneusement choisir son état initial, celui-ci puisse émuler le comportement de n’importe quel autre automate présenté par Wolfram, ou bien celui de n’importe quel ordinateur. Cette capacité peut sembler très déroutante étant donné le fonctionnement excessivement simple de ce processus, basé sur huit règles seulement. Son niveau de sophistication se trouve de la sorte largement en dessous du jeu d’instructions de n’importe quel processeur. Ces considérations suggèrent qu’un système n’a nul besoin de disposer de mécanismes compliqués pour pouvoir calculer tout ce qui peut l’être. Aussi Wolfram suspecte-t-il qu’un grand nombre des automates qu’il étudie dans son livre se révèlent effectivement Turing-complet, et donc tous équivalents. Il faut tout de même souligner que, même si la règle 110 peut intrinsèquement effectuer n’importe quel calcul, l’état initial de l’automate doit néanmoins être soigneusement préparé pour qu’il corresponde au programme à exécuter. Cette tâche, loin d’être simple, ne dispose d’aucune solution évidente pour y arriver. Tout ce que nous pouvons affirmer, c’est que c’est possible.</p>
+
+<h2 id="le-monde-sur-un-tableau-noir">Le monde sur un tableau noir</h2>
+
+<p>Tout comme pour la règle 110, l’apparente simplicité du jeu d’instructions d’un ordinateur se révèle trompeuse. Son pouvoir d’expression est énorme : l’espace des programmes qu’il a la possibilité d’engendrer à une taille qui dépasse l’entendement. Cet espace reste d’ailleurs largement inexploré. Les différents langages de programmation modernes rivalisent d’ingéniosité pour augmenter leur niveau d’abstraction et ainsi manipuler des concepts de plus en plus élaborés. Le langage Python vole déjà très loin du niveau de description auquel nous serions confrontés en programmant directement un ordinateur en langage machine. Néanmoins, il faut bien se rappeler qu’aucun langage ou autre programme n’augmente la capacité d’expression intrinsèque d’un ordinateur, celle-ci étant entièrement déterminée par son jeu d’instructions de départ. Et comme ce dernier contient tout ce qu’il faut pour prétendre à l’universalité, il peut émuler n’importe quel autre système formel.</p>
+
+<p>Cette puissance d’expression n’empêche évidemment pas d’exécuter à la main toutes les opérations réalisées par un ordinateur. Ce n’est certes pas pratique et le processus requerra un temps apocalyptiquement lent, mais c’est possible. Si un ordinateur avait la capacité de simuler un monde duquel émergeaient des êtres intelligents, cela signifie que la simulation pourrait tout autant se voir capillotractée à la main sur un tableau noir et à la craie. L’aspect dérangeant avec cette vision des choses, c’est de savoir ce qui est réel et ce qui génère du sens. Un tableau couvert de traits de craie peut-il vraiment contenir en son sein des êtres en train de sauter de joie ou de pleurer la disparition d’un être cher ? Cessent-ils alors de crier et de pleurer si je passe un coup d’éponge ?</p>
+
+<h2 id="une-histoire-de-q-et-de-bits">Une histoire de <em>« q »</em> et de <em>« bits »</em></h2>
+
+<p>La thèse de Church-Turing formalise la notion de calculabilité en affirmant que tout ce qui est calculable par un processus mécanique ou par un être humain peut être déterminé par un ensemble de règles formelles à appliquer de manière systématique. Un système Turing-complet, comme l’automate cellulaire 110, peut alors calculer tout ce qui rentre dans cette définition. Le problème vient du constat que cette dernière est quelque peu dissociée de la physique elle-même. Par exemple, la notion d’information s’exprime par le concept de bit pouvant prendre la valeur 0 ou 1. Or, quiconque a déjà entendu parler de physique quantique sait que l’information ne prend pas cette forme au niveau élémentaire de la matière. La question que nous pouvons légitimement nous poser revient alors à savoir si une machine de Turing peut effectivement calculer l’évolution d’un processus quantique, et donc d’un processus <em>« réel »</em>.</p>
+
+<p>Il est peut-être nécessaire de rappeler quelques notions de base de mécanique quantique pour saisir complètement cette question. Celle-ci a souvent mauvaise réputation pour diverses raisons. Au-delà du très haut niveau de mathématiques qu’il faut maîtriser pour l’étudier, c’est surtout le comportement des particules, dont les lois défient l’intuition, qui la rend difficile à appréhender. Néanmoins, si beaucoup voient dans la mécanique quantique une bizarrerie de la nature malmenant ce qui paraît raisonnable et rationnel, c’est le point de vue inverse qu’il faut considérer. La mécanique quantique correspond à la réalité (ou tout du moins le mieux que nous pouvons en connaître), mais notre cerveau ne dispose d’aucune aptitude naturelle à l’appréhender. Nous ne sommes en effet confrontés qu’à une version extrêmement réduite de la physique dans la vie de tous les jours, et l’évolution a conduit nos cerveaux à ne pouvoir traiter efficacement que cette même vision simplifiée. Ce raccourci induit un fort biais intuitif nous amenant à considérer tout ce qui sort de ce cadre comme bizarre et non naturel.</p>
+
+<p>Le problème de la physique, c’est qu’à notre échelle, les objets apparaissent comme des entités concrètes aux contours parfaitement définis. Si vous observez une balle de ping-pong, celle-ci semble se trouver à un endroit très précis sans qu’il y ait la moindre ambiguïté sur sa position. Par analogie, nous avons tendance à imaginer une particule élémentaire de la même façon, comme un point minuscule occupant une région bien délimitée de l’espace. Mais la réalité est tout autre : une particule élémentaire, loin du concept de point, n’occupe aucune région bien définie. Ce que l’on appelle une particule est en fait décrit par une fonction d’onde, un peu comme une corde de guitare qui vibre. Sauf que la particule ne s’identifie pas à la corde, seulement à sa vibration. Cette fonction d’onde détermine les différents emplacements où il est statistiquement possible de la dénicher. Plus l’amplitude de l’onde augmente quelque part, plus il est possible que la particule y soit. Mais il ne faut pas voir cette fonction d’onde comme un artifice derrière lequel est cachée notre incapacité à savoir où la particule se trouve réellement. Celle-ci peut se manifester partout à la fois, au prorata de son amplitude de probabilité. La particule, en tant que vibration, se trouve effectivement en plusieurs endroits en même temps. Cette manifestation d’ubiquité est appelée une superposition d’états.</p>
+
+<p>Il peut sembler curieux que si ce genre de phénomènes existe, ils ne s’observent pas à notre échelle. Ce paradoxe est d’ailleurs illustré par la fameuse expérience de pensée du chat de Schrödinger. Celle-ci, emblématique, consiste à imaginer un chat enfermé dans une boîte close, en charmante compagnie d’un dispositif permettant de le mettre à mort. La subtilité tient dans le mécanisme de mise à feu, lié à la désintégration d’un atome. Cette fission est purement dictée par la mécanique quantique, et donc par une fonction d’onde de probabilité. D’un point de vue quantique, l’atome peut se trouver dans une superposition d’états, à la fois entier et à la fois désintégré. Nous pouvons imaginer qu’au bout de cinq minutes, par exemple, l’atome a eu une chance sur deux de voler en éclats. Cette situation se traduit par une fonction d’onde où ces deux états coexistent à probabilités égales. Mais que pouvons-nous alors conclure sur le statut du chat ? Est-il mort ou vivant ? Qu’en est-il du mécanisme de mesure déclenchant la mise à mort ? La difficulté de répondre à cette question provient de la constatation que, s’il est encore possible de se représenter une telle superposition d’états pour un atome, il est par contre beaucoup plus compliqué d’imaginer un chat dans un état de superposition, à la fois mort et à la fois vivant.</p>
+
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/SchrodingerCat.png" />
+    </div>
+    <a href="/images/SchrodingerCat.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+
+<p>Il y a plusieurs façons de lever ce paradoxe, et l’une d’elles est un mécanisme qui s’appelle la décohérence. Une fois qu’une particule interagit avec la fonction d’onde d’une autre particule, certaines combinaisons ondulatoires deviennent mutuellement incompatibles et donc très improbables. Cette réduction se traduit par une amplitude tendant vers zéro en certains endroits. En conclusion, plus une particule va interagir avec d’autres, moins il subsistera de combinaisons envisageables, jusqu’à ce que la fonction d’onde s’écroule en une unique possibilité 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;24&#93;<span class="tooltiptext">Il existe d’autres explications, plus exotiques, mais ma préférence va clairement à celle-ci.</span></span>
+			
+		
+	
+
+
+. C’est ce qui est observé à notre échelle où les objets sont constitués de myriades de particules interagissant les unes avec les autres, empêchant toute ambiguïté possible. Dans l’expérience de pensée décrite plus haut, la fonction d’onde de l’atome va immanquablement interagir avec le mécanisme de mise à mort, rendant complètement irréaliste une quelconque superposition d’états de cet atome ou du mécanisme lui-même. La décohérence nous dit que le sort du chat doit basculer inexorablement vers l’une des deux possibilités, soit mort, soit vivant.</p>
+
+<p>Il y a bien des manières d’interpréter la mécanique quantique, et aucun consensus ne semble pointer à l’horizon. Certains considèrent que celle-ci se limite à un outil de calcul et que ce qui se cache derrière le rideau n’a pas d’importance. D’autres pensent que la théorie, incomplète, ne décrit pas entièrement la réalité. Ou encore, certains considèrent que la mécanique quantique <em>est</em> la réalité. Mais quoi qu’il en soit, il semble évident que la notion d’information bien définie, constituée de 1 et de 0, semble quelque peu naïve face au monde quantique. Dans celui-ci, la plus petite notion d’information s’appelle le qubit. Comme pour un bit classique, un qubit peut prendre les deux valeurs 0 et 1. Mais eu égard aux subtilités de la mécanique quantique, il peut aussi se trouver dans une superposition de ces deux états. Par exemple, un qubit pourrait se trouver dans l’état 0 avec 30 % de probabilité et à la fois dans l’état 1 dans les 70 % restants. Cette situation signifie concrètement que, en évaluant l’état d’un tel qubit, l’appareil de mesure trouvera la valeur 0 ou 1 au prorata de cette répartition.</p>
+
+<p>Si nous en revenons maintenant aux machines de Turing manipulant de l’information classique, la question équivaut à se demander si elles sont effectivement capables de calculer un processus quantique. Cette question, l’illustre Richard Feynman se l’est posée au début des années 1980 ; et il a pu démontrer que, aussi surprenant que cela puisse paraître, cela se trouvait dans le domaine du possible. Par contre, le processus se révèle extrêmement inefficace et donc irréalisable en pratique. Oui, calculer un processus quantique avec un ordinateur classique peut s’envisager, mais la durée des opérations prend un temps infiniment long si la précision totale du résultat est désirée. Un modèle théorique de machine de Turing quantique a plus tard été proposé par Deutsch. Celui-ci se base sur la machine de Turing classique, mais manipule intrinsèquement des qubits. La capacité de ce modèle le rend apte, en théorie, à simuler n’importe quel processus physique, mais de manière efficace cette fois.</p>
+
+<h2 id="l-alpha-et-l-omega">L’Alpha et l’Omega</h2>
+
+<p>Un ordinateur manipulant des qubits en lieu et place des bits classiques des ordinateurs usuels s’appelle sans surprise un ordinateur quantique. Ils n’existent actuellement qu’à l’état embryonnaire, mais beaucoup d’espoirs reposent sur l’avènement de telles machines. En raison de leur nature, ils recèlent la capacité à simuler efficacement beaucoup de problèmes qui prendraient beaucoup trop de temps à calculer sur un ordinateur classique. Par exemple, quoi de mieux que l’utilisation des propriétés quantiques d’une particule pour simuler un autre processus quantique ?</p>
+
+<p>Il est amusant de se rendre compte que si un ordinateur quantique est programmé pour simuler le comportement de particules élémentaires, avec toute l’exactitude que cela implique, la frontière entre la physique et la simulation de celle-ci se brouille puis disparaît. Une simulation parfaite a pour effet qu’il ne subsiste aucune différence de nature entre un objet réel et sa simulation. Les deux se comporteront exactement de la même façon. Le corollaire de cette idée implique que tout ce qui compte, finalement, se résume à l’information et à la façon dont elle est manipulée. Une simulation d’électron n’est pas moins réelle que l’électron lui-même.</p>
+
+<p>Si un ordinateur quantique peut simuler n’importe quelles particules de l’univers, il faut aussi se rendre compte que, fondamentalement, n’importe quelle partie de l’univers peut calculer. Un caillou s’apparente à un ordinateur quantique en soi, qui simule avec exactitude et depuis des millions d’années l’état de ce même caillou. Il manque certes de flexibilité, car il ne peut rien calculer d’autre, contrairement à un ordinateur quantique qui, par construction, se veut plus généraliste.</p>
+
+<p>Mais si c’est seulement l’information qui prime en fin de compte, faite de bits ou de qubits, il est facile de se figurer notre univers comme le résultat d’une gigantesque simulation. Il n’y aurait aucune différence conceptuelle avec un autre point de vue, car la réalité ou la simulation de cette réalité sont des notions qui semblent strictement équivalentes. Aussi pouvons-nous imaginer que Dieu s’assimile avec cet ordinateur universel animant le monde, ou bien avec le programme qui s’y exécute, ou encore avec son concepteur, une telle distinction n’apportant finalement rien de concret.</p>
+
+<p>Cette vision des choses nous permet d’imaginer des mondes imbriqués les uns dans les autres à l’image des poupées russes. Des ordinateurs suffisamment puissants dans un univers pourraient simuler d’autres univers et, inversement, nous pourrions nous considérer nous-mêmes comme le produit d’une simulation. Tout ne tiendrait finalement qu’à cette notion de calculabilité. Mais si celle-ci apparaît universelle, toutes les entités capables de calculer doivent se réduire au même concept et il ne serait donc pas possible de glaner de l’information sur ce <em>« calculateur »</em> en l’étudiant depuis l’intérieur. Nous ne pourrons jamais savoir de quoi notre univers est issu, car il n’existe aucun moyen pour nous d’en échapper.</p>
+
+<p>Quoi qu’il en soit, si tout l’univers se comporte comme un ordinateur manipulant de l’information, quel sens pourrait-il y avoir de ne pas le considérer comme tel ? Évidemment, cette image ne répond pas à la question de savoir d’où viendrait « l’Ordinateur » ultime, celui qui engloberait tous les autres. Mais comme nous l’avons déjà vu, il n’y a pas de réponse à cette question.</p>
+
+<p>© Jean-Sébastien Gonsette 2018</p>
+
+<p>Tous droits réservés</p>
+
+<p><a href="../chap6">Chapitre suivant</a></p>
+
+<hr />
+
+
+	
+		
+			&#91;20&#93;: En plus de l’opportunité de boire une petite bière au passage pour se remettre de leurs émotions.
+			<br><br>
+		
+	
+		
+			&#91;21&#93;: En fait, une seconde question était également particulièrement cocasse. Celle-ci était: « comment font les poissons pour respirer ? ». La rumeur raconte qu’un étudiant y aurait répondu en pivotant ses mains le long de ses oreilles, tout en ouvrant et fermant sa bouche en « O », afin de mimer ledit poisson. L’histoire ne dit malheureusement pas si cette explication a été validée.
+			<br><br>
+		
+	
+		
+			&#91;22&#93;: Sur le papier tout du moins, car il n’est pas possible d’isoler un quark. L’énergie à fournir est telle que celle-ci permettra d’engendrer de nouveaux quarks avec lesquels il pourra instantanément se recombiner.
+			<br><br>
+		
+	
+		
+			&#91;23&#93;: Comment réaliser une simulation avec des Carambars ? En les déballant et en les remballant, des heures de plaisir en perspective ! Mais le plus difficile resterait alors de trouver le moyen d’expliquer aux petits êtres intelligents de ma simulation que leur monde est fait de caramel.
+			<br><br>
+		
+	
+		
+			&#91;24&#93;: Il existe d’autres explications, plus exotiques, mais ma préférence va clairement à celle-ci.
+			<br><br>
+		
+	
+
+
+
+
+        </span>
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        8 autres articles
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap0/" class="link ph2 pv2 db black">
+            0. Avant-propos
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap1/" class="link ph2 pv2 db black">
+            1. Dieu ne croit pas à notre Dieu
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap2/" class="link ph2 pv2 db black">
+            2. L&#39;âme Strâme Grâme
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap3/" class="link ph2 pv2 db black">
+            3. Conscience robotique
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap4/" class="link ph2 pv2 db black">
+            4. Conscience humaine
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap5/" class="link ph2 pv2 db black o-50">
+            5. Qu’est-ce qu’un électron ?
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap6/" class="link ph2 pv2 db black">
+            6. Space Opéra
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap7/" class="link ph2 pv2 db black">
+            7. Aux frontières du réel
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap8/" class="link ph2 pv2 db black">
+            8. Pour (ne pas) conclure
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
+    &copy; 2018 Jean-Sébastien Gonsette
+  </a>
+  
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://jsgonsette.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

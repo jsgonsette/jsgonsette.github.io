@@ -1,0 +1,68 @@
+.tooltip {
+    position: relative;
+    display: inline-block;
+    color: DodgerBlue;
+    border-bottom: 1px dotted blue; /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 480px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
+ 
+    /* Position the tooltip text - see examples below! */
+    position: absolute;
+    z-index: 1;
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+}
+
+.justified {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.highlighted {
+    background: #FF101010;
+    border-style: solid;
+    border-width: 3px 0px 3px 0px;
+    padding: 20px 20px 20px 20px;
+    border-color: grey;
+}
+
+
+code.has-jax {
+    font: inherit;
+    font-size: 100%;
+    background: inherit;
+    border: inherit;
+    color: #515151;
+}
+
+table.table-style-one {
+    color:#333333;
+    border-width: 1px;
+    border-collapse: collapse;
+}
+table.table-style-one th {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+    background-color: #B3B3B3;
+}
+table.table-style-one td {
+    border-width: 1px;
+    padding: 8px;
+    border-style: solid;
+}
+
+
+

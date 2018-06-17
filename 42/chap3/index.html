@@ -1,0 +1,679 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Jean-Sébastien Gonsette  | 3. Conscience robotique</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.31.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    <link href='https://jsgonsette.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/jsg.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="3. Conscience robotique" />
+<meta property="og:description" content="- Je vous l&#39;ai dit, nous les avons sondés. Ils sont entièrement constitués de viande. - Pas de cerveau ? - Oh, il y a effectivement bien un cerveau. C&#39;est juste que ce cerveau est fait de viande ! - Mais alors... qu&#39;est ce qui produit la pensée ?" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jsgonsette.github.io/42/chap3/" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta itemprop="name" content="3. Conscience robotique">
+<meta itemprop="description" content="- Je vous l&#39;ai dit, nous les avons sondés. Ils sont entièrement constitués de viande. - Pas de cerveau ? - Oh, il y a effectivement bien un cerveau. C&#39;est juste que ce cerveau est fait de viande ! - Mais alors... qu&#39;est ce qui produit la pensée ?">
+
+
+
+<meta itemprop="wordCount" content="8405">
+
+
+
+<meta itemprop="keywords" content="42," />
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="3. Conscience robotique"/>
+<meta name="twitter:description" content="- Je vous l&#39;ai dit, nous les avons sondés. Ils sont entièrement constitués de viande. - Pas de cerveau ? - Oh, il y a effectivement bien un cerveau. C&#39;est juste que ce cerveau est fait de viande ! - Mais alors... qu&#39;est ce qui produit la pensée ?"/>
+
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jsgonsette.github.io/images/Chap3.png');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jsgonsette.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Jean-Sébastien Gonsette
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/42/" title="42 page">
+              42
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/ipendulum/" title="iPendulum page">
+              iPendulum
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="À propos page">
+              À propos
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">3. Conscience robotique</h1>
+        
+          <h2 class="fw1 f5 f3-l white-80 measure-wide-l center lh-copy mt3 mb4">
+            - Je vous l&#39;ai dit, nous les avons sondés. Ils sont entièrement constitués de viande. - Pas de cerveau ? - Oh, il y a effectivement bien un cerveau. C&#39;est juste que ce cerveau est fait de viande ! - Mais alors... qu&#39;est ce qui produit la pensée ?
+          </h2>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          
+            42: La question de la vie de l&#39;univers et du reste, en moins de 7,5 millions d&#39;années
+          
+        </p>
+        <h1 class="f1">
+          3. Conscience robotique
+        </h1>
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        <span class="justified">
+        
+
+
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+<p><a href="../chap2">Chapitre précédent</a></p>
+
+<p>La machine pourra-t-elle un jour égaler, voir surpasser l’homme ? Cette question est incontestablement sujette à débat. Elle divise, d’une part, ceux qui pensent que la pensée peut être entièrement mécanisée et, d’autre part, ceux qui considèrent la conscience comme insaisissable et ne pouvant être réduite à un simple ensemble de processus automatiques. L’approche classique en intelligence artificielle (IA), visant à approximer les processus mentaux à grand renfort de manipulations symboliques déconnectées de la réalité, donna plutôt raison aux seconds partisans 
+
+	
+		
+			
+				<span class="tooltip"> &#91;12&#93;<span class="tooltiptext">Les systèmes experts qui résultent de cette approche, quoique très efficaces lorsqu’ils restent en terrain connu, ne comprennent fondamentalement pas la signification des symboles qu’ils manipulent. Il en résulte qu’ils se retrouvent complètement dépourvus face à une problématique nouvelle pour laquelle ils n’ont pas été conçus, puisqu’ils sont alors privés des concepts de haut niveau qui seraient requis pour la résoudre.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Les tentatives modernes se montrent néanmoins plus prometteuses. En construisant les IA du bas vers le haut, typiquement par l’emploi de réseaux neuronaux, celles-ci se voient dépourvues de toute règle ou de logique abstraite insufflées arbitrairement par leur concepteur. C’est seulement par apprentissage, à la manière d’un humain, que ces concepts peuvent finalement émerger et s’orner de toute la flexibilité voulue. Et même si la technologie actuelle ne permet pas encore de forger une IA consciente d’elle-même, nous pouvons nous demander ce que signifierait « être conscient » pour une telle hypothétique machine, comme nous allons l’imaginer dans ce chapitre.</p>
+
+<h2 id="échec-et-math">Échec et math ?</h2>
+
+<p>Un jour que la radio tournait en bruit de fond dans le local où je travaillais, j’ai entendu le présentateur annoncer l’ouverture d’un débat sur la question suivante : « arrivera-t-on un jour à créer une machine qui soit aussi intelligente que les humains ? »  Les auditeurs étaient ensuite invités à téléphoner pour prendre la parole et donner leur avis. Cette question m’a fait doublement sourire. La première raison provenait du fait que j’étais justement en train de travailler avec mes coéquipiers sur l’élaboration d’un robot ; celui-ci était destiné à participer au concours de robotique Eurobot. Le deuxième point venait pour moi de la futilité de ce débat : la question ne consiste pas tant de savoir « si ? », mais plutôt de savoir « quand ? ». La discussion de la possibilité de l’intelligence artificielle n’est pas spéculative, comme pourrait l’être celle de déterminer si nous pourrons un jour voyager dans le temps. Nous savons depuis longtemps que créer une telle intelligence est envisageable et tout le monde en porte la preuve entre ses deux oreilles ! Si la nature y est parvenue, l’homme y parviendra également.</p>
+
+<p>Le concours Eurobot que j’ai mentionné se voit s’affronter deux robots dans une course de vitesse pour l’accomplissement d’une tâche bien définie. Ces robots brillent toutefois plus par l’ingéniosité de leurs créateurs plutôt que par leur intelligence propre. Ils se contentent en effet d’exécuter aveuglément des programmes très précis et spécifiques au problème auxquels ils font face. Ils ne disposent d’aucune capacité de raisonnement, les robots réagissent de manière simple à des stimulus simples. Un long chemin se dresse encore devant nous avant d’atteindre l’intelligence à laquelle le présentateur radio faisait référence. D’une manière générale, ce que l’on nomme intelligence artificielle de nos jours est loin de manifester la moindre intelligence, au sens humain du terme.</p>
+
+<p>Deep Blue, qui fut le premier programme à battre le meilleur joueur humain aux échecs en 1997, était certes très sophistiqué d’un pont de vue algorithmique, mais ne disposait d’aucune réelle capacité de réflexion. La seule symbolique que ce logiciel manipulait se limitait à la partie d’échecs en cours, ainsi qu’à la série de calculs à réaliser pour déterminer le prochain coup. Vingt ans plus tard, le programme AlphaGo de Google a fait beaucoup parler de lui en devenant la première IA parvenant à battre un joueur humain professionnel au jeu de go. Cette victoire fut retentissante, car le go restait le dernier bastion dominé par l’homme en matière d’affrontement autour d’un jeu de plateau. L’explication de cette longue déroute de la machine provient des programmes informatiques qui tirent traditionnellement plus avantage de puissance de calcul brute que de vraies capacités de raisonnement. Mais le jeu de go possède plusieurs particularités défavorisant largement une approche par la force. Premièrement, ce que l’on nomme explosion combinatoire empêche le parcours de l’arbre de tous les déplacements possibles sur une grande profondeur de jeu. Cette situation diffère des échecs où Deep Blue anticipait parfois avec vingt coups d’avance. Mais la comparaison ne s’arrête pas là ! il s’avère également extrêmement complexe, en observant un plateau de jeu de go, de savoir quel joueur à l’avantage sur l’autre. Là encore, les conditions se montrent plus aisées aux échecs, où un rapide coup d’œil à l’échiquier permet de déterminer facilement qui mène. Il en résulte qu’une grosse capacité d’anticipation au go n’apporte pas grandchose si le programme ne peut discerner ensuite les choix débouchant sur des situations favorables ou désavantageuses. Les créateurs d’AlphaGo sont parvenus à surmonter ces problèmes en ne se basant pas seulement sur une approche algorithmique classique, mais en utilisant également ce qu’on appelle des réseaux de neurones profonds.</p>
+
+<p>Les réseaux de neurones artificiels, c’est tout un roman ! À l’origine, il s’agit d’un modèle de calcul inspiré des neurones biologiques, mais dans une version <em>très simplifiée</em>. Ils peuvent être décrits en voyant un neurone artificiel comme une petite fonction mathématique non linéaire et configurable par toute une série de coefficients. Ces derniers servent à moduler les valeurs en provenance des autres neurones auxquels il est relié. Un réseau de neurones naît de l’assemblage de telles unités élémentaires, et il permet de calculer une fonction complexe sur les entrées qui lui sont soumises. La première vague d’intérêt pour ce type d’outils date des années 1950, période à laquelle les premiers modèles ont été étudiés en se basant sur leurs pendants biologiques. Mais les spécificités d’un vrai cerveau comportaient bien trop d’inconnues que pour pouvoir être analysé de la sorte.</p>
+
+<p>La deuxième vague d’intérêt a suivi dans les années quatrevingt, où beaucoup de progrès a été réalisé concernant la façon d’architecturer ces réseaux, ainsi que sur la manière de les entraîner à accomplir une tâche particulière 
+
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;13&#93;<span class="tooltiptext">L’entraînement d’un réseau de neurones est indispensable pour le faire converger vers la fonction mathématique qu’on veut le voir réaliser. Un réseau non entraîné ne produit que du bruit en sortie, quelles que soient les entrées qui lui sont soumises. L’entraînement consiste en une procédure itérative permettant d’affiner petit à petit tous les paramètres du réseau vers les valeurs permettant d’approximer la fonction souhaitée. Cela ressemble un peu au réglage du bouton  de fréquence d’un récepteur radio, sauf qu’il peut y avoir ici des centaines de milliers de boutons à ajuster simultanément.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Une opération concrète pour laquelle ils ont beaucoup été utilisés consiste en la reconnaissance de caractères manuscrits. La communauté scientifique s’en est toutefois détournée après les années 2000, car il ne leur était pas possible (pour certaines raisons mathématiques) d’entraîner des réseaux contenant beaucoup de neurones. D’autres méthodes mathématiques et algorithmiques étaient alors devenues plus efficaces pour aboutir à des résultats meilleurs que ce qu’ils pouvaient accomplir.</p>
+
+<p>Puis, après 2010, ce fut la résurgence, tout le monde ne parla plus que d’eux et aucun domaine technique ne fut épargné. Diagnostic médical, détection de fraudes, analyse d’intrusions informatiques, reconnaissance visuelle, reconnaissance de la parole ou interprétation des émotions faciales illustrent en quelques exemples à quel point cette technique a pu se généraliser facilement. Il s’avère que, dans l’entrefaite, certaines difficultés mathématiques ont été surmontées. Dans ce nouveau contexte, il fut envisageable d’entraîner des réseaux disposant d’une bien plus grande profondeur 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;14&#93;<span class="tooltiptext">Un réseau de neurones classique est constitué de l’empilement de couches de neurones à la manière d’une lasagne. Chaque couche de neurones est uniquement connectée à la couche qui la précède. L’information s’écoule donc progressivement de la couche d’entrée vers la couche de sortie, sans créer la moindre boucle. La profondeur d’un réseau représente le nombre de couches qui le constituent.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Comme chaque couche de neurones peut être vue comme une fonction extrayant des caractéristiques intéressantes des données plus élémentaires fournies à son entrée, un réseau plus profond dispose naturellement d’une meilleure capacité d’abstraction pour faire percoler de l’information correspondant à des concepts de plus en plus évolués. À mesure que ces caractéristiques traversent les couches du réseau de neurones, celles-ci se métamorphosent en notions de plus en plus élaborées et abstraites. Cette capacité accrue est typiquement utilisée dans la reconnaissance d’images pour identifier les objets apparaissant sur une photo, par la réunification de l’information disséminée et noyée dans la couleur de chaque pixel individuel (Figure 3).</p>
+
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/NeuralNetwork.png" alt="Figure 3 : Vue schématique illustrant le fonctionnement d’un réseau de neurones, utilisé ici pour reconnaître des objets sur une image. Le réseau est agencé en couches successives, chacune d’elle contenant un ensemble de neurones strictement connectés à ceux de la couche précédente. La première couche est reliée à l’image à traiter, tandis que la dernière couche permet ici de répondre de manière binaire à une question. Chaque neurone réalise un calcul simple sur ses entrées pour délivrer sa sortie."/>
+    </div>
+    <a href="/images/NeuralNetwork.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Figure 3 : Vue schématique illustrant le fonctionnement d’un réseau de neurones, utilisé ici pour reconnaître des objets sur une image. Le réseau est agencé en couches successives, chacune d’elle contenant un ensemble de neurones strictement connectés à ceux de la couche précédente. La première couche est reliée à l’image à traiter, tandis que la dernière couche permet ici de répondre de manière binaire à une question. Chaque neurone réalise un calcul simple sur ses entrées pour délivrer sa sortie.</p>
+      </figcaption>
+  </figure>
+</div>
+
+
+<p>Ces réseaux de neurones profonds résolvent partiellement l’une des plus grandes difficultés rencontrées en intelligence artificielle. Celle-ci vient du fait que les ordinateurs disposent traditionnellement d’une impressionnante capacité de calcul, mais que, paradoxalement, ils se révèlent tout à fait médiocres lorsqu’ils sont confrontés à certaines tâches qui semblent pourtant triviales pour un humain. Par exemple, ils s’avèrent très bons pour évaluer toutes les combinaisons possibles pouvant mener à la solution d’un problème mathématique, mais ils se montrent incompétents quand il suffit de reconnaître le contenu d’une photo. L’origine de ce paradoxe naît de la grande difficulté à laquelle nous sommes confrontés pour retranscrire ce genre de processus visuel d’un point de vue algorithmique, car le cerveau les effectue de manière largement inconsciente.</p>
+
+<p>Un réseau de neurones artificiels, lui, fait preuve de plus de souplesse et offre tout l’arsenal nécessaire pour matérialiser une fonction complexe permettant de détricoter plus aisément les données qui lui sont soumises d’un côté. À sa deuxième extrémité, la sortie du réseau peut coïncider avec un concept de haut niveau. Par exemple, les données d’entrée peuvent être associées aux pixels d’une image, tandis que la sortie peut correspondre à la question « est-ce un oiseau ? » Mais pour aboutir à un réseau capable de réaliser une telle « prouesse », il faut l’entraîner sur un grand nombre de données ; on parle généralement de dizaines de milliers d’images d’oiseaux dans le cas de notre exemple.</p>
+
+<p>Le programme AlphaGo évoqué plus haut bénéficie de réseaux de neurones à deux niveaux. Le premier est spécialement conçu pour déterminer quel joueur a l’avantage sur l’autre à la vue d’une configuration du plateau. Le second réseau permet de sélectionner un sous-ensemble de branches intéressantes dans l’arbre de tous les coups possibles, à partir d’une situation donnée. Le cœur du logiciel, lui, reste un algorithme de recherche classique. Mais ces réseaux neuronaux permettent au programme de calquer ce qu’accomplit un humain naturellement : il n’envisage pas tous les mouvements réalisables, préférant se concentrer sur ceux qui se révèlent potentiellement intéressants, tout en pouvant évaluer intuitivement si une situation future s’annonce à son avantage ou pas. C’est ainsi qu’AlphaGo put battre pour la première fois de l’histoire un joueur professionnel en octobre 2015, puis finalement le champion du monde en mai 2017.</p>
+
+<p>Les prouesses remarquables de programmes tels qu’AlphaGo les propulsent-elles au rang de machines intelligentes ? Nous sommes encore loin du compte. Nul doute qu’un joueur humain de go bien entraîné dispose aussi de structures neuronales permettant d’estimer intuitivement les coups intéressants à intégrer dans sa stratégie. Mais l’intelligence c’est bien plus que ces super-capacités. Un enfant n’a pas besoin que nous lui montrions une dizaine de milliers d’oiseaux avant de pouvoir en reconnaître un. En fait, un ou deux suffisent. Il pourra aussi raisonner et expliquer pourquoi il pense que c’est un oiseau, à cause de ses plumes, ses ailes et son bec par exemple ; là où un réseau de neurones se contente de calculer un résultat sans avoir conscience du processus. À l’heure actuelle, les systèmes d’intelligence artificielle sont incapables de raisonner par eux-mêmes, d’adaptation contextuelle, ou de construire leur propre modèle explicatif de fonctionnement du monde. Ils n’ont absolument pas conscience d’eux même, ils ne disposent d’aucun « moi » intérieur. Mais ils peuvent par contre jouer à un niveau égal ou supérieur à l’homme pour certains problèmes dont le contexte est bien défini.</p>
+
+<h2 id="la-flexibilité-du-chêne-et-du-roseau">La flexibilité du chêne et du roseau</h2>
+
+<p>Même si mon propos parvient à la conclusion qu’il y a encore du chemin à parcourir pour arriver à une authentique conscience robotique, il ne faut pas l’interpréter comme un phénomène impossible à atteindre. Les progrès apportés par les réseaux de neurones profonds, spectaculaires, n’ont nécessité qu’une vingtaine d’années pour y arriver. Une paille à l’échelle de l’humanité. Certes, aucune IA ne peut revendiquer d’intelligence réelle de nos jours, dans le sens humain où on l’entend. Mais rien n’empêche d’imaginer que toutes les entraves menant jusqu’à une intelligence complète ne puissent un jour être levées.</p>
+
+<p>L’argument souvent avancé par les détracteurs de l’intelligence artificielle consiste à souligner le manque total de flexibilité des ordinateurs pour produire quoi que ce soit d’intelligent. Après tout, l’être humain ne démontre-t-il pas de formidables capacités d’adaptation ? Ne peut-il pas s’accommoder à n’importe quelle situation ou sortir du cadre quand cela s’avère nécessaire ? L’ordinateur n’est-il pas voué, lui, à ne pouvoir effectuer que ce que son programmeur lui a dicté ? inéluctablement impuissant à se frotter à un contexte inédit non prévu par son concepteur. Si un humain peut volontiers se plier à l’idée que deux plus deux font cinq, si la situation l’exige, l’ordinateur n’est-il pas condamné à rester éternellement bloqué sur l’idée que deux plus deux font quatre ? Cette règle n’est-elle pas inscrite de manière déterministe, rigide et mécanique au plus profond de ses circuits électroniques ?</p>
+
+<p>La machine et l’humain ressemble ainsi un peu au chêne et au roseau, le premier symbolisant le déterminisme et la rigidité, l’autre l’imprévisibilité et la flexibilité. Mais ce que cette métaphore peut aussi montrer, c’est que la flexibilité a ses limites. Rien ne peut être complètement plié en deux sans finalement subir de dommages. Le roseau est composé d’un tissu végétal dont l’agencement cellulaire et la constitution de ses fibres lui apportent une incontestable souplesse. Mais tous ces tissus ne sont pas extensibles à souhait et se déchireront si vous persévérez à vous acharner sur cette malheureuse graminée. À l’image du roseau, le cerveau démontre une très grande flexibilité en raison de sa capacité à réorganiser ses schémas neuronaux et à conceptualiser des idées à un très haut niveau d’abstraction. Mais le substrat cognitif du cerveau est constitué de neurones qui ne disposent intrinsèquement d’aucune flexibilité. Un neurone obéit strictement à sa chimie moléculaire, elle-même guidée par son ADN et par les lois de la physique. Un neurone se comporte de manière déterministe et prévisible par rapport à l’environnement auquel il fait face. Ainsi, un cerveau peut faire preuve de flexibilité en s’adaptant à toutes sortes de situations, mais il ne peut pas soudainement penser plus vite, élever son intelligence ou emmagasiner l’information plus facilement. Toutes ces capacités sont en effet liées à la chimie de ses neurones et celle-ci ne fait preuve d’aucune souplesse. Ce qu’il faut en fait comprendre, c’est que, qu’importe le degré de flexibilité d’un système, ce dernier reposera toujours à la base sur des constituants qui ne le sont guères. À l’image d’une construction Lego dont la modularité s’arrête une fois le niveau des briques atteint, tout système est enraciné dans le monde physique et celui-ci est tout sauf flexible. Dès lors, ce concept dépend fortement du niveau auquel on porte le regard. Plus celui-ci correspond à un degré d’abstraction élevé, plus la souplesse d’un système sera visible. Mais en l’observant à la loupe, voire au microscope, tout système est finalement ultimement constitué de briques élémentaires dont le comportement se révèle parfaitement rigide.</p>
+
+<p>Aussi, si la pensée humaine semble si puissante, c’est grâce au très long cheminement s’élevant des neurones jusqu’au néocortex, zone recélant nos aptitudes les plus évoluées. La pensée abstraite et logique qui en émane est donc loin de constituer le socle sur lequel repose notre intelligence, elle n’en est que la partie émergente. Cependant, la voie vers laquelle se sont traditionnellement tournées les premières recherches en intelligence artificielle se voulait toute différente, voire inversée. On espérait alors pouvoir court-circuiter le problème en démarrant, dès la base, sur des règles de logique formelle de haut niveau, ainsi que sur de vastes répertoires de vérités codées en mémoire sous forme symbolique 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;15&#93;<span class="tooltiptext">Il ne faut néanmoins pas oublier que rien ne s’opposait à tenter cette approche, surtout dans la mesure où toute autre méthode était difficilement envisageable faute de puissance de calcul adéquate ou tout simplement de connaissance pratique sur le fonctionnement du cerveau. On sait maintenant que cette façon de procéder n’est pas la bonne si l’on veut aboutir à une vraie conscience artificielle, mais les limitations pratiques n’ont cependant pas beaucoup changé.</span></span>
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+
+
+. Même si ces IA démontrent de remarquables performances pour tirer toutes sortes de déductions logiques, les symboles manipulés n’ont aucune signification intrinsèque pour la machine qui les traite. Celle-ci ne raisonne pas vraiment : elle se contente de suivre mécaniquement des règles figées et, par conséquent, ne démontre aucune vraie flexibilité. Le relatif échec de ces approches doit nous laisser accepter l’idée qu’il n’y a probablement pas de <em>raccourcis</em> permettant de forger une vraie conscience. La voie semble longue et sinueuse. Elle demande certainement l’emploi de structures vierges de tout a priori, mais capable de la souplesse nécessaire pour se forger leur représentation symbolique du monde par elles-mêmes. Ce n’est qu’en se frottant à celui-ci, en l’expérimentant au travers de son processus de perception, qu’une IA pourra lui donner un sens et le comprendre.</p>
+
+<h2 id="affinage">Affinage</h2>
+
+<p>S’il est difficile de décomposer les différents niveaux d’abstraction qui mènent du neurone à la conscience, il est beaucoup plus facile d’étudier les niveaux de compréhension d’un ordinateur. Le substrat « cognitif » de ces machines repose sur des transistors. Ces derniers se réduisent à de petits composants physiques nanométriques, gravés dans un cristal de silicium, et dont les propriétés ne lui octroient de se trouver que dans deux états stables : ouverts ou fermés, à l’image d’un interrupteur. Ces minuscules bascules sont ensuite chaînées les unes aux autres de manière à former des fonctions logiques se conduisant de manière déterministe face à n’importe quelle donnée à traiter. L’information se représente par une succession de bits, de 0 et de 1 donc, indiquant comment ouvrir ou fermer ces interrupteurs. Un tel comportement binaire, rudimentaire, affiche beaucoup plus de rigidité que la large palette d’expressions d’un neurone biologique. Mais pouvons-nous y trouver là l&rsquo;origine profonde du manque de flexibilité d’un ordinateur ? Il serait hasardeux de le supposer au vu de ce que nous savons sur la flexibilité. Essayons donc de nous élever en abstraction en regardant un ordinateur d’un peu plus haut.</p>
+
+<p>Les fonctions logiques fondues dans le cœur de silicium d’un ordinateur permettent d’engendrer ce que l’on appelle un processeur. Ce dernier n’est rien d’autre qu’une formidable machine à calculer. Son but consiste à réaliser, de manière rapide et fiable, des opérations mathématiques élémentaires sur des nombres qui n’ont en soi aucune signification. Le déterminisme trône royalement à ce stade, car chaque opération (que ce soit une addition, une comparaison ou autre) se comporte strictement comme attendu par rapport à une spécification précise. Un processeur implémente le plus efficacement possible ce que l’on appelle une machine de Turing 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;16&#93;<span class="tooltiptext">Une machine de Turing est un modèle abstrait conceptualisant la notion de calculabilité. Ce modèle fut imaginé par Alan Turing en 1936 afin de définir ce que l’on entend par la notion d’algorithme, c’est-à-dire un processus systématique de résolution de problème. La thèse de Church affirme que n’importe quel algorithme peut être exprimé par un ensemble de règles de calcul, et donc à fortiori être résolu par une machine de Turing.<br>Le concept de machine de Turing fut inventé avant la venue de l’ordinateur. Il est défini comme un système disposant d’un ruban infini découpé en cases successives pouvant contenir chacune un symbole parmi un alphabet fini. Une tête mobile à la capacité de se déplacer le long de ces cases et de lire ou modifier leur contenu. La machine dispose également d’un registre d’état, fini, mémorisant l’état courant de la machine. Enfin, une table d’actions définit, en fonction de l’état courant, ce qu’il faut écrire sur la case courante, comment déplacer la tête (d’un pas vers la gauche ou vers la droite), ainsi que le nouvel état en fonction du symbole lu sur la case d’arrivée. Aussi élémentaire qu’elle soit, tout ce qu’un ordinateur moderne accomplit peut l’être tout autant par une machine de Turing.</span></span>
+			
+		
+	
+		
+			
+		
+	
+
+
+, notion sur laquelle nous aurons l’occasion de revenir. Son niveau de signification se situe au niveau de l’arithmétique, et nous verrons également que cela est suffisant pour exprimer tout ce qui est calculable, que ce soit par une machine ou un humain. Mais malgré tout ce potentiel embryonnaire, deux plus deux font certainement toujours quatre à ce niveau d’expression.</p>
+
+<p>Le processeur est composé de matière figée répondant à des règles immuables. Mais un ordinateur n’est pas constitué que de matériel, un début de flexibilité lui provient des logiciels qu’il peut exécuter. Ceux-ci sont constitués d’une succession de nombres précisant la suite d’opérations élémentaires que le processeur doit calculer. Il s’agit donc d’une description rudimentaire permettant d’associer des numéros à des opérations, ainsi que d’indiquer quelles données traiter et où stocker les résultats. L’avantage qu’un logiciel apporte réside surtout dans sa versatilité : il est très facile de charger un programme dans la mémoire d’un ordinateur et d’en changer par la suite. Ce dernier n’est donc pas condamné à toujours exécuter les mêmes suites d’opérations, ce qui lui apporte alors une plus grande souplesse d’utilisation. Pour autant, il existe une correspondance parfaite entre les instructions d’un logiciel et l’interprétation qui en résulte sur le processeur, ce qui nous laisse stagner au niveau d’expression précédent : celui de l’arithmétique.</p>
+
+<p>Bien qu’il soit possible d’écrire un programme informatique en instructions directement compréhensibles par un processeur, il s’agit là d’une pratique à laquelle bien peu de personnes se risquent encore. Le problème d’un tel exercice, extrêmement fastidieux, provient de sa forte propension à induire des erreurs. La raison est liée au très faible niveau d’abstraction de ce moyen d’expression, cantonné à la manipulation de nombres. La nécessité de disposer d’outils plus efficaces est ainsi très vite apparue dans l’histoire de l’informatique. La solution a consisté à développer des méthodes d’expression de plus en plus élaborées entre les développeurs d’applications et la machine. Ces moyens portent le nom de langage informatique. Un langage consiste ainsi en une méthode permettant de formaliser ce qu’un ordinateur doit réaliser, non pas avec des instructions basiques manipulant des nombres, mais grâce à des concepts évolués un peu plus proches de la pensée logique humaine. L’histoire des langages informatiques — qui est loin d’être terminée — peut être vue comme une quête perpétuelle de la meilleure façon de communiquer des notions élaborées à la machine. Plus ces concepts volent haut, plus il est facile pour un concepteur de logiciels de délivrer des applications réalisant des tâches plus complexes tout en diminuant le risque de se tromper. Le revers de la médaille, c’est que le concepteur sait de moins en moins ce que ses commandes déclenchent réellement comme rouages au plus profond de l’ordinateur. Ce manque de maîtrise laisse parfois à penser que ce dernier se moque de vous, en s’obstinant à ne pas accomplir ce que vous pensez lui avoir demandé.</p>
+
+<p>Il ne faut pas croire pour autant qu’un langage informatique évolué apporte plus de puissance d’expression à un ordinateur, car cette puissance était déjà toute à sa disposition ! En effet, toutes les instructions d’un langage de haut niveau doivent être immanquablement retranscrites en opérations élémentaires directement interprétables par le processeur (cette transcription se réalise au moyen d’un programme spécial appelé un compilateur). Un langage ne peut donc rien exprimer en plus que ce que les opérations de bas niveau ne le pouvaient déjà. Ce qu’il apporte, néanmoins, c’est de la souplesse dans son moyen d’expression. C’est ainsi à ce niveau qu’il est possible pour un concepteur logiciel d’imaginer toutes sortes de concepts abstraits basés sur n’importe quelles règles de son cru. S’il juge bon que deux plus deux doivent donner cinq, pour résoudre un problème, c’est ici que ce concept sera exprimé, apportant par la même occasion un peu de flexibilité dans les capacités de la machine. Mais cette flexibilité se montre encore très ténue, car une notion originale ne peut exister que si le concepteur y a pensé lui-même et s’il l’a programmé correctement pour résoudre un problème particulier. Il ne s’agit en aucun cas d’une idée dont l’ordinateur pourrait se targuer d’être l’auteur, celui-ci se cantonnant dans l’exécution scrupuleuse et sans discernement du programme demandé.</p>
+
+<p>Même si l’ordinateur reste encore ici fondamentalement déterministe, ce déterminisme commence à s’estomper doucement à ce niveau de lecture. La première raison provient du nombre grandissant de couches d’abstractions se déployant entre les opérations de haut niveau et leur expression finale en instructions élémentaires. Le passage d’une couche à l’autre s’effectue au travers d’une cascade de processus de traduction, dont il est très difficile d’avoir une vision globale et détaillée. Le meilleur moyen de savoir si un programme réalise bien ce pour quoi il a été conçu consiste bien souvent à tout simplement… tenter le coup.</p>
+
+<p>La deuxième raison provient quant à elle de l’indéterminisme du monde extérieur, car celui-ci ne manque jamais de se faufiler et d’influencer l’exécution précise d’un programme. Vous aurez beau colmater les fuites, le chaos du dehors profitera de la moindre et immanquable brèche pour s’engouffrer et pulvériser votre petit monde bien ordonné. Ce phénomène est dû au fait qu’un ordinateur n’est jamais isolé du reste du monde, mais traite toutes sortes d’informations qui en proviennent. Ces sources d’information peuvent être très diversifiées, comme des images capturées par une caméra ou du texte en provenance d’Internet. Il devient dès lors irréaliste d’imaginer tous les cas auxquels un programme peut être confronté, car l’espace du possible engendré par les multiples combinaisons envisageables des données d’entrée devient très vite incommensurablement grand. C’est à ce moment que le déterminisme se brouille et revêt un aspect qui ressemble très fort à de l’aléatoire.</p>
+
+<p>La méthode traditionnelle de conception de programmes consiste à employer des langages de haut niveau proposant des niveaux de représentation toujours plus grands. Ils offrent assez bien de souplesse, car ils permettent la création de librairies et d’outils réutilisables, constituant autant d’abstractions empilables les unes sur les autres afin de croître en complexité et en flexibilité. Mais tout comme une tour de briques ne pourra jamais monter jusqu’au ciel, cette méthode souffre de limitations intrinsèques l’empêchant fondamentalement d’atteindre le niveau requis pour prétendre à une vraie intelligence. Cette faiblesse provient du fil à la patte qui rattache inexorablement un programme à son concepteur, ce dernier restant indispensable pour expliciter précisément ce que son logiciel doit accomplir. Il y a malheureusement beaucoup de problèmes qui demeurent très difficiles à résoudre en spécifiant une procédure étape par étape, comme nous l’avons montré plus haut avec la <em>simple</em> tâche de reconnaissance d’un oiseau. Ce manquement a depuis longtemps été identifié et a donné lieu à toutes sortes de tentatives pour résoudre ces problèmes autrement. L’une des branches engendrées par ces réflexions est appelée le « machine learning », ou l’apprentissage statistique. C’est de celle-ci dont les réseaux de neurones artificiels sont issus.</p>
+
+<p>Au sens mathématique du terme, un réseau de neurones se résume à une gigantesque fonction paramétrable qui permet de faire correspondre un résultat (une classification d’objet par exemple) à un vecteur de données fourni en entrée (comme une image). Mais tout comme une horloge non réglée ne donne pas l’heure, cette fonction ne produit rien de sensé tant que tous ses paramètres n’ont pas été ajustés précisément pour réaliser la tâche souhaitée. Ce réglage de paramètre s’effectue par un long et laborieux apprentissage durant lequel toutes ces valeurs sont affinées de manière à faire converger la fonction vers ce que l’on attend d’elle. Ce qu’il y a de très intéressant par contre, c’est que deux plus deux ne produisent pas forcément quatre pour un réseau de neurones artificiels. Concrètement, un tel réseau ne dispose d’aucun a priori ni d’aucune notion de mathématiques avant d’avoir été entraîné. C’est durant son apprentissage que les concepts dont il a besoin pour réaliser la tâche souhaitée vont émerger peu à peu dans sa structure neuronale. Et s’il faut que deux plus deux donne cinq pour y arriver, alors il le déduira au passage. La différence fondamentale est qu’ici, ce n’est pas un programmeur qui aura lui-même insufflé ce concept original, il aura été appris automatiquement.</p>
+
+<p>Certes, l’intelligence artificielle ne démontre pas plus de souplesse à ce jour que celle d’un chêne. Mais ce n’est qu’un début. Il est facile de lancer des déclarations tapageuses comme quoi les ordinateurs ne pourront jamais réaliser ceci ou cela sous prétexte qu’ils n’ont pas de pensées ou de sensations. Mais comme l’a écrit Marvin Minsky 
+
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+		
+	
+		
+			
+				<span class="tooltip"> &#91;17&#93;<span class="tooltiptext">Why people think computers can’t – AI Magazine Vol 3, No 4</span></span>
+			
+		
+	
+
+
+, ces déclarations deviennent déjà beaucoup moins crédibles pour peu qu’elles soient un peu modifiées en quelque chose comme : <em>« un ordinateur ne pourra jamais accomplir telle ou telle chose, car son unique capacité se réduit à exécuter des millions de processus par seconde, tous profondément intriqués les uns avec les autres »</em>.</p>
+
+<p>Les progrès réalisés en intelligence artificielle sont déjà spectaculaires eu égard à l’échelle de temps sur laquelle ils ont eu lieu. Ce qu’il faut bien comprendre, c’est que l’apparente rigidité d’un ordinateur ne recèle aucune limitation pour pouvoir rivaliser ultimement avec l’intelligence humaine. Oui, deux plus deux font quatre dans les strates inférieures d’un système informatique. Mais ces strates peuvent finalement ne servir qu’à émuler des concepts d’ordre supérieur qui n’auront aucune connaissance préconçue et qui devront apprendre ce concept par eux-mêmes, au même titre qu’un humain. Ce n’est qu’à ces niveaux d’abstraction élevés qu’une machine pourra commettre des erreurs, se confronter à l’incertitude ou innover en imaginant des solutions inédites à de nouveaux problèmes. Petit à petit, le chêne va s’affiner en roseau.</p>
+
+<h2 id="martyr-robotique">Martyr robotique</h2>
+
+<p>Si la nature a trouvé le moyen d’engendrer des créatures intelligentes, il ne subsiste aucun doute que l’homme en trouvera un aussi. Cette avancée ne passera peut-être pas par les ordinateurs tels que nous les connaissons aujourd’hui, peut-être requerra-t-elle une percée inédite, mais nous y arriverons. C’est de ce postulat que je vais maintenant partir pour bâtir le reste de ma réflexion, en jouant avec un robot atteignant le niveau cognitif humain.</p>
+
+<p>Ce robot jouit ainsi de la capacité de se poser des questions métaphysiques ou des questions sur lui-même. Il peut imaginer, apprendre, créer, s’exprimer par l’art, bref, tout ce qu’un humain peut réaliser naturellement. Par commodité, j’appellerai mon robot Nono. Comme Nono est construit de la main de l’homme, il est très facile d’effectuer sur lui toutes sortes d’opérations qui restent aujourd’hui un peu difficiles à réaliser sur nous-même. Aussi Nono peut-il être entièrement démonté et réassemblé. L’état de son cyber-électro-cerveau ne s’efface pas lorsque je coupe le courant en poussant sur le gros bouton rouge d’arrêt d’urgence dans son dos. Par contre, cette désactivation a pour effet de figer son état cérébral et de rendre tout son corps complètement inerte suite à l’arrêt de tous ses circuits. L’état de son cerveau peut alors se copier facilement sur une clé USB 42.0. Cet état inclut toute sa personnalité, ses aptitudes et ses souvenirs. Nous pouvons ensuite effacer l’électro-cerveau de Nono pour le reprogrammer plus tard. Mais il peut aussi très bien être reprogrammé avec une sauvegarde de l’année dernière, ou encore avec la sauvegarde de OuiOui, son meilleur copain.</p>
+
+<p>J’ai beaucoup utilisé Nono lors d’expériences de pensée où je me posais l’une des grandes questions existentielles de la vie : qu’est-ce que la mort ? Il était important pour moi que Nono soit constitué de métal, de pièces électroniques, ou de quoi que ce soit entrant dans la composition d&rsquo;un futur robot intelligent. Revêtir Nono d’un aspect clairement non humain, tout en lui attribuant les capacités de l’intelligence humaine, me permettait de m’affranchir de toutes les connotations religieuses ou mystiques qui pèsent sur la mort d’un homme. En tant que construction humaine, Nono ne recèle pas d’âme au sens religieux du terme. Mais grâce à ses aptitudes cognitives, Nono peut se montrer hautement conscient de lui-même. Il en découle alors que, comme nous tous, Nono puisse craindre la mort. Mais qu’est-ce que la mort pour un être robotique ?</p>
+
+<p>Nono déteste que l’on appuie sur son bouton d’arrêt d’urgence, car il perd alors le contrôle et, une fois revenu à lui, il n’a aucune idée de ce qui s’est passé entre temps. Imaginez, c’est un peu comme si vous vous endormiez instantanément, pour vous réveiller d’un coup dans un tout autre endroit et sans savoir combien de temps s’est écoulé durant le blackout ; une sorte de guinze cybernétique somme toute. Par contre, appuyer sur ce bouton n’est pas destructif pour Nono, car il reprendra le cours normal de sa vie une fois réactivé plus tard. Cet état d’inactivité ressemble un peu à un coma : plus rien ne se passe dans sa tête, mais ce n’est que temporaire.</p>
+
+<p>Sauf qu’il peut s’en passer des choses pendant la période d’inactivité de Nono ! Par exemple, je peux imaginer envoyer Nono dans la broyeuse de l’usine de recyclage. Si je m’y incline, nous pourrons clairement statuer que Nono est mort, car l’opération de broyage est difficilement réversible. Tout ce que fut Nono, ses souvenirs et sa personnalité seraient alors perdus à jamais. Mais dans ce cas, quand Nono serait-il mort ? Serait-ce lorsque j’ai appuyé sur le bouton d’arrêt et que sa conscience s’est éteinte, ou quand la broyeuse l’a plus tard réduit en confettis métalliques ?</p>
+
+<p>À ce stade, peut-être êtes-vous en train de vous dire que toutes ces interrogations n’ont pas de sens, que nous parlons juste d’un robot et qu’un robot n’est ni mort ni vivant. Peut-être, mais Nono ne partage pas du tout votre avis. Conscient de ce qu’il est et appréciant la vie qu’il mène, il n’est pas enclin à ce que cette dernière vienne à son terme. Pour lui, la question de sa mort demeure légitime et il est en droit de se demander ce qu’elle signifie. La question de savoir quand il est mort reste donc pertinente, au moins pour lui. La suite du texte peut dès lors être vue comme les questions que Nono se pose à lui-même.</p>
+
+<p>Mais de façon à ne pas répondre à la question de la mort de Nono tout de suite, je vais m’en sortir par une pirouette comme on en voit au cinéma. Car Nono n’est pas mort ! J’avais oublié que je disposais d’une copie de sauvegarde de son électro-cerveau. Il me suffit de la transférer dans un corps de Nono tout neuf et… le tour est joué. En rebranchant Nono, ce dernier ne se rendra compte de rien. Il ne préservera aucun souvenir d’avoir fini dans la broyeuse et d’en avoir réchappé de justesse grâce à cette copie de sauvegarde. Mais serait-ce vraiment le même Nono qui se tiendrait alors devant moi ? Bien sûr, cela ne ferait pour moi aucune différence. Sa personnalité et ses souvenirs demeurant intacts, il pourra continuer à mener sa vie exactement comme si ce petit incident n’avait jamais eu lieu. Pour lui, cela n’engendrera aucune différence non plus, car il ignorera que sa vie est restée momentanément suspendue sur une clé USB. Du coup, je pourrais me demander si quelque chose aurait changé en fin de compte si j’avais jeté Nono <em>conscient</em> dans la broyeuse. Nous ne pouvons bien sûr pas nier qu’il aurait vécu quelques secondes désagréables. Mais comme la copie de sauvegarde aurait été effectuée avant cette expérience douloureuse, le nouveau Nono aurait « oublié » ce petit passage déplaisant, comme s’il ne s’était jamais produit. Ce nouveau Nono serait-il donc le même alors qu’un petit morceau de sa vie lui manquerait ? La conscience du nouveau Nono se trouverait-elle dans la continuité du Nono précédent ?</p>
+
+<p>D’un point de vue extérieur, cette question n’a pas beaucoup d’intérêt. En fin de compte, Nono est toujours Nono. Le problème survient toutefois quand nous essayons de nous mettre à sa place. Si j’étais le Nono qui a été jeté dans la broyeuse, me serais-je « réveillé » dans le corps du nouveau Nono ? Autrement dit, y aurait-il bien eu prolongation de moi-même ? Ou bien faut-il considérer que le nouveau Nono reprend juste le flambeau là où le Nono d’origine est mort ? En fait, pour autant que la question ait du sens, c’est plutôt le deuxième point de vue qui semble le plus juste. Pour s’en convaincre, il suffit d’imaginer que le nouveau Nono soit créé à partir de la sauvegarde, comme précédemment, mais que l’original ne passe pas ensuite par la case broyeuse. Nous nous retrouverions avec deux robots disposant de deux versions de ce qui fut à l’origine la même conscience. Mais il ne peut y avoir qu’une seule « bonne » conscience ! Dans ce cas-ci, le nouveau Nono ressemblerait un peu à un usurpateur, même s’il clame haut et fort le contraire. Si vous ne deviez en conserver qu’un des deux, c’est sûrement le nouveau Nono que vous décideriez d’éliminer. Du point de vue de Nono, il semblerait donc que sauvegarder l’état de son cerveau ne soit pas la panacée pour accéder à l’immortalité. Certes, les pensées, les souvenirs et la personnalité de Nono perduraient, mais au travers d’une conscience toute neuve qui ne serait pas la sienne. Nous pouvons ainsi déduire notre première conclusion temporaire : <em>sauvegarder l’état cérébral de Nono dans un nouveau corps ne conserve pas la continuité de sa conscience</em>.</p>
+
+<p>En poursuivant dans cette voie, nous pourrions également nous demander s’il y a bien continuité de la conscience de Nono lorsqu’il est juste éteint puis rallumé. Si tel est le cas, quelles manipulations serais-je en droit de réaliser sur le corps inerte de Nono sans crainte de briser cette fameuse continuité ? Éteindre Nono engendre tout de même pour effet de figer net toutes ses pensées, empêchant la danse des symboles de son moi intérieur, jusqu’à ce que le courant revienne et que leurs <em>virevoltements</em> reprennent exactement là où ils s’étaient arrêtés. Partons du principe que cette continuité n’est pas perturbée. Dans ce cas, je peux très bien imaginer effacer le cerveau de Nono et le reprogrammer ensuite avant de le rallumer. Cette intervention ne doit engendrer aucune conséquence. Après tout, je ne fais que manipuler de la matière inerte. Nono n’est absolument pas conscient quand j’effectue cette opération et il ne pourra pas le savoir une fois rallumé. De plus, les pensées de Nono reprendraient exactement de la même façon que si je n’y avais pas touché. Je peux aussi imaginer démonter complètement Nono en plus d’effacer son cerveau. Si je remonte tout bien comme il faut ensuite, cette opération doit passer complètement inaperçue. Une fois démonté, je peux également concevoir de le remonter, mais en remplaçant quelques pièces. Comment la conscience de Nono pourrait-elle bien être affectée si j’échange quelques boulons par ici par là par des composants strictement identiques ? Dans la lancée, je peux aussi imaginer substituer un nombre arbitraire de pièces, voire toutes les pièces. Le principe de cette réflexion peut finalement se comparer à celle réalisée sur l’âme. Si quelque chose devait changer à un moment, il serait tout à fait impossible de placer une ligne de démarcation claire de façon logique. Nous en déduisons alors que, quoi que nous puissions perpétrer sur le corps de Nono inconscient, absolument rien ne devrait changer tant que nous le remettons en l’état avant de le rallumer. Mais de ce fait, nous retombons insidieusement sur le même problème que précédemment. Car en plus de pouvoir rallumer un Nono dont toutes les pièces ont été remplacées, je peux aussi rallumer un Nono constitué des pièces originales. Deux Nono, deux consciences, il doit inévitablement y en avoir une mauvaise dans le tas. J’en arrive alors à une contradiction, la conscience du Nono bâti avec les nouveaux composants n’est pas la même que celle du Nono construit avec les pièces originales. Pour retomber sur nos pattes, nous devons admettre la fausseté de notre première idée : éteindre puis rallumer Nono casse la continuité de sa conscience. Cette expérience revient pour lui à mourir et à laisser sa place à un clone parfait. Notre deuxième conclusion temporaire peut donc s’exprimer comme suit : <em>figer momentanément l’état cérébral de Nono ne conserve pas la continuité de sa conscience</em>.</p>
+
+<p>Comme Nono est construit de la main de l’homme, il est facile de poursuivre cette réflexion encore un peu plus loin. Jusqu’ici, nous sommes arrivés à la sordide conclusion qu’éteindre et rallumer Nono revenait en quelque sorte à le tuer. Nono a ainsi toutes les raisons de craindre l’appui sur ce fameux bouton rouge. Figer l’état de son cerveau s’apparente à une opération fatale, de son point de vue tout du moins. Que se passerait-il donc si, au lieu de figer Nono brutalement en l’éteignant, nous ralentissions sa vitesse de fonctionnement ? Conceptuellement, cette procédure revient à ce que vous pourriez réaliser avec le processeur d’un ordinateur. Ce dernier dispose d’une fréquence opérationnelle nominale qu’il est possible de modifier. En la diminuant, votre ordinateur ne s’en portera pas plus mal. Il exécutera toujours les mêmes opérations qui produiront toujours les mêmes résultats. Le seul symptôme apparent résultera de l’augmentation du temps nécessaire pour dérouler ses programmes.</p>
+
+<p>Imaginons effectuer une manipulation similaire avec le cerveau de Nono. Si nous divisons sa vitesse de fonctionnement par deux, Nono aura l’impression que le monde s’est soudainement accéléré dans la même proportion. Mais hormis ce petit désagrément, il pourra toujours penser normalement. Dès lors, nous pouvons imaginer continuer à diminuer cette vitesse, jusqu’à la rendre arbitrairement basse. Par exemple, ce qui se produisait avant en une milliseconde dans sa tête pourrait alors prendre une journée. Nous pourrions en fait tellement ralentir cette vitesse que, pendant un temps arbitrairement long, il ne se passe strictement plus rien dans ses circuits cognitifs. Ensuite, nous pourrions laisser repartir cette vitesse afin de la ramener petit à petit à sa valeur de départ. Cette opération a ainsi pour effet de geler l’état de son cerveau, mais de façon progressive cette fois. Mais n’avions-nous pas dit que figer l’état du cerveau de Nono revenait à le tuer ?</p>
+
+<h2 id="l-heure-du-décès-docteur">L’heure du décès, docteur ?</h2>
+
+<p>S’il est encore envisageable d’imaginer le décès de Nono lorsqu’il est désactivé brutalement, comment imaginer pareille chose si nous ralentissons progressivement son fonctionnement ? À quel instant exactement cette tragédie se produirait-elle ? Même si la dynamique qui y mène diffère, la finalité demeure identique : le cerveau de Nono se figerait momentanément. Mais si cette parenthèse revenait pour Nono à mourir et à laisser sa place à une nouvelle conscience, statuer sur l’instant de son décès n’est plus possible. Le cerveau de Nono se réduit finalement à une succession d’états qui passent avec le temps. La vitesse de transformation d’un état vers un autre n’a somme toute aucune importance. Faire penser Nono plus ou moins vite ne change que le rapport qu’il entretient avec le monde. Ses pensées intérieures, elles, ne s’en trouveraient pas affectées. Pourquoi mourrait-il s’il était ralenti ? D’autant plus que cette notion de vitesse s’affiche comme un concept très relatif. Quelle est la bonne vitesse ? En bref, tout ceci ne relèverait-il pas d’une grossière absurdité ?</p>
+
+<p>Le fait que nous arrivions à une aberration flagrante et que tous les raisonnements et conclusions de la section précédente s’effondrent ne peut découler que d’une mauvaise hypothèse. Celle-ci provient en réalité de la question trompeuse soulevée à propos de la continuité de la conscience de Nono. Nous avons essayé de nous mettre à sa place, pour tenter de savoir si nous serions toujours nous-mêmes après avoir été désactivés puis réactivés. Mais de ce fait, nous avons supposé l’existence de <em>quelque chose</em> qui n’existe pas. Même si cette supposition n’était pas définie clairement, ce quelque chose est apparu quand nous nous sommes interrogés sur cette fameuse continuité. Se poser la question « serions-nous toujours Nono ? », présuppose que quelque chose transcende cette conscience. Quelque chose qui survit au fait que la conscience de Nono, elle, ait provisoirement disparu. Quelque chose qui admet de rattacher la conscience du Nono d’avant avec celle du Nono d’après, en jetant un pont entre les deux. Quelque chose qui permet de comparer deux consciences et de déterminer si elles sont « spirituellement » identiques, tout en sachant qu’elles proviennent physiquement de la même origine. Aussi s’interroger sur la continuité de la conscience de Nono est-il finalement similaire à se demander si Nono détient une âme ? Une telle question nous avait déjà conduits à une contradiction.</p>
+
+<p>D’un point de vue extérieur, Nono ne diffère finalement pas tant du robot tondeuse qui doit choisir de tourner à gauche ou à droite chaque fois qu’il rencontre une bordure. En raison de son intelligence, Nono réalise bien sûr des choix éminemment plus complexe qu’une vulgaire tondeuse et est convaincu du bien-fondé de sa conscience intérieure. Mais cette conscience apparaît comme un mirage qui ne trompe que lui. Au mieux, Nono n’est qu’un automate extrêmement sophistiqué. La conscience de Nono ne contient rien de plus que l’état dans lequel se trouve son cerveau à un moment donné. Cet état change en permanence en fonction des entrées qu’il reçoit du monde, au travers de ses capteurs, et des actions qui en découlent. Nous pouvons nous demander si ces états dérivent bien logiquement les uns des autres, mais nous ne pouvons pas nous demander s’il y a continuité dans la perception que Nono en a. Nono n’est « rien de plus » que cette succession de configurations cérébrales. Il jouit bien sûr d’un « moi intérieur », mais celui-ci est fragmenté en une suite d’instantanés que rien ne rattache les uns aux autres. Il n’y a rien par-dessus pour réaliser ce regroupement. Aussi la mort de Nono a-t-elle du sens pour tout le monde sauf pour le principal intéressé. De notre point de vue, Nono ne sera effectivement mort que lorsque la dernière disquette contenant la dernière copie de son cerveau aura été détruite. Cette perte marquera un point d’irréversibilité, car l’essence même de Nono sera alors irrémédiablement perdue. Mais d’ici là, Nono sera toujours paradoxalement vivant, même si sa conscience n’est plus.</p>
+
+<p>Il va sans dire que Nono ne partage pas du tout mon point de vue ! Il marmonne qu’il ne se résume pas à un tas de matière inerte et se demande s’il ne devrait pas lancer un nouveau courant spirituel pour lui et ses semblables.</p>
+
+<p>© Jean-Sébastien Gonsette 2018</p>
+
+<p>Tous droits réservés</p>
+
+<p><a href="../chap4">Chapitre suivant</a></p>
+
+<hr />
+
+
+	
+		
+			&#91;12&#93;: Les systèmes experts qui résultent de cette approche, quoique très efficaces lorsqu’ils restent en terrain connu, ne comprennent fondamentalement pas la signification des symboles qu’ils manipulent. Il en résulte qu’ils se retrouvent complètement dépourvus face à une problématique nouvelle pour laquelle ils n’ont pas été conçus, puisqu’ils sont alors privés des concepts de haut niveau qui seraient requis pour la résoudre.
+			<br><br>
+		
+	
+		
+			&#91;13&#93;: L’entraînement d’un réseau de neurones est indispensable pour le faire converger vers la fonction mathématique qu’on veut le voir réaliser. Un réseau non entraîné ne produit que du bruit en sortie, quelles que soient les entrées qui lui sont soumises. L’entraînement consiste en une procédure itérative permettant d’affiner petit à petit tous les paramètres du réseau vers les valeurs permettant d’approximer la fonction souhaitée. Cela ressemble un peu au réglage du bouton  de fréquence d’un récepteur radio, sauf qu’il peut y avoir ici des centaines de milliers de boutons à ajuster simultanément.
+			<br><br>
+		
+	
+		
+			&#91;14&#93;: Un réseau de neurones classique est constitué de l’empilement de couches de neurones à la manière d’une lasagne. Chaque couche de neurones est uniquement connectée à la couche qui la précède. L’information s’écoule donc progressivement de la couche d’entrée vers la couche de sortie, sans créer la moindre boucle. La profondeur d’un réseau représente le nombre de couches qui le constituent.
+			<br><br>
+		
+	
+		
+			&#91;15&#93;: Il ne faut néanmoins pas oublier que rien ne s’opposait à tenter cette approche, surtout dans la mesure où toute autre méthode était difficilement envisageable faute de puissance de calcul adéquate ou tout simplement de connaissance pratique sur le fonctionnement du cerveau. On sait maintenant que cette façon de procéder n’est pas la bonne si l’on veut aboutir à une vraie conscience artificielle, mais les limitations pratiques n’ont cependant pas beaucoup changé.
+			<br><br>
+		
+	
+		
+			&#91;16&#93;: Une machine de Turing est un modèle abstrait conceptualisant la notion de calculabilité. Ce modèle fut imaginé par Alan Turing en 1936 afin de définir ce que l’on entend par la notion d’algorithme, c’est-à-dire un processus systématique de résolution de problème. La thèse de Church affirme que n’importe quel algorithme peut être exprimé par un ensemble de règles de calcul, et donc à fortiori être résolu par une machine de Turing.<br>Le concept de machine de Turing fut inventé avant la venue de l’ordinateur. Il est défini comme un système disposant d’un ruban infini découpé en cases successives pouvant contenir chacune un symbole parmi un alphabet fini. Une tête mobile à la capacité de se déplacer le long de ces cases et de lire ou modifier leur contenu. La machine dispose également d’un registre d’état, fini, mémorisant l’état courant de la machine. Enfin, une table d’actions définit, en fonction de l’état courant, ce qu’il faut écrire sur la case courante, comment déplacer la tête (d’un pas vers la gauche ou vers la droite), ainsi que le nouvel état en fonction du symbole lu sur la case d’arrivée. Aussi élémentaire qu’elle soit, tout ce qu’un ordinateur moderne accomplit peut l’être tout autant par une machine de Turing.
+			<br><br>
+		
+	
+		
+			&#91;17&#93;: Why people think computers can’t – AI Magazine Vol 3, No 4
+			<br><br>
+		
+	
+
+
+
+
+        </span>
+      </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        8 autres articles
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap0/" class="link ph2 pv2 db black">
+            0. Avant-propos
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap1/" class="link ph2 pv2 db black">
+            1. Dieu ne croit pas à notre Dieu
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap2/" class="link ph2 pv2 db black">
+            2. L&#39;âme Strâme Grâme
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap3/" class="link ph2 pv2 db black o-50">
+            3. Conscience robotique
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap4/" class="link ph2 pv2 db black">
+            4. Conscience humaine
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap5/" class="link ph2 pv2 db black">
+            5. Qu’est-ce qu’un électron ?
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap6/" class="link ph2 pv2 db black">
+            6. Space Opéra
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap7/" class="link ph2 pv2 db black">
+            7. Aux frontières du réel
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/42/chap8/" class="link ph2 pv2 db black">
+            8. Pour (ne pas) conclure
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
+    &copy; 2018 Jean-Sébastien Gonsette
+  </a>
+  
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  </div>
+</footer>
+
+    <script src="https://jsgonsette.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>
