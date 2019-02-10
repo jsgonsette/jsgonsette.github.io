@@ -257,7 +257,7 @@ MathJax.Hub.Config({
 <p>Ces questions sont nombreuses et se mordent la queue assez rapidement puisque chaque élément a finalement une conséquence sur un autre. Quand on part de rien comme dans le cas présent, le mieux est d’y aller au pifomètre en fixant arbitrairement certains paramètres, puis en vérifiant qu’au final le tout tient la route. Un modèle peut être ensuite implémenté en simulation. Cela permet de gagner énormément de temps en testant les hypothèses de dimensionnement sur PC et en visualisant directement le résultat des lois de régulation sur de jolis graphiques (voir le graphe ci-dessous issu d&rsquo;une simulation). Dans mon cas, je n’ai lancé la phase de prototypage qu’une fois sûr que tout tenait la route en simulation. Bien sûr, ce n’est pas 100% <em>bulletproof</em>, car certains détails vous échapperont toujours, mais ça limite tout de même fortement les risques d’aller dans le mur. Le dernier point, et non des moindres, est que ce modèle est indispensable pour les algorithmes embarqués dans le pendule. Il permet tout d’abord de paramétrer les lois de contrôle qui commande le moteur du pendule, ensuite, il est nécessaire pour interpréter correctement les données retournées par les capteurs et réaliser une estimation correcte de l’état du pendule à un instant donné.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -394,7 +394,7 @@ $$y(t)=y_0.e^{(n-d+k).t}$$</p>
 <p>Dans les autres cas, cela devient une multigaussienne en plusieurs dimensions. La deuxième étape consiste à mesurer l’état du système au temps $t+dt$. Ces mesures viennent aussi avec leur lot d’incertitudes, une fois encore modélisées par des gaussiennes. Toutes les mesures sont pondérées par leur incertitude respective, comme dans l’exemple du voltmètre. Ensuite, le résultat est fusionné avec la prédiction en tenant compte là encore des incertitudes respectives des deux estimations. Une vue synthétique du processus est illustrée sur la figure qui suit. Si le sujet vous intéresse, je vous conseille vivement la lecture de ce <a href="https://www.amazon.fr/Optimal-State-Estimation-Nonlinear-Approaches/dp/0471708585">livre</a>.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">

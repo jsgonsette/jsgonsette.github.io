@@ -275,7 +275,7 @@ Max Planck fut le premier à définir ce que l’on appelle les unités de Planc
 <p>Nous en arrivons maintenant à un problème bien gênant et survenant lors de la programmation d’un moteur physique de jeu vidéo. Ce problème apparaît dès qu’un objet est autorisé à se déplacer plus vite qu’une unité d’espace par unité de temps, un peu comme s’il dépassait la vitesse de la lumière dans son contexte. À titre d’exemple, considérons un jeu représenté par une grille discrète désignant les différents emplacements où nous pouvons effectivement placer nos objets. Imaginons ensuite disposer d’un personnage et d’un mur séparés par une dizaine de cases et que ce protagoniste décide de tirer en direction de cet élément du décor (Figure 7). Si la vélocité du projectile est élevée, elle pourrait se manifester par un déplacement de cinq cases ou plus à chaque pas de temps. Dès lors, si un programmeur devait implémenter naïvement une détection de collision en se basant seulement sur le contenu des cases adjacentes à l’élément en mouvement, le projectile aurait toutes les chances de traverser le mur sans qu’aucune détection soit décelée. Le jeu présenterait donc un problème de causalité, car la ligne de vie du projectile croiserait celle des obstacles sans interagir avec eux.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -556,7 +556,7 @@ Max Planck fut le premier à définir ce que l’on appelle les unités de Planc
 <p>En fait, tout dépend du mouvement. Commençons par le cas le plus simple où l’entité évolue verticalement d’un pas à l’autre (Figure 16). Les déplacements successifs de cette entité sont représentés par les cases colorées en bleu dans la grille. Chaque case correspond à l’état de cette entité à un « instant » donné. Aussi sa ligne de vie se traduit-elle par la colonne bleue verticale filant vers le bas. Si la causalité se limite à cloner l’entité d’une rangée à la suivante à chaque pas, celle-ci ne doit ressentir aucun effet particulier. Il est donc naturel que, pour elle, l’axe du temps se superpose à sa ligne de vie, c’est-à-dire à l’axe vertical de la figure.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">

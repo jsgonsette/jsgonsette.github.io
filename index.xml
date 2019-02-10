@@ -17,8 +17,9 @@
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_00/</guid>
-      <description>Dans cette famille, il a deux enfants. Si je vous apprends que l&amp;rsquo;un des enfants est une fille, quelle est la probabilité que l&amp;rsquo;autre enfant soit aussi une fille?
-Révéler un indiceNon la réponse n&amp;#39;est pas 1/2. Lisez bien la question, si si, ça aide !window.onload = function (){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;hidden&#34;;}document.getElementById(&#39;clue&#39;).onclick = function() {if (document.getElementById(&#39;clue_text&#39;).style.visibility == &#34;hidden&#34;){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;visible&#34;;}else{document.</description>
+      <description>&lt;p&gt;Dans cette famille, il a deux enfants. Si je vous apprends que l&amp;rsquo;un des enfants est une fille, quelle est la probabilité que l&amp;rsquo;autre enfant soit aussi une fille?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -47,8 +48,9 @@ Retrouve la bille qui est différente en 4 pesées, grâce à une balance à pla
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_04/</guid>
-      <description>En utilisant une et une seule fois les chiffres suivants: 1, 5, 6, 7, sans les assembler pour en faire des nombres, comment arriver au résultat 21 en utilisant seulement (mais autant de fois que l&amp;rsquo;on veut) les quatre opérations de base: +, -, *, / ?
-Révéler un indiceIntéressez vous particulièrement aux fractionswindow.onload = function (){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;hidden&#34;;}document.getElementById(&#39;clue&#39;).onclick = function() {if (document.</description>
+      <description>&lt;p&gt;En utilisant une et une seule fois les chiffres suivants: 1, 5, 6, 7, sans les assembler pour en faire des nombres, comment arriver au résultat &lt;strong&gt;21&lt;/strong&gt; en utilisant seulement (mais autant de fois que l&amp;rsquo;on veut) les &lt;strong&gt;quatre opérations de base&lt;/strong&gt;: +, -, *, / ?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,10 +59,9 @@ Révéler un indiceIntéressez vous particulièrement aux fractionswindow.on
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_05/</guid>
-      <description>Un électricien installe un câble souterrain de 10 fils pour relier 2 bâtiments visuellement isolés. Il se rend compte qu&amp;rsquo;il a oublié de marquer les fils.
-Il dispose d&amp;rsquo;une batterie et d&amp;rsquo;une ampoule (ou d&amp;rsquo;un testeur de continuité), d&amp;rsquo;un jeu de dominos pour relier les fils, ainsi que d&amp;rsquo;étiquettes pour les marquer.
-Comment peut-il repérer les fils qui correspondent de chaque côté du câble en seulement un aller-retour?
-Révéler un indiceCommencez par trouver une méthode pour discriminer des groupes de fils en un trajetwindow.</description>
+      <description>&lt;p&gt;Un électricien installe un câble souterrain de &lt;strong&gt;10 fils&lt;/strong&gt; pour relier 2 bâtiments visuellement isolés. Il se rend compte qu&amp;rsquo;il a oublié de marquer les fils.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -69,8 +70,9 @@ Révéler un indiceCommencez par trouver une méthode pour discriminer des grou
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_06/</guid>
-      <description>Vous participez à un jeu qui consiste à deviner derrière laquelle de 3 portes se cache une somme d’argent, les deux autres portes cachant chacune une chèvre.
-Une fois que vous avez fait votre choix et avant d’avoir vérifié la réponse, le présentateur vous explique que, parmi les 2 portes restantes (celles que vous n&amp;rsquo;avez pas choisies), il va en éliminer une des deux. Il vous garantit toutefois de ne pas éliminer une porte qui cache l’argent.</description>
+      <description>&lt;p&gt;Vous participez à un jeu qui consiste à deviner derrière laquelle de &lt;strong&gt;3 portes&lt;/strong&gt; se cache une &lt;strong&gt;somme d’argent&lt;/strong&gt;, les deux autres portes cachant chacune &lt;strong&gt;une chèvre&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -121,9 +123,11 @@ Le maître des nains peut demander à chacun des nains de fabriquer autant de li
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_11/</guid>
-      <description>5 pirates doivent se partager un trésor de 12 lingots d&amp;rsquo;or. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)
-L&amp;rsquo;ensemble des pirates effectue alors un vote : si la stricte majorité des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.
-Quel partage doit proposer le plus vieux, sachant que tous les pirates sont intelligents et avides?</description>
+      <description>&lt;p&gt;&lt;strong&gt;5 pirates&lt;/strong&gt; doivent se partager un trésor de &lt;strong&gt;12 lingots d&amp;rsquo;or&lt;/strong&gt;. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)&lt;/p&gt;
+
+&lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -172,9 +176,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_16/</guid>
-      <description>Un marchand possède 3000 bananes, il souhaite les vendre au marché qui se trouve à 1000 km de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de 1000 bananes à la fois et qu&amp;rsquo;en plus, le chameau mange une banane par kilomètre !
-Combien de bananes le marchand est-il en mesure d&amp;rsquo;amener au marché ?
-NB: Il a la possibilité de faire autant de trajets qu&amp;rsquo;il souhaite et peut déposer des bananes en chemin et les reprendre ensuite.</description>
+      <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -183,8 +185,9 @@ NB: Il a la possibilité de faire autant de trajets qu&amp;rsquo;il souhaite et 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
-      <description>Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.
-Cela va sans dire, le chat ne sait pas nager et il lui est impossible de mettre une patte dans l&amp;rsquo;étang. Le canard a quant à lui les ailes trop courtes pour s&amp;rsquo;envoler.</description>
+      <description>&lt;p&gt;Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -202,9 +205,9 @@ Cela va sans dire, le chat ne sait pas nager et il lui est impossible de mettre 
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_19/</guid>
-      <description>Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.
-Chacun choisit une combinaison de trois résultats (ex. Pile, pile, face). Ils lancent la pièce plusieurs fois, le premier qui voit sa combinaison apparaitre dans les trois derniers lancers gagne. Ils ne peuvent pas choisir la même combinaison.
-Le chat, plus fort, décide de choisir sa combinaison en premier.</description>
+      <description>&lt;p&gt;Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -213,9 +216,11 @@ Le chat, plus fort, décide de choisir sa combinaison en premier.</description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_20/</guid>
-      <description>Derrière trois personnages A, B et C se cachent les dieux Vrai, Faux et Aléatoire.
-Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.
-Votre tâche est de dévoiler les identités de A, B et C en ne posant uniquement que trois questions dont la réponse est vrai ou faux. Chaque question ne peut être posée qu&amp;rsquo;à un seul dieu.</description>
+      <description>&lt;p&gt;Derrière trois personnages A, B et C se cachent les dieux &lt;strong&gt;Vrai&lt;/strong&gt;, &lt;strong&gt;Faux&lt;/strong&gt; et &lt;strong&gt;Aléatoire&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -226,11 +231,7 @@ Votre tâche est de dévoiler les identités de A, B et C en ne posant uniquemen
       <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
       <description>&lt;p&gt;100 prisonniers sont condamnés à mort. Le directeur de la prison propose un challenge à nos prisonniers:&lt;/p&gt;
 
-&lt;ul&gt;
-&lt;li&gt;il leur attribue à tous un numéro entre 1 et 100&lt;/li&gt;
-&lt;li&gt;il installe dans son bureau une armoire avec 100 tiroirs, dans chacun desquels il met aléatoirement un et un seul numéro entre 1 et 100. Chaque numéro apparait une et une seule fois&lt;/li&gt;
-&lt;li&gt;il propose à chaque prisonnier de venir ouvrir 50 tiroirs de son bureau, pour regarder le numéro qui est dedans&lt;/li&gt;
-&lt;/ul&gt;</description>
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
