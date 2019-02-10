@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Enigmes on Jean-Sébastien Gonsette</title>
+    <link>https://jsgonsette.github.io/enigmes/</link>
+    <description>Recent content in Enigmes on Jean-Sébastien Gonsette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Fri, 01 Feb 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jsgonsette.github.io/enigmes/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Probabitliés trompeuses</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_00/</link>
+      <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_00/</guid>
+      <description>Dans cette famille, il a deux enfants. Si je vous apprends que l&amp;rsquo;un des enfants est une fille, quelle est la probabilité que l&amp;rsquo;autre enfant soit aussi une fille?
+Révéler un indiceNon la réponse n&amp;#39;est pas 1/2. Lisez bien la question, si si, ça aide !window.onload = function (){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;hidden&#34;;}document.getElementById(&#39;clue&#39;).onclick = function() {if (document.getElementById(&#39;clue_text&#39;).style.visibility == &#34;hidden&#34;){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;visible&#34;;}else{document.</description>
+    </item>
+    
+    <item>
+      <title>Les deux jarres</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_01/</link>
+      <pubDate>Sat, 02 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_01/</guid>
+      <description>Tu disposes de 50 billes blanches et 50 billes noires. Répartis ces billes dans les 2 jarres qui sont devant toi afin que:
+Quand je choisis ensuite une jarre au hasard, puis de cette jarre que je prenne une bille au hasard, les chances d&amp;rsquo;extraire une bille blanche soient maximales.</description>
+    </item>
+    
+    <item>
+      <title>Pesée</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_03/</link>
+      <pubDate>Sun, 03 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_03/</guid>
+      <description>Un sac contient 80 billes. Elles sont toutes exactement semblables, sauf l&amp;rsquo;une d&amp;rsquo;elles qui est légèrement moins lourde mais qui a la même apparence extérieure que les 79 autres.
+Retrouve la bille qui est différente en 4 pesées, grâce à une balance à plateau.</description>
+    </item>
+    
+    <item>
+      <title>Arithmétique</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_04/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_04/</guid>
+      <description>En utilisant une et une seule fois les chiffres suivants: 1, 5, 6, 7, sans les assembler pour en faire des nombres, comment arriver au résultat 21 en utilisant seulement (mais autant de fois que l&amp;rsquo;on veut) les quatre opérations de base: +, -, *, / ?
+Révéler un indiceIntéressez vous particulièrement aux fractionswindow.onload = function (){document.getElementById(&#39;clue_text&#39;).style.visibility = &#34;hidden&#34;;}document.getElementById(&#39;clue&#39;).onclick = function() {if (document.</description>
+    </item>
+    
+    <item>
+      <title>Méli-mélot</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_05/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_05/</guid>
+      <description>Un électricien installe un câble souterrain de 10 fils pour relier 2 bâtiments visuellement isolés. Il se rend compte qu&amp;rsquo;il a oublié de marquer les fils.
+Il dispose d&amp;rsquo;une batterie et d&amp;rsquo;une ampoule (ou d&amp;rsquo;un testeur de continuité), d&amp;rsquo;un jeu de dominos pour relier les fils, ainsi que d&amp;rsquo;étiquettes pour les marquer.
+Comment peut-il repérer les fils qui correspondent de chaque côté du câble en seulement un aller-retour?
+Révéler un indiceCommencez par trouver une méthode pour discriminer des groupes de fils en un trajetwindow.</description>
+    </item>
+    
+    <item>
+      <title>Les trois portes</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_06/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_06/</guid>
+      <description>Vous participez à un jeu qui consiste à deviner derrière laquelle de 3 portes se cache une somme d’argent, les deux autres portes cachant chacune une chèvre.
+Une fois que vous avez fait votre choix et avant d’avoir vérifié la réponse, le présentateur vous explique que, parmi les 2 portes restantes (celles que vous n&amp;rsquo;avez pas choisies), il va en éliminer une des deux. Il vous garantit toutefois de ne pas éliminer une porte qui cache l’argent.</description>
+    </item>
+    
+    <item>
+      <title>L’anniversaire de Shelly</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_07/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_07/</guid>
+      <description>Jonathan et Michel rencontrent Shelly, mais celle-ci ne veut pas leur donner directement sa date d’anniversaire (c&amp;rsquo;est une femme après tout). A la place elle leur donne à tous deux les 10 possibilités suivantes (elle est maline par contre):
+ 15, 16 ou 19 mai 17 ou 18 juin 14 ou 16 juillet 14, 15 ou 17 aout  Ensuite elle donne, séparément, à Michel le mois et à Jonathan le jour.</description>
+    </item>
+    
+    <item>
+      <title>Le circuit</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_08/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_08/</guid>
+      <description>Une voiture a besoin d&amp;rsquo;exactement 1 litre d&amp;rsquo;essence pour faire le tour d’un circuit automobile. Et l&amp;rsquo;on dispose justement d&amp;rsquo;un litre d&amp;rsquo;essence, pas plus.
+Pour corser un peu le problème, on décide de répartir ce litre d&amp;rsquo;essence entre divers récipients disposés un peu n&amp;rsquo;importe où le long de la piste.
+Y-a-t-il forcément un point de départ depuis lequel on pourra faire le tour complet, quel que soit la répartition du litre d’essence autour du circuit ?</description>
+    </item>
+    
+    <item>
+      <title>Le partage du Sultan</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_09/</guid>
+      <description>Un Sultan veut récompenser ses 42 loyaux serviteurs pour leurs bons services. Il veut leur donner des bâtonnets d&amp;rsquo;encens. Malheureusement, il ne possède que 41 bâtonnets d&amp;rsquo;encens, tous de fins cylindres identiques.
+Soucieux de répartir équitablement les 41 bâtonnets entre ses 42 serviteurs, le sultan décide alors de couper les bâtonnets avec son sabre.
+Quel est le minimum de coups de sabre que le Sultan devra donner pour pouvoir effectuer un partage exact des 41 bâtonnets d&amp;rsquo;encens entre ses 42 loyaux serviteurs ?</description>
+    </item>
+    
+    <item>
+      <title>L&#39;or des sept nains</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_10/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_10/</guid>
+      <description>7 nains récoltent de l&amp;rsquo;or pour le maître des nains. Les nains fabriquent avec cet or des lingots d&amp;rsquo;exactement 1 kg. Le problème est qu&amp;rsquo;un certain nombre de nains sont des voleurs et à chaque fois qu&amp;rsquo;ils fabriquent un lingot ils volent 1g d&amp;rsquo;or et fabriquent ainsi des lingots de 999g.
+Le maître des nains peut demander à chacun des nains de fabriquer autant de lingots qu&amp;rsquo;il le souhaite, les nains voleurs voleront systématiquement 1g.</description>
+    </item>
+    
+    <item>
+      <title>Le partage des pirates</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_11/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_11/</guid>
+      <description>5 pirates doivent se partager un trésor de 12 lingots d&amp;rsquo;or. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)
+L&amp;rsquo;ensemble des pirates effectue alors un vote : si la stricte majorité des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.
+Quel partage doit proposer le plus vieux, sachant que tous les pirates sont intelligents et avides?</description>
+    </item>
+    
+    <item>
+      <title>Perdu en forêt</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_12/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
+      <description>Vous êtes perdu dans une immense forêt et vous avez pour seule indication qu&amp;rsquo;il y a un chemin forestier rectiligne qui se trouve à 5 kilomètres de l&amp;rsquo;endroit où vous vous trouvez. Mais vous ignorez dans quelle direction il se trouve.
+Quel est la trajectoire la plus courte à travers la forêt qui vous y mènera à coup sûr ?</description>
+    </item>
+    
+    <item>
+      <title>Découpe d&#39;un carré</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_13/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_13/</guid>
+      <description>Comment découper un carré en 8 triangles n&amp;rsquo;ayant que des angles strictement aigus ?</description>
+    </item>
+    
+    <item>
+      <title>Pesée (le retour)</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_14/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_14/</guid>
+      <description>Un sac contient 12 billes. Elles sont toutes exactement semblables, sauf l&amp;rsquo;une d&amp;rsquo;elles qui est légèrement moins lourde ou plus lourde, &amp;hellip; mais qui a la même apparence extérieure que les 11 autres.
+Retrouve la bille qui est différente en 3 pesées, grâce à une balance à plateau.
+Durant ces 3 pesées, détermine si la bille est plus lourde ou moins lourde que les autres.</description>
+    </item>
+    
+    <item>
+      <title>Le gâteau triangulaire</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_15/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_15/</guid>
+      <description>Le responsable de la préparation aux Olympiades de Mathématiques a décidé d&amp;rsquo;offrir à ses étudiants un gâteau de forme triangulaire avec trois côtés inégaux. Il passe donc la commande à la pâtisserie en donnant les mesures des trois côtés.
+Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donnant bien sûr les mêmes mesures. Mais quand le pâtissier, ayant terminé son gâteau, prend la boîte, il constate que certes les mesures des côtés ont été respectées, mais sa forme est symétrique à celle du triangle (du gâteau)!</description>
+    </item>
+    
+    <item>
+      <title>Le chameau et les bananes</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_16/</guid>
+      <description>Un marchand possède 3000 bananes, il souhaite les vendre au marché qui se trouve à 1000 km de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de 1000 bananes à la fois et qu&amp;rsquo;en plus, le chameau mange une banane par kilomètre !
+Combien de bananes le marchand est-il en mesure d&amp;rsquo;amener au marché ?
+NB: Il a la possibilité de faire autant de trajets qu&amp;rsquo;il souhaite et peut déposer des bananes en chemin et les reprendre ensuite.</description>
+    </item>
+    
+    <item>
+      <title>Le canard et le chat</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_17/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
+      <description>Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.
+Cela va sans dire, le chat ne sait pas nager et il lui est impossible de mettre une patte dans l&amp;rsquo;étang. Le canard a quant à lui les ailes trop courtes pour s&amp;rsquo;envoler.</description>
+    </item>
+    
+    <item>
+      <title>Découpe triangulaire</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_18/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_18/</guid>
+      <description>Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?</description>
+    </item>
+    
+    <item>
+      <title>Pile ou face</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_19/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_19/</guid>
+      <description>Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.
+Chacun choisit une combinaison de trois résultats (ex. Pile, pile, face). Ils lancent la pièce plusieurs fois, le premier qui voit sa combinaison apparaitre dans les trois derniers lancers gagne. Ils ne peuvent pas choisir la même combinaison.
+Le chat, plus fort, décide de choisir sa combinaison en premier.</description>
+    </item>
+    
+    <item>
+      <title>L&#39;énigme la plus difficile du monde</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_20/</guid>
+      <description>Derrière trois personnages A, B et C se cachent les dieux Vrai, Faux et Aléatoire.
+Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.
+Votre tâche est de dévoiler les identités de A, B et C en ne posant uniquement que trois questions dont la réponse est vrai ou faux. Chaque question ne peut être posée qu&amp;rsquo;à un seul dieu.</description>
+    </item>
+    
+    <item>
+      <title>Les 100 prisonniers</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_21/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
+      <description>&lt;p&gt;100 prisonniers sont condamnés à mort. Le directeur de la prison propose un challenge à nos prisonniers:&lt;/p&gt;
+
+&lt;ul&gt;
+&lt;li&gt;il leur attribue à tous un numéro entre 1 et 100&lt;/li&gt;
+&lt;li&gt;il installe dans son bureau une armoire avec 100 tiroirs, dans chacun desquels il met aléatoirement un et un seul numéro entre 1 et 100. Chaque numéro apparait une et une seule fois&lt;/li&gt;
+&lt;li&gt;il propose à chaque prisonnier de venir ouvrir 50 tiroirs de son bureau, pour regarder le numéro qui est dedans&lt;/li&gt;
+&lt;/ul&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

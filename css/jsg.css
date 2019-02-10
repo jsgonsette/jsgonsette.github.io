@@ -38,6 +38,11 @@
     border-color: grey;
 }
 
+.clue {
+	color: DodgerBlue;
+	cursor: help
+}
+
 
 code.has-jax {
     font: inherit;
