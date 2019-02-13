@@ -70,4 +70,37 @@ table.table-style-one td {
 }
 
 
+/* For bar graph */
+.graph-cont{
+  width: calc(100% - 40px);
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.bar_back {
+	height: 30px;
+	max-width: 800px;
+	margin: 0 auto 10px auto;
+	line-height: 30px;
+	font-size: 16px;
+	color: white;
+	padding: 0 0 0 10px;
+	position: relative;
+	z-index: -2;
+	background: #ecf0f1;
+}
+
+.bar_front {
+	background: #2ecc71;
+	height: 30px;
+	display: block;
+	width: 50%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+}
+  
+
 

@@ -84,14 +84,14 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/enigmes/" title="Enigmes page">
-              Enigmes
+            <a class="hover-white no-underline white-90" href="/ipendulum/" title="iPendulum page">
+              iPendulum
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/ipendulum/" title="iPendulum page">
-              iPendulum
+            <a class="hover-white no-underline white-90" href="/enigmes/" title="Énigmes page">
+              Énigmes
             </a>
           </li>
           
@@ -267,7 +267,7 @@ MathJax.Hub.Config({
 <p>Après ce long préambule, vous pouvez légitimement vous dire que je ne vous ai finalement pas encore appris grand-chose et que vous ne savez toujours pas quels sont les principes physiques à l’œuvre dans ce pendule. Je vais y venir, mais pour ça il faut que nous allions d’abord jeter un coup d’œil dans les entrailles de la bête. La figure quis uit vous donne une vue éclatée des différents éléments. Nous pouvons y voir que le pendule est assemblé à partir d’un nombre assez restreint de constituants.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -394,7 +394,7 @@ Nous pouvons une fois encore appeler Newton à la rescousse pour expliquer les d
 <p>Le pendule ne peut acquérir le sens de l’équilibre qu’en étant capable de mesurer sa position dans l’espace et de corriger cette position en conséquence. Il doit donc être doté de capteurs permettant de lui indiquer quel est l’angle qu’il forme avec le sol. Ces capteurs sont constitués d&rsquo;un gyroscope 1 axe, matérialisé par le circuit ISZ-2510, et d&rsquo;un accéléromètre 3 axes embarqué dans le circuit ADXL345. Nous verrons dans le prochain article comment il est possible de reconstruire les paramètres dynamiques du pendule en fonction de ces mesures. Ces deux circuits sont en fait des capteurs analogiques intégrés dans un circuit numérique. Ils disposent ainsi de deux entrées d’alimentation distinctes. La raison d&rsquo;être de ces deux entrées est liée à la mesure analogique qui doit être le moins possible polluée par les bruits numériques du reste du circuit. Les deux circuits dialoguent avec le microcontrôleur via un bus SPI.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">

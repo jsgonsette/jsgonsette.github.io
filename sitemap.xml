@@ -54,6 +54,18 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/enigmes/riddle_08b/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/enigmes/riddle_08c/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/enigmes/riddle_09/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -66,13 +78,6 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/enigmes/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
     <loc>https://jsgonsette.github.io/enigmes/riddle_10/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -80,6 +85,13 @@
   
   <url>
     <loc>https://jsgonsette.github.io/ipendulum/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/enigmes/</loc>
+    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -146,6 +158,12 @@
   
   <url>
     <loc>https://jsgonsette.github.io/enigmes/riddle_21/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/enigmes/riddle_22/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

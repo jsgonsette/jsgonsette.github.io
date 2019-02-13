@@ -12,7 +12,7 @@
     
     
     <item>
-      <title>Probabitliés trompeuses</title>
+      <title>Probabilités trompeuses</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_00/</link>
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
@@ -29,7 +29,8 @@
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_01/</guid>
       <description>Tu disposes de 50 billes blanches et 50 billes noires. Répartis ces billes dans les 2 jarres qui sont devant toi afin que:
-Quand je choisis ensuite une jarre au hasard, puis de cette jarre que je prenne une bille au hasard, les chances d&amp;rsquo;extraire une bille blanche soient maximales.</description>
+Quand je choisis ensuite une jarre au hasard, puis de cette jarre que je prenne une bille au hasard, les chances d&amp;rsquo;extraire une bille blanche soient maximales.
+DifficultéIntuition Mathématique Logique </description>
     </item>
     
     <item>
@@ -39,7 +40,8 @@ Quand je choisis ensuite une jarre au hasard, puis de cette jarre que je prenne 
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_03/</guid>
       <description>Un sac contient 80 billes. Elles sont toutes exactement semblables, sauf l&amp;rsquo;une d&amp;rsquo;elles qui est légèrement moins lourde mais qui a la même apparence extérieure que les 79 autres.
-Retrouve la bille qui est différente en 4 pesées, grâce à une balance à plateau.</description>
+Retrouve la bille qui est différente en 4 pesées, grâce à une balance à plateau.
+DifficultéIntuition Mathématique Logique </description>
     </item>
     
     <item>
@@ -86,11 +88,43 @@ Retrouve la bille qui est différente en 4 pesées, grâce à une balance à pla
     </item>
     
     <item>
-      <title>Le circuit</title>
+      <title>Les fourmis</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_08/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_08/</guid>
+      <description>Sur un bâton d&amp;rsquo;un mètre de long sont disposées aléatoirement 50 fourmis et elles commencent toutes à marcher vers la gauche ou la droite au harsard.
+Dès qu&amp;rsquo;une fourmi en rencontre une autre, ces deux ci font instantanément demi-tour. Arrivée au bout du baton, une fourmi tombe et disparaît.
+Si une fourmi avance à une vitesse de 1cm/s, combien de temps maximum faut-il attendre avant que toutes les fourmis soient tombées du bâton ?</description>
+    </item>
+    
+    <item>
+      <title>Le Rubik&#39;s Cake</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_08b/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_08b/</guid>
+      <description>Vous avez préparé pour vos amis un superbe et délicieux gâteau cubique. Celui-ci est en outre recouvert d&amp;rsquo;un magnifique glacage sur ses 5 faces visibles (latérales et suppérieure).
+Tout le monde n&amp;rsquo;as pas encore confirmé, vous n&amp;rsquo;êtes pas encore sûr de combien vous serez à table. Par contre, pour qu&amp;rsquo;il n&amp;rsquo;y ait aucune jalousie, vous devez déjà réfléchir à la manière de découper ce gateau. Les morceaux ne doivent pas obligatoirement avoir la même forme, mais tout le monde doit recevoir la même quantité de gateau ET la même surface de glacage.</description>
+    </item>
+    
+    <item>
+      <title>Sans dessus dessous</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_08c/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_08c/</guid>
+      <description>Le but de l&amp;rsquo;épreuve est la suivante:
+Un paquet de 52 cartes est confié à quelqu’un qui a pour tâche d’en retourner un certain nombre, disons 19, de manière à ce qu’elles soient faces visibles au lieu de faces cachées. Ce paquet est ensuite mélangé pour que ces 19 cartes soient placées aléatoirement dans le paquet.
+Les yeux bandés, votre tâche est de séparer le paquet en deux tas, de telle manière que chacun des tas contienne le même nombre de cartes faces visibles.</description>
+    </item>
+    
+    <item>
+      <title>Le circuit</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_09/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_09/</guid>
       <description>Une voiture a besoin d&amp;rsquo;exactement 1 litre d&amp;rsquo;essence pour faire le tour d’un circuit automobile. Et l&amp;rsquo;on dispose justement d&amp;rsquo;un litre d&amp;rsquo;essence, pas plus.
 Pour corser un peu le problème, on décide de répartir ce litre d&amp;rsquo;essence entre divers récipients disposés un peu n&amp;rsquo;importe où le long de la piste.
 Y-a-t-il forcément un point de départ depuis lequel on pourra faire le tour complet, quel que soit la répartition du litre d’essence autour du circuit ?</description>
@@ -98,10 +132,10 @@ Y-a-t-il forcément un point de départ depuis lequel on pourra faire le tour co
     
     <item>
       <title>Le partage du Sultan</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_09/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_09/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_10/</guid>
       <description>Un Sultan veut récompenser ses 42 loyaux serviteurs pour leurs bons services. Il veut leur donner des bâtonnets d&amp;rsquo;encens. Malheureusement, il ne possède que 41 bâtonnets d&amp;rsquo;encens, tous de fins cylindres identiques.
 Soucieux de répartir équitablement les 41 bâtonnets entre ses 42 serviteurs, le sultan décide alors de couper les bâtonnets avec son sabre.
 Quel est le minimum de coups de sabre que le Sultan devra donner pour pouvoir effectuer un partage exact des 41 bâtonnets d&amp;rsquo;encens entre ses 42 loyaux serviteurs ?</description>
@@ -109,20 +143,20 @@ Quel est le minimum de coups de sabre que le Sultan devra donner pour pouvoir ef
     
     <item>
       <title>L&#39;or des sept nains</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_10/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_11/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_10/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_11/</guid>
       <description>7 nains récoltent de l&amp;rsquo;or pour le maître des nains. Les nains fabriquent avec cet or des lingots d&amp;rsquo;exactement 1 kg. Le problème est qu&amp;rsquo;un certain nombre de nains sont des voleurs et à chaque fois qu&amp;rsquo;ils fabriquent un lingot ils volent 1g d&amp;rsquo;or et fabriquent ainsi des lingots de 999g.
 Le maître des nains peut demander à chacun des nains de fabriquer autant de lingots qu&amp;rsquo;il le souhaite, les nains voleurs voleront systématiquement 1g.</description>
     </item>
     
     <item>
       <title>Le partage des pirates</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_11/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_12/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_11/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
       <description>&lt;p&gt;&lt;strong&gt;5 pirates&lt;/strong&gt; doivent se partager un trésor de &lt;strong&gt;12 lingots d&amp;rsquo;or&lt;/strong&gt;. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)&lt;/p&gt;
 
 &lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;
@@ -132,59 +166,62 @@ Le maître des nains peut demander à chacun des nains de fabriquer autant de li
     
     <item>
       <title>Perdu en forêt</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_12/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
-      <description>Vous êtes perdu dans une immense forêt et vous avez pour seule indication qu&amp;rsquo;il y a un chemin forestier rectiligne qui se trouve à 5 kilomètres de l&amp;rsquo;endroit où vous vous trouvez. Mais vous ignorez dans quelle direction il se trouve.
-Quel est la trajectoire la plus courte à travers la forêt qui vous y mènera à coup sûr ?</description>
-    </item>
-    
-    <item>
-      <title>Découpe d&#39;un carré</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_13/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_13/</guid>
-      <description>Comment découper un carré en 8 triangles n&amp;rsquo;ayant que des angles strictement aigus ?</description>
+      <description>Vous êtes perdu dans une immense forêt et vous avez pour seule indication qu&amp;rsquo;il y a un chemin forestier rectiligne qui se trouve à 5 kilomètres de l&amp;rsquo;endroit où vous vous trouvez. Mais vous ignorez dans quelle direction il se trouve.
+Quel est la trajectoire la plus courte à travers la forêt qui vous y mènera à coup sûr ?
+DifficultéIntuition Mathématique Logique </description>
     </item>
     
     <item>
-      <title>Pesée (le retour)</title>
+      <title>Découpe d&#39;un carré</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_14/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_14/</guid>
-      <description>Un sac contient 12 billes. Elles sont toutes exactement semblables, sauf l&amp;rsquo;une d&amp;rsquo;elles qui est légèrement moins lourde ou plus lourde, &amp;hellip; mais qui a la même apparence extérieure que les 11 autres.
-Retrouve la bille qui est différente en 3 pesées, grâce à une balance à plateau.
-Durant ces 3 pesées, détermine si la bille est plus lourde ou moins lourde que les autres.</description>
+      <description>Comment découper un carré en 8 triangles n&amp;rsquo;ayant que des angles strictement aigus ?
+DifficultéIntuition Mathématique Logique </description>
     </item>
     
     <item>
-      <title>Le gâteau triangulaire</title>
+      <title>Pesée (le retour)</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_15/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_15/</guid>
+      <description>Un sac contient 12 billes. Elles sont toutes exactement semblables, sauf l&amp;rsquo;une d&amp;rsquo;elles qui est légèrement moins lourde ou plus lourde, &amp;hellip; mais qui a la même apparence extérieure que les 11 autres.
+Retrouve la bille qui est différente en 3 pesées, grâce à une balance à plateau.
+Durant ces 3 pesées, détermine si la bille est plus lourde ou moins lourde que les autres.
+DifficultéIntuition Mathématique Logique </description>
+    </item>
+    
+    <item>
+      <title>Le gâteau triangulaire</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_16/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_16/</guid>
       <description>Le responsable de la préparation aux Olympiades de Mathématiques a décidé d&amp;rsquo;offrir à ses étudiants un gâteau de forme triangulaire avec trois côtés inégaux. Il passe donc la commande à la pâtisserie en donnant les mesures des trois côtés.
 Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donnant bien sûr les mêmes mesures. Mais quand le pâtissier, ayant terminé son gâteau, prend la boîte, il constate que certes les mesures des côtés ont été respectées, mais sa forme est symétrique à celle du triangle (du gâteau)!</description>
     </item>
     
     <item>
       <title>Le chameau et les bananes</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_16/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_17/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_16/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
       <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Le canard et le chat</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_17/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_18/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_18/</guid>
       <description>&lt;p&gt;Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -192,19 +229,21 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>Découpe triangulaire</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_18/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/enigmes/riddle_18/</guid>
-      <description>Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?</description>
-    </item>
-    
-    <item>
-      <title>Pile ou face</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_19/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_19/</guid>
+      <description>&lt;p&gt;Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Pile ou face ?</title>
+      <link>https://jsgonsette.github.io/enigmes/riddle_20/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/enigmes/riddle_20/</guid>
       <description>&lt;p&gt;Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
@@ -212,10 +251,10 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>L&#39;énigme la plus difficile du monde</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_20/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_21/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_20/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
       <description>&lt;p&gt;Derrière trois personnages A, B et C se cachent les dieux &lt;strong&gt;Vrai&lt;/strong&gt;, &lt;strong&gt;Faux&lt;/strong&gt; et &lt;strong&gt;Aléatoire&lt;/strong&gt;.&lt;/p&gt;
 
 &lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;
@@ -225,10 +264,10 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>Les 100 prisonniers</title>
-      <link>https://jsgonsette.github.io/enigmes/riddle_21/</link>
+      <link>https://jsgonsette.github.io/enigmes/riddle_22/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
+      <guid>https://jsgonsette.github.io/enigmes/riddle_22/</guid>
       <description>&lt;p&gt;100 prisonniers sont condamnés à mort. Le directeur de la prison propose un challenge à nos prisonniers:&lt;/p&gt;
 
 &lt;p&gt;&lt;/p&gt;</description>
