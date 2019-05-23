@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.54.0" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -29,20 +29,6 @@
 <meta property="og:url" content="https://jsgonsette.github.io/42/chap5/" />
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <meta itemprop="name" content="5. Qu’est-ce qu’un électron ?">
 <meta itemprop="description" content="Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions">
 
@@ -53,7 +39,8 @@
 
 
 <meta itemprop="keywords" content="42," />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="5. Qu’est-ce qu’un électron ?"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="5. Qu’est-ce qu’un électron ?"/>
 <meta name="twitter:description" content="Je ne cherche pas à connaître les réponses, je cherche à comprendre les questions"/>
 
       
@@ -84,14 +71,20 @@
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/enigmes/" title="Énigmes page">
+              Énigmes
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
             <a class="hover-white no-underline white-90" href="/ipendulum/" title="iPendulum page">
               iPendulum
             </a>
           </li>
           
           <li class="list f5 f4-ns fw4 dib pr3">
-            <a class="hover-white no-underline white-90" href="/enigmes/" title="Énigmes page">
-              Énigmes
+            <a class="hover-white no-underline white-90" href="/wizium/" title="Wizium page">
+              Wizium
             </a>
           </li>
           
@@ -379,7 +372,7 @@
 <p>L’automate cellulaire que je vais considérer se veut extrêmement basique : il est constitué d’une rangée unidimensionnelle finie de cellules et la règle d’évolution s’appuie uniquement sur l’état courant de chacune d’elles et de ses deux voisines. De plus, les cellules ne peuvent prendre que la valeur 0 ou 1. État initial des cellules mis à part, un tel automate cellulaire est entièrement défini en fixant l’évolution d’une cellule sur base des huit combinaisons possibles d’elle-même et de ses deux voisines. Par exemple, une règle pourrait être représentée par l’image ci-dessous (Figure 4).</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -396,7 +389,7 @@
 <p>Celle-ci doit se lire de la manière suivante : prenons le troisième cas en partant de la gauche, il signifie que si une cellule est blanche alors que ses deux voisines sont noires, cette cellule doit devenir noire dans la rangée qui suit. Pour chacune des huit configurations envisageables, une règle fixe donc si une cellule doit basculer sur la valeur 0 ou 1 à l’instant suivant. Il s’en suit que le nombre de règles pouvant être construites de la sorte se limite à 256. Certaines n’affichent aucune propriété intéressante, car elles ont pour seul effet que toutes les cellules de l’automate prennent rapidement une couleur uniforme. D’autres encore conduisent à des situations où l’automate se fige, chaque nouvelle rangée devenant identique à la précédente. Certaines règles génèrent des comportements comme de la périodicité ou des structures fractales. C’est le cas de la règle 126, ci-dessous (Figure 5). Un tel schéma de comportement est dit simple, ou réductible, car il est possible de prédire l’état d’une cellule à n’importe quel emplacement de la grille sans devoir dérouler toute la dynamique de l’évolution des cellules jusque-là. La réalisation d’un calcul plus simple permet de court-circuiter le long chemin qui mène à l’état de n’importe quelle cellule de la grille.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
