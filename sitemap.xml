@@ -72,6 +72,13 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/wizium/part1/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/42/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -138,6 +145,13 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/wizium/part2/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/enigmes/riddle_20/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -170,6 +184,7 @@
   
   <url>
     <loc>https://jsgonsette.github.io/wizium/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>

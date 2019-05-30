@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.31.1" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -29,6 +29,20 @@
 <meta property="og:url" content="https://jsgonsette.github.io/42/chap6/" />
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <meta itemprop="name" content="6. Space Opéra">
 <meta itemprop="description" content="La distinction entre le passé, le présent, le futur n’est qu’une illusion, aussi tenace soit-elle">
 
@@ -39,8 +53,7 @@
 
 
 <meta itemprop="keywords" content="42," />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="6. Space Opéra"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="6. Space Opéra"/>
 <meta name="twitter:description" content="La distinction entre le passé, le présent, le futur n’est qu’une illusion, aussi tenace soit-elle"/>
 
       
@@ -269,7 +282,7 @@ Max Planck fut le premier à définir ce que l’on appelle les unités de Planc
 <p>Nous en arrivons maintenant à un problème bien gênant et survenant lors de la programmation d’un moteur physique de jeu vidéo. Ce problème apparaît dès qu’un objet est autorisé à se déplacer plus vite qu’une unité d’espace par unité de temps, un peu comme s’il dépassait la vitesse de la lumière dans son contexte. À titre d’exemple, considérons un jeu représenté par une grille discrète désignant les différents emplacements où nous pouvons effectivement placer nos objets. Imaginons ensuite disposer d’un personnage et d’un mur séparés par une dizaine de cases et que ce protagoniste décide de tirer en direction de cet élément du décor (Figure 7). Si la vélocité du projectile est élevée, elle pourrait se manifester par un déplacement de cinq cases ou plus à chaque pas de temps. Dès lors, si un programmeur devait implémenter naïvement une détection de collision en se basant seulement sur le contenu des cases adjacentes à l’élément en mouvement, le projectile aurait toutes les chances de traverser le mur sans qu’aucune détection soit décelée. Le jeu présenterait donc un problème de causalité, car la ligne de vie du projectile croiserait celle des obstacles sans interagir avec eux.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -514,7 +527,7 @@ Max Planck fut le premier à définir ce que l’on appelle les unités de Planc
 <p>Comme nous l’avons vu auparavant, la construction d’un tel automate repose sur une simple règle de <em>causalité</em>. En d’autres termes, chaque cellule d’une rangée est façonnée sur base du contenu des cellules avoisinantes dans la rangée précédente. Il n’y a pas de <em>temps</em> à proprement parler au sein de la grille qui résulte de ce processus, hormis celui nécessaire au calcul de son contenu. Aussi n’y a-t-il pas d’ordre de construction imposé pour l’élaboration de la grille complète tant que la causalité est respectée. Par exemple, les deux grilles de droite de la Figure 14 forment des édifications partielles totalement valables qui mèneront au même résultat, représenté par la grille de gauche. Leur création s’apparente à la construction d’un mur de briques. Vous pouvez les monter dans l’ordre que vous voulez tant qu’une brique repose complètement sur d’autres briques du dessous. Cette flexibilité s’oppose à la conception linéaire du temps que nous entretenons habituellement. Il n’est pas possible ici d’attribuer un numéro de séquence à chaque cellule, pour déterminer un ordre strict de calcul, sans que cet ordonnancement paraisse complètement arbitraire.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">

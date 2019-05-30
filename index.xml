@@ -17,7 +17,9 @@
       <pubDate>Fri, 01 Feb 2019 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_00/</guid>
-      <description>&lt;p&gt;Dans cette famille, il a deux enfants. Si je vous apprends que l&amp;rsquo;un des enfants est une fille, quelle est la probabilité que l&amp;rsquo;autre enfant soit aussi une fille?&lt;/p&gt;</description>
+      <description>&lt;p&gt;Dans cette famille, il a deux enfants. Si je vous apprends que l&amp;rsquo;un des enfants est une fille, quelle est la probabilité que l&amp;rsquo;autre enfant soit aussi une fille?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -48,7 +50,9 @@ DifficultéIntuition Mathématique Logique </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_04/</guid>
-      <description>&lt;p&gt;En utilisant une et une seule fois les chiffres suivants: 1, 5, 6, 7, sans les assembler pour en faire des nombres, comment arriver au résultat &lt;strong&gt;21&lt;/strong&gt; en utilisant seulement (mais autant de fois que l&amp;rsquo;on veut) les &lt;strong&gt;quatre opérations de base&lt;/strong&gt;: +, -, *, / ?&lt;/p&gt;</description>
+      <description>&lt;p&gt;En utilisant une et une seule fois les chiffres suivants: 1, 5, 6, 7, sans les assembler pour en faire des nombres, comment arriver au résultat &lt;strong&gt;21&lt;/strong&gt; en utilisant seulement (mais autant de fois que l&amp;rsquo;on veut) les &lt;strong&gt;quatre opérations de base&lt;/strong&gt;: +, -, *, / ?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -57,7 +61,9 @@ DifficultéIntuition Mathématique Logique </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_05/</guid>
-      <description>&lt;p&gt;Un électricien installe un câble souterrain de &lt;strong&gt;10 fils&lt;/strong&gt; pour relier 2 bâtiments visuellement isolés. Il se rend compte qu&amp;rsquo;il a oublié de marquer les fils.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Un électricien installe un câble souterrain de &lt;strong&gt;10 fils&lt;/strong&gt; pour relier 2 bâtiments visuellement isolés. Il se rend compte qu&amp;rsquo;il a oublié de marquer les fils.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -66,7 +72,9 @@ DifficultéIntuition Mathématique Logique </description>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_06/</guid>
-      <description>&lt;p&gt;Vous participez à un jeu qui consiste à deviner derrière laquelle de &lt;strong&gt;3 portes&lt;/strong&gt; se cache une &lt;strong&gt;somme d’argent&lt;/strong&gt;, les deux autres portes cachant chacune &lt;strong&gt;une chèvre&lt;/strong&gt;.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Vous participez à un jeu qui consiste à deviner derrière laquelle de &lt;strong&gt;3 portes&lt;/strong&gt; se cache une &lt;strong&gt;somme d’argent&lt;/strong&gt;, les deux autres portes cachant chacune &lt;strong&gt;une chèvre&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -123,6 +131,15 @@ Y-a-t-il forcément un point de départ depuis lequel on pourra faire le tour co
     </item>
     
     <item>
+      <title>La longue voie du backtracking</title>
+      <link>https://jsgonsette.github.io/wizium/part1/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/wizium/part1/</guid>
+      <description>Même si l&amp;rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&amp;rsquo;année 2005. Je m&amp;rsquo;en souviens particulièrement bien, car c&amp;rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&amp;rsquo;hiver. J&amp;rsquo;imagine que j&amp;rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&amp;rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&amp;rsquo;a occupé quelque temps, le temps de résoudre quelques grilles.</description>
+    </item>
+    
+    <item>
       <title>Le partage du Sultan</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_10/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -151,7 +168,9 @@ Le maître des nains peut demander à chacun des nains de fabriquer autant de li
       <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
       <description>&lt;p&gt;&lt;strong&gt;5 pirates&lt;/strong&gt; doivent se partager un trésor de &lt;strong&gt;12 lingots d&amp;rsquo;or&lt;/strong&gt;. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)&lt;/p&gt;
 
-&lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;</description>
+&lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -203,9 +222,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
-      <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;
-
-&lt;p&gt;Combien de bananes le marchand est-il en mesure d&amp;rsquo;amener au marché ?&lt;/p&gt;</description>
+      <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -214,7 +231,9 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_18/</guid>
-      <description>&lt;p&gt;Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Un petit canard se trouve au milieu d&amp;rsquo;un étang circulaire, au bord duquel se trouve un chat menaçant. Le canard aimerait bien goûter à l&amp;rsquo;herbe se trouvant en bordure de l&amp;rsquo;étang, et le chat lui, aimerait bien goûter au canard.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -223,7 +242,18 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_19/</guid>
-      <description>&lt;p&gt;Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?&lt;/p&gt;</description>
+      <description>&lt;p&gt;Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>De la bonne façon de paver sa grille</title>
+      <link>https://jsgonsette.github.io/wizium/part2/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/wizium/part2/</guid>
+      <description>La méthode utilisée précédemment pour remplir la grille se voulait excessivement naïve, car il est tout à fait effroyable de ne tester la validité de la solution qu&amp;rsquo;une fois tous les mots placés. Le problème étant combinatoire, la nature exponentielle des combinaisons de mots sont comme autant de branches, branchettes et puis brindilles se subivisant effroyablement rapidement. Aussi vaut-il mieux se rendre compte le plus tôt possible que la voie choisie n&amp;rsquo;aboutira à aucune solution, de manière à couper la branche morte dès le début et ne pas perdre du précieux temps de calcul au fin fond de son arborescence.</description>
     </item>
     
     <item>
@@ -232,7 +262,9 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_20/</guid>
-      <description>&lt;p&gt;Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.&lt;/p&gt;</description>
+      <description>&lt;p&gt;Un chat et une souris décident de jouer à pile ou face. Mais ils se disent que ce n&amp;rsquo;est pas très intéressant comme jeu donc ils compliquent un peu la règle.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -243,7 +275,9 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
       <description>&lt;p&gt;Derrière trois personnages A, B et C se cachent les dieux &lt;strong&gt;Vrai&lt;/strong&gt;, &lt;strong&gt;Faux&lt;/strong&gt; et &lt;strong&gt;Aléatoire&lt;/strong&gt;.&lt;/p&gt;
 
-&lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;</description>
+&lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -252,7 +286,9 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_22/</guid>
-      <description>&lt;p&gt;100 prisonniers sont condamnés à mort. Le directeur de la prison propose un challenge à nos prisonniers:&lt;/p&gt;</description>
+      <description>&lt;p&gt;100 prisonniers sont condamnés à mort. Le directeur de la prison propose un challenge à nos prisonniers:&lt;/p&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -361,7 +397,9 @@ Le mystère de l’existence m’est apparu comme une question vive et troublant
       <guid>https://jsgonsette.github.io/ipendulum/part2/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Lors de l’article précédent consacré à ce pendule inversé, je vous ai expliqué les principes physiques généraux qui sont à l’œuvre pour maintenir l’équilibre du pendule et le faire sauter lorsqu’il est couché sur le flanc. Cependant, si vous désirez comprendre les détails techniques de fonctionnement ou si vous désirez vous plonger dans le code pour réguler le pendule à votre sauce, ces explications sont loin d’être suffisantes. Je vous propose donc aujourd’hui de retrousser vos manches et de vous plonger gaiement avec moi dans le cambouis de la régulation LQR, des filtres de Kalman et des systèmes temps réel.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -372,7 +410,9 @@ Le mystère de l’existence m’est apparu comme une question vive et troublant
       <guid>https://jsgonsette.github.io/ipendulum/part3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Nous voici déjà aux termes de cette série d’articles consacrée à la réalisation d’un pendule inversé. J’espère avoir réussi à susciter votre intérêt pour le sujet malgré le fait que les concepts théoriques et mathématiques sous-jacents peuvent sembler austères. Ce dernier article est beaucoup plus pragmatique et a pour but de vous guider dans l’assemblage et la mise en route de votre propre pendule.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>

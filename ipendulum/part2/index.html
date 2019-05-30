@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.54.0" />
+    <meta name="generator" content="Hugo 0.31.1" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -29,6 +29,20 @@
 <meta property="og:url" content="https://jsgonsette.github.io/ipendulum/part2/" />
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <meta itemprop="name" content="Pendule inversé, part 2">
 <meta itemprop="description" content="Loi de contrôle, filtre de Kalman, micrologiciel">
 
@@ -39,8 +53,7 @@
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Pendule inversé, part 2"/>
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Pendule inversé, part 2"/>
 <meta name="twitter:description" content="Loi de contrôle, filtre de Kalman, micrologiciel"/>
 
       
@@ -155,6 +168,8 @@
 <p>Lors de l’article précédent consacré à ce pendule inversé, je vous ai expliqué les principes physiques généraux qui sont à l’œuvre pour maintenir l’équilibre du pendule et le faire sauter lorsqu’il est couché sur le flanc. Cependant, si vous désirez comprendre les détails techniques de fonctionnement ou si vous désirez vous plonger dans le code pour réguler le pendule à votre sauce, ces explications sont loin d’être suffisantes. Je vous propose donc aujourd’hui de retrousser vos manches et de vous plonger gaiement avec moi dans le cambouis de la régulation LQR, des filtres de Kalman et des systèmes temps réel.</p>
 </blockquote>
 
+<p></p>
+
 <p>
 
 
@@ -248,7 +263,7 @@ MathJax.Hub.Config({
 <p>Ces questions sont nombreuses et se mordent la queue assez rapidement puisque chaque élément a finalement une conséquence sur un autre. Quand on part de rien comme dans le cas présent, le mieux est d’y aller au pifomètre en fixant arbitrairement certains paramètres, puis en vérifiant qu’au final le tout tient la route. Un modèle peut être ensuite implémenté en simulation. Cela permet de gagner énormément de temps en testant les hypothèses de dimensionnement sur PC et en visualisant directement le résultat des lois de régulation sur de jolis graphiques (voir le graphe ci-dessous issu d&rsquo;une simulation). Dans mon cas, je n’ai lancé la phase de prototypage qu’une fois sûr que tout tenait la route en simulation. Bien sûr, ce n’est pas 100% <em>bulletproof</em>, car certains détails vous échapperont toujours, mais ça limite tout de même fortement les risques d’aller dans le mur. Le dernier point, et non des moindres, est que ce modèle est indispensable pour les algorithmes embarqués dans le pendule. Il permet tout d’abord de paramétrer les lois de contrôle qui commande le moteur du pendule, ensuite, il est nécessaire pour interpréter correctement les données retournées par les capteurs et réaliser une estimation correcte de l’état du pendule à un instant donné.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -272,7 +287,7 @@ $$\ddot\varphi = {(I+I_w).(\tau_m - \tau_f) \over I.I_w} - {M.g.sin \theta \over
 <p>Dans lesquels $m_b$,  $I_b$, $m_w$ et $I_w$ expriment les masses et inerties du corps du pendule et de sa roue d’inertie, tandis que $l_b$ et $l_w$ traduisent la hauteur du centre de gravité du corps du pendule et la hauteur de la roue d’inertie par rapport au sol. Ces équations peuvent être facilement intégrées pour simuler le pendule, mais vont surtout nous servir ici pour établir les lois de contrôle du moteur.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">

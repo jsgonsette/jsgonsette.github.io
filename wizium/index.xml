@@ -6,9 +6,28 @@
     <description>Recent content in Wizium on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
+    <lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jsgonsette.github.io/wizium/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>La longue voie du backtracking</title>
+      <link>https://jsgonsette.github.io/wizium/part1/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/wizium/part1/</guid>
+      <description>Même si l&amp;rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&amp;rsquo;année 2005. Je m&amp;rsquo;en souviens particulièrement bien, car c&amp;rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&amp;rsquo;hiver. J&amp;rsquo;imagine que j&amp;rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&amp;rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&amp;rsquo;a occupé quelque temps, le temps de résoudre quelques grilles.</description>
+    </item>
+    
+    <item>
+      <title>De la bonne façon de paver sa grille</title>
+      <link>https://jsgonsette.github.io/wizium/part2/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/wizium/part2/</guid>
+      <description>La méthode utilisée précédemment pour remplir la grille se voulait excessivement naïve, car il est tout à fait effroyable de ne tester la validité de la solution qu&amp;rsquo;une fois tous les mots placés. Le problème étant combinatoire, la nature exponentielle des combinaisons de mots sont comme autant de branches, branchettes et puis brindilles se subivisant effroyablement rapidement. Aussi vaut-il mieux se rendre compte le plus tôt possible que la voie choisie n&amp;rsquo;aboutira à aucune solution, de manière à couper la branche morte dès le début et ne pas perdre du précieux temps de calcul au fin fond de son arborescence.</description>
+    </item>
     
   </channel>
 </rss>

@@ -27,7 +27,9 @@
       <guid>https://jsgonsette.github.io/ipendulum/part2/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Lors de l’article précédent consacré à ce pendule inversé, je vous ai expliqué les principes physiques généraux qui sont à l’œuvre pour maintenir l’équilibre du pendule et le faire sauter lorsqu’il est couché sur le flanc. Cependant, si vous désirez comprendre les détails techniques de fonctionnement ou si vous désirez vous plonger dans le code pour réguler le pendule à votre sauce, ces explications sont loin d’être suffisantes. Je vous propose donc aujourd’hui de retrousser vos manches et de vous plonger gaiement avec moi dans le cambouis de la régulation LQR, des filtres de Kalman et des systèmes temps réel.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -38,7 +40,9 @@
       <guid>https://jsgonsette.github.io/ipendulum/part3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Nous voici déjà aux termes de cette série d’articles consacrée à la réalisation d’un pendule inversé. J’espère avoir réussi à susciter votre intérêt pour le sujet malgré le fait que les concepts théoriques et mathématiques sous-jacents peuvent sembler austères. Ce dernier article est beaucoup plus pragmatique et a pour but de vous guider dans l’assemblage et la mise en route de votre propre pendule.&lt;/p&gt;
-&lt;/blockquote&gt;</description>
+&lt;/blockquote&gt;
+
+&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
   </channel>
