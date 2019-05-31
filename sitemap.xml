@@ -177,6 +177,13 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/wizium/part3/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/ipendulum/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>

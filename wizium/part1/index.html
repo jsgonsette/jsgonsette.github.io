@@ -288,7 +288,7 @@ MathJax.Hub.Config({
 <p>L&rsquo;idée du <em>backtracking</em> revient simplement à placer les éléments les uns à la suite des autres, en effectuant chaque fois un choix parmi tous ceux respectant les contraintes désirées. Bien sûr, il se peut qu&rsquo;il n&rsquo;y ait parfois aucune possibilité, ce qui implique de changer un élément placé précédemment pour permettre d&rsquo;énumérer de nouvelles combinaisons. Si ce dernier élément vient lui aussi à être épuisé, alors on remontera encore d&rsquo;un cran dans la pile d&rsquo;éléments déjà en place, et ainsi de suite. Cette méthode se contente donc d&rsquo;énumérer tous les cas possibles jusqu&rsquo;à tomber sur une solution par hasard. Dans le cas de notre petit exemple, l&rsquo;arbre des combinaisons et la manière d&rsquo;itérer à travers lui sont donnés ci-dessous.</p>
 
 
-<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -307,7 +307,7 @@ MathJax.Hub.Config({
 <p>La procédure est systématique et garantit de trouver la solution. Essayons toutefois d&rsquo;évaluer la difficulté d&rsquo;un tel problème en fonction d&rsquo;une taille de grille $S$ et d&rsquo;un dictionnaire contenant $N$ mots de taille $S$. Histoire de fixer les idées, voici la répartition des mots en fonction de leur longueur dans le dictionnaire français que j&rsquo;utilise.</p>
 
 
-
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -426,7 +426,7 @@ MathJax.Hub.Config({
 
 <p>Une première constatation intéressante vient de la comparaison du nombre de grilles qu&rsquo;il est possible de générer avec la probabilité que l&rsquo;une d&rsquo;elles soit une solution. Avec le dictionnaire utilisé pour créer cette table, il apparait avec certitude qu&rsquo;aucune grille parfaite de taille 9 ne peut être générée, le nombre de combinaisons étant 10 millions de fois trop faible que pour espérer en trouver une. Quant aux grilles de taille 8, elles devraient contenir une quinzaine de solutions.</p>
 
-<p>Le deuxième point important concerne le nombre pantagruélique de grilles à tester avant de pouvoir espérer trouver une combinaison gagnante. Pour une grille de taille 8, cette valeur tourne autour de $10^{35}$ grilles, ce qui s&rsquo;apparente à trouver le <em>bon</em> grain de sable parmi un volume de sable fin équivalent à celui de la terre. Cette analogie plus que parlante montre de manière évidente que la méthode proposée ici nécessite quelques ajustements, afin de pouvoir générer des grilles parfaites en moins de mille-milliards de milliards d&rsquo;années.</p>
+<p>Le deuxième point important concerne le nombre pantagruélique de grilles à tester avant de pouvoir espérer trouver une combinaison gagnante. Pour une grille de taille 8, cette valeur tourne autour de $10^{35}$ grilles, <em>ce qui s&rsquo;apparente à trouver le bon grain de sable parmi un volume de sable fin équivalent à celui de la terre</em>. Cette analogie plus que parlante montre de manière évidente que la méthode proposée ici nécessite quelques ajustements, afin de pouvoir générer des grilles parfaites en moins de mille-milliards de milliards d&rsquo;années.</p>
 
 <p><a href="../part2">Chapitre suivant</a></p>
 
@@ -445,7 +445,7 @@ MathJax.Hub.Config({
   <div class="bg-light-gray pa3">
     <ul>
       <li class="list b mb3">
-        1 autre article
+        2 autres articles
       </li>
       
         <li class="list f5 w-100 hover-bg-white nl1">
@@ -459,6 +459,13 @@ MathJax.Hub.Config({
           
           <a href="/wizium/part2/" class="link ph2 pv2 db black">
             De la bonne façon de paver sa grille
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/wizium/part3/" class="link ph2 pv2 db black">
+            Ma tactique de course est évidente: j&#39;appuie sur l&#39;accélérateur et je fonce
           </a>
         </li>
       
