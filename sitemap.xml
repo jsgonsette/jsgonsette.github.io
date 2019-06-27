@@ -152,14 +152,14 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/enigmes/riddle_20/</loc>
+    <loc>https://jsgonsette.github.io/enigmes/</loc>
+    <lastmod>2019-02-03T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/enigmes/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
+    <loc>https://jsgonsette.github.io/enigmes/riddle_20/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -197,6 +197,13 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/</loc>
+    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/42/chap0/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -228,7 +235,6 @@
   
   <url>
     <loc>https://jsgonsette.github.io/tags/42/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   
@@ -258,15 +264,7 @@
   
   <url>
     <loc>https://jsgonsette.github.io/categories/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://jsgonsette.github.io/</loc>
-    <lastmod>2019-02-01T00:00:00+00:00</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
   </url>
   
   <url>
@@ -289,7 +287,6 @@
   
   <url>
     <loc>https://jsgonsette.github.io/tags/</loc>
-    <changefreq>monthly</changefreq>
     <priority>0</priority>
   </url>
   

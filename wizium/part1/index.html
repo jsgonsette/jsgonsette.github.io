@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.31.1" />
+    <meta name="generator" content="Hugo 0.55.6" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -28,22 +28,8 @@
 <meta property="og:description" content="Même si l&rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&rsquo;année 2005. Je m&rsquo;en souviens particulièrement bien, car c&rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&rsquo;hiver. J&rsquo;imagine que j&rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&rsquo;a occupé quelque temps, le temps de résoudre quelques grilles." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jsgonsette.github.io/wizium/part1/" />
-
-
-
 <meta property="article:published_time" content="2019-05-19T00:00:00&#43;00:00"/>
-
 <meta property="article:modified_time" content="2019-05-19T00:00:00&#43;00:00"/>
-
-
-
-
-
-
-
-
-
-
 
 <meta itemprop="name" content="La longue voie du backtracking">
 <meta itemprop="description" content="Même si l&rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&rsquo;année 2005. Je m&rsquo;en souviens particulièrement bien, car c&rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&rsquo;hiver. J&rsquo;imagine que j&rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&rsquo;a occupé quelque temps, le temps de résoudre quelques grilles.">
@@ -51,12 +37,13 @@
 
 <meta itemprop="datePublished" content="2019-05-19T00:00:00&#43;00:00" />
 <meta itemprop="dateModified" content="2019-05-19T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="1663">
+<meta itemprop="wordCount" content="1690">
 
 
 
 <meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="La longue voie du backtracking"/>
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="La longue voie du backtracking"/>
 <meta name="twitter:description" content="Même si l&rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&rsquo;année 2005. Je m&rsquo;en souviens particulièrement bien, car c&rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&rsquo;hiver. J&rsquo;imagine que j&rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&rsquo;a occupé quelque temps, le temps de résoudre quelques grilles."/>
 
       
@@ -166,6 +153,10 @@
         
 
 <p>Même si l&rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&rsquo;année 2005. Je m&rsquo;en souviens particulièrement bien, car c&rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&rsquo;hiver. J&rsquo;imagine que j&rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&rsquo;a occupé quelque temps, le temps de résoudre quelques grilles. Mais l&rsquo;algorithmicien qui sommeille en moi s&rsquo;est vite demandé quelle pourrait être la procédure itérative et déterministe qu&rsquo;il faudrait appliquer pour résoudre une grille à tous les coups. Il s&rsquo;avère qu&rsquo;elle n&rsquo;est pas très compliquée pour peu que l&rsquo;on s&rsquo;autorise à émettre parfois des hypothèses et à revenir dessus par la suite. Cette méthode est à la base du <em>backtracking</em>, ou <em>retour sur trace</em> en bon français, et c&rsquo;est d&rsquo;elle que nous allons parler aujourd&rsquo;hui.</p>
+
+<div class="highlighted">
+La version anglaise de cet article est disponible sur <a href="https://medium.com/@jeansebastien.gonsette/how-i-learned-backtracking-thanks-to-crosswords-d6e586c3f961?source=friends_link&sk=f57f0516c380395c857bd18241fb4f98">Medium</a>. Le code source de la libraire dont je parle ici est quant à lui disponible sur <a href="https://github.com/jsgonsette/Wizium">GitHub</a>.
+</div>
 
 <p>
 
