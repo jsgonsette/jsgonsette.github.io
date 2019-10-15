@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Wizium on Jean-Sébastien Gonsette</title>
+    <link>https://jsgonsette.github.io/projects/wizium/</link>
+    <description>Recent content in Wizium on Jean-Sébastien Gonsette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate>
+    
+	<atom:link href="https://jsgonsette.github.io/projects/wizium/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>La longue voie du backtracking</title>
+      <link>https://jsgonsette.github.io/projects/wizium/part1/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/wizium/part1/</guid>
+      <description>Même si l&amp;rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&amp;rsquo;année 2005. Je m&amp;rsquo;en souviens particulièrement bien, car c&amp;rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&amp;rsquo;hiver. J&amp;rsquo;imagine que j&amp;rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&amp;rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&amp;rsquo;a occupé quelque temps, le temps de résoudre quelques grilles.</description>
+    </item>
+    
+    <item>
+      <title>De la bonne façon de paver sa grille</title>
+      <link>https://jsgonsette.github.io/projects/wizium/part2/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/wizium/part2/</guid>
+      <description>&lt;p&gt;La méthode utilisée précédemment pour remplir la grille se voulait excessivement naïve, car il est tout à fait catastrophique de ne tester la validité de la solution qu&amp;rsquo;une fois tous les mots placés. Le problème étant combinatoire, la nature exponentielle des combinaisons de mots s&amp;rsquo;affiche comme autant de branches, branchettes et puis brindilles se subdivisant effroyablement rapidement. Aussi vaut-il mieux se rendre compte le plus tôt possible que la voie choisie n&amp;rsquo;aboutira à aucune solution, de manière à couper la branche morte dès le début et ne pas perdre du précieux temps de calcul au fin fond de son arborescence.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Ma tactique de course est évidente: j&#39;appuie sur l&#39;accélérateur et je fonce</title>
+      <link>https://jsgonsette.github.io/projects/wizium/part3/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/wizium/part3/</guid>
+      <description>&lt;p&gt;Appliqué sans discernement, le &lt;em&gt;backtracking&lt;/em&gt; peut s&amp;rsquo;avérer redoutable de complexité, tant la voie qui mène à la solution peut être longue, tortueuse, pleine d&amp;rsquo;ornières, de pièges et de détours dans lesquels se perdre indéfiniment. Maitriser le problème permet néanmoins de tracer un chemin beaucoup plus direct vers la solution, nettoyé de tous ses obstacles et voies de traverses, et permettant finalement un gain de temps qu&amp;rsquo;aucune autre optimisation ou puissance de calcul herculéenne ne pourra jamais compenser. Grâce à la méthode exposée dans l&amp;rsquo;article précédent, nous avons à disposition une autoroute filant pratiquement en ligne droite vers la solution. Mais cela veut-il dire pour autant que nous désirons nous trainer le long de ce chemin à bord d&amp;rsquo;un vieux tacot fumant et tout cabossé ?&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

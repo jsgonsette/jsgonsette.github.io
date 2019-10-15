@@ -6,7 +6,7 @@
     <description>Recent content in J S G  on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 19 May 2019 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://jsgonsette.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -123,11 +123,20 @@ Y-a-t-il forcément un point de départ depuis lequel on pourra faire le tour co
     </item>
     
     <item>
+      <title>Commenter ou ne pas commenter ?</title>
+      <link>https://jsgonsette.github.io/posts/codecomments/</link>
+      <pubDate>Mon, 01 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/posts/codecomments/</guid>
+      <description>Internet est incontestablement une technologie formidable qui a littéralement propulsé le partage d&amp;rsquo;information et l&amp;rsquo;échange d&amp;rsquo;idées à un niveau jamais atteint auparavant. Néanmoins, cela génère parfois quelques frustrations, comme lorsque nous lisons les propos d&amp;rsquo;une personne qui alimente une réflexion dont la conclusion est fondamentalement opposée à notre opinion personnelle. Cela génère alors un sentiment d&amp;rsquo;urgence inextinguible vous poussant à réagir d&amp;rsquo;une manière ou d&amp;rsquo;une autre, car vous voilà au fait d&amp;rsquo;un crime de quasi-lèse-majesté ; quelqu&amp;rsquo;un, quelque part sur Internet, à tort !</description>
+    </item>
+    
+    <item>
       <title>La longue voie du backtracking</title>
-      <link>https://jsgonsette.github.io/wizium/part1/</link>
+      <link>https://jsgonsette.github.io/projects/wizium/part1/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/wizium/part1/</guid>
+      <guid>https://jsgonsette.github.io/projects/wizium/part1/</guid>
       <description>Même si l&amp;rsquo;origine du Sudoku remonte aussi loin que le siècle dernier, un sursaut de popularité peut être noté durant l&amp;rsquo;année 2005. Je m&amp;rsquo;en souviens particulièrement bien, car c&amp;rsquo;est à cette époque que je les ai découverts, alors que je me rendais aux sports d&amp;rsquo;hiver. J&amp;rsquo;imagine que j&amp;rsquo;ai dû tomber sur un recueil de grilles dans une station-service, lors de l&amp;rsquo;un de nos arrêts en voiture vers notre destination. Ce concept nouveau pour moi m&amp;rsquo;a occupé quelque temps, le temps de résoudre quelques grilles.</description>
     </item>
     
@@ -237,10 +246,10 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>De la bonne façon de paver sa grille</title>
-      <link>https://jsgonsette.github.io/wizium/part2/</link>
+      <link>https://jsgonsette.github.io/projects/wizium/part2/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/wizium/part2/</guid>
+      <guid>https://jsgonsette.github.io/projects/wizium/part2/</guid>
       <description>&lt;p&gt;La méthode utilisée précédemment pour remplir la grille se voulait excessivement naïve, car il est tout à fait catastrophique de ne tester la validité de la solution qu&amp;rsquo;une fois tous les mots placés. Le problème étant combinatoire, la nature exponentielle des combinaisons de mots s&amp;rsquo;affiche comme autant de branches, branchettes et puis brindilles se subdivisant effroyablement rapidement. Aussi vaut-il mieux se rendre compte le plus tôt possible que la voie choisie n&amp;rsquo;aboutira à aucune solution, de manière à couper la branche morte dès le début et ne pas perdre du précieux temps de calcul au fin fond de son arborescence.&lt;/p&gt;</description>
     </item>
     
@@ -275,10 +284,10 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>Ma tactique de course est évidente: j&#39;appuie sur l&#39;accélérateur et je fonce</title>
-      <link>https://jsgonsette.github.io/wizium/part3/</link>
+      <link>https://jsgonsette.github.io/projects/wizium/part3/</link>
       <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/wizium/part3/</guid>
+      <guid>https://jsgonsette.github.io/projects/wizium/part3/</guid>
       <description>&lt;p&gt;Appliqué sans discernement, le &lt;em&gt;backtracking&lt;/em&gt; peut s&amp;rsquo;avérer redoutable de complexité, tant la voie qui mène à la solution peut être longue, tortueuse, pleine d&amp;rsquo;ornières, de pièges et de détours dans lesquels se perdre indéfiniment. Maitriser le problème permet néanmoins de tracer un chemin beaucoup plus direct vers la solution, nettoyé de tous ses obstacles et voies de traverses, et permettant finalement un gain de temps qu&amp;rsquo;aucune autre optimisation ou puissance de calcul herculéenne ne pourra jamais compenser. Grâce à la méthode exposée dans l&amp;rsquo;article précédent, nous avons à disposition une autoroute filant pratiquement en ligne droite vers la solution. Mais cela veut-il dire pour autant que nous désirons nous trainer le long de ce chemin à bord d&amp;rsquo;un vieux tacot fumant et tout cabossé ?&lt;/p&gt;</description>
     </item>
     
@@ -365,19 +374,19 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>Pendule inversé, part 1</title>
-      <link>https://jsgonsette.github.io/ipendulum/part1/</link>
+      <link>https://jsgonsette.github.io/projects/ipendulum/part1/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/ipendulum/part1/</guid>
+      <guid>https://jsgonsette.github.io/projects/ipendulum/part1/</guid>
       <description>Le concept de pendule inversé n’est ni nouveau ni inutile. J’en veux pour preuve que vous, lecteur, en êtes le parfait exemple. Un corps humain est un pendule inversé ! En effet, en regardant la définition sur Wikipedia nous pouvons lire : un pendule inversé est un pendule dont le centre de masse est placé au-dessus de son point de pivot. En d’autres termes il s’agit d’un pendule que l’on a mis la tête en bas et qui ne demande qu’à se casser la figure.</description>
     </item>
     
     <item>
       <title>Pendule inversé, part 2</title>
-      <link>https://jsgonsette.github.io/ipendulum/part2/</link>
+      <link>https://jsgonsette.github.io/projects/ipendulum/part2/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/ipendulum/part2/</guid>
+      <guid>https://jsgonsette.github.io/projects/ipendulum/part2/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Lors de l’article précédent consacré à ce pendule inversé, je vous ai expliqué les principes physiques généraux qui sont à l’œuvre pour maintenir l’équilibre du pendule et le faire sauter lorsqu’il est couché sur le flanc. Cependant, si vous désirez comprendre les détails techniques de fonctionnement ou si vous désirez vous plonger dans le code pour réguler le pendule à votre sauce, ces explications sont loin d’être suffisantes. Je vous propose donc aujourd’hui de retrousser vos manches et de vous plonger gaiement avec moi dans le cambouis de la régulation LQR, des filtres de Kalman et des systèmes temps réel.&lt;/p&gt;
 &lt;/blockquote&gt;</description>
@@ -385,10 +394,10 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     
     <item>
       <title>Pendule inversé, part 3</title>
-      <link>https://jsgonsette.github.io/ipendulum/part3/</link>
+      <link>https://jsgonsette.github.io/projects/ipendulum/part3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/ipendulum/part3/</guid>
+      <guid>https://jsgonsette.github.io/projects/ipendulum/part3/</guid>
       <description>&lt;blockquote&gt;
 &lt;p&gt;Nous voici déjà aux termes de cette série d’articles consacrée à la réalisation d’un pendule inversé. J’espère avoir réussi à susciter votre intérêt pour le sujet malgré le fait que les concepts théoriques et mathématiques sous-jacents peuvent sembler austères. Ce dernier article est beaucoup plus pragmatique et a pour but de vous guider dans l’assemblage et la mise en route de votre propre pendule.&lt;/p&gt;
 &lt;/blockquote&gt;</description>

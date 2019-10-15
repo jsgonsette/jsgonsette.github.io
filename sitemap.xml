@@ -72,7 +72,14 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/wizium/part1/</loc>
+    <loc>https://jsgonsette.github.io/posts/codecomments/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/wizium/part1/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -145,7 +152,7 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/wizium/part2/</loc>
+    <loc>https://jsgonsette.github.io/projects/wizium/part2/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -177,27 +184,34 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/wizium/part3/</loc>
+    <loc>https://jsgonsette.github.io/posts/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/wizium/part3/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/ipendulum/</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.5</priority>
-  </url>
-  
-  <url>
-    <loc>https://jsgonsette.github.io/wizium/</loc>
-    <lastmod>2019-05-19T00:00:00+00:00</lastmod>
+    <loc>https://jsgonsette.github.io/projects/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
     <loc>https://jsgonsette.github.io/</loc>
+    <lastmod>2019-07-01T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/wizium/</loc>
     <lastmod>2019-05-19T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
@@ -268,19 +282,19 @@
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/ipendulum/part1/</loc>
+    <loc>https://jsgonsette.github.io/projects/ipendulum/part1/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/ipendulum/part2/</loc>
+    <loc>https://jsgonsette.github.io/projects/ipendulum/part2/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   
   <url>
-    <loc>https://jsgonsette.github.io/ipendulum/part3/</loc>
+    <loc>https://jsgonsette.github.io/projects/ipendulum/part3/</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
@@ -288,6 +302,12 @@
   <url>
     <loc>https://jsgonsette.github.io/tags/</loc>
     <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/ipendulum/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
   
   <url>
