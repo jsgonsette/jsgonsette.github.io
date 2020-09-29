@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>J S G  on Jean-Sébastien Gonsette</title>
@@ -6,11 +6,7 @@
     <description>Recent content in J S G  on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://jsgonsette.github.io/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Probabilités trompeuses</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_00/</link>
@@ -168,7 +164,6 @@ Le maître des nains peut demander à chacun des nains de fabriquer autant de li
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
       <description>&lt;p&gt;&lt;strong&gt;5 pirates&lt;/strong&gt; doivent se partager un trésor de &lt;strong&gt;12 lingots d&amp;rsquo;or&lt;/strong&gt;. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)&lt;/p&gt;
-
 &lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;</description>
     </item>
     
@@ -222,7 +217,6 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
       <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;
-
 &lt;p&gt;Combien de bananes le marchand est-il en mesure d&amp;rsquo;amener au marché ?&lt;/p&gt;</description>
     </item>
     
@@ -242,6 +236,15 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_19/</guid>
       <description>&lt;p&gt;Si l’on casse un bâton en 3 parties, quelles sont les chances que l’on puisse en faire un triangle ?&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>L&#39;inextricable lien entre conscience et physique quantique</title>
+      <link>https://jsgonsette.github.io/posts/quantum/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/posts/quantum/</guid>
+      <description>Le mystère de l&amp;rsquo;origine de l&amp;rsquo;Univers est certainement l&amp;rsquo;un des plus profonds et mystérieux auquel l&amp;rsquo;humanité puisse se confronter. Car quand bien même la physique serait complète et disposerait d&amp;rsquo;un modèle et d&amp;rsquo;équations permettant d&amp;rsquo;appréhender la plus petite excitation du monde quantique qui le compose, le pourquoi de l&amp;rsquo;existence d&amp;rsquo;un tel Univers demeurerait, lui, insondable. Il faut d&amp;rsquo;ailleurs bien garder à l&amp;rsquo;esprit que le mot &amp;ldquo;insondable&amp;rdquo; doit être compris ici au sens premier du terme: rien ni personne ne pourra jamais apporter la moindre ébauche d&amp;rsquo;explication.</description>
     </item>
     
     <item>
@@ -269,7 +272,6 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
       <description>&lt;p&gt;Derrière trois personnages A, B et C se cachent les dieux &lt;strong&gt;Vrai&lt;/strong&gt;, &lt;strong&gt;Faux&lt;/strong&gt; et &lt;strong&gt;Aléatoire&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;</description>
     </item>
     
@@ -297,7 +299,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap0/</guid>
-      <description>Quel est le point commun entre Dieu, l’âme, le libre arbitre, la nature de la conscience, ou encore celle de l’univers, de l’espace et du temps ? Ce sont assurément des questions difficiles, qui n’admettent ni réponses toutes faites ni réponses définitives. Ce sont également les grandes questions philoso-phiques, quintessentielles, auxquelles tout le monde est amené à réfléchir au moins une fois dans sa vie. Aussi vont-elles de pair avec les inévitables « Qui suis-je ?</description>
+      <description>Quel est le point commun entre Dieu, l’âme, le libre arbitre, la nature de la conscience, ou encore celle de l’univers, de l’espace et du temps ? Ce sont assurément des questions difficiles, qui n’admettent ni réponses toutes faites ni réponses définitives.</description>
     </item>
     
     <item>
@@ -306,7 +308,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap1/</guid>
-      <description>Ce premier chapitre ouvre le bal des questions difficiles en commençant par le point qui se révèle peut-être le plus épineux : qui ou quoi pourrait bien être la cause première de l’univers que nous arpentons ? Ni les positions ni les explications ne manquent pour alimenter ce sujet on ne peut plus controversé. Celles-ci s’étalent sur le large spectre allant du bigotisme le plus vigoureux à l’athéisme scientifique le plus poussé.</description>
+      <description>Ce premier chapitre ouvre le bal des questions difficiles en commençant par le point qui se révèle peut-être le plus épineux : qui ou quoi pourrait bien être la cause première de l’univers que nous arpentons ? Ni les positions ni les explications ne manquent pour alimenter ce sujet on ne peut plus controversé.</description>
     </item>
     
     <item>
@@ -315,7 +317,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap2/</guid>
-      <description>L’énigme de l’expérience de la conscience soulève certainement autant de mystères que celui de l’origine de l’univers. Qu’est-ce qui détermine notre individualité ? D’où nous vient cette conscience et, surtout, où disparaît-elle lorsque nous mourons ? Qu’est-ce qui sépare la vie d’un corps inerte ? Est-il possible que l’âme vaille précisément la différence entre une personne vivante et sa dépouille mortelle ? Voilà des questions redoutables qui n’ont pas manqué de tarauder l’homme depuis le début de l’humanité.</description>
+      <description>L’énigme de l’expérience de la conscience soulève certainement autant de mystères que celui de l’origine de l’univers. Qu’est-ce qui détermine notre individualité ? D’où nous vient cette conscience et, surtout, où disparaît-elle lorsque nous mourons ? Qu’est-ce qui sépare la vie d’un corps inerte ?</description>
     </item>
     
     <item>
@@ -324,7 +326,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap3/</guid>
-      <description>La machine pourra-t-elle un jour égaler, voir surpasser l’homme ? Cette question est incontestablement sujette à débat. Elle divise, d’une part, ceux qui pensent que la pensée peut être entièrement mécanisée et, d’autre part, ceux qui considèrent la conscience comme insaisissable et ne pouvant être réduite à un simple ensemble de processus automatiques. L’approche classique en intelligence artificielle (IA), visant à approximer les processus mentaux à grand renfort de manipulations symboliques déconnectées de la réalité, donna plutôt raison aux seconds partisans &amp;#91;12&amp;#93;Les systèmes experts qui résultent de cette approche, quoique très efficaces lorsqu’ils restent en terrain connu, ne comprennent fondamentalement pas la signification des symboles qu’ils manipulent.</description>
+      <description>La machine pourra-t-elle un jour égaler, voir surpasser l’homme ? Cette question est incontestablement sujette à débat. Elle divise, d’une part, ceux qui pensent que la pensée peut être entièrement mécanisée et, d’autre part, ceux qui considèrent la conscience comme insaisissable et ne pouvant être réduite à un simple ensemble de processus automatiques.</description>
     </item>
     
     <item>
@@ -333,7 +335,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap4/</guid>
-      <description>Saisir la nature de la conscience est une gageure. Pourtant, ce n’est pas faute d’en côtoyer au quotidien, la nôtre en particulier. Mais qu’est-ce qui la définit et qu’est-ce qui la rend tangible ? En quoi est-elle liée à notre individualité et à ce que nous sommes ? Malheureusement, la conscience d’un autre restera éternellement une subjectivité vue de l’extérieur ; il n’est pas possible d’interchanger les points de vue.</description>
+      <description>Saisir la nature de la conscience est une gageure. Pourtant, ce n’est pas faute d’en côtoyer au quotidien, la nôtre en particulier. Mais qu’est-ce qui la définit et qu’est-ce qui la rend tangible ? En quoi est-elle liée à notre individualité et à ce que nous sommes ?</description>
     </item>
     
     <item>
@@ -342,7 +344,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap5/</guid>
-      <description>La question de la nature de la réalité se montre particulièrement ardue. Bien sûr, les scientifiques travaillent d’arrache-pied pour nous dévoiler l’intimité la plus profonde de la matière. Mais sur quoi cela peut-il bien déboucher de concret, de tangible ? Si les briques de l’univers peuvent être décomposées à l’infini, nous n’aurons jamais fini d’en boucler le tour. Mais dans le cas contraire, tout ce que nous pourrons jamais en connaître se limite à un ensemble d’équations et de paramètres sous-tendant le meilleur modèle mathématique que l’on pourra en élaborer.</description>
+      <description>La question de la nature de la réalité se montre particulièrement ardue. Bien sûr, les scientifiques travaillent d’arrache-pied pour nous dévoiler l’intimité la plus profonde de la matière. Mais sur quoi cela peut-il bien déboucher de concret, de tangible ? Si les briques de l’univers peuvent être décomposées à l’infini, nous n’aurons jamais fini d’en boucler le tour.</description>
     </item>
     
     <item>
@@ -351,7 +353,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap6/</guid>
-      <description>Lorsque l’on tente d’imaginer la création de l’univers, l’espace et le temps semblent y jouer un rôle primordial. Ces deux notions paraissent tellement fondamentales que, s’il est encore possible de concevoir un univers totalement vide avant sa naissance, il est beaucoup plus difficile de se représenter que temps et espace n’y existaient pas préalablement. Comment parler de la création si celle-ci ne survient pas à un moment donné et à un endroit précis ?</description>
+      <description>Lorsque l’on tente d’imaginer la création de l’univers, l’espace et le temps semblent y jouer un rôle primordial. Ces deux notions paraissent tellement fondamentales que, s’il est encore possible de concevoir un univers totalement vide avant sa naissance, il est beaucoup plus difficile de se représenter que temps et espace n’y existaient pas préalablement.</description>
     </item>
     
     <item>
@@ -409,7 +411,7 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/contact/</guid>
-      <description>À propos de l’auteur Je suis titulaire d&amp;rsquo;un Master Ingénieur Civil Electricien que j&amp;rsquo;ai obtenu à la Faculté Polytechnique de Mons en 2003, ainsi que d&amp;rsquo;un Master spécialisé en Commande et Systèmes embarqués de l&amp;rsquo;ISAE-SUPAERO en 2004. J&amp;rsquo;ai ensuite travaillé 6 ans chez Thales sur le développement de bancs de contrôle de satellites, dont notamment Galileo. En 2010, j&amp;rsquo;ai quitté le domaine aérospatial pour rentrer dans le monde de l&amp;rsquo;automobile, chez AW.</description>
+      <description>À propos de l’auteur Je suis titulaire d&amp;rsquo;un Master Ingénieur Civil Electricien que j&amp;rsquo;ai obtenu à la Faculté Polytechnique de Mons en 2003, ainsi que d&amp;rsquo;un Master spécialisé en Commande et Systèmes embarqués de l&#39;ISAE-SUPAERO en 2004. J&amp;rsquo;ai ensuite travaillé 6 ans chez Thales sur le développement de bancs de contrôle de satellites, dont notamment Galileo. En 2010, j&amp;rsquo;ai quitté le domaine aérospatial pour rentrer dans le monde de l&amp;rsquo;automobile, chez AW.</description>
     </item>
     
   </channel>

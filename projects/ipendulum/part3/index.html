@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -29,13 +29,10 @@
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jsgonsette.github.io/projects/ipendulum/part3/" />
 
-
 <meta itemprop="name" content="Pendule inversé, part 3">
 <meta itemprop="description" content="Station de Contrôle PC, fabrication, assemblage, mise en route">
 
-
-
-<meta itemprop="wordCount" content="3373">
+<meta itemprop="wordCount" content="3304">
 
 
 
@@ -155,11 +152,7 @@
         <blockquote>
 <p>Nous voici déjà aux termes de cette série d’articles consacrée à la réalisation d’un pendule inversé. J’espère avoir réussi à susciter votre intérêt pour le sujet malgré le fait que les concepts théoriques et mathématiques sous-jacents peuvent sembler austères. Ce dernier article est beaucoup plus pragmatique et a pour but de vous guider dans l’assemblage et la mise en route de votre propre pendule.</p>
 </blockquote>
-
-<div class="highlighted">
-Avant de commencer, sachez que toutes les ressources nécessaires à la réalisation de ce projet se trouvent sur <a href="https://github.com/jsgonsette/InvertedPendulum">GitHub</a>. Vous y trouverez les binaires permettant la réalisation mécanique, électronique et la programmation logicielle, ainsi que les codes sources correspondants. Un <em>How To</em> plus factuel y est aussi présenté pour vous aider dans la réalisation.
-</div>
-
+<!-- raw HTML omitted -->
 <p>
 
 
@@ -239,19 +232,12 @@ MathJax.Hub.Config({
 </script>
 
 </p>
-
 <h2 id="assemblage-du-pcb">Assemblage du PCB</h2>
-
 <p>Les dimensions plutôt restreintes du pendule font que l’encombrement du circuit imprimé constitue une contrainte majeure. Celui-ci est donc assemblé avec des composants CMS sur les deux faces. Le deuxième souci vient des deux capteurs : l’accéléromètre et le gyroscope. Ce genre de composants n’existe tout simplement pas dans des boîtiers autres que LGA (Land Grid Array), autrement dit, ils n’ont pas de pattes soudables au fer à souder et le passage au four est obligatoire. Pour toutes ces raisons, ne vous lancez dans l’assemblage manuel que si vous savez parfaitement ce que vous faites. Dans le cas contraire, une autre possibilité revient à faire comme moi et à demander au fabricant du PCB de les douder directement pour vous.</p>
-
 <p>Le micrologiciel se programme dans le microcontrôleur via le connecteur J200 avec le binaire fourni. Ce micrologiciel se recompile facilement à l’aide de l’environnement MPLAB X de Microchip et grâce au code source que vous trouverez également sur GitHub.</p>
-
 <h2 id="test-du-circuit-imprimé">Test du circuit imprimé</h2>
-
 <p>Le circuit imprimé peut être facilement testé avant même de le monter mécaniquement dans le pendule. Pour cela, alimentez-le avec une tension entre 6 et 9V sur son connecteur J300, ou connectez-lui simplement sa batterie LIPO. Une fois sous tension, la LED 301 doit s’allumer pour signaler la présence de l’alimentation. Le programme vérifie ensuite qu’il peut bien communiquer avec l’accéléromètre et avec le gyroscope. En cas de problème la LED 200 clignote en rouge, par intermittence de 3 ou 4 pulsations selon le capteur en défaut. Si le moteur n’est pas connecté au circuit imprimé, le programme le détecte également et signale l’erreur en clignotant par intermittence de 2 pulsations.</p>
-
 <p>Vous pouvez ensuite connecter le moteur au circuit imprimé via le connecteur J100, comme indiqué sur la photo ci dessous. Prenez le moteur en main par son stator et mettez la tension. Le moteur doit se mettre à tourner brièvement et, si tout se passe bien, la LED 200 ne devrait pas se mettre à clignoter.</p>
-
 
 <link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
 <div class="box" >
@@ -266,54 +252,15 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <h2 id="inventaire-des-composants">Inventaire des composants</h2>
-
 <p>L’assemblage du pendule est une étape aisée une fois que l’on dispose de toutes les pièces requises. Nous allons dès lors commencer par faire l’inventaire de tout ce dont vous avez besoin. Le premier élément est bien sûr un circuit imprimé fonctionnel, mais à ce stade cela devrait être réglé. Le deuxième élément  est une batterie LIPO 2S dont les dimensions doivent être de 5 sur 3 sur 1 cm. Celle sélectionnée pour le projet porte la référence 7,4V Lipo 2S 30C 450mah chez TeamOrion. Elle ne semble plus être disponible, donc voici un <a href="https://www.guixmodel.fr/modelisme/accus-et-chargeurs/accus/lipo-2s/accu-lipo-450mah-2s-30c-kryptonium-detail">équivalent</a> possible. L&rsquo;important est que la tension et les dimensions soient identiques, le reste n&rsquo;est pas important.</p>
-
-<p><center>
-
-
-<div class="box" style="max-width:70%">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/iPendulum/Battery.jpg" alt="Exemple de batterie permettant d&#39;alimenter le pendule."/>
-    </div>
-    <a href="/images/iPendulum/Battery.jpg" itemprop="contentUrl"></a>
-      <figcaption>
-          <p>Exemple de batterie permettant d&#39;alimenter le pendule.</p>
-      </figcaption>
-  </figure>
-</div>
-</center></p>
-
+<!-- raw HTML omitted -->
 <p>Le câble d’alimentation de cette batterie se termine par un connecteur JST-RCY (qui, pour une raison qui m’échappe, est appelé connecteur BEC dans le jargon un peu brumeux des modélistes). Comme ce type de connecteur n’existe pas en version soudable sur circuit imprimé, il est nécessaire de fabriquer un petit adaptateur pour passer du connecteur JST-RCY de la batterie au connecteur JST-XH du circuit imprimé. Il existe des pinces très onéreuses pour assembler en un tour de main le fil, le connecteur en plastique et les terminaisons métalliques. Elles ont aussi la fâcheuse tendance de n’être compatible qu’avec un seul type de connecteur. Je vous conseille donc vivement d’assembler les connecteurs à la main et au fer à souder. Cela prend certes plus de temps, mais pour la fabrication d’un seul câble ce n’est pas vraiment un problème.</p>
-
 <p>Vous avez ensuite besoin de trois pièces en plastique : une demi-coque servant de support au moteur, une demi-coque servant de support au circuit imprimé, ainsi que le moyeu de la roue d’inertie. Le fichier binaire de ces pièces est fourni ici et peut être utilisé pour les imprimer grâce à une imprimante 3D. En ce qui me concerne, je suis passé par le site <a href="http://www.sculpteo.com">Sculpteo</a> et j’ai choisi comme matériau le plastique blanc de base.</p>
-
 <p>Vous avez bien sûr aussi besoin d’un moteur. Celui-ci est un moteur sans balais de chez Maxon de la série EC 45 Flat. Le très gros avantage de ce moteur vient de sa forme relativement plate qui le rend parfait pour le glisser dans le pendule sans que ce dernier ne prenne une dimension démesurée. Sa référence exacte porte le numéro <a href="https://www.maxonmotor.com/maxon/view/product/200142">200142</a>.</p>
-
-<p><center>
-
-
-<div class="box" style="max-width:70%">
-  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
-    <div class="img">
-      <img itemprop="thumbnail" src="/images/iPendulum/Maxon.jpg" alt="Le moteur brushless du pendule, de chez Maxon."/>
-    </div>
-    <a href="/images/iPendulum/Maxon.jpg" itemprop="contentUrl"></a>
-      <figcaption>
-          <p>Le moteur brushless du pendule, de chez Maxon.</p>
-      </figcaption>
-  </figure>
-</div>
-
-</center></p>
-
+<!-- raw HTML omitted -->
 <p>Vous avez également besoin d’un anneau métallique qui va servir à donner sa masse à la roue d’inertie. Durant la conception, j’ai essayé d’éviter d’avoir à usiner une pièce compliquée en métal. Pour ce faire, je suis parti du principe que la partie complexe de la roue pourrait être imprimée en plastique, tandis que le pourtour extérieur pouvait être un simple anneau métallique. Celui-ci doit avoir les dimensions suivantes : diamètre extérieur de 55mm, diamètre intérieur de 48mm et épaisseur de 10mm. Un tel anneau peut être commandé sur le site <a href="https://fr.misumi-ec.com/">misumi</a> et porte la référence <strong>AWSM-D-D55-V48-T10</strong>.</p>
-
 <p>Enfin il vous faut un peu de visserie pour assembler toutes les pièces ensemble.  Trois vis M3 de 6mm sont nécessaires pour fixer le moteur, tandis que sept autres vis pour plastique serviront à fixer le circuit imprimé et assembler les coques du pendule.</p>
-
 
 
 <div class="box" >
@@ -328,13 +275,9 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <h2 id="assemblage-du-pendule">Assemblage du pendule</h2>
-
 <p>La roue d’inertie est l’élément qui demande le plus d’attention. Premièrement il est nécessaire de sertir l’anneau métallique autour de l’axe en plastique. En principe les dimensions doivent correspondre et un serrage à l’étau est suffisant pour les fixer ensemble définitivement. Si le serrage est trop fort, un petit coup de lime sur l’axe en plastique devrait régler le problème. Dans le cas contraire, quelques points de super glue devraient également résoudre le souci si le serrage est trop lâche. Ensuite, il est nécessaire de repercer le trou central de l’axe en plastique afin que l’axe moteur puisse y être inséré. Veillez à bien réaliser cette opération en étant le plus droit possible, en utilisant une perceuse à colonne par exemple.  Tout déséquilibre se traduira par un balourd lorsque la roue sera en rotation. La mèche doit percer un trou de 4mm de diamètre. Je vous conseille de tester votre mèche dans un autre support avant de réaliser cette opération, afin de vérifier que le trou ne soit ni trop étroit, ni trop serré, pour y glisser l’axe du moteur.</p>
-
 <p>Fixez maintenant le moteur dans la coque en plastique à l’aide des trois vis prévues à cet effet. Veillez à faire passer la nappe de câble à travers le trou de la coque, comme indiqué sur la première des photos qui suivent. Insérez maintenant la roue d’inertie sur l’axe dans le sens illustré sur la deuxième photo.  Veillez à bien faire pression sur l’axe central du moteur pour cette opération, et pas sur le pourtour extérieur, afin de ne pas voiler le moteur. Si ça ne rentre pas, agrandissez un peu le trou. Dans tous les cas, il est intéressant de fixer la roue sur l&rsquo;axe avec un peu de colle afin d&rsquo;empêcher tout glissement. Il est important qu&rsquo;elle soit bien maintenue afin que le pendule puisse effectuer des sauts convenablement.</p>
-
 
 
 <div class="box" >
@@ -351,7 +294,6 @@ MathJax.Hub.Config({
 
 
 
-
 <div class="box" >
   <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
     <div class="img">
@@ -364,9 +306,7 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>Les étapes un peu délicates étant maintenant derrière vous, vous pouvez visser  le circuit imprimé dans la coque prévue à cet effet avec 4 des vis pour plastique. Ajoutez lui également le câble de connexion à la batterie (figure ci-dessous).</p>
-
 
 
 <div class="box" >
@@ -381,9 +321,7 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>L’étape finale consiste à rassembler les deux moitiés du pendule ensemble. Pour ce faire, commencez par insérer la nappe de câble du moteur dans le connecteur J100 du PCB, dans le même sens que montré sur la photo qui suit. Vissez ensuite les deux coques avec les 3 dernières vis pour plastique.</p>
-
 
 
 <div class="box" >
@@ -398,9 +336,7 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>Félicitations, votre pendule est maintenant complètement assemblé et prêt à l’emploi. Pour que tout soit complet, il ne vous reste plus qu’à glisser une batterie LIPO chargée dans l’emplacement prévu à cet effet derrière le circuit imprimé, comme illustré à la photo ci-dessous.</p>
-
 
 
 <div class="box" >
@@ -415,29 +351,19 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <h2 id="mise-en-route">Mise en route</h2>
-
 <p>Le pendule ne tente de s’équilibrer ou de sauter que lorsqu’il est correctement orienté, c&rsquo;est-à-dire quand l’axe autour duquel il pivote est en contact avec le sol. Par contre si le moteur est orienté vers le bas ou vers le haut, le pendule se met en attente. Positionnez-le donc sur le flanc gauche ou droit et actionnez l’interrupteur. Après cinq secondes d’immobilité dans cette position, le pendule considère qu’il peut tenter de réaliser un saut. Il doit donc accélérer sa roue d’inertie puis la bloquer afin de basculer dans sa position d’équilibre. Vous pouvez aussi le placer directement en équilibre en le soulevant manuellement depuis sa position de repos. Dès que l’angle du pendule est suffisant, le moteur délivre le couple nécessaire pour remonter seul à son point d’équilibre. Si vous déséquilibrez le pendule, celui-ci tentera de rattraper le coup autant que possible. Au-delà d’un certain point cependant, il devra bien capituler et retombera sur le flanc. Il retentera alors un saut après les cinq secondes d’immobilité nécessaires.</p>
-
 <h2 id="fonctionnement-des-led">Fonctionnement des LED</h2>
-
 <p>Le PCB du pendule dispose de trois petites LED, rouge, jaune et verte, qui permettent de visualiser de façon très sommaire ce que le pendule est en train de réaliser. Celle la plus importante est sans conteste la LED rouge car c’est elle qui indique les erreurs critiques empêchant le pendule de fonctionner normalement. Une telle erreur se traduit par un clignotement de cette LED rouge selon un motif qui dépend de l’erreur rencontrée:</p>
-
 <ul>
 <li>Un simple clignotement signifie que la tension batterie est trop faible.</li>
 <li>Un clignotement par groupe de deux signifie que le moteur n’est pas détecté.</li>
 <li>Un clignotement par groupe de trois ou quatre signifie que le processeur ne parvient pas à dialoguer avec le gyroscope ou les accéléromètres, respectivement.</li>
 </ul>
-
 <p>Lorsque le pendule fonctionne normalement, il peut être dans plusieurs états possibles. Le premier est l’attente d’un positionnement stable avant d’effectuer un saut. Dans ce cas aucune LED n’est allumée. Lorsque le pendule est prêt à faire un saut et accélère sa roue d’inertie, il le manifeste en affichant un chenillard se déplaçant dans la direction du saut. Enfin, seule la LED verte clignote lorsque le pendule maintient son équilibre.</p>
-
 <h2 id="connexion-à-la-station-sol">Connexion à la station sol</h2>
-
 <p>Le logiciel <em>iPendulum Control Station</em> est un petit programme réalisé en C# et tournant sous Windows. Il est destiné à se connecter à la liaison série du pendule afin de collecter toutes sortes d’informations sur l’état du micrologiciel, ainsi qu’à réaliser le calibrage de ses organes internes. Ce programme ne prend réellement son sens qu’à des fins de diagnostic, ou durant le développement du pendule lui-même, pour obtenir des informations en temps réel de ce qu’il se passe à l’intérieur. Ce programme et son code source sont disponibles sur GitHub dans le sous répertoire <code>Software</code></p>
-
 <p>Une fois le programme lancé, allez dans le menu <em>« Tools-&gt;Connect »</em>. Choisissez le numéro de port COM auquel est connecté le pendule et établissez la connexion. Si tout se passe bien, la boîte de dialogue de connexion disparaît et l’écran principal du programme laisse tomber le gris pour s’afficher en couleur. Cet écran affiche une représentation stylisée du pendule et de l’angle qu’il fait avec le sol. Différents onglets sont disponibles dans le bas de la page. Par défaut, l’écran principal est sélectionné et affiche les informations en temps réel du pendule. Un deuxième écran affiche des graphiques contenant l’historique des différentes variables, tandis qu’un troisième permet de sélectionner dans quel fichier de configuration écrire les données collectées du pendule.</p>
-
 
 
 <div class="box" >
@@ -452,11 +378,8 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
-<h2 id="description-de-l-application">Description de l’application</h2>
-
+<h2 id="description-de-lapplication">Description de l’application</h2>
 <p>L’écran principal affiche une vue du pendule avec l’orientation qu’il présente dans le monde réel. Faites bouger le pendule à la main et vous pourrez le voir bouger à l’écran de la même façon. Le volet de gauche de l’écran principal contient un arbre que vous pouvez dérouler afin d’observer l’état complet du pendule en temps réel.</p>
-
 <ul>
 <li>Le nœud <em>« Operating System »</em> contient des informations spécifiques au RTOS : version, utilisation de la mémoire, tâches, pourcentage d’utilisation du CPU.</li>
 <li>Le nœud <em>« Système »</em> affiche des informations générales sur le micrologiciel.</li>
@@ -465,7 +388,6 @@ MathJax.Hub.Config({
 <li>Le nœud « Motor » indique le couple délivré par le moteur.</li>
 <li>Enfin le nœud <em>« State »</em> affiche l’état du pendule tel qu’estimé par le filtre de Kalman.</li>
 </ul>
-
 
 
 <div class="box" >
@@ -480,9 +402,7 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>Sélectionnez maintenant l’onglet <em>« Scopes »</em> afin d’afficher l’historique des télémétries remontées par le pendule. Quatre graphes se présentent à vous. Celui en haut à gauche est consacré à l’état estimé du pendule. Son voisin de droite affiche les informations concernant le moteur : couple délivré et vitesse. En bas à gauche vous trouverez les informations retournées par l’accéléromètre et le gyroscope. Enfin, le dernier graphique affiche la vitesse brute mesurée par le contrôleur moteur. Cette vitesse est toujours positive, quel que soit le sens de rotation du moteur, car le contrôleur ne peut physiquement pas distinguer l’un ou l’autre cas. Tous les graphiques sont rafraîchis dynamiquement en fur et à mesure de l’arrivée des données. Vous pouvez zoomer avec la roulette de la souris ou les boutons dédiés sur la gauche de l’écran. Vous pouvez également faire défiler les graphiques, soit avec la barre de défilement horizontale, soit en cliquant dans un graphique et en déplaçant la souris. Les quatre graphiques sont synchronisés entre eux et affichent toujours la même fenêtre temporelle.</p>
-
 
 
 <div class="box" >
@@ -497,17 +417,11 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>Si vous vous rendez dans l’onglet <em>« Log »</em>, vous pourrez spécifier un fichier dans lequel stocker le contenu complet du dialogue qui a lieu entre l’application et le pendule. Choisissez un fichier et cliquez ensuite sur <em>« Start Logging »</em> pour démarrer l’enregistrement.</p>
-
 <h2 id="calibration-de-la-batterie">Calibration de la batterie</h2>
-
 <p>La tension délivrée par la batterie fait partie des mesure remontées par le pendule. Celle-ci permet de se faire une idée de son état de charge et ainsi d’éviter que la tension n’atteigne le seuil critique en dessous duquel la batterie LIPO pourrait être endommagée. Ce seuil est d’environ 3,7 Volts par cellule, soit 7,4 Volts dans notre cas. La chaine de mesure de cette tension peut être calibrée via le menu <em>« Tools-&gt;Calibration-&gt;Battery »</em>. Une boite de dialogue affiche alors deux champs, l’un contenant la mesure brute, l’autre vous permettant d’entrer la mesure calibrée. Pour la connaitre, mesurez simplement la tension de la batterie avec un voltmètre.</p>
-
 <h2 id="calibration-des-capteurs-inertiels">Calibration des capteurs inertiels</h2>
-
 <p>Comme expliqué dans l’article précédent, le pendule estime en permanence sa vitesse de rotation, ainsi que l’angle qu’il forme avec le sol, en s’aidant de capteurs de type gyroscope et accéléromètres. Ces capteurs ont bien sur leurs propres erreurs de mesure et la liste exhaustive de celles-ci est plutôt longue. La précision n’étant toutefois pas critique dans le cas qui nous occupe, seuls les biais et les erreurs d’échelle présentent un intérêt à être corrigés.</p>
-
 
 
 <div class="box" >
@@ -522,18 +436,12 @@ MathJax.Hub.Config({
   </figure>
 </div>
 
-
 <p>Un biais est une erreur systématique constante qui affecte toutes les mesures de la même façon. Une manière simple de le corriger est de mettre le capteur dans une situation où il devrait indiquer zéro, puis de lire sa valeur de sortie. Cela est plutôt aisé pour le gyroscope, car il suffit de lire la sortie du capteur quand le pendule est au repos pour connaitre le biais. La situation est déjà moins simple pour les accéléromètres car une situation de repos nécessite de positionner le capteur selon un axe perpendiculaire à un plan horizontal. Cela est plus facile à dire qu’à faire car il est très difficile d’aligner parfaitement un capteur de cette façon. L’idée utilisée ici pour s’en sortir est de moyenner les valeurs des accéléromètres dans deux situations antisymétriques, de manière à ce que les déviations par rapport à l’horizontale se compensent mutuellement.</p>
-
 <p>Au final, le biais du gyroscope est le plus simple à corriger, mais c’est aussi l’erreur qui a le plus gros impact. Un gyroscope mesure en effet une vitesse de rotation, dont l’intégration peut donner une idée de la position. Intégrer une erreur constante revient alors à obtenir une erreur sur la position qui croit sans fin. Les biais sur les accéléromètres ont une incidence plus faible car ils affectent directement la mesure de position. Une dernière remarque qui a son importance est que le biais d’un capteur gyroscopique à la furieuse tendance à dériver avec la température ou à varier lentement avec le temps.</p>
-
 <p>L’erreur d’échelle affecte le gain du système. La valeur délivrée présente donc un gain non unitaire par rapport à la valeur exacte recherchée. Le gain du gyroscope n’est pas corrigé dans le pendule car il est nécessaire de disposer d’équipements spécifiques pour mettre le pendule en rotation à une vitesse bien précise dans le but de mesurer cette erreur de gain. Il est par contre tout à fait possible de corriger les gains des accéléromètres car nous disposons d’une valeur de référence toute prête :  la gravité. En positionnant le pendule à plat ou sur le flanc, les accéléromètres doivent mesurer soit une accélération nulle, soit une fraction bien précise de g.
 Ne vous en faites pas si tout cela vous semble un peu complexe. Une procédure de calibration toute faites est disponible via le menu <em>« Tools-&gt;Calibration-&gt;IMU »</em>. Cette procédure requiert votre participation pour mettre le pendule dans des positions bien définies. Suivez simplement les instructions jusqu’au bout pour terminer la procédure.</p>
-
 <h2 id="conclusion">Conclusion</h2>
-
 <p>Nous voici arrivé à la fin de cette série d’articles sur le développement d’un pendule inversé. J’espère avoir pu titiller votre curiosité avec ce gadget, mais aussi lever un coin de voile sur les méthodes de régulation modernes. Ce pendule n’a pas d’autre utilité en soi que d’amuser, d’intriguer, ou tout simplement de découvrir et d’expérimenter. Mais il ne faut pas perdre de vue que ce genre de techniques sont omniprésentes dans la vie quotidienne, que ce soit dans les objets que nous utilisons ou dans la nature. Les boucles de régulation sont à l’œuvre dans le fonctionnement de nos voitures, de nos systèmes de communication ou dans les avions ou les fusées afin de suivre une trajectoire stable. La vie regorge également de telles capacités, que ce soit au niveau des interactions entre protéines dans les cellules ou de tout autre paramètre biologique qui nécessite d’être régulé : température, pression sanguine, etc.</p>
-
 <p>Les code source du pendule, que ce soit le micrologiciel ou la station sol, sont complètement ouverts. Si vous vous en sentez l’envie, c’est maintenant à vous de jouer …</p>
         </span>
       </div>
@@ -627,7 +535,7 @@ Ne vous en faites pas si tout cela vous semble un peu complexe. Une procédure d
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
-    &copy; 2019 Jean-Sébastien Gonsette
+    &copy; 2020 Jean-Sébastien Gonsette
   </a>
   <p align="right">
 

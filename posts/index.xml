@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Billets on Jean-Sébastien Gonsette</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Billets on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Mon, 01 Jul 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://jsgonsette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Commenter ou ne pas commenter ?</title>
       <link>https://jsgonsette.github.io/posts/codecomments/</link>
@@ -18,6 +14,15 @@
       
       <guid>https://jsgonsette.github.io/posts/codecomments/</guid>
       <description>Internet est incontestablement une technologie formidable qui a littéralement propulsé le partage d&amp;rsquo;information et l&amp;rsquo;échange d&amp;rsquo;idées à un niveau jamais atteint auparavant. Néanmoins, cela génère parfois quelques frustrations, comme lorsque nous lisons les propos d&amp;rsquo;une personne qui alimente une réflexion dont la conclusion est fondamentalement opposée à notre opinion personnelle. Cela génère alors un sentiment d&amp;rsquo;urgence inextinguible vous poussant à réagir d&amp;rsquo;une manière ou d&amp;rsquo;une autre, car vous voilà au fait d&amp;rsquo;un crime de quasi-lèse-majesté ; quelqu&amp;rsquo;un, quelque part sur Internet, à tort !</description>
+    </item>
+    
+    <item>
+      <title>L&#39;inextricable lien entre conscience et physique quantique</title>
+      <link>https://jsgonsette.github.io/posts/quantum/</link>
+      <pubDate>Sun, 20 Sep 2020 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/posts/quantum/</guid>
+      <description>Le mystère de l&amp;rsquo;origine de l&amp;rsquo;Univers est certainement l&amp;rsquo;un des plus profonds et mystérieux auquel l&amp;rsquo;humanité puisse se confronter. Car quand bien même la physique serait complète et disposerait d&amp;rsquo;un modèle et d&amp;rsquo;équations permettant d&amp;rsquo;appréhender la plus petite excitation du monde quantique qui le compose, le pourquoi de l&amp;rsquo;existence d&amp;rsquo;un tel Univers demeurerait, lui, insondable. Il faut d&amp;rsquo;ailleurs bien garder à l&amp;rsquo;esprit que le mot &amp;ldquo;insondable&amp;rdquo; doit être compris ici au sens premier du terme: rien ni personne ne pourra jamais apporter la moindre ébauche d&amp;rsquo;explication.</description>
     </item>
     
   </channel>

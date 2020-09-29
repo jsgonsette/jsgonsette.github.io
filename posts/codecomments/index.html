@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.55.6" />
+    <meta name="generator" content="Hugo 0.75.1" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -28,16 +28,13 @@
 <meta property="og:description" content="Internet est incontestablement une technologie formidable qui a littéralement propulsé le partage d&rsquo;information et l&rsquo;échange d&rsquo;idées à un niveau jamais atteint auparavant. Néanmoins, cela génère parfois quelques frustrations, comme lorsque nous lisons les propos d&rsquo;une personne qui alimente une réflexion dont la conclusion est fondamentalement opposée à notre opinion personnelle. Cela génère alors un sentiment d&rsquo;urgence inextinguible vous poussant à réagir d&rsquo;une manière ou d&rsquo;une autre, car vous voilà au fait d&rsquo;un crime de quasi-lèse-majesté ; quelqu&rsquo;un, quelque part sur Internet, à tort !" />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://jsgonsette.github.io/posts/codecomments/" />
-<meta property="article:published_time" content="2019-07-01T00:00:00&#43;00:00"/>
-<meta property="article:modified_time" content="2019-07-01T00:00:00&#43;00:00"/>
-
+<meta property="article:published_time" content="2019-07-01T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-07-01T00:00:00+00:00" />
 <meta itemprop="name" content="Commenter ou ne pas commenter ?">
 <meta itemprop="description" content="Internet est incontestablement une technologie formidable qui a littéralement propulsé le partage d&rsquo;information et l&rsquo;échange d&rsquo;idées à un niveau jamais atteint auparavant. Néanmoins, cela génère parfois quelques frustrations, comme lorsque nous lisons les propos d&rsquo;une personne qui alimente une réflexion dont la conclusion est fondamentalement opposée à notre opinion personnelle. Cela génère alors un sentiment d&rsquo;urgence inextinguible vous poussant à réagir d&rsquo;une manière ou d&rsquo;une autre, car vous voilà au fait d&rsquo;un crime de quasi-lèse-majesté ; quelqu&rsquo;un, quelque part sur Internet, à tort !">
-
-
-<meta itemprop="datePublished" content="2019-07-01T00:00:00&#43;00:00" />
-<meta itemprop="dateModified" content="2019-07-01T00:00:00&#43;00:00" />
-<meta itemprop="wordCount" content="2351">
+<meta itemprop="datePublished" content="2019-07-01T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-07-01T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2341">
 
 
 
@@ -151,39 +148,21 @@
       <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
         <span class="justified">
         <p>Internet est incontestablement une technologie formidable qui a littéralement propulsé le partage d&rsquo;information et l&rsquo;échange d&rsquo;idées à un niveau jamais atteint auparavant. Néanmoins, cela génère parfois quelques frustrations, comme lorsque nous lisons les propos d&rsquo;une personne qui alimente une réflexion dont la conclusion est fondamentalement opposée à notre opinion personnelle. Cela génère alors un sentiment d&rsquo;urgence inextinguible vous poussant à réagir d&rsquo;une manière ou d&rsquo;une autre, car vous voilà au fait d&rsquo;un crime de quasi-lèse-majesté ; quelqu&rsquo;un, quelque part sur Internet, <strong>à tort</strong> !</p>
-
-<div class="highlighted">
-La version anglaise de cet article est disponible sur <a href="https://medium.com/swlh/to-comment-or-not-to-comment-72d84e6f0706?source=friends_link&sk=3f6f14236d6d4825c413ad1de28781fb">Medium</a>. 
-</div>
-
+<!-- raw HTML omitted -->
 <p>Cette situation je l&rsquo;ai vécue en lisant un article intitulé: &ldquo;<em>Stop writing code comments</em>&rdquo;, dans lequel son auteur construit une plaidoirie visant à tout simplement arrêter d&rsquo;écrire, voir d&rsquo;aller jusqu&rsquo;à supprimer, les commentaires dans les codes source de programmes informatiques. Bien sûr, ce sujet n&rsquo;est pas nouveau, et j&rsquo;ai d&rsquo;ailleurs déjà largement débattu de cette problématique avec de nombreux collègues. Certains d&rsquo;entre eux sont d&rsquo;ailleurs largement partisans d&rsquo;en user au minimum, car ils les voient au mieux comme une perte de temps, au pire comme source de confusion. Mais de là à aller jusqu&rsquo;à l&rsquo;apologie de la suppression totale des commentaires, il y a un pas que je ne pensais pas que l&rsquo;on pouvait franchir.</p>
-
 <p>Même si mon sang ne fit qu&rsquo;un tour et si je ressentis l&rsquo;envie furieuse de nier en bloc ce pamphlet qui ne devait être qu&rsquo;un ramassis d&rsquo;âneries, je pris quand même la peine d&rsquo;étudier l&rsquo;argumentation de ce détracteur. &ldquo;L&rsquo;Art de la Guerre&rdquo; n&rsquo;enseigne-t-il pas qu&rsquo;il faut connaitre son ennemi comme soi-même ? Et puis, il faut quand même bien admettre qu&rsquo;il serait légèrement présomptueux d&rsquo;affirmer détenir la seule et unique vérité. Si cet auteur nourrit le sentiment que les commentaires dans un programme sont totalement inutiles, ce ressenti doit reposer quelque part sur des critères un minimum objectif. Je pris donc une grande respiration avant de partir à l&rsquo;attaque de ce billet afin de bien en saisir les tenants et aboutissants.</p>
-
 <p>Je fus dès lors surpris de constater que les éléments de base soutenant son discours étaient tout à fait sensés, mais que c&rsquo;était plutôt au niveau des recommandations qu&rsquo;il en déduisait que cela devenait bancal. L&rsquo;auteur soutient en effet la thèse du <strong>code autodocumenté</strong>, c’est-à-dire que tout programmeur doit s&rsquo;efforcer d&rsquo;écrire le code le plus clair et le plus expressif possible afin d&rsquo;éviter autant que possible de devoir expliciter ce qu&rsquo;il réalise. Les noms de chaque variable, classe ou fonction doit ne laisser planer aucun doute sur le but qu&rsquo;elles desservent. Les fonctions doivent être de petite taille et ne doivent servir qu&rsquo;un but clairement indiqué par leur nom. Dès que la logique qui l&rsquo;anime devient trop complexe, une fonction doit être fractionnée en autant de petits morceaux simples, chacun encapsulé dans sa propre routine. Toutes ces règles de bonnes pratiques permettent ainsi de faciliter autant que possible la relecture du code, sa testabilité, ou encore l&rsquo;aisance avec laquelle quelqu&rsquo;un pourra plus tard apporter de quelconques modifications.</p>
-
 <p>Je ne peux que souligner ici la pertinence et l&rsquo;importance de ces propos, car je suis moi-même un fervent partisan soutenant que du bon code ne doit pas seulement faire ce qu&rsquo;il doit faire; il doit aussi être extrêmement lisible, structuré et modulable, et ce de manière à minimiser autant que possible sa complexité à tous ses niveaux de lecture. J&rsquo;entends par là que quand vous regardez un morceau du code source, celui-ci doit permettre de réduire autant que possible la charge mentale de travail de celui qui le relit. Étant donné que dans la vie d&rsquo;un logiciel, son code sera plus souvent relu qu&rsquo;il n&rsquo;a été écrit, cela permet de gagner énormément de temps à toutes les étapes de son existence, tout en diminuant drastiquement la probabilité de laisser trainer toutes sortes de <em>bugs</em>.</p>
-
 <p>En fait ce principe va beaucoup plus loin que le débat qui nous occupe sur les commentaires, et je vais me permettre ici une petite parenthèse. Le but premier de l&rsquo;ingénierie logiciel et de l&rsquo;écriture de code tient entièrement dans la gestion de la <strong>complexité</strong>. Et s&rsquo;il est facile d&rsquo;oublier ce point lorsque l&rsquo;on écrit un programme de quelques centaines de lignes de code, il en est tout autre pour des logiciels plus gros ou plus complexes. Beaucoup ont peut-être déjà assisté à la croissance organique de programmes qui, petit à petit, se transformaient en usines à gaz dont plus personne ne maitrisait le fonctionnement intégralement. Et la règle d&rsquo;or pour lutter contre ce phénomène tient principalement dans la modularisation systématique et hiérarchique de tous les constituants du programme. C&rsquo;est pour ça que le développement d&rsquo;un système passe par la conception de différents modules qui sont eux-mêmes décomposés en sous-modules, en classes, puis en fonctions. C&rsquo;est pour ça qu&rsquo;il faut passer du temps à concevoir le fonctionnement de ceux-ci à un plus haut niveau d&rsquo;abstraction avant de les coder, ou encore qu&rsquo;il faille passer du temps à concevoir des interfaces pour les connecter les uns aux autres. Partout, il faut s&rsquo;assurer que les différentes parties soient hautement cohérentes les unes avec les autres (elles visent conjointement le même objectif), mais que leurs couplages (c&rsquo;est-à-dire leurs interactions) soient faibles. Et c&rsquo;est ainsi seulement qu&rsquo;il peut être humainement possible de gérer du code dont les effets peuvent s&rsquo;étaler sur plusieurs ordres de grandeur de complexité, en allant de la manipulation du simple bit jusqu&rsquo;à des centaines de MB d&rsquo;information.</p>
-
 <p>Parmi tous les outils qui permettent de confiner la <em>complexité</em> du code à un niveau humainement acceptable, la notion de <em>code autodocumenté</em> doit bien évidemment constituer le fer de lance de l&rsquo;arsenal du programmeur, et je ne veux aucunement débattre de ce point ici. Mon problème vient de l&rsquo;étape qui suit et qui consiste alors à <strong>diaboliser</strong> les commentaires, en niant non seulement leur utilité, mais aussi en affirmant qu&rsquo;ils génèrent plus de tort que de bien.</p>
-
 <p>Les critiques à l&rsquo;égard des commentaires, nombreuses et bien connues, sont alimentées par un éternel débat visant à définir la quintessence de ce que devrait être l&rsquo;art de la conception de logiciels. Nous pouvons par exemple citer le fait que les commentaires rendraient le code plus difficile à lire, car le langage ordinaire est bien moins précis qu&rsquo;un langage de programmation. Nous pouvons ajouter que le code change sans que personne ne prenne la peine de modifier les commentaires qui l&rsquo;accompagnent, rendant la lecture encore plus confuse et difficile. Ils s&rsquo;apparentent alors à une perte de temps inutile, car ils requièrent d&rsquo;écrire ou de lire deux fois plus d&rsquo;informations, l&rsquo;une étant par ailleurs complètement obsolète et fausse. De plus, l&rsquo;information ultime, celle qui compte vraiment et qui ne ment jamais, se trouve être le code ; pourquoi s&rsquo;embarrasser alors d&rsquo;une charge de travail veine et potentiellement nuisible ?</p>
-
 <p>Toutes les embuches que je viens de citer sont effectivement bien réelles, inutile de le nier. Mais ces problèmes n&rsquo;arrivent que quand les commentaires sont mal utilisés, par des programmeurs <strong>inexpérimentés</strong> dans l&rsquo;art de les employer. Et ce n&rsquo;est pas parce que quelques maladroits se sont déjà blessés avec une pelle ou une pioche qu&rsquo;il faut considérer ces outils comme le mal absolu. Imaginez la situation:</p>
-
-<p>&ldquo;*Des outils pour creuser un trou ?! Mais vous êtes fous, c&rsquo;est une source de tracasseries et d&rsquo;embêtements sans fin. Il faut les manier avec prudence, en prendre soin, sans compter le risque de se blesser. Moi, je vais vous dire, il n&rsquo;y a aucun trou que je ne puisse creuser avec mes doigts et une cuillère à café. Vous ne me croyez pas, regardez ce trou d&rsquo;un mètre cube, entièrement réalisé en trois jours avec de l&rsquo;huile de coude. Alors, rangez-moi vos outils ou autres pelleteuses du diable, un <strong>vrai ouvrier</strong> n&rsquo;utilise que ses muscles et la cuillère à café*&ldquo;.</p>
-
+<p>&ldquo;<em>Des outils pour creuser un trou ?! Mais vous êtes fous, c&rsquo;est une source de tracasseries et d&rsquo;embêtements sans fin. Il faut les manier avec prudence, en prendre soin, sans compter le risque de se blesser. Moi, je vais vous dire, il n&rsquo;y a aucun trou que je ne puisse creuser avec mes doigts et une cuillère à café. Vous ne me croyez pas, regardez ce trou d&rsquo;un mètre cube, entièrement réalisé en trois jours avec de l&rsquo;huile de coude. Alors, rangez-moi vos outils ou autres pelleteuses du diable, un <strong>vrai ouvrier</strong> n&rsquo;utilise que ses muscles et la cuillère à café</em>&rdquo;.</p>
 <p>Si vous trouvez mon histoire caricaturale, je m&rsquo;en vais vous en compter une autre tout à fait vraie cette fois. Plusieurs personnes m&rsquo;ont déjà affirmé, totalement convaincues, qu&rsquo;il n&rsquo;y a aucune situation qui ne puisse pas se déboguer intégralement au <strong>printf</strong>. Qu&rsquo;un vrai <strong>pur</strong> programmeur n&rsquo;avait pas besoin d&rsquo;IDE, juste d&rsquo;un éditeur de texte comme <em>vi</em> et des <em>printf</em>. L&rsquo;un a même été jusqu&rsquo;à m&rsquo;affirmer que la souris était une perte de temps, tout pouvant se réaliser plus vite avec les raccourcis clavier. J&rsquo;ai toujours été perplexe devant ce genre d&rsquo;affirmations. La conviction inébranlable avec laquelle ils étaient proférés me faisait même douter de moi-même au début, me laissant croire que c&rsquo;était moi l&rsquo;incompétent qui ne comprenait pas comment déboguer un processus multitâches manipulant des structures de données complexes sans utiliser de points d&rsquo;arrêts, d&rsquo;outils d&rsquo;inspection de variables, ou encore de visualisation de la mémoire. Mais la vérité est bien différente, ces personnes ne se sont probablement jamais frottées à des problématiques autres que celles que je considère moi comme <em>enfantines</em>. Je ne veux pas dire par là qu&rsquo;il ne faut jamais employer de <em>printf</em>, il s&rsquo;agit d&rsquo;une option qui est souvent pertinente, ce que je veux dire c&rsquo;est qu&rsquo;il existe aussi beaucoup de situations bien plus délicates et qu&rsquo;il est très naïf de les ignorer.</p>
-
 <p>Les situations citées à titre d&rsquo;exemples dans l&rsquo;article bannissant les commentaires sont ainsi du même acabit, c&rsquo;est-à-dire <em>simplistes</em>. Elles mettent toutes en oeuvre des exemples triviaux en soulignant l&rsquo;inutilité d&rsquo;écrire un commentaire du style &ldquo;<em>The title of the CD</em>&rdquo; à côté d&rsquo;une variable s&rsquo;intitulant &ldquo;<em>title</em>&rdquo;, ou encore &ldquo;<em>This function sends an email</em>&rdquo; pour une fonction appelée &ldquo;<em>SendEmail ()</em>&rdquo;. Je ne dis pas que je ne suis jamais confronté à ce genre de banalités, mais étant plutôt versé sur l&rsquo;écriture d&rsquo;algorithmes résolvant des problèmes compliqués, je demeure très perplexe. J&rsquo;ai ainsi pour habitude de toujours mentionner en commentaire l&rsquo;intervalle d&rsquo;acceptabilité ou les unités physiques auxquelles se rapportent des variables modélisant un processus. Cela permet en un coup d&rsquo;oeil de comprendre que la variable <em>speed</em> s&rsquo;utilise en <em>m/s</em> et pas en <em>km/h</em>, sans devoir lire une centaine de lignes de code à la recherche d&rsquo;un indice quelconque. Dois-je dorénavant m&rsquo;abstenir de ce genre de futilités et ne miser que sur la notion de code autodocumenté ? Dois-je plutôt maintenant changer le nom de ma variable <em>speed</em> en quelque chose de moins prosaïque comme <em>speed_positive_lessthan150_meterbysecond</em> ?</p>
-
 <p>De la même manière, j&rsquo;essaie toujours de placer un paragraphe résumant les grandes lignes de ce que réalise chaque fonction, en plus de leur donner un nom explicite. La raison est simple, beaucoup d&rsquo;entre elles sont assez abstraites et ne permettent pas de les résumer en un triplet de mots. Imaginez par exemple que vous codiez une fonction cherchant la racine d&rsquo;un polynôme en utilisant la méthode itérative de Newton. Il me semble bon dans ce cas de résumer ce que cette fonction réalise, ainsi que de fournir un pointeur éventuel vers quelque information additionnelle. Dois-je dorénavant plutôt renommer ma fonction <em>FindPolynomialRoot ()</em> par quelque chose de plus explicite comme <em>FindPolynomialRoot_UseNewtonApproximation_MoreOnWikipedia_Newtons_method ()</em> afin d&rsquo;éviter de recourir à ces commentaires abjects ?</p>
-
 <p>Même si je force un peu le trait (et encore), la réalité est tout autre. Un bon programmeur doit sans cesse trouver le meilleur compromis en se basant sur tous les outils qui peuvent l&rsquo;aider à gérer la complexité d&rsquo;un programme. Le code auto-documenté en est un, très important même, mais il est souvent loin d&rsquo;être suffisant. Méfiez-vous d&rsquo;ailleurs de tous ceux qui prétendent avoir trouvé le Graal et prônent une politique absolutiste, car la vérité est souvent dans la nuance, jamais dans les extrêmes. Bien utilisé, l&rsquo;emploi de commentaires peut et doit vous aider à mieux structurer et documenter votre code. Les refuser, comme l&rsquo;auteur le prétend dans son article en argüant qu&rsquo;un programmeur n&rsquo;est pas un <em>documentateur</em>, revient à prétendre qu&rsquo;aucune autre forme de documentation que le code n&rsquo;est nécessaire. <em>Exit</em> donc les architectures logicielles, les diagrammes UML, les plans de test, les modélisations détaillées, le pseudocode ou la description des méthodes algorithmiques et mathématiques, tout ce que vous avez à savoir se trouve dans le code. Tant que nous y sommes, peut-être même que pour un <strong>pur</strong> programmeur, tout ce qu&rsquo;il y a à savoir se trouve dans le code <em>compilé</em>.</p>
-
 <p>Plus sérieusement, <em>le code ne contient que ce que le compilateur doit savoir, mais certainement pas tout ce que vous, en tant qu&rsquo;humain, devez savoir</em>. Les commentaires doivent être vus et utilisés comme moyen de documentation intermédiaire entre le code et les autres documents de conception. Ils ne doivent donc pas faire double emploi, mais plutôt apporter un éclairage à un niveau d&rsquo;abstration plus élevé, c&rsquo;est à dire à niveau qu&rsquo;aucun code auto-documenté ne pourrait atteindre. Les commentaires doivent toujours décrire <strong>l&rsquo;intention du programmeur</strong>, et certainement pas reformuler ce que le code réalise. Ils ne doivent dès lors aucunement être redondants et certainement pas être obsolètes. Car oui, les commentaires doivent s&rsquo;écrire conjointement avec le code lui-même, et changer l&rsquo;un revient à changer l&rsquo;autre. Pour bien fixer les idées, dites-vous qu&rsquo;une ne lisant que les commentaires se rapportant à une fonction, vous devez être non seulement capable de savoir ce que la fonction fait, mais aussi de saisir les grandes lignes logiques de comment elle y parvient. En ce sens, les commentaires doivent toujours décrire une histoire qu&rsquo;il doit être possible de lire en ignorant le code avec lequel ils s&rsquo;entremêlent. Des commentaires de plus haut niveau peuvent également aider à comprendre comment l&rsquo;ensemble des fonctions ou classes s&rsquo;articulent, en résumant le fonctionnement général ou en ponctuant certaines parties du code, tout comme une table des matières et des titres de chapitre structurent un livre. Et si vous n&rsquo;avez jamais ressenti le besoin d&rsquo;employer des commentaires, peut-être est-ce tout simplement parce que vous n&rsquo;avez jamais écrit de livre. Il n&rsquo;y a rien de péjoratif là-dedans, mais c&rsquo;est bon de le savoir avant de prétendre avoir tout compris et militer pour leur disparition.</p>
-
 <p>Pour clore ce petit billet, je voudrais citer le livre &ldquo;Code Complete&rdquo; de Steve McConnel. Unique en son genre, ce dernier aborde en long et en large le sujet trop souvent ignoré de la gestion de la complexité dans les programmes informatiques. Et si vous ne deviez en lire qu&rsquo;un passage, alors il s&rsquo;agit sans conteste de &ldquo;The Commento&rdquo; que vous trouverez chaptire 32.3.</p>
 
         </span>
@@ -240,6 +219,29 @@ La version anglaise de cet article est disponible sur <a href="https://medium.co
 
 
 
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        1 autre article dans Billets
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/posts/codecomments/" class="link ph2 pv2 db black o-50">
+            Commenter ou ne pas commenter ?
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/posts/quantum/" class="link ph2 pv2 db black">
+            L&#39;inextricable lien entre conscience et physique quantique
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
 
     </aside>
   </div>
@@ -248,7 +250,7 @@ La version anglaise de cet article est disponible sur <a href="https://medium.co
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
-    &copy; 2019 Jean-Sébastien Gonsette
+    &copy; 2020 Jean-Sébastien Gonsette
   </a>
   <p align="right">
 

@@ -1,22 +1,18 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>42 on Jean-Sébastien Gonsette</title>
     <link>https://jsgonsette.github.io/tags/42/</link>
     <description>Recent content in 42 on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>fr</language>
-    
-	<atom:link href="https://jsgonsette.github.io/tags/42/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <language>fr</language><atom:link href="https://jsgonsette.github.io/tags/42/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>3. Conscience robotique</title>
       <link>https://jsgonsette.github.io/42/chap3/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap3/</guid>
-      <description>La machine pourra-t-elle un jour égaler, voir surpasser l’homme ? Cette question est incontestablement sujette à débat. Elle divise, d’une part, ceux qui pensent que la pensée peut être entièrement mécanisée et, d’autre part, ceux qui considèrent la conscience comme insaisissable et ne pouvant être réduite à un simple ensemble de processus automatiques. L’approche classique en intelligence artificielle (IA), visant à approximer les processus mentaux à grand renfort de manipulations symboliques déconnectées de la réalité, donna plutôt raison aux seconds partisans &amp;#91;12&amp;#93;Les systèmes experts qui résultent de cette approche, quoique très efficaces lorsqu’ils restent en terrain connu, ne comprennent fondamentalement pas la signification des symboles qu’ils manipulent.</description>
+      <description>La machine pourra-t-elle un jour égaler, voir surpasser l’homme ? Cette question est incontestablement sujette à débat. Elle divise, d’une part, ceux qui pensent que la pensée peut être entièrement mécanisée et, d’autre part, ceux qui considèrent la conscience comme insaisissable et ne pouvant être réduite à un simple ensemble de processus automatiques.</description>
     </item>
     
     <item>
@@ -25,7 +21,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap4/</guid>
-      <description>Saisir la nature de la conscience est une gageure. Pourtant, ce n’est pas faute d’en côtoyer au quotidien, la nôtre en particulier. Mais qu’est-ce qui la définit et qu’est-ce qui la rend tangible ? En quoi est-elle liée à notre individualité et à ce que nous sommes ? Malheureusement, la conscience d’un autre restera éternellement une subjectivité vue de l’extérieur ; il n’est pas possible d’interchanger les points de vue.</description>
+      <description>Saisir la nature de la conscience est une gageure. Pourtant, ce n’est pas faute d’en côtoyer au quotidien, la nôtre en particulier. Mais qu’est-ce qui la définit et qu’est-ce qui la rend tangible ? En quoi est-elle liée à notre individualité et à ce que nous sommes ?</description>
     </item>
     
     <item>
@@ -34,7 +30,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap5/</guid>
-      <description>La question de la nature de la réalité se montre particulièrement ardue. Bien sûr, les scientifiques travaillent d’arrache-pied pour nous dévoiler l’intimité la plus profonde de la matière. Mais sur quoi cela peut-il bien déboucher de concret, de tangible ? Si les briques de l’univers peuvent être décomposées à l’infini, nous n’aurons jamais fini d’en boucler le tour. Mais dans le cas contraire, tout ce que nous pourrons jamais en connaître se limite à un ensemble d’équations et de paramètres sous-tendant le meilleur modèle mathématique que l’on pourra en élaborer.</description>
+      <description>La question de la nature de la réalité se montre particulièrement ardue. Bien sûr, les scientifiques travaillent d’arrache-pied pour nous dévoiler l’intimité la plus profonde de la matière. Mais sur quoi cela peut-il bien déboucher de concret, de tangible ? Si les briques de l’univers peuvent être décomposées à l’infini, nous n’aurons jamais fini d’en boucler le tour.</description>
     </item>
     
     <item>
@@ -43,7 +39,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/42/chap6/</guid>
-      <description>Lorsque l’on tente d’imaginer la création de l’univers, l’espace et le temps semblent y jouer un rôle primordial. Ces deux notions paraissent tellement fondamentales que, s’il est encore possible de concevoir un univers totalement vide avant sa naissance, il est beaucoup plus difficile de se représenter que temps et espace n’y existaient pas préalablement. Comment parler de la création si celle-ci ne survient pas à un moment donné et à un endroit précis ?</description>
+      <description>Lorsque l’on tente d’imaginer la création de l’univers, l’espace et le temps semblent y jouer un rôle primordial. Ces deux notions paraissent tellement fondamentales que, s’il est encore possible de concevoir un univers totalement vide avant sa naissance, il est beaucoup plus difficile de se représenter que temps et espace n’y existaient pas préalablement.</description>
     </item>
     
     <item>

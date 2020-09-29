@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Énigmes on Jean-Sébastien Gonsette</title>
@@ -6,11 +6,7 @@
     <description>Recent content in Énigmes on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 03 Feb 2019 00:00:00 +0000</lastBuildDate>
-    
-	<atom:link href="https://jsgonsette.github.io/enigmes/index.xml" rel="self" type="application/rss+xml" />
-    
-    
+    <lastBuildDate>Sun, 03 Feb 2019 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/enigmes/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Probabilités trompeuses</title>
       <link>https://jsgonsette.github.io/enigmes/riddle_00/</link>
@@ -150,7 +146,6 @@ Le maître des nains peut demander à chacun des nains de fabriquer autant de li
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_12/</guid>
       <description>&lt;p&gt;&lt;strong&gt;5 pirates&lt;/strong&gt; doivent se partager un trésor de &lt;strong&gt;12 lingots d&amp;rsquo;or&lt;/strong&gt;. Le plus vieux a l&amp;rsquo;initiative de proposer le partage (par exemple, tout pour lui&amp;hellip;)&lt;/p&gt;
-
 &lt;p&gt;L&amp;rsquo;ensemble des pirates effectue alors un vote : si la &lt;strong&gt;stricte majorité&lt;/strong&gt; des pirates accepte le partage, le partage s&amp;rsquo;effectue. Sinon le plus vieux est exécuté et le processus recommence avec le 2ème plus vieux.&lt;/p&gt;</description>
     </item>
     
@@ -204,7 +199,6 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_17/</guid>
       <description>&lt;p&gt;Un marchand possède &lt;strong&gt;3000 bananes&lt;/strong&gt;, il souhaite les vendre au marché qui se trouve à &lt;strong&gt;1000 km&lt;/strong&gt; de là. Pour les transporter, il dispose d&amp;rsquo;un chameau assez particulier puisque cet animal n&amp;rsquo;est pas capable de transporter plus de &lt;strong&gt;1000 bananes&lt;/strong&gt; à la fois et qu&amp;rsquo;en plus, le chameau mange &lt;strong&gt;une banane par kilomètre&lt;/strong&gt; !&lt;/p&gt;
-
 &lt;p&gt;Combien de bananes le marchand est-il en mesure d&amp;rsquo;amener au marché ?&lt;/p&gt;</description>
     </item>
     
@@ -242,7 +236,6 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
       
       <guid>https://jsgonsette.github.io/enigmes/riddle_21/</guid>
       <description>&lt;p&gt;Derrière trois personnages A, B et C se cachent les dieux &lt;strong&gt;Vrai&lt;/strong&gt;, &lt;strong&gt;Faux&lt;/strong&gt; et &lt;strong&gt;Aléatoire&lt;/strong&gt;.&lt;/p&gt;
-
 &lt;p&gt;Vrai répond toujours la vérité, Faux répond toujours le contraire de la vérité, et Aléatoire choisit ses réponses au hasard.&lt;/p&gt;</description>
     </item>
     
