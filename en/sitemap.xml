@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>https://jsgonsette.github.io/en/posts/quantum/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/posts/quantum/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/posts/quantum/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/en/posts/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/posts/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/posts/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/en/</loc>
+    <lastmod>2020-10-25T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/en/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/categories/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/en/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/tags/"
+                />
+  </url>
+  
+</urlset>
