@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+        <title>Board Games Buddy/Connect&nbsp;4 configuration</title>
+        <meta name="description" content="Play board games against General Game Playing AI agents">
+        <meta name="author" content="[Jean-Sébastien Gonsette]">
+		
+		<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, maximum-scale=1, user-scalable=no"/>
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="mobile-web-app-capable" content="yes">		
+		
+		<link rel="stylesheet" href="buddy.css">
+    </head>
+    <body>
+	<style>
+	</style>
+	
+	<div id="container">
+		
+		<div id="nav" class="ui-widget">
+			<div id="title"><h1>title</h1></div>
+			<div id="buttons_div">
+				<ul id="lang" class="button optionpicker">
+					<li id="lang_en" onclick="location.href='buddy.htm?language=en'"><img src="./assets/en.svg" alt="en"/>en</li>
+					<li id="lang_fr" onclick="location.href='buddy.htm?language=fr'"><img src="./assets/fr.svg" alt="fr"/>fr</li>
+				</ul>				
+				
+				<ul id="games" class="button optionpicker">
+				<li id="other_games">other games</li>
+				</ul>
+
+				<ul id="player1" class="button optionpicker">
+				<li id="player1_player" onclick="chose_agent_1 (player1_player)">Joueur</li>
+				<li id="player1_mcts" onclick="chose_agent_1 (player1_mcts)">Agent MCTS</li>
+				<li id="player1_random" onclick="chose_agent_1 (player1_random)">Agent Aléatoire</li>
+				</ul>
+
+				<ul id="player2" class="button optionpicker">
+				<li id="player2_mcts" onclick="chose_agent_2 (player2_mcts)">Agent MCTS</li>
+				<li id="player2_player" onclick="chose_agent_2 (player2_player)">Joueur</li>
+				<li id="player2_random" onclick="chose_agent_2 (player2_random)">Agent Aléatoire</li>
+				</ul>
+
+				<div id="play" class="button" onclick="start_game ()">Jouer</div>
+			</div>
+		</div>
+		
+		<div id="about">
+			about
+		</div>
+	</div>
+
+	<script src="language.js" type="text/javascript"></script>
+	<script>
+		"use strict";
+		
+		const queryString = window.location.search;
+		const urlParams = new URLSearchParams(queryString);
+
+		// Extract language
+		var language = 'en'
+		if (urlParams.has ('language')) language = urlParams.get('language')
+		if ((language in languages) == false) language = 'en'
+
+		// Extract game
+		var games = ['connect4', 'braverats', 'quantik']
+		var game = games [0]
+		if (urlParams.has ('game')) game = urlParams.get('game')
+		if (games.includes (game) == false) game = games [0]
+
+		init_page (languages [language], game)
+		chose_agent_1 (document.getElementById('player1_player'));
+		chose_agent_2 (document.getElementById('player2_mcts'));
+		populate_games ();
+
+		function init_page (dico, game) {
+
+			// Get game specific dico
+			var dico_game = dico.games [game]
+			document.getElementById('title').innerHTML = "<h1>" + dico_game.title + "</h1>"
+
+			// Set game specific elements depending on language
+			var about_text = dico.about
+			var about_el = document.getElementById('about');
+
+			var html_text = "<h3>" + dico.preview + "</h3>"
+			html_text += "<p>" + dico_game.about + "</p>"
+			about_text.forEach (line => {
+
+				if (line.startsWith ("##")) html_text += "<h4>" + line.substring (2) + "</h4>"
+				else if (line.startsWith ("#")) html_text += "<h3>" + line.substring (1) + "</h3>"
+				else html_text += "<p>" + line +  "</p>"
+			})
+			about_el.innerHTML = html_text
+
+			// Change other page elements depending on langugae
+			document.getElementById('other_games').innerHTML = dico.other_games
+			document.getElementById('player1_player').innerHTML = dico.player
+			document.getElementById('player1_mcts').innerHTML = dico.agent_mcts
+			document.getElementById('player1_random').innerHTML = dico.agent_random
+			document.getElementById('player2_player').innerHTML = dico.player
+			document.getElementById('player2_mcts').innerHTML = dico.agent_mcts
+			document.getElementById('player2_random').innerHTML = dico.agent_random
+			document.getElementById('play').innerHTML = dico.play
+
+			var lang_el = document.getElementById('lang')
+			var chosen_lang = document.getElementById(`lang_${language}`)
+			lang_el.insertBefore(chosen_lang, lang_el.childNodes [0]);
+		}
+
+		
+		function chose_agent_1 (liAgent) {
+
+			var dico = languages [language]
+			var dico_game = dico.games [game]
+			var ulElem = document.getElementById('player1');
+			var first = ulElem.childNodes [0]
+
+			liAgent.style.backgroundImage = `url('${dico_game.icons [0]}')`; 
+			if (first.style != undefined) first.style.backgroundImage= ``
+
+			ulElem.insertBefore(liAgent, first);
+
+			if (game == "braverats") {
+				if (liAgent.id == "player1_player" && document.getElementById('player2').childNodes [0].id == "player2_player") {
+					chose_agent_2 (document.getElementById('player2_mcts'))
+				}
+			}
+		}
+
+		function chose_agent_2 (liAgent) {
+
+			var dico = languages [language]
+			var dico_game = dico.games [game]
+			var ulElem = document.getElementById('player2');
+			var first = ulElem.childNodes [0]
+
+			liAgent.style.backgroundImage = `url('${dico_game.icons [1]}')`; 
+			if (first.style != undefined) first.style.backgroundImage= ``
+
+			ulElem.insertBefore(liAgent, first);
+
+			if (game == "braverats") {
+				if (liAgent.id == "player2_player" && document.getElementById('player1').childNodes [0].id == "player1_player") {
+					chose_agent_1 (document.getElementById('player1_mcts'))
+				}
+			}
+		}
+		
+		function start_game () {
+		
+			var agent_1 = document.getElementById ('player1').childNodes [0].id.split ('_') [1];
+			var agent_2 = document.getElementById ('player2').childNodes [0].id.split ('_') [1];
+			
+			var link = `${game}/${game}-client.htm?agent1=${agent_1}&agent2=${agent_2}&language=${language}` 
+			window.location.href = link;
+		}
+		
+		function populate_games () {
+		
+			var ulElem = document.getElementById('games');
+			
+			games.forEach (game => {
+				var dico_game = window [`${game}_${language}`]
+
+				var li = document.createElement('li');
+				li.innerHTML = dico_game.title;
+				var link = `buddy.htm?language=${language}&game=${game}`
+				li.addEventListener("click", function() {window.location.href = link})
+				ulElem.appendChild (li)
+			})			
+		}
+	</script>
+	
+	
+    </body>
+</html>

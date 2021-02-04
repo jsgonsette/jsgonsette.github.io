@@ -1,0 +1,233 @@
+html {
+	font-family: Arial, Helvetica, sans-serif;
+	/*font-size: 2.75vh;*/
+}
+
+body { 
+	padding: 0; 
+	margin: 0; 
+	overflow:hidden;
+}
+
+div {
+	position: absolute;
+	text-align: center;
+}
+
+h1 {
+	font-size: 2.0em;
+	font-weight:  bold;
+	margin: 0;
+}
+
+
+/* ================================= */
+
+@media (orientation:portrait) and (max-aspect-ratio: 4/6)  {
+	#container {
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
+	#nav {
+		left: 0%;
+		top: 0%;
+		width:100%;
+		height:calc(100vw*6/4*0.4);
+	}
+	#about {
+		left: 0;
+		top: calc(100vw*6/4*0.4);
+		width: 100%;
+		height: calc(100vh - 100vw*6/4*0.4);
+	}
+  html {font-size: 3.5vw;}
+}
+
+@media (orientation:portrait) and (min-aspect-ratio: 4/6)  {
+	#container {
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left: 0;
+	}
+	#nav {
+		left: 0%;
+		top: 0%;
+		width:100%;
+		height:40%;
+	}
+	#about {
+		left: 0;
+		top: 40%;
+		width: 100%;
+		height: 60%;
+	}
+	html {font-size: 2.5vh;}
+}
+
+@media (orientation:landscape) and (min-aspect-ratio: 3/2) {
+
+ 	#container {
+		width: 150vh;
+		height: 100vh;
+		top: 0;
+		left: calc(50vw - 75vh);
+	}
+
+	html {font-size: 2.75vh;}
+}
+
+@media (orientation:landscape) and (max-aspect-ratio: 3/2) {
+	#container {
+		width: 100vw;
+		height: 100vh;
+		top: 0;
+		left:0;
+	}
+
+	html {font-size: 2.0vw;}
+}
+
+@media (orientation:landscape) {
+	
+	#nav {
+		left: 0%;
+		top: 0%;
+		width: 33.3333333333%;
+		height:66%; 
+	}
+	#about {
+		left: 33.3333333333%;
+		top: 0%;
+		width: 66.6666666667%;
+		height: 100%; 
+	}
+}
+
+
+
+/* ================================= */
+.button {
+	position: absolute;
+	width: 75%;
+	left: 0;
+	right: 0;
+	padding: 0;
+	margin: auto;
+	line-height: 1.5em;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 0.2em;
+	border-radius: 0.5em;
+	cursor: pointer;
+	border-color: #8685a2;
+	background-color: #a6a5c9;
+}
+
+.optionpicker {
+	z-index: 1;
+	height: 1.5em;
+	width: 75%;
+	overflow: hidden;
+	transition-property: height;
+	transition-duration: 0.3s;
+	transition-timing-function:ease;
+	transition-delay: 0s;
+}
+
+.optionpicker li {
+	display: block;
+	border-top: 0.05em solid #8685a2;
+	background-color: #a6a5c9;
+}
+
+.optionpicker li:first-child {
+	border: none;
+	background-color: #a6a5c9;
+}
+
+.optionpicker:hover {
+	height: 6.1em;
+}
+
+.optionpicker li img {
+	margin-right: 0.5em;
+	height: 0.75em;
+}
+
+.optionpicker li:hover {
+	background-color:  #d3d3e4;
+}		
+
+
+
+/* ================================= */
+#container {
+	background-color: white;
+}
+#nav {
+	background-color: white;
+}
+#about {
+	background-color: white;
+	text-align: left;
+	overflow-y: auto;
+}
+
+#title {
+	width: 100%;
+	height: 12.5%;
+	top: 0%;
+	left: 0%;
+}
+#buttons_div {
+	background-color: white;
+	width: 100%;
+	height: 87.5%;
+	left: 0%;
+	top: 12.5%
+}
+
+
+#lang {
+	top: 0%;
+}
+#lang:hover {
+	height: 3.1em;
+}
+#games {
+	z-index: 4;
+	top: 16%;
+}
+#player1 {
+	z-index: 2;
+	top: 50%;
+}
+#player1:hover {
+	height: 4.6em;
+}
+#player1 li:first-child {
+	/*background-image: url(connect4/red.svg);*/
+	background-size: 1.5em 1.5em;
+	background-repeat: no-repeat;
+	background-position: left center;		
+}
+
+#player2 {
+	top: 66%;
+}
+#player2:hover {
+	z-index: 3;
+	height: 4.6em;
+}
+#player2 li:first-child {
+	/*background-image: url(connect4/yellow.svg);*/
+	background-size: 1.5em 1.5em;
+	background-repeat: no-repeat;
+	background-position: left center;		
+}
+#play {
+	top: 83%;
+}
