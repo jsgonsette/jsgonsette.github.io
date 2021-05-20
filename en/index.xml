@@ -6,7 +6,25 @@
     <description>Recent content in J S G  on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Part 1: Artificialis Intelligentia et Circenses</title>
+      <link>https://jsgonsette.github.io/en/projects/buddy/part1/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/buddy/part1/</guid>
+      <description>The notion of artificial intelligence is a concept whose traces can be found up to more than 1000 years before our era, but which experienced an especially lightning rise from the 19th century with the work of many mathematicians and engineers who began to formalize its principles. Then, a convergence of innovative ideas at the dawn of the 20th century established a close connection with this field as soon as it appeared that the brain was made up of neurons processing electrical impulses.</description>
+    </item>
+    
+    <item>
+      <title>Part 2: Ambition, Architecture and Design</title>
+      <link>https://jsgonsette.github.io/en/projects/buddy/part2/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/buddy/part2/</guid>
+      <description>&lt;p&gt;The goal of this project is more in the realization of a generic platform for board games than in the implementation or the study of the best algorithm existing in this field. It is therefore important to clearly define the constraints that we want to fullfill in order to sketch the solution accordingly.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Why consciousness and quantum physics are inextricably linked</title>
       <link>https://jsgonsette.github.io/en/posts/quantum/</link>
@@ -14,6 +32,24 @@
       
       <guid>https://jsgonsette.github.io/en/posts/quantum/</guid>
       <description>The mystery of the origin of the Universe is certainly one of the most profound and mysterious that humanity can face. Because even if physics become complete and get a model and equations to understand the smallest excitement of the quantum world that composes it, the reason for the existence of such a Universe would remain unfathomable. And it is important to specify that the word &amp;ldquo;unfathomable&amp;rdquo; must be understood here in the original sense of the term: nothing nor anybody can ever provide the slightest sketch of an explanation.</description>
+    </item>
+    
+    <item>
+      <title>Part 3: Monte-Carlo Tree Search Agent</title>
+      <link>https://jsgonsette.github.io/en/projects/buddy/part3/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/buddy/part3/</guid>
+      <description>To be written</description>
+    </item>
+    
+    <item>
+      <title>Part 4: AlphaZero Agent</title>
+      <link>https://jsgonsette.github.io/en/projects/buddy/part4/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/buddy/part4/</guid>
+      <description>To be written</description>
     </item>
     
   </channel>

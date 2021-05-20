@@ -80,6 +80,23 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/projects/buddy/part1/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/buddy/part1/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/buddy/part1/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/posts/codecomments/</loc>
     <lastmod>2019-07-01T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -171,6 +188,23 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/projects/buddy/part2/</loc>
+    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/buddy/part2/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/buddy/part2/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/posts/quantum/</loc>
     <lastmod>2020-09-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -223,6 +257,23 @@
   </url>
   
   <url>
+    <loc>https://jsgonsette.github.io/projects/buddy/part3/</loc>
+    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/buddy/part3/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/buddy/part3/"
+                />
+  </url>
+  
+  <url>
     <loc>https://jsgonsette.github.io/posts/</loc>
     <lastmod>2020-09-20T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
@@ -248,14 +299,58 @@
   
   <url>
     <loc>https://jsgonsette.github.io/projects/</loc>
-    <lastmod>2019-10-19T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/buddy/part4/</loc>
+    <lastmod>2021-05-12T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/buddy/part4/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/buddy/part4/"
+                />
+  </url>
+  
+  <url>
+    <loc>https://jsgonsette.github.io/projects/buddy/</loc>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://jsgonsette.github.io/en/projects/buddy/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="fr"
+                href="https://jsgonsette.github.io/projects/buddy/"
+                />
   </url>
   
   <url>
     <loc>https://jsgonsette.github.io/</loc>
-    <lastmod>2020-09-20T00:00:00+00:00</lastmod>
+    <lastmod>2021-05-17T00:00:00+00:00</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
     <xhtml:link

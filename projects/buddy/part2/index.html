@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Jean-Sébastien Gonsette  | Partie 2: Ambition, Architecture et Design</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.75.1" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+
+    <link href='https://jsgonsette.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/jsg.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/socialSharing.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="Partie 2: Ambition, Architecture et Design" />
+<meta property="og:description" content="Le but de ce projet tient plus dans la réalisation d&rsquo;une plateforme générique pour jeux de société que dans l&rsquo;implémentation ou l&rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&rsquo;on se donne pour esquisser la solution en conséquence." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jsgonsette.github.io/projects/buddy/part2/" />
+<meta property="article:published_time" content="2021-05-12T00:00:00+00:00" />
+<meta property="article:modified_time" content="2021-05-12T00:00:00+00:00" /><meta property="og:site_name" content="Jean-Sébastien Gonsette" />
+<meta itemprop="name" content="Partie 2: Ambition, Architecture et Design">
+<meta itemprop="description" content="Le but de ce projet tient plus dans la réalisation d&rsquo;une plateforme générique pour jeux de société que dans l&rsquo;implémentation ou l&rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&rsquo;on se donne pour esquisser la solution en conséquence.">
+<meta itemprop="datePublished" content="2021-05-12T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2021-05-12T00:00:00+00:00" />
+<meta itemprop="wordCount" content="2279">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Partie 2: Ambition, Architecture et Design"/>
+<meta name="twitter:description" content="Le but de ce projet tient plus dans la réalisation d&rsquo;une plateforme générique pour jeux de société que dans l&rsquo;implémentation ou l&rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&rsquo;on se donne pour esquisser la solution en conséquence."/>
+
+      
+    
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jsgonsette.github.io/images/Buddy/Part2.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jsgonsette.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Jean-Sébastien Gonsette
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/42/" title="42 page">
+              42
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/enigmes/" title="Énigmes page">
+              Énigmes
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/posts/" title="Billets page">
+              Billets
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/projects/" title="Projets page">
+              Projets
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/contact/" title="À propos page">
+              À propos
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">Partie 2: Ambition, Architecture et Design</h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          
+            Board Games Buddy
+          
+        </p>
+        <h1 class="f1">
+          Partie 2: Ambition, Architecture et Design
+        </h1>
+        <time class="f6 mv4 dib tracked" datetime="2021-05-12T00:00:00Z">
+          <b>Publié: </b>May 12, 2021
+          
+
+          
+          <br><br>
+          
+              <b><a href="https://jsgonsette.github.io/en/projects/buddy/part2/">Version en.</a></b>
+          
+        
+        </time>
+
+
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        <span class="justified">
+        <p>Le but de ce projet tient plus dans la réalisation d&rsquo;une plateforme générique pour jeux de société que dans l&rsquo;implémentation ou l&rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&rsquo;on se donne pour esquisser la solution en conséquence.</p>
+<p>Bien sûr, la performance des IA est capitale dans la mesure où il n&rsquo;est pas intéressant de se confronter à un adversaire trop faible. Mais nul n&rsquo;est besoin ici d&rsquo;égaler les performances stratosphériques des meilleurs programmes dédiés (par exemple comme pour le <em>go</em> ou les <em>échecs</em>). Il serait d&rsquo;ailleurs difficile de tenter d&rsquo;égaler certaines solutions existantes du fait de l&rsquo;importante puissance de calcul nécessaire pour l&rsquo;entrainement des réseaux de neurones utilisés.</p>
+<p>
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</p>
+
+<div class="highlighted">
+Vous pouvez vous mesurer aux IA décrites dans cet article à <a href="http://www.gonsette.be/boardgamesbuddy/buddy.htm?language=fr">cette adresse</a>
+</div>
+
+
+<h2 id="an-engine-to-play-them-all">An engine to play them all</h2>
+<p>Ce que je désirais surtout dès le départ c&rsquo;était de disposer d&rsquo;une solution sur laquelle pouvoir implémenter toutes sortes de jeux de société, sachant que ceux-ci peuvent incorporer de nombreux mécanismes comme le hasard, des informations cachées, des ordres de tours qui peuvent changer selon les circonstances, des actions où les joueurs effectuent des choix simultanés, etc. Il était donc nécessaire d&rsquo;embrasser tous les mécanismes communs aux jeux de société avec la seule restriction de se limiter aux jeux au tour par tour.</p>
+<p>Même si nous n&rsquo;aborderons pas le sujet des IA tout de suite, il était clair dès le début qu&rsquo;il faudrait se frotter à un moment ou un autre à l&rsquo;entrainement de réseaux de neurones pour les algorithmes qui reposent sur ce genre de mécanismes. Cela implique de pouvoir collecter facilement des données d’apprentissage sur des parties où la machine s&rsquo;affronte elle-même.</p>
+<p>Enfin, il était important pour moi d&rsquo;avoir la possibilité que les jeux puissent se jouer dans un navigateur Web au travers d&rsquo;une interface graphique agréable, mais sans que le code tourne intégralement côté client.</p>
+<p>Ces contraintes sont quelque peu différentes des nombreux projets ou tutoriels que l&rsquo;on peut trouver dans le domaine des jeux de société. La solution <a href="https://github.com/deepmind/open_spiel"><em>OpenSpiel</em></a>  développée par DeepMind, par exemple, est fortement axée sur la recherche. Elle a pour vocation d&rsquo;implémenter un maximum d&rsquo;algorithmes et d&rsquo;outils permettant de couvrir l&rsquo;état de l&rsquo;art, mais nécessite de savoir quoi utiliser et comment et ne propose aucune interface graphique. Quant aux nombreux tutoriels que l&rsquo;on peut trouver sur le Web, ils ne se préoccupent habituellement que d&rsquo;un seul jeu ou d&rsquo;un seul type d&rsquo;algorithme, laissant de côté les performances ou la généricité.</p>
+<p>De mon côté, je me suis plutôt orienté vers une solution bâtie sur trois composants:</p>
+<ul>
+<li>Une libraire ayant la charge d&rsquo;implémenter la logique générale, les IA, ainsi que les mécaniques fines de chacun des jeux de société;</li>
+<li>Un serveur encapsulant la librairie et permettant de faire tourner celle-ci sur une machine distante au travers d&rsquo;une API dédiée;</li>
+<li>Le client Web se chargeant du rendu des jeux dans un navigateur.</li>
+</ul>
+<p>Cela permet beaucoup de souplesse dans l&rsquo;utilisation finale, comme illustré dans la figure de déploiement ci-dessous.
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Buddy/DeployServer.png" alt="Diagramme de déploiement client-serveur"/>
+    </div>
+    <a href="/images/Buddy/DeployServer.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Diagramme de déploiement client-serveur</p>
+      </figcaption>
+  </figure>
+</div>
+</p>
+<p>La partie droite contient ladite libraire <em>libBuddyCore</em>, ainsi qu&rsquo;une application <em>BuddyCore Server</em> exposant son utilisation au travers d&rsquo;un moyen de communication basé sur les Websockets. Le protocole WebSockets m&rsquo;a paru la solution de choix dans la mesure où il offre toute la flexibilité d&rsquo;une communication bidirectionnelle TCP/IP, mais est également compatible avec tous les navigateurs Web. La bidirectionnalité est importante afin que le serveur puisse envoyer toutes les notifications qui surviennent lors d&rsquo;une partie (les coups sélectionnés, des statistiques, des requêtes, etc.) de son plein gré, évitant ainsi le recours à du <em>polling</em> intempestif. Le contenu des messages , quant à lui, est construit en <em>JSON</em>, car ce format à le grand avantage d&rsquo;être lisible et cela facilite considérablement le développement. Recourir à un encodage plus compact n&rsquo;a pas lieu d&rsquo;être ici vu le faible débit des messages échangés durant une partie.</p>
+<p>La portion de gauche illustre deux façons de s&rsquo;interfacer avec le serveur. La première, dont j&rsquo;ai parlé plus haut, est un client Web se chargeant de la communication avec le serveur, du déroulement générique d&rsquo;une partie, ainsi que du rendu graphique propre à chaque jeu. Pour information, le rendu est effectué en dessinant dans un canevas HTML5 et j&rsquo;ai été agréablement surpris par la facilité, la qualité et la fluidité avec laquelle il est possible d&rsquo;y arriver. N&rsquo;ayant jamais programmé en JavaScript auparavant et ayant plutôt l&rsquo;habitude des applications graphiques natives, c&rsquo;était honnêtement une bonne surprise. Ensuite, il est bien sûr imaginable de s&rsquo;interfacer avec le serveur au moyen de n&rsquo;importe quel autre langage, comme illustré avec la partie Python dans le bloc inférieur.</p>
+<p>Si cette séparation entre client et serveur est très intéressante pour un déploiement réel de l&rsquo;application, cela complexifie aussi les opérations. Il est toutefois possible de faire un usage beaucoup plus commode de la libraire en s&rsquo;interfaçant directement avec elle, comme illustré dans l&rsquo;image ci-dessous. C&rsquo;est de cette façon que la librairie est utilisée pour effectuer des tests ou pour collecter des données en grande quantité pour l&rsquo;entrainement de réseaux de neurones.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Buddy/DeployLocal.png" alt="Diagramme de déploiement local"/>
+    </div>
+    <a href="/images/Buddy/DeployLocal.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Diagramme de déploiement local</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h2 id="a-chaque-tâche-son-langage">A chaque tâche son langage</h2>
+<p>Une fois les grandes lignes de l&rsquo;architecture posées vient la question des langages à employer pour développer les différents composants. La partie graphique tournant dans un navigateur est alors la plus simple à trancher, car il n&rsquo;existe que peu ou pas de choix en dehors du <em>JavaScript</em>. L&rsquo;entrainement de réseaux neuronaux impose de passer par des librairies telles que <em>TensorFlow</em> ou <em>PyTorch</em>, lesquelles sont principalement utilisées en <em>Python</em>. Toutefois, l&rsquo;entrainement des algorithmes d&rsquo;IA constitue une tâche qui s&rsquo;effectue seulement en marge et qui n&rsquo;a pas d&rsquo;incidence ensuite sur l&rsquo;utilisation finale.</p>
+<p>Le point le plus important concerne alors le choix du langage pour la librairie <em>libBuddyCore</em>. Celle-ci a pour but d&rsquo;implémenter efficacement toutes sortes d&rsquo;algorithmes d&rsquo;IA et qui, on s&rsquo;en doute bien, doivent pouvoir être exécutés le plus rapidement possible tout en offrant une gestion de la mémoire très efficace. La raison impérieuse nous obligeant à nous concentrer sur l’efficience vient du fait que ces algorithmes sont par nature très couteux en temps de calcul et en mémoire. Réfléchir au prochain coup à jouer revient en effet d&rsquo;une manière ou d&rsquo;une autre à évaluer un maximum de possibilités afin de sélectionner la plus prometteuse. Un algorithme tournant deux fois plus vite peut donc explorer autant de choix en plus endéans le même laps de temps. C&rsquo;est aussi un algorithme qui pourra effectuer deux fois plus vite un même nombre de parties contre lui-même pour collecter des données d&rsquo;apprentissage. De la même façon, un algorithme requérant deux fois moins de mémoire pourra d&rsquo;autant plus facilement être parallélisé pour gagner encore en vitesse d&rsquo;exécution.</p>
+<p>Ces considérations étant établies, il est évident qu&rsquo;aller vers un langage interprété tel que le <em>Python</em>, pourtant très prisé dans le domaine scientifique, reviendrait à se tirer une balle dans le pied. Son inaptitude à exécuter du code parallélisé, sa lenteur rédhibitoire dès que l&rsquo;on écrit la moindre boucle (environ 2 ordres de grandeur par rapport à du code natif) et son manque de contrôle sur la gestion de la mémoire font vraiment de lui l&rsquo;un des pires candidats auquel on puisse penser. Ensuite, si un langage intermédiaire comme le <em>Java</em> peut faire l&rsquo;affaire, il est beaucoup plus intéressant de se tourner vers un langage compilé pour tirer profit au maximum des capacités de la machine hôte. Si plusieurs choix sont certainement valables, je me suis orienté vers le <em>C++</em> tout simplement à cause de mes décennies d&rsquo;expérience dans ce langage.</p>
+<p>C&rsquo;est alors à ce stade que le Python que l&rsquo;on avait sorti par la porte peut faire son retour en passant par la fenêtre. Si l&rsquo;on se donne la peine d&rsquo;encapsuler la libraire native dans un <em>&ldquo;wrapper&rdquo;</em> Python, celle-ci peut ensuite s&rsquo;utiliser en bénéficiant de toute la facilité propre à ce langage, tout en conservant des performances inchangées. Il s&rsquo;agit là d&rsquo;un combo gagnant que l&rsquo;on retrouve dans beaucoup de projets, <em>TensorFlow</em> en étant un parfait représentant.</p>
+<h2 id="dans-les-entrailles-de-la-bête">Dans les entrailles de la bête</h2>
+<p>La partie la plus complexe dans ce projet tient certainement dans la fameuse librairie <em>libBuddyCore</em>, puisque c&rsquo;est à elle que revient l&rsquo;honneur d&rsquo;intégrer les différentes IA et d&rsquo;offrir une interface permettant de faire complètement abstraction des jeux que l&rsquo;on pourra y implémenter. Comme nous aborderons les IA dans les prochains chapitres, concentrons-nous ici sur l&rsquo;implémentation générique d&rsquo;un moteur de jeux de société.</p>
+<h3 id="abstraction-des-jeux">Abstraction des jeux</h3>
+<p>Le diagramme de classes de la partie concernant l&rsquo;implémentation des jeux est donné dans l&rsquo;image ce-dessous:</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Buddy/ClassGameBook.png" alt="Diagramme de classes des jeux"/>
+    </div>
+    <a href="/images/Buddy/ClassGameBook.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Diagramme de classes des jeux</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>Afin de pouvoir exposer une interface simple concernant les jeux disponibles, la librairie gère tous ceux-ci au travers du <em>Singleton GameBook</em>. Ce dernier dispose d&rsquo;une liste de jeux qui se font connaitre par leur interface abstraite <em>Game</em>, comme c&rsquo;est le cas par exemple pour la classe <em>Connect4</em>. La fonction principale de la classe <em>Game</em> est la méthode <em>CreateGameInitState</em> qui, comme son nom l&rsquo;indique, permet d&rsquo;instancier l&rsquo;état initial du jeu qu&rsquo;elle représente.</p>
+<p>L&rsquo;état de n&rsquo;importe quel jeu, c&rsquo;est-à-dire l&rsquo;ensemble des informations qui sont nécessaires pour connaitre la disposition de tous ses éléments de gameplay à un instant donné, est exposé au travers de la classe abstraite <em>IGameState</em>. Cette dernière dispose d&rsquo;un jeu de fonctions génériques permettant de le manipuler afin de faire avancer le cours d&rsquo;une partie. Étant donné que les actions possibles dépendent intégralement du jeu dont on parle, il est obligatoire d&rsquo;abstraire ces dernières de la même façon. Aussi, une action sera toujours représentée par une valeur entière dont la signification est laissée à la totale discrétion du jeu. Par exemple, les actions du jeu Puissance 4 peuvent être représentées par les nombres de 1 à 7 pour désigner chacune des colonnes dans lesquelles jouer un pion. Mais toute autre numérotation ferait l&rsquo;affaire.</p>
+<p>La fonction <em>GetLegalAction</em> retourne donc systématiquement une liste de nombre abscons et ceux-ci peuvent être dépendants de l&rsquo;état du jeu lui-même. La fonction <em>ApplyAction</em> permet ensuite de faire évoluer l&rsquo;état du jeu en fonction du numéro d&rsquo;action passé en argument, mais encore une fois cet aspect est laissé à la discrétion du jeu lui-même. Il s&rsquo;en suit que les informations qu&rsquo;une IA peut glaner sur l&rsquo;évolution d&rsquo;une partie seront toutes aussi abstraites et se résument à</p>
+<ul>
+<li>des numéros d&rsquo;actions disponibles;</li>
+<li>le numéro du joueur dont c&rsquo;est le tour;</li>
+<li>un score intermédiaire éventuel;</li>
+<li>si la partie est terminée et, si oui, qui est le vainqueur.</li>
+</ul>
+<p>Il apparait ainsi clairement que ce moteur de jeu n&rsquo;est pas conçu pour implémenter des IA spécifiques aux jeux disputés, mais plutôt pour des IA générales qui pourront joueur à toute une classe de jeux partageant les mêmes propriétés de très haut niveau.</p>
+<h3 id="orchestration-dune-partie">Orchestration d&rsquo;une partie</h3>
+<p>Le diagramme ci-dessous reprend les principales classes impliquées dans le déroulement d&rsquo;une partie entre multiples agents, encore une fois sans avoir connaissance du détail des agents ou des jeux. Le point de contact avec l&rsquo;extérieur de la librairie est constitué de la classe <em>Contest</em> qui a la charge de rassembler un ou plusieurs agents autour d&rsquo;une partie. Ceux-ci doivent tous hériter de la classe abstraite <em>Agent</em> et il existe également un agent spécial pour s&rsquo;interfacer avec l&rsquo;extérieur de la librairie, afin de permettre à un joueur humain ou à une IA externe de prendre part à la partie.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Buddy/ClassContest.png" alt="Diagramme de classes pour l&#39;organisation d&#39;une partie"/>
+    </div>
+    <a href="/images/Buddy/ClassContest.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Diagramme de classes pour l&#39;organisation d&#39;une partie</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>Le déroulement précis d&rsquo;une partie est laissé aux soins de la classe <em>Scheduler</em> qui a pour rôle :</p>
+<ul>
+<li>de s&rsquo;informer de l&rsquo;ordre dans lequel doit jouer chaque agent,</li>
+<li>de collecter la liste des actions qui sont accessibles à chacun d&rsquo;eux,</li>
+<li>de leur communiquer cette liste,</li>
+<li>de prendre connaissance en retour de l&rsquo;action sélectionnée,</li>
+<li>de transmettre cette action au jeu afin de faire évoluer son état,</li>
+<li>de signaler aux agents le nouvel état du jeu,</li>
+<li>de signaler toutes ces étapes pour tenir informer l&rsquo;utilisateur de la libraire du déroulement de la partie.</li>
+</ul>
+<p>Ces différentes étapes sont illustrées plus en détail sur le diagramme de séquence ci-dessous. Afin de s&rsquo;accommoder à toutes sortes de schémas pouvant survenir dans un jeu de société, une partie est découpée en une succession de <em>Rounds</em>, eux-mêmes organisés en un enchainement de <em>Turns</em>.</p>
+<p>L&rsquo;idée d&rsquo;un <em>Round</em> est très proche de celle que l&rsquo;on retrouve traditionnellement dans un jeu, c&rsquo;est-à-dire qu&rsquo;il donne l&rsquo;occasion à chaque joueur de jouer une fois. Cela n&rsquo;est toutefois pas obligatoire, certains joueurs pouvant très bien devoir passer leur tour ou jouer plusieurs fois. Un <em>Turn</em>, quant à lui, permet à un ou plusieurs joueurs de jouer <strong>simultanément</strong>. Concrètement, aucun agent n&rsquo;est informé du choix des actions des autres et de l&rsquo;état résultant du jeu tant que cette phase n&rsquo;est pas complètement résolue. Si aucun choix simultané n&rsquo;est nécessaire, un <em>Turn</em> n&rsquo;impliquera qu&rsquo;un seul agent.</p>
+<p>Le contenu d&rsquo;un <em>Round</em> n&rsquo;est aucunement figé, car c&rsquo;est le jeu lui-même qui décide de son contenu avant qu&rsquo;il ne commence. Il peut donc être remanié au besoin en fonction des circonstances et permettre ainsi des schémas complexes. Dit autrement, une instance <em>IGameState</em> peut décider à chaque <em>Round</em> de l&rsquo;ordre précis des joueurs, tandis que la classe <em>Scheduler</em> orchestrera la partie en conséquence pour faire transiter toute l&rsquo;information entre les parties prenantes.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Buddy/SeqScheduler.png" alt="Orchestration d&#39;une partie"/>
+    </div>
+    <a href="/images/Buddy/SeqScheduler.png" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Orchestration d&#39;une partie</p>
+      </figcaption>
+  </figure>
+</div>
+
+<h2 id="conclusion">Conclusion</h2>
+<p>Ce chapitre a été l&rsquo;occasion de définir les objectifs de haut niveau de ce projet et de survoler les choix principaux de conception qui ont été mis en oeuvre pour les atteindre. Le prochain chapitre rentrera plus dans le vif du sujet en commençant à aborder une problématique qui a été éludée jusqu&rsquo;ici: la réalisation concrète d&rsquo;une IA.</p>
+<hr>
+        </span>
+      </div>
+      <div class="f5 mid-gray">
+      <br>
+      N&#39;hésitez pas à partager
+      
+
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjsgonsette.github.io%2fprojects%2fbuddy%2fpart2%2f" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Board%20Games%20Buddy - Partie%202%3a%20Ambition%2c%20Architecture%20et%20Design&amp;url=https%3a%2f%2fjsgonsette.github.io%2fprojects%2fbuddy%2fpart2%2f" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+
+
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Board%20Games%20Buddy - Partie%202%3a%20Ambition%2c%20Architecture%20et%20Design&amp;body=https%3a%2f%2fjsgonsette.github.io%2fprojects%2fbuddy%2fpart2%2f" target="_self" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fjsgonsette.github.io%2fprojects%2fbuddy%2fpart2%2f&amp;media=https://jsgonsette.github.io/&amp;description=Board%20Games%20Buddy - Partie%202%3a%20Ambition%2c%20Architecture%20et%20Design" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+    </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        3 autres articles dans Board Games Buddy
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/buddy/part1/" class="link ph2 pv2 db black">
+            Partie 1: Artificialis Intelligentia et Circenses
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/buddy/part2/" class="link ph2 pv2 db black o-50">
+            Partie 2: Ambition, Architecture et Design
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/buddy/part3/" class="link ph2 pv2 db black">
+            Partie 3: Agent Monte-Carlo Tree Search
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/projects/buddy/part4/" class="link ph2 pv2 db black">
+            Partie 4: Agent AlphaZero
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
+    &copy; 2021 Jean-Sébastien Gonsette
+  </a>
+  <p align="right">
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+</p>
+  </div>
+</footer>
+
+    <script src="https://jsgonsette.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

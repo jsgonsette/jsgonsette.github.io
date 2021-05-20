@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Board Games Buddy on Jean-Sébastien Gonsette</title>
+    <link>https://jsgonsette.github.io/projects/buddy/</link>
+    <description>Recent content in Board Games Buddy on Jean-Sébastien Gonsette</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>fr</language>
+    <lastBuildDate>Mon, 17 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/projects/buddy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Partie 1: Artificialis Intelligentia et Circenses</title>
+      <link>https://jsgonsette.github.io/projects/buddy/part1/</link>
+      <pubDate>Mon, 17 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/buddy/part1/</guid>
+      <description>La notion d&amp;rsquo;intelligence artificielle est un concept dont on retrouve les traces jusqu&amp;rsquo;à plus de 1000 ans avant notre ère, mais qui connut surtout une progression fulgurante à partir du XIXesiècle avec les travaux de nombreux mathématiciens et ingénieurs qui commencèrent à en formaliser les principes. Ensuite, une convergence d&amp;rsquo;idées novatrices au début du XXe siècle noua un lien étroit avec ce domaine dès qu&amp;rsquo;il apparut que le cerveau était composé de neurones traitant des impulsions électriques.</description>
+    </item>
+    
+    <item>
+      <title>Partie 2: Ambition, Architecture et Design</title>
+      <link>https://jsgonsette.github.io/projects/buddy/part2/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/buddy/part2/</guid>
+      <description>&lt;p&gt;Le but de ce projet tient plus dans la réalisation d&amp;rsquo;une plateforme générique pour jeux de société que dans l&amp;rsquo;implémentation ou l&amp;rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&amp;rsquo;on se donne pour esquisser la solution en conséquence.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Partie 3: Agent Monte-Carlo Tree Search</title>
+      <link>https://jsgonsette.github.io/projects/buddy/part3/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/buddy/part3/</guid>
+      <description>En cours de rédaction</description>
+    </item>
+    
+    <item>
+      <title>Partie 4: Agent AlphaZero</title>
+      <link>https://jsgonsette.github.io/projects/buddy/part4/</link>
+      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/projects/buddy/part4/</guid>
+      <description>En cours de rédaction</description>
+    </item>
+    
+  </channel>
+</rss>
