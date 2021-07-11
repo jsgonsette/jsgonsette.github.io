@@ -6,7 +6,16 @@
     <description>Recent content in Billets on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Gestion de mots de passe avancée pour une vie digitale ultra sécurisée </title>
+      <link>https://jsgonsette.github.io/posts/ultimatepasswordguide/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/posts/ultimatepasswordguide/</guid>
+      <description>&lt;p&gt;La question épineuse de la sécurité de notre vie digitale n&amp;rsquo;a fait que se complexifier au fil des années, du fait de notre usage de plus en plus massif de toutes sortes de contenus numériques. Les enjeux financiers se cachant derrière nos données pouvant parfois être colossaux, il est normal qu&amp;rsquo;elles aient dès le début attisé la convoitise de toutes sortes de personnes peu scrupuleuses. Et il va s&amp;rsquo;en dire que, même si toutes sortes de mécanismes ont été mis en place pour mieux protéger nos données, les techniques pour les dérober n&amp;rsquo;ont jamais cessé de croitre en ingéniosité.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Commenter ou ne pas commenter ?</title>
       <link>https://jsgonsette.github.io/posts/codecomments/</link>

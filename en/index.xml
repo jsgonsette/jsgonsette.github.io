@@ -6,7 +6,16 @@
     <description>Recent content in J S G  on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Wed, 12 May 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Almost Ultimate Passwords Management Guide for a Safe Digital Life </title>
+      <link>https://jsgonsette.github.io/en/posts/ultimatepasswordguide/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/posts/ultimatepasswordguide/</guid>
+      <description>&lt;p&gt;The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity.&lt;/p&gt;</description>
+    </item>
+    
     <item>
       <title>Part 1: Artificialis Intelligentia et Circenses</title>
       <link>https://jsgonsette.github.io/en/projects/buddy/part1/</link>
@@ -17,12 +26,30 @@
     </item>
     
     <item>
+      <title>To Comment or Not to Comment ?</title>
+      <link>https://jsgonsette.github.io/en/posts/codecomments/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/posts/codecomments/</guid>
+      <description>No, you should not stop writing code comments. The Internet is undeniably a tremendous technology that has literally propelled information sharing and exchange of ideas to a level never achieved before. Nevertheless, this sometimes provokes some frustrations, as when we read the words of a person whose thinking and conclusion are fundamentally at the opposite of ours. It may generate a serious sense of urgency that causes you to react in one way or another, because you are aware of a crime of lese-majesty; someone, somewhere on the Internet is wrong!</description>
+    </item>
+    
+    <item>
+      <title>The Long Way of Backtracking</title>
+      <link>https://jsgonsette.github.io/en/projects/wizium/part1/</link>
+      <pubDate>Sun, 09 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/wizium/part1/</guid>
+      <description>Although the origin of Sudoku goes back as far as the last century, a surge of popularity can be noted during the year 2005. I remember it particularly well, because it was at that time that I discovered them while I was going to winter sports. I guess I had to come across a collection of grids at a gas station, during one of our stops to our destination. This totally new concept for me occupied me some time, the time to solve some grids.</description>
+    </item>
+    
+    <item>
       <title>Part 2: Ambition, Architecture and Design</title>
       <link>https://jsgonsette.github.io/en/projects/buddy/part2/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/en/projects/buddy/part2/</guid>
-      <description>&lt;p&gt;The goal of this project is more in the realization of a generic platform for board games than in the implementation or the study of the best algorithm existing in this field. It is therefore important to clearly define the constraints that we want to fullfill in order to sketch the solution accordingly.&lt;/p&gt;</description>
+      <description>&lt;p&gt;The goal of this project is more in the realization of a generic platform for board games than in the implementation or the study of the best algorithm existing in this field. It is therefore important to clearly define the constraints that we want to fulfil in order to sketch the solution accordingly.&lt;/p&gt;</description>
     </item>
     
     <item>
@@ -35,12 +62,30 @@
     </item>
     
     <item>
+      <title>The Right Way to Pave the Grid</title>
+      <link>https://jsgonsette.github.io/en/projects/wizium/part2/</link>
+      <pubDate>Thu, 27 Jun 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/wizium/part2/</guid>
+      <description>&lt;p&gt;The method used previously to fill the grid was excessively naive, because it is quite catastrophic to wait the grid is full before to test the validity of the solution. The problem being combinatorial, the exponential nature of the combinations of words appears as so many branches and twigs subdividing frightfully quickly. So it is better to realize as soon as possible that the chosen path is rather a dead end, so as to cut off the dead branch as soon as possible and avoiding to lose valuable computing time in the depths of its tree.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
       <title>Part 3: Monte-Carlo Tree Search Agent</title>
       <link>https://jsgonsette.github.io/en/projects/buddy/part3/</link>
       <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
       
       <guid>https://jsgonsette.github.io/en/projects/buddy/part3/</guid>
       <description>To be written</description>
+    </item>
+    
+    <item>
+      <title>My racing tactic is obvious: I press the accelerator and I rush</title>
+      <link>https://jsgonsette.github.io/en/projects/wizium/part3/</link>
+      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/projects/wizium/part3/</guid>
+      <description>&lt;p&gt;Appliqué sans discernement, le &lt;em&gt;backtracking&lt;/em&gt; peut s&amp;rsquo;avérer redoutable de complexité, tant la voie qui mène à la solution peut être longue, tortueuse, pleine d&amp;rsquo;ornières, de pièges et de détours dans lesquels se perdre indéfiniment. Maitriser le problème permet néanmoins de tracer un chemin beaucoup plus direct vers la solution, nettoyé de tous ses obstacles et voies de traverses, et permettant finalement un gain de temps qu&amp;rsquo;aucune autre optimisation ou puissance de calcul herculéenne ne pourra jamais compenser. Grâce à la méthode exposée dans l&amp;rsquo;article précédent, nous avons à disposition une autoroute filant pratiquement en ligne droite vers la solution. Mais cela veut-il dire pour autant que nous désirons nous trainer le long de ce chemin à bord d&amp;rsquo;un vieux tacot fumant et tout cabossé ?&lt;/p&gt;</description>
     </item>
     
     <item>

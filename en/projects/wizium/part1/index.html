@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Jean-Sébastien Gonsette  | The Long Way of Backtracking</title>
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.80.0" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
+    
+
+    <link href='https://jsgonsette.github.io/dist/main.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/jsg.css' rel='stylesheet' type="text/css" />
+    <link href='https://jsgonsette.github.io/css/socialSharing.css' rel='stylesheet' type="text/css" />
+    
+      
+    
+
+    
+
+    <meta property="og:title" content="The Long Way of Backtracking" />
+<meta property="og:description" content="Although the origin of Sudoku goes back as far as the last century, a surge of popularity can be noted during the year 2005. I remember it particularly well, because it was at that time that I discovered them while I was going to winter sports. I guess I had to come across a collection of grids at a gas station, during one of our stops to our destination. This totally new concept for me occupied me some time, the time to solve some grids." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://jsgonsette.github.io/en/projects/wizium/part1/" />
+<meta property="article:published_time" content="2019-06-09T00:00:00+00:00" />
+<meta property="article:modified_time" content="2019-06-09T00:00:00+00:00" /><meta property="og:site_name" content="Jean-Sébastien Gonsette" />
+<meta itemprop="name" content="The Long Way of Backtracking">
+<meta itemprop="description" content="Although the origin of Sudoku goes back as far as the last century, a surge of popularity can be noted during the year 2005. I remember it particularly well, because it was at that time that I discovered them while I was going to winter sports. I guess I had to come across a collection of grids at a gas station, during one of our stops to our destination. This totally new concept for me occupied me some time, the time to solve some grids.">
+<meta itemprop="datePublished" content="2019-06-09T00:00:00+00:00" />
+<meta itemprop="dateModified" content="2019-06-09T00:00:00+00:00" />
+<meta itemprop="wordCount" content="1600">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="The Long Way of Backtracking"/>
+<meta name="twitter:description" content="Although the origin of Sudoku goes back as far as the last century, a surge of popularity can be noted during the year 2005. I remember it particularly well, because it was at that time that I discovered them while I was going to winter sports. I guess I had to come across a collection of grids at a gas station, during one of our stops to our destination. This totally new concept for me occupied me some time, the time to solve some grids."/>
+
+      
+    
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+
+  
+  
+  <header class="cover bg-top" style="background-image: url('https://jsgonsette.github.io/images/Wizium/LongWay.jpg');">
+    <div class="pb3-m pb6-l bg-black-60">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="https://jsgonsette.github.io/" class="f3 fw2 hover-white no-underline white-90 dib">
+      Jean-Sébastien Gonsette
+    </a>
+    <div class="flex-l items-center">
+      
+        <ul class="pl0 mr3">
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/en/posts/" title="Posts page">
+              Posts
+            </a>
+          </li>
+          
+          <li class="list f5 f4-ns fw4 dib pr3">
+            <a class="hover-white no-underline white-90" href="/en/projects/" title="Projects page">
+              Projects
+            </a>
+          </li>
+          
+        </ul>
+      
+      
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://medium.com/@jeansebastien.gonsette" class="link-transition medium link dib z-999 pt3 pt0-l mr2" title="Medium link">
+    <svg  height="32px"  style="enable-background:new 0 0 170 170;" version="1.1" viewBox="0 0 170 170" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+  </a>
+
+
+    </div>
+  </div>
+</nav>
+
+      <div class="tc-l pv6 ph3 ph4-ns">
+        <h1 class="f2 f1-l fw2 white-90 mb0 lh-title">The Long Way of Backtracking</h1>
+        
+      </div>
+    </div>
+  </header>
+
+
+    <main class="pb7" role="main">
+      
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <p class="f6 b helvetica tracked">
+          
+            Wizium - My Crosswords Generator
+          
+        </p>
+        <h1 class="f1">
+          The Long Way of Backtracking
+        </h1>
+        <time class="f6 mv4 dib tracked" datetime="2019-06-09T00:00:00Z">
+          <b>Published: </b>June 9, 2019
+          
+
+          
+          <br><br>
+          
+              <b><a href="https://jsgonsette.github.io/projects/wizium/part1/">Version fr.</a></b>
+          
+        
+        </time>
+
+
+      </header>
+      <div class="nested-copy-line-height lh-copy f4 nested-links nested-img mid-gray">
+        <span class="justified">
+        <p>Although the origin of <em>Sudoku</em> goes back as far as the last century, a surge of popularity can be noted during the year 2005. I remember it particularly well, because it was at that time that I discovered them while I was going to winter sports. I guess I had to come across a collection of grids at a gas station, during one of our stops to our destination. This totally new concept for me occupied me some time, the time to solve some grids. But the algorithmist in me quickly wondered what could be the iterative and deterministic procedure that should be applied to resolve a grid every time. It turns out that it is not very complicated if we allow ourselves to make assumptions and come back on them later. This method is at the basis of backtracking and this is our subject for today.</p>
+<p>
+<div class="highlighted">
+Le code source de la libraire dont je parle ici est disponible sur <a href="https://github.com/jsgonsette/Wizium">GitHub</a>.
+</div>
+
+
+
+
+
+
+
+  
+
+
+<script src="https://code.jquery.com/jquery-1.12.4.min.js" integrity="sha256-ZosEbRLbNQzLpnKIkEdrPv7lOy9C27hHQ+Xp8a4MxAQ=" crossorigin="anonymous"></script>
+<script src="/js/load-photoswipe.js"></script>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.css" integrity="sha256-sCl5PUOGMLfFYctzDW3MtRib0ctyUvI9Qsmq2wXOeBY=" crossorigin="anonymous" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/default-skin/default-skin.min.css" integrity="sha256-BFeI1V+Vh1Rk37wswuOYn5lsTcaU96hGaI7OUVCLjPc=" crossorigin="anonymous" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe.min.js" integrity="sha256-UplRCs9v4KXVJvVY+p+RSo5Q4ilAUXh7kpjyIP5odyc=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.1/photoswipe-ui-default.min.js" integrity="sha256-PWHOlUzc96pMc8ThwRIXPn8yH4NOLu42RQ0b9SpnpFk=" crossorigin="anonymous"></script>
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']],
+    displayMath: [['$$','$$'], ['\[','\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+    TeX: { equationNumbers: { autoNumber: "AMS" },
+         extensions: ["AMSmath.js", "AMSsymbols.js"] }
+  }
+});
+</script>
+
+</p>
+<p>I have to admit that my interest in Sudoku dropped drastically once I finished my demystification work by mentally developing my little algorithm. I have never even coded it, so I cannot say for sure that I have not missed some subtleties. Because at that point, the game looked too simple and I focused on another idea. Of course, it must have been influenced by the crossword games that my magazine should also contain, but I distinctly remember thinking that generating such crossword grids automatically had to be a challenge on a whole new level. The basic principle of trial and error is certainly the same, but the space of possibilities is at a completely different scale and appeared to me to require a great deal of ingenuity.</p>
+<h2 id="a-very-hard-start">A very hard start</h2>
+<p>As often with me, I can’t resist the challenges I throw to myself and, after taking advantage of the ski lifts to think about some preliminary ideas, I soon started to test them for real once back at home. But the difficulty of the problem far exceeded my expectations. I don&rsquo;t hide from you that my first experiments were really bad. Imagine my first iterations with tiny grids of 9 squares out of 9 which filled laboriously until half, then interminably iterated over all possible combinations of these 4 or 5 words, without ever being able to place a 6th. The fourth word was at best updated every half hour and at that rate I could not envision the grid complete before a million years. So I’m not even talking about bigger grids, like the fairly well spread 17x17 format. Yes, the algorithm was correct from a formal point of view, in the sense that it would eventually discover a solution by going through all the possibilities, but from a practical perspective it was disastrous.</p>
+<p>It soon became clear that several problems had to be overcome before hitting the road successfully, and that each of these points was decisive for reaching the holy grail of the high-performance generator.</p>
+<ul>
+<li>How to encode the dictionary of words and how to be effective to find candidates to place on the grid?</li>
+<li>What is the right order to place and test words on the grid?</li>
+<li>How to avoid as much as possible testing unnecessary combinations or, in other words, how to prune the tree of possibilities at best?</li>
+</ul>
+<p>I will address these three questions one after the other, but first, let’s talk about <em>backtracking</em> itself to understand the context in which they fit.</p>
+<h2 id="the-longest-journey-begins-with-a-first-step-maybe-in-the-wrong-direction">The longest journey begins with a first step&hellip; maybe in the wrong direction</h2>
+<p>As mentioned on Wikipedia, <em>backtracking</em> refers to a family of algorithms for solving constraint <em>satisfaction problems</em>. This is a good thing, because that’s what it’s all about here: <em>an empty grid must be filled with letters under the constraint that their sequences, taken horizontally or vertically, always correspond to a word in a pre-established list</em>. A naïve implementation simply consists in enumerating all the possibilities until you find one that doesn&rsquo;t violate any imposed rule.</p>
+<p>To fix the ideas, I propose to ignore the black boxes at first and to concentrate on the generation of perfect squared grids, i.e. containing only letters. This problem offers the advantage of being able to both illustrate the principle of <em>backtracking</em>, but also to make you realize the abysmal complexity of the process as long as you try it with a brutal and naïve approach.</p>
+
+<link rel="stylesheet" href="/css/hugo-easy-gallery.css" />
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Wizium/Perfects.jpg" alt="Perfect grids (in French). The two on the left are even hyper-perfect grids."/>
+    </div>
+    <a href="/images/Wizium/Perfects.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Perfect grids (in French). The two on the left are even hyper-perfect grids.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>Let’s start with a very simple problem to easily enumerate all the solutions: consider a 3x3 grid to fill on the basis of a dictionary containing this rich list of French words: <em>&ldquo;QUE&rdquo;</em>, <em>&ldquo;UNS&rdquo;</em>, <em>&ldquo;EST&rdquo;</em> et <em>&ldquo;TES&rdquo;</em>.</p>
+<p><em>Backtracking</em> idea simply consists in inserting the elements one after the other, each time making a choice among all those respecting the desired constraints. Of course, there may sometimes be no possibility, which involves changing an item placed previously in order to enumerate new combinations. If this last element also comes to be exhausted, then we will go up a step further in the stack of items already in place, and so on. This method merely enumerates all the possible cases until it reaches a solution by chance. In the case of our little example, the combinatorial tree and the way to iterate through it are given below.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Wizium/Backtracking.jpg" alt="Illustration of the backtracking procedure. In this example, it just tests all the possible combinations."/>
+    </div>
+    <a href="/images/Wizium/Backtracking.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Illustration of the backtracking procedure. In this example, it just tests all the possible combinations.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>For this exercise, we try to iteratively place three words horizontally, from top to bottom. As soon as the third word is in place, we check if the three vertical words then formed are in the dictionary. If this is not the case, the algorithm removes it from the grid and chooses a new option.</p>
+<p>The procedure is systematic and guarantees to find the solution. Let us, however, try to evaluate the difficulty of such a problem according to a grid size $S$ and a dictionary containing $N$ words of size $S$. To clarify, here is the distribution of the words in my French dictionary spread according to their length.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Wizium/HistoLength.jpg" alt="Distribution of words by length (French dictionary)"/>
+    </div>
+    <a href="/images/Wizium/HistoLength.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Distribution of words by length (French dictionary)</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>It is necessary to stack $N$ words on each other before being able to check whether each of the $N$ vertical locations contains a valid word, if any. It is possible to estimate this probability easily if we ignore the correlations between sequences of letters. So if we take two words $w_1$ and $w_2$ randomly in the dictionary, the probability of <em>coincidence</em> between the $i^{th}$ letter of the first and the $j^{th}$ letter of the second is given by:</p>
+<p>$$p_{co}=P(w_1[i]=w_2[j])=\sum_{l=1}^{26}f(l)^2,$$</p>
+<p>where $f(l)$ corresponds to the frequency of occurrence of the $l^{th}$ letter of the alphabet. This frequency is simply determined by inspection of the words of the dictionary, as with the histogram below.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Wizium/Frequency.jpg" alt="Letter frequencies in the French dictionary."/>
+    </div>
+    <a href="/images/Wizium/Frequency.jpg" itemprop="contentUrl"></a>
+      <figcaption>
+          <p>Letter frequencies in the French dictionary.</p>
+      </figcaption>
+  </figure>
+</div>
+
+<p>This gives a coincidence probability $p_{co}$ of 7.8%. A word of size $N$ in a column will then be valid if and only if this probability is favourable to us $S$ times in a row for any of the $N$ valid words in the dictionary. The probability $p_v$ of finding a correct word in any of the vertical locations is then:</p>
+<p>$$p_v=1- (1 - p_{co}^S)^N $$</p>
+<p>And for the probability that the complete grid is correct, it is given by:</p>
+<p>$$p_g={p_v}^S = N^S.{p_{co}}^{S^2}$$</p>
+<p>We can immediately see that this formula does not look very favourable for large grids. On the other hand, and it makes sense, the more the words in the dictionary, the greater our chances of finding a correct arrangement. But to get a clear idea of what this formula represents, let’s put a few figures on it right away:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">$S$</th>
+<th style="text-align:center">$N$</th>
+<th style="text-align:center">  $p_g$  </th>
+<th style="text-align:center">Number of grids</th>
+<th style="text-align:right">Mean solving time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:center"></td>
+<td style="text-align:right"></td>
+</tr>
+<tr>
+<td style="text-align:left">5  </td>
+<td style="text-align:center">6160</td>
+<td style="text-align:center">$10^{-8.7}$</td>
+<td style="text-align:center">$10^{19.0}$</td>
+<td style="text-align:right">2 minutes</td>
+</tr>
+<tr>
+<td style="text-align:left">6  </td>
+<td style="text-align:center">13385</td>
+<td style="text-align:center">$10^{-15.0}$</td>
+<td style="text-align:center">$10^{24.8}$</td>
+<td style="text-align:right">35 years</td>
+</tr>
+<tr>
+<td style="text-align:left">7  </td>
+<td style="text-align:center">22596</td>
+<td style="text-align:center">$10^{-23.7}$</td>
+<td style="text-align:center">$10^{30.5}$</td>
+<td style="text-align:right">10 billion years</td>
+</tr>
+<tr>
+<td style="text-align:left">8  </td>
+<td style="text-align:center">31337</td>
+<td style="text-align:center">$10^{-34.8}$</td>
+<td style="text-align:center">$10^{36.0}$</td>
+<td style="text-align:right">1000 trillion years</td>
+</tr>
+<tr>
+<td style="text-align:left">9  </td>
+<td style="text-align:center">36325</td>
+<td style="text-align:center">$10^{-48.5}$</td>
+<td style="text-align:center">$10^{41.0}$</td>
+<td style="text-align:right">???</td>
+</tr>
+<tr>
+<td style="text-align:left">10  </td>
+<td style="text-align:center">36359</td>
+<td style="text-align:center">$10^{-65.0}$</td>
+<td style="text-align:center">$10^{45.6}$</td>
+<td style="text-align:right">:'-(</td>
+</tr>
+</tbody>
+</table>
+<p>The first two columns give the size of the grid and the number of words of that length. The third column gives the probability that a grid assembled at random by stacking $S$ words is valid, while the fourth gives the total number of grids that can be generated in this way. Finally, the last column estimates the average time needed to find a correct grid at the rate of one million grids tested per second.</p>
+<p>A first interesting observation comes from the comparison of the number of grids that can be generated with the probability that one of them is a solution. With the dictionary used to create this table, we are almost certain that no perfect grid of size 9 can be generated, the number of combinations being 10 million times too small to hope to find one. As for the size 8 grids, they should contain about fifteen solutions.</p>
+<p>The second important point concerns the pantagruelic number of grids to be tested before one can hope to find a winning combination. For a grid of size 8, this value is around $10^{35}$ grids, <em>which is similar to finding the right grain of sand among a volume of fine sand equivalent to that of the earth</em>. This breathtaking analogy clearly shows that the method proposed here requires some adjustments, in order to generate perfect grids in less than one thousand trillion years.</p>
+<p><a href="../part2">Next chapter</a></p>
+
+        </span>
+      </div>
+      <div class="f5 mid-gray">
+      <br>
+      Sharing is caring
+      
+
+<a class="resp-sharing-button__link" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjsgonsette.github.io%2fen%2fprojects%2fwizium%2fpart1%2f" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18.77 7.46H14.5v-1.9c0-.9.6-1.1 1-1.1h3V.5h-4.33C10.24.5 9.5 3.44 9.5 5.32v2.15h-3v4h3v12h5v-12h3.85l.42-4z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://twitter.com/intent/tweet/?text=Wizium%20-%20My%20Crosswords%20Generator - The%20Long%20Way%20of%20Backtracking&amp;url=https%3a%2f%2fjsgonsette.github.io%2fen%2fprojects%2fwizium%2fpart1%2f" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M23.44 4.83c-.8.37-1.5.38-2.22.02.93-.56.98-.96 1.32-2.02-.88.52-1.86.9-2.9 1.1-.82-.88-2-1.43-3.3-1.43-2.5 0-4.55 2.04-4.55 4.54 0 .36.03.7.1 1.04-3.77-.2-7.12-2-9.36-4.75-.4.67-.6 1.45-.6 2.3 0 1.56.8 2.95 2 3.77-.74-.03-1.44-.23-2.05-.57v.06c0 2.2 1.56 4.03 3.64 4.44-.67.2-1.37.2-2.06.08.58 1.8 2.26 3.12 4.25 3.16C5.78 18.1 3.37 18.74 1 18.46c2 1.3 4.4 2.04 6.97 2.04 8.35 0 12.92-6.92 12.92-12.93 0-.2 0-.4-.02-.6.9-.63 1.96-1.22 2.56-2.14z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+
+
+
+
+<a class="resp-sharing-button__link" href="mailto:?subject=Wizium%20-%20My%20Crosswords%20Generator - The%20Long%20Way%20of%20Backtracking&amp;body=https%3a%2f%2fjsgonsette.github.io%2fen%2fprojects%2fwizium%2fpart1%2f" target="_self" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M22 4H2C.9 4 0 4.9 0 6v12c0 1.1.9 2 2 2h20c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zM7.25 14.43l-3.5 2c-.08.05-.17.07-.25.07-.17 0-.34-.1-.43-.25-.14-.24-.06-.55.18-.68l3.5-2c.24-.14.55-.06.68.18.14.24.06.55-.18.68zm4.75.07c-.1 0-.2-.03-.27-.08l-8.5-5.5c-.23-.15-.3-.46-.15-.7.15-.22.46-.3.7-.14L12 13.4l8.23-5.32c.23-.15.54-.08.7.15.14.23.07.54-.16.7l-8.5 5.5c-.08.04-.17.07-.27.07zm8.93 1.75c-.1.16-.26.25-.43.25-.08 0-.17-.02-.25-.07l-3.5-2c-.24-.13-.32-.44-.18-.68s.44-.32.68-.18l3.5 2c.24.13.32.44.18.68z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+<a class="resp-sharing-button__link" href="https://pinterest.com/pin/create/button/?url=https%3a%2f%2fjsgonsette.github.io%2fen%2fprojects%2fwizium%2fpart1%2f&amp;media=https://jsgonsette.github.io/&amp;description=Wizium%20-%20My%20Crosswords%20Generator - The%20Long%20Way%20of%20Backtracking" target="_blank" rel="noopener" aria-label="">
+  <div class="resp-sharing-button resp-sharing-button--pinterest resp-sharing-button--small"><div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.14.5C5.86.5 2.7 5 2.7 8.75c0 2.27.86 4.3 2.7 5.05.3.12.57 0 .66-.33l.27-1.06c.1-.32.06-.44-.2-.73-.52-.62-.86-1.44-.86-2.6 0-3.33 2.5-6.32 6.5-6.32 3.55 0 5.5 2.17 5.5 5.07 0 3.8-1.7 7.02-4.2 7.02-1.37 0-2.4-1.14-2.07-2.54.4-1.68 1.16-3.48 1.16-4.7 0-1.07-.58-1.98-1.78-1.98-1.4 0-2.55 1.47-2.55 3.42 0 1.25.43 2.1.43 2.1l-1.7 7.2c-.5 2.13-.08 4.75-.04 5 .02.17.22.2.3.1.14-.18 1.82-2.26 2.4-4.33.16-.58.93-3.63.93-3.63.45.88 1.8 1.65 3.22 1.65 4.25 0 7.13-3.87 7.13-9.05C20.5 4.15 17.18.5 12.14.5z"/></svg>
+    </div>
+  </div>
+</a>
+
+
+    </div>
+    </article>
+    <aside class="ph3 mt2 mt6-ns">
+      
+
+
+
+
+
+
+
+  <div class="bg-light-gray pa3">
+    <ul>
+      <li class="list b mb3">
+        2 autres articles dans Wizium
+      </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/en/projects/wizium/part1/" class="link ph2 pv2 db black o-50">
+            The Long Way of Backtracking
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/en/projects/wizium/part2/" class="link ph2 pv2 db black">
+            The Right Way to Pave the Grid
+          </a>
+        </li>
+      
+        <li class="list f5 w-100 hover-bg-white nl1">
+          
+          <a href="/en/projects/wizium/part3/" class="link ph2 pv2 db black">
+            My racing tactic is obvious: I press the accelerator and I rush
+          </a>
+        </li>
+      
+    </ul>
+  </div>
+
+
+    </aside>
+  </div>
+
+    </main>
+    <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
+    &copy; 2021 Jean-Sébastien Gonsette
+  </a>
+  <p align="right">
+
+
+
+
+
+
+  <a href="https://www.linkedin.com/in/jsgonsette/" class="link-transition linkedin link dib z-999 pt3 pt0-l mr2" title="LinkedIn link">
+    <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://github.com/jsgonsette" class="link-transition github link dib z-999 pt3 pt0-l mr2" title="Github link">
+    <svg  height="32px"  style="enable-background:new 0 0 512 512;" version="1.1" viewBox="0 0 512 512" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+  <path d="M256,32C132.3,32,32,134.8,32,261.7c0,101.5,64.2,187.5,153.2,217.9c11.2,2.1,15.3-5,15.3-11.1   c0-5.5-0.2-19.9-0.3-39.1c-62.3,13.9-75.5-30.8-75.5-30.8c-10.2-26.5-24.9-33.6-24.9-33.6c-20.3-14.3,1.5-14,1.5-14   c22.5,1.6,34.3,23.7,34.3,23.7c20,35.1,52.4,25,65.2,19.1c2-14.8,7.8-25,14.2-30.7c-49.7-5.8-102-25.5-102-113.5   c0-25.1,8.7-45.6,23-61.6c-2.3-5.8-10-29.2,2.2-60.8c0,0,18.8-6.2,61.6,23.5c17.9-5.1,37-7.6,56.1-7.7c19,0.1,38.2,2.6,56.1,7.7   c42.8-29.7,61.5-23.5,61.5-23.5c12.2,31.6,4.5,55,2.2,60.8c14.3,16.1,23,36.6,23,61.6c0,88.2-52.4,107.6-102.3,113.3   c8,7.1,15.2,21.1,15.2,42.5c0,30.7-0.3,55.5-0.3,63c0,6.1,4,13.3,15.4,11C415.9,449.1,480,363.1,480,261.7   C480,134.8,379.7,32,256,32z"/>
+</svg>
+
+  </a>
+
+
+  <a href="https://medium.com/@jeansebastien.gonsette" class="link-transition medium link dib z-999 pt3 pt0-l mr2" title="Medium link">
+    <svg  height="32px"  style="enable-background:new 0 0 170 170;" version="1.1" viewBox="0 0 170 170" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" >
+<path d="M46.5340803,65.2157554 C46.6968378,63.6076572 46.0836,62.018231 44.8828198,60.93592 L32.6512605,46.2010582 L32.6512605,44 L70.6302521,44 L99.9859944,108.380952 L125.794585,44 L162,44 L162,46.2010582 L151.542017,56.2281011 C150.640424,56.9153477 150.193188,58.0448862 150.380019,59.1628454 L150.380019,132.837155 C150.193188,133.955114 150.640424,135.084652 151.542017,135.771899 L161.755369,145.798942 L161.755369,148 L110.38282,148 L110.38282,145.798942 L120.963119,135.527337 C122.002801,134.487948 122.002801,134.182246 122.002801,132.592593 L122.002801,73.0417402 L92.585901,147.755438 L88.6106443,147.755438 L54.3622782,73.0417402 L54.3622782,123.115814 C54.0767278,125.221069 54.7759199,127.3406 56.2581699,128.863022 L70.0186741,145.55438 L70.0186741,147.755438 L31,147.755438 L31,145.55438 L44.7605042,128.863022 C46.2319621,127.338076 46.8903838,125.204485 46.5340803,123.115814 L46.5340803,65.2157554 Z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+  </a>
+
+</p>
+  </div>
+</footer>
+
+    <script src="https://jsgonsette.github.io/dist/app.bundle.js" async></script>
+
+  </body>
+</html>

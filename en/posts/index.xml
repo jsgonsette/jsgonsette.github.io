@@ -6,7 +6,25 @@
     <description>Recent content in Posts on Jean-Sébastien Gonsette</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>fr</language>
-    <lastBuildDate>Sun, 20 Sep 2020 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 08 Jul 2021 00:00:00 +0000</lastBuildDate><atom:link href="https://jsgonsette.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Almost Ultimate Passwords Management Guide for a Safe Digital Life </title>
+      <link>https://jsgonsette.github.io/en/posts/ultimatepasswordguide/</link>
+      <pubDate>Thu, 08 Jul 2021 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/posts/ultimatepasswordguide/</guid>
+      <description>&lt;p&gt;The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity.&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>To Comment or Not to Comment ?</title>
+      <link>https://jsgonsette.github.io/en/posts/codecomments/</link>
+      <pubDate>Sat, 06 Jul 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://jsgonsette.github.io/en/posts/codecomments/</guid>
+      <description>No, you should not stop writing code comments. The Internet is undeniably a tremendous technology that has literally propelled information sharing and exchange of ideas to a level never achieved before. Nevertheless, this sometimes provokes some frustrations, as when we read the words of a person whose thinking and conclusion are fundamentally at the opposite of ours. It may generate a serious sense of urgency that causes you to react in one way or another, because you are aware of a crime of lese-majesty; someone, somewhere on the Internet is wrong!</description>
+    </item>
+    
     <item>
       <title>Why consciousness and quantum physics are inextricably linked</title>
       <link>https://jsgonsette.github.io/en/posts/quantum/</link>
