@@ -9,7 +9,7 @@
     <meta name="MobileOptimized" content="320">
 
     <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="generator" content="Hugo 0.80.0" />
+    <meta name="generator" content="Hugo 0.90.0" />
     
     
       <META NAME="ROBOTS" CONTENT="INDEX, FOLLOW">
@@ -27,19 +27,15 @@
     <meta property="og:title" content="Almost Ultimate Passwords Management Guide for a Safe Digital Life " />
 <meta property="og:description" content="The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="https://jsgonsette.github.io/en/posts/ultimatepasswordguide/" />
+<meta property="og:url" content="https://jsgonsette.github.io/en/posts/ultimatepasswordguide/" /><meta property="article:section" content="Posts" />
 <meta property="article:published_time" content="2021-07-08T00:00:00+00:00" />
 <meta property="article:modified_time" content="2021-07-08T00:00:00+00:00" /><meta property="og:site_name" content="Jean-Sébastien Gonsette" />
+
 <meta itemprop="name" content="Almost Ultimate Passwords Management Guide for a Safe Digital Life ">
-<meta itemprop="description" content="The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity.">
-<meta itemprop="datePublished" content="2021-07-08T00:00:00+00:00" />
+<meta itemprop="description" content="The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity."><meta itemprop="datePublished" content="2021-07-08T00:00:00+00:00" />
 <meta itemprop="dateModified" content="2021-07-08T00:00:00+00:00" />
-<meta itemprop="wordCount" content="4873">
-
-
-
-<meta itemprop="keywords" content="" />
-<meta name="twitter:card" content="summary"/>
+<meta itemprop="wordCount" content="7705">
+<meta itemprop="keywords" content="" /><meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Almost Ultimate Passwords Management Guide for a Safe Digital Life "/>
 <meta name="twitter:description" content="The difficult question of our digital life security has only become more complex over the years, due to our increasingly massive use of all kinds of digital content. As the financial stakes behind our data can sometimes be colossal, it is normal that from the beginning they have aroused the greed of all kinds of unscrupulous people. And it goes without saying that, even if all kinds of mechanisms have been put in place to better protect our data, the techniques to steal it have never stopped growing in ingenuity."/>
 
@@ -325,7 +321,7 @@ MathJax.Hub.Config({
 <p>And of course, you can nest these functions together to create a complex secret derivation of your own. To fix the ideas, suppose that we choose <code>12345</code> as the <em>Root Code</em>, which is to say one of the least secure passwords we can imagine. Now let&rsquo;s select the following derivation function (obviously, don&rsquo;t choose the same one!):</p>
 <p>$$SALT = SHA1 (REV (B64 (12345)))$$</p>
 <p>Which means that we encode the string <code>12345</code> in <em>Base64</em>, that we read the result backwards, then that we take the <em>SHA1</em> hash of the outcome. It may seem like it&rsquo;s complicated, but it isn&rsquo;t that much and it can be done in minutes with good online tools. It is also very easy to get the same result from the command line in Linux:</p>
-<pre><code>rc=12345
+<pre tabindex="0"><code>rc=12345
 echo -n $(echo -n $rc | base64 | rev) | sha1sum
 </code></pre><p>Then we get:</p>
 <p><code>SALT = c25061cd9ec4fe948926caeb0d75ec1b5c3dace8</code></p>
@@ -373,7 +369,112 @@ echo -n $(echo -n $rc | base64 | rev) | sha1sum
 <p>If two-factor authentication exists, then we can join the path coming from passwords linked to some hardware resource. These two cases indeed present an additional level of security and we can possibly proceed without the <em>salt</em> technique seen previously. But whether it is with or without the <em>salt</em>, I still distinguish two possible cases in the flowchart, through the <em>&lt;Daily use?&gt;</em> block.</p>
 <p>If a password is not often used, then it is fine to generate it randomly using the password manager and let the latter remember it. When you need it, you just have to take it from the manager and this is what I call <em>complex pwd</em> in the diagram. But for all kinds of reasons, it can be restrictive to have to open the manager every time you want to access a frequent application, or if there is no way to copy paste a sequence of 40 random characters.</p>
 <p>So it is sometimes wise to relax a little our constraints which are in any case already of a good level. This is what I call <em>simple pwd</em> in the diagram. Be careful that I don&rsquo;t mean that such password should be easy to guess, but rather that it should be easy to remember, while being unique and having a complex appearance. Then, you can use it everywhere without difficulty and without too much risk. I will not discuss here the different techniques to elaborate this kind of good password, because I realize that this guide is already very long and that I still have a lot to say. So I&rsquo;ll just point to other articles, like <a href="https://cybernews.com/best-password-managers/how-to-create-a-strong-password/">this one</a>, or even <a href="https://medium.com/fleetsmith/the-ultimate-guide-to-strong-passwords-in-2019-488bb8614c83">this other one</a>.</p>
-<p>TO BE CONTINUED</p>
+<h3 id="critical-passwords-management">Critical Passwords Management</h3>
+<p>As mentioned above, there is one category of information that needs to be taken care of and that does not relate directly to an online account or to any piece of hardware. Having intrinsic value, and assuming that the password manager is not foolproof, it needs additional protection.</p>
+<p>This is typically the case with a cryptocurrency wallet recovery phrase, for example, because anyone with that information will be able to access your digital holdings. But there are other scenarios and one of them is a piece of data that we have already covered above ; the seeds of two-factor authentication applications such as the <em>Google Authenticator</em>. Indeed, if you store the master password of an online account in the manager, you cannot store the information related to two-factor authentication in the same way in the same place. Because if the manager were to be corrupted, these two pieces of information would be disclosed simultaneously.</p>
+<p>We can thus imagine all kinds of more critical information that cannot be found <em>as is</em> in the password manager. And to find out what requires these extra precautions, it suffices to ask the question: &ldquo;<em>what would happen if someone could see the entire contents of my password manager? What could he do with it?</em> &ldquo;. The answer will then be obvious.</p>
+<p>A first option to solve this problem, simple, <strong>but that I do not recommend</strong>, could be to embed a secondary <em>KeePass</em> archive inside the main container. The second would thus aim to store critical information in an independent digital safe with its own key, thus avoiding revealing anything in the event of an intrusion into the main container. But if it seems interesting, this approach has several flaws:</p>
+<ol>
+<li>
+<p>If there is any backdoor in the password manager (the kind that the <em>NSA</em> is sometimes suspected of trying to introduce where it can), then this second encryption will exhibit exactly the same weakness and will not provide any additional protection.</p>
+</li>
+<li>
+<p>Accessing this second container is done exactly as with the main one: you have to open it to access all of its content. But as we have seen, it is not possible to guarantee that there is no malware lurking and waiting for this moment to strip you. And since we&rsquo;re talking about much more sensitive data here, it would be <em>very inappropriate</em> to attempt to access it on your primary computer. In other words, this means that this second safe could only be handled on a computer secured with a solution like <em>Tails</em>. This makes its use much less easy and we will see that a slightly more practical solution exists.</p>
+</li>
+</ol>
+<h4 id="pgp-encryption-with-kleopatra">PGP Encryption With Kleopatra</h4>
+<p><em>OpenPGP</em> is a non-proprietary data encryption and authentication format based on public key cryptography. The latter differs radically from symmetric cryptography in terms of its handling. So, instead of using the same secret key to encrypt and decrypt data, two keys are needed here, one public and the other private. The public key can be known to everyone, because once it has been used to encrypt information, it is not sufficient to restore it. Decryption can only be done by the holder of the private key.</p>
+<p>We can then advantageously use this property to protect sensitive data even before storing it in the password manager. First of all, by using a different encryption protocol, this protects us from any breach in the security of the manager itself. Then, we will be able to encrypt each new information individually and this operation can possibly be carried out on any computer; using the public key does not require any special precautions. The only truly critical operation comes down to the decryption of a piece of data using the private key, which must imperatively be carried out on a <em>Tails</em> session to be perfectly certain that it remains confidential.</p>
+<p>Concretely, public key cryptography is used with the help of certificates containing, among other things, the famous pairs of public and private keys. Since the private key must be kept secret, it is not stored as is in the certificate. Instead, it is encrypted with symmetric encryption whose key, called a <em>pass phrase</em>, is chosen when creating the certificate. The certificate can then be used directly to encrypt any data, but the knowledge of the <em>pass phrase</em> is essential to further decrypt it.</p>
+<p>The free software <em>Kleopatra</em>, available under <em>Linux</em> as on <em>Windows</em>, allows to create and manage such certificates, as well as to carry out the operations of encryption decryption. The first step is to create a certificate dedicated to the protection of sensitive data and that we save in the <em>KeePass</em> container. As explained above, a <em>pass phrase</em> has to be chosen for the protection of the private key. The easiest way is to use again the derivation mechanism we devised to generate the <em>salt</em> on the <em>Yubikey</em>. By applying it this time to the <em>master key</em>, we thus obtain a new code, easy to regenerate, which can be used as a <em>pass phrase</em>. Once the certificate has been created, it then remains to <strong>save</strong> it in the password manager to be sure not to lose it (without it, the encrypted data cannot be recovered).</p>
+<p>All these different steps are illustrated in the red block on the drawing introduced above. Critical information can be seen passing into the <em>PGP Encrypted</em> block, the latter operating through a public and private key pair protected by a <em>pass phrase</em> generated from the <em>master key</em>. Once again, this mechanism provides strong passwords that can be easily recovered thanks the knowledge of a simpler <em>root code</em>.</p>
+<h4 id="tails">Tails</h4>
+<p>As presented above, <em>Tails</em> allows you to run a reliable OS on any computer through a bootable USB key, used exclusively in read-only mode. This ensures that you always start a session in a trusted environment. <strong>Extremely well documented</strong>, usage of <em>Tails</em> shouldn&rsquo;t be a problem for anyone, but it sure does require a bit of gymnastics and discipline. It is therefore best to reserve it only for the management of critical data which should not be accessed often.</p>
+<p>For example, if you are managing your digital wallet recovery phrases on a computer, it is really <strong>a must</strong> that they never hit an untrusted PC in any way. The procedure to be scrupulously applied to save this kind of information is then as follows:</p>
+<ol>
+<li>Copy your <em>KeePass</em> archive to a USB key;</li>
+<li>Launch a <em>Tails</em> session on your PC;</li>
+<li>Unlock the <em>KeePass</em> container on the USB key;</li>
+<li>Extract the certificate dedicated to sensitive data and add it to <em>Tails</em>;</li>
+<li>Record sensitive information in a text file or other;</li>
+<li>Use <em>Kleopatra</em> to encrypt this file using the certificate;</li>
+<li>Add the encrypted file to the <em>KeePass</em> container;</li>
+</ol>
+<p>Then, before closing the <em>Tails</em> session and that the unencrypted sensitive information disappears, it is <strong>essential</strong> to verify that it is indeed possible to restore it using this same certificate and knowledge of the <em>pass phrase</em>.</p>
+<p>Technically, adding such encrypted information to the password manager can also be done without going through a <em>Tails</em> session. The only thing that the latter provides is the assurance that the information to be protected cannot be stolen. It all depends a little on what we are talking about. Each case is unique and it is up to you to judge the incurred risk.</p>
+<p>On the other hand, any decryption operation should only be performed in <em>Tails</em>, in order to be sure not to have the <em>pass phrase</em> stolen. Because if it gets disclosed, then all the data encrypted with the corresponding certificate gets compromised.</p>
+<h3 id="backup-copies">Backup Copies</h3>
+<p>Unlike many other password management solutions, <em>KeePass</em> software does not natively offer a mechanism to make backup copies of your data or to synchronize them across multiple devices. This functionality is, however, essential to be sure to never lose your passwords, even in the event of failure of your computer equipment.</p>
+<p>Fortunately, and even if it is a little less practical, <em>KeePass</em> benefits from a wide range of optional plug-ins, some of which being dedicated to synchronization with the <em>cloud</em>. It is thus possible to synchronize its database with the usual file storage services such as <em>Google Drive</em>, <em>One Drive</em>, <em>DropBox</em>, etc.</p>
+<p>The other option is to simply transfer your <em>KeePass</em> archive by hand to an online disk storage each time it is modified. But, whatever the chosen method, it is legitimate to ask the question of the security of such an approach: is it really acceptable to put your password database online and expose it to all dangers ?</p>
+<p>The answer to this question is a big <em>yes</em>, and for several reasons. First of all, the container will not be directly exposed since it will be stored in some private space. And I&rsquo;m sure that a place like <em>Google Drive</em> is better protected than your home PC can ever be. Then, even if a malicious person does manage to get their hands on your database, there is very little chance that they will be able to do anything with it. As long as a password container remains encrypted, it takes enormous computing power to break in. One small nuance, though, this is only true if you have chosen a strong password. Otherwise, I invite you to <a href="https://tzusec.com/cracking-keepass-database/">read this article</a> to change your mind on the question. Finally, this password archive has been built in such a way that accessing the data it contains is not sufficient to directly access your various digital accounts ; because of the mechanisms we saw, like splitting a password in 2 pieces, or like the usage of double authentication or additional encryption. All of this put together makes it extremely unlikely that you could ever have anything stolen from you, at least numerically speaking.</p>
+
+
+<div class="box" >
+  <figure  itemprop="associatedMedia" itemscope itemtype="http://schema.org/ImageObject">
+    <div class="img">
+      <img itemprop="thumbnail" src="/images/Posts/PasswordXKCD.png" />
+    </div>
+    <a href="/images/Posts/PasswordXKCD.png" itemprop="contentUrl"></a>
+  </figure>
+</div>
+
+<p>Finally, it will be necessary to make a call on a friend to fully meet requirement 3, which states that all digital devices can be destroyed without consequence. If this does happen, you may no longer have access to the online file service where your password database is stored. It is possible to guard against this scenario by using any mailbox of an acquaintance to make a backup from time to time. Simply send a message with the <em>KeePass</em> container attached to and explain your recipient to not delete it. In addition, there is no need to spam your friends every time you make a change to your data, because the purpose of this email is simply to be able to access the online file service again.</p>
+<p>Even if the security of an encrypted archive like the one created by <em>KeePass</em> is high, you might be reluctant to spread it widely and lose control over it. To be on the safe side, it is easy to encrypt the container before emailing it for backup. One option among others is to use <em>Kleopatra</em> which offers the possibility of performing symmetric encryption based on a password. The latter can be the <em>pass phrase</em> or another sequence derived from it. Then remove the extension of the file and give it a name that is not very explicit. No one else but you will be able to really know what it is about, and the contents of the file will be a simple block of random values revealing no clue.</p>
+<h3 id="handover">Handover</h3>
+<p>If for some reason, it is necessary for someone to be able to access your password archive should the worst happen, you will need to store your <em>root code</em>, the <em>secret derivation mechanism</em> and clear instructions in a safe. Your legatee must also be one of the people to whom you sent the email containing a backup copy. From there, all you will have to do is figure out some way to give access to the safe to whoever you choose if the situation calls for it. The best way to get there is perhaps to go through a notary. In the meantime, your legatee will be unable to use the email you sent him and, on the other hand, someone who could break in the safe could not do anything with those instructions.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>It is good to summarize ourselves after these long explanations. The various stages of this methodology are listed below and classified in different categories. Again, there are no unique ways to do this and everyone&rsquo;s needs are different. So everything does not necessarily have to be kept and various steps can be adapted. The important thing is to consider all the worst scenarios and to prepare for them by having an appropriate response for each of them. To borrow a quote from <em>Game of Thrones</em>: &ldquo;* What we don’t know is what usually gets us killed.*&rdquo;</p>
+<h3 id="standard-set-up">Standard set up</h3>
+<ol>
+<li>Get a <em>Yubikey</em> and a USB stick on which you flash <em>Tails</em>.</li>
+<li>Install the <em>KeePass</em> and <em>Kleopatra</em> software. On <em>Tails</em> they are provided straight away.</li>
+<li>Choose a <em>root code</em> and determine a secret <em>derivation mechanism</em>. This information should be remembered or put in the safe.</li>
+<li>Derive <em>salt</em> from the <em>root code</em> and from the <em>derivation procedure</em>. Program your <em>Yubikey</em> to generate it when you perform a long press.</li>
+<li>Create a new <em>KeePass</em> archive whose <em>master key</em> is given by: <em>root code</em> + <em>salt</em>.</li>
+<li>(Optionally), install a plug-in allowing the synchronization of the archive with an online file service.</li>
+<li>(Optionally), engrave the <em>root code</em> and the <em>derivation procedure</em>, then place them in a safe. Don&rsquo;t forget to provide some instructions for the person for whom this information is intended.</li>
+</ol>
+<h3 id="advanced-set-up">Advanced set up</h3>
+<ol>
+<li>Transfer your <em>KeePass</em> archive to a <em>Tails</em> session using a USB key.</li>
+<li>Generate the <em>pass phrase</em> using the <em>master key</em> and the <em>derivation procedure</em>.</li>
+<li>Use <em>Kleopatra</em> to create an encryption certificate. The private key must be protected by the <em>pass phrase</em>.</li>
+<li>Open the <em>KeePass</em> archive and add this certificate to it.</li>
+<li>Bring back the <em>KeePass</em> archive with the USB key.</li>
+</ol>
+<h3 id="adding-a-standard-password">Adding a Standard Password</h3>
+<ol>
+<li>Ask yourself the right questions to find out if this password will include <em>salt</em> for added protection. The <em>Yubikey</em> key will then be needed.</li>
+<li>Ask yourself the right questions to know if this password will be random and impossible to remember without the manager, or if you will be using a mnemonic to be able to use it frequently.</li>
+<li>Add the password to your archive. If the password is random, let <em>KeePass</em> generate it for you.</li>
+<li>If this is an online account, enable two-factor authentication. The ideal is the <em>Yubikey</em>, <em>Google Authenticator</em> (or similar) duo. The first one for normal use, the second one in case of loss of the key. The <em>Google Authenticator</em> seed must also be saved in the <em>KeePass</em> archive and be treated as a critical password.</li>
+<li>(Optionally) if the <em>Yubikey</em> is enabled for two-factor authentication, remove this account from the <em>Google Authenticator</em> application.</li>
+</ol>
+<h3 id="adding-a-critical-password">Adding a Critical Password</h3>
+<ol>
+<li>(Optionally), transfer your <em>KeePass</em> archive to a <em>Tails</em> session using a USB key.</li>
+<li>Open the archive and extract the encryption certificate to make it usable by <em>Kleopatra</em>.</li>
+<li>Use <em>Kleopatra</em> to encrypt the information with the certificate.</li>
+<li>(Optionally) and on <em>Tails</em> only, perform a test to verify that you can decipher the information using the <em>pass phrase</em>.</li>
+<li>Add the encrypted information to your archive.</li>
+<li>(Optionally), retrieve the <em>KeePass</em> archive with the USB key.</li>
+</ol>
+<p>The decision whether or not to switch to <em>Tails</em> for adding such a password really depends on what is at stake. Many situations can afford to do without it.</p>
+<h3 id="extracting-a-critical-password">Extracting a Critical Password</h3>
+<ol>
+<li>Transfer your <em>KeePass</em> archive to a <em>Tails</em> session using a USB key.</li>
+<li>Open the archive and extract the encryption certificate to make it usable by <em>Kleopatra</em>.</li>
+<li>Extract the information to be decrypted from the archive.</li>
+<li>Generate the <em>pass phrase</em> using the <em>master key</em> and the <em>derivation procedure</em>.</li>
+<li>Decipher the information with <em>Kleopatra</em> and the <em>pass phrase</em>.</li>
+</ol>
+<h3 id="restoration-in-the-event-of-loss-of-some-equipment">Restoration in the event of loss of some equipment</h3>
+<ul>
+<li>If you no longer have access to your <em>KeePass</em> archive, ask your acquaintances to resend your recovery email. Decrypt the attachment, open the archive it contains, and get access back to your online file service where the last fresh version of the archive is stored.</li>
+<li>If you have lost your phone and the double authentication it contained, recover them by extracting the seeds saved in the <em>KeePass</em> archive. This will enable to restore the two-factor authentication to the new phone.</li>
+<li>If you have lost your <em>Yubikey</em>, you will need to delete it from each account that uses it as a means of two-factor authentication. To do this, make sure you have your fallback authentication available on your <em>Google Authenticator</em>. Then connect to each of the impacted accounts to remove the access using the lost <em>Yubikey</em>, and replace it thanks to a new key. For added security, you may also need to change the <em>salt</em> used in the <em>master key</em> and in any other password using this technique. Concretely, this involves changing the <em>root code</em> and recreating new passwords using the <em>derivation procedure</em>. It all depends on the circumstances of the loss of the key and the risk that someone can try to use it against you.</li>
+</ul>
         </span>
       </div>
       <div class="f5 mid-gray">
@@ -466,7 +567,7 @@ echo -n $(echo -n $rc | base64 | rev) | sha1sum
     <footer class="bg-near-black bottom-0 w-100 pa3" role="contentinfo">
   <div class="flex justify-between">
   <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="https://jsgonsette.github.io/" >
-    &copy; 2021 Jean-Sébastien Gonsette
+    &copy; 2023 Jean-Sébastien Gonsette
   </a>
   <p align="right">
 
