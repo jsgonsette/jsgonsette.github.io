@@ -1,6 +1,7 @@
 {
-  "name": "egui Template PWA",
-  "short_name": "egui-template-pwa",
+  "name": "µCeption",
+  "short_name": "µCeption: A Very Simple CPU",
+  "description": "Deep dive into the electronic gears of a simple CPU. https://web.dev/articles/add-manifest?hl=fr",
   "icons": [
     {
       "src": "./icon-256.png",
@@ -22,7 +23,7 @@
   "lang": "en-US",
   "id": "/index.html",
   "start_url": "./index.html",
-  "display": "standalone",
+  "display": "fullscreen",
   "background_color": "white",
-  "theme_color": "white"
+  "theme_color": "black"
 }
