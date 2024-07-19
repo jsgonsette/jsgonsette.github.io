@@ -2,8 +2,8 @@ var cacheName = 'egui-template-pwa';
 var filesToCache = [
   './',
   './index.html',
-  './cpuception.js',
-  './cpuception_bg.wasm',
+  './microception.js',
+  './microception_bg.wasm',
 ];
 
 /* Start the service worker and cache all of the app's content */
