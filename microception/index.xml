@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>microCeption</title>
-    <link>http://127.0.0.1:5500/microception/</link>
+    <link>https://jsgonsette.github.io/microception/</link>
     <description>Recent content on microCeption</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <atom:link href="http://127.0.0.1:5500/microception/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://jsgonsette.github.io/microception/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
