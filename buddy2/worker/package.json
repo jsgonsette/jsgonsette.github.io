@@ -1,0 +1,19 @@
+{
+  "name": "buddy-worker",
+  "type": "module",
+  "collaborators": [
+    "Jean-Sébastien Gonsette"
+  ],
+  "description": "Bubbdy",
+  "version": "0.1.0",
+  "files": [
+    "buddy_worker_bg.wasm",
+    "buddy_worker.js",
+    "buddy_worker.d.ts"
+  ],
+  "main": "buddy_worker.js",
+  "types": "buddy_worker.d.ts",
+  "sideEffects": [
+    "./snippets/*"
+  ]
+}
