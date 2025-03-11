@@ -55,9 +55,9 @@ function stop_game () {
 /// 1: if some game running
 /// 2: if a request is pending
 function get_server_status () {
-	if (globalThis.game_started == false) return 0;
-	if (globalThis.game_started == true) return 1;
-	if (globalThis.game_started === null) return 2;
+	if (globalThis.game_started === false) return 0;
+	else if (globalThis.game_started === true) return 1;
+	else /*if (globalThis.game_started === null)*/ return 2;
 }
 
 /// Called from the main Rust app to get the next notification
@@ -158,6 +158,7 @@ register_plugin = function (importObject) {
 	importObject.env.stop_game = stop_game;
 	importObject.env.get_next_notification = get_next_notification;
 	importObject.env.send_action = send_action;
+	importObject.env.get_server_status = get_server_status;
 }
 
 // ################################################################################################
