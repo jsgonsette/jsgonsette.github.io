@@ -10,6 +10,11 @@ export class Server {
    */
   constructor();
   /**
+   * Called by the JS side to open a ONNX NN model from `raw_onnx_data` and to store it
+   * under the model key `model_name`.
+   */
+  load_nn_model(model_name: string, raw_onnx_data: Uint8Array): void;
+  /**
    * Called by the JS side to transmit the action selected by the human player
    */
   send_action(agent_handle: number, action_json: string): void;
@@ -36,12 +41,15 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly __wbg_server_free: (a: number, b: number) => void;
   readonly server_new: () => number;
+  readonly server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly server_send_action: (a: number, b: number, c: number, d: number) => void;
   readonly server_schedule: (a: number) => void;
   readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint) => number;
   readonly server_stop_game: (a: number) => void;
+  readonly __wbindgen_exn_store: (a: number) => void;
+  readonly __externref_table_alloc: () => number;
+  readonly __wbindgen_export_2: WebAssembly.Table;
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
-  readonly __wbindgen_export_1: WebAssembly.Table;
   readonly __wbindgen_malloc: (a: number, b: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_start: () => void;

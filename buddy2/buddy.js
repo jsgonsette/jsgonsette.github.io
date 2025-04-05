@@ -6,11 +6,42 @@
 function create_web_worker () {
 	console.info ("Create web worker")
 	globalThis.worker = new Worker('worker.js', { type: 'module' });
+	globalThis.worker.onmessage = process_notifications;
+
 	globalThis.game_started = false;
 	globalThis.notifications = [];
+	globalThis.num_nn_model_loading = 0;
+	globalThis.nn_model_loading_percent = 0;
+}
+
+function get_nn_model_loading_percent () {
+	if (globalThis.num_nn_model_loading === 0) return 100;
+	else {
+		return Math.round( globalThis.nn_model_loading_percent / globalThis.num_nn_model_loading );
+	}
+}
+
+/// Start the loading of some NN model asynchronously.
+/// The model must be located at the provided `model_uri`.
+function load_nn_model (model_uri, model_name) {
+
+	console.info ("JS - Main - load_nn_model");
+
+	let msg = new Map([
+		["kind", "load_nn_model"],
+		["uri", consume_js_object(model_uri)],
+		["nn_name", consume_js_object(model_name)],
+	]);
+
+	globalThis.num_nn_model_loading += 1;
+
+	worker.postMessage(msg);
 }
 
 /// Called from the main Rust app to start a new game
+/// `game_name`: the name of the game (e.g. Connect_4)
+/// `agent_configs`: JSON string of a vector of [(agent_type, agent_name, parameters)]
+/// `seed`: Game seed for PRNG
 function start_game (game_name, agent_configs, seed) {
 
 	console.info ("JS - Main - start_game");
@@ -25,12 +56,8 @@ function start_game (game_name, agent_configs, seed) {
 	
 	globalThis.game_started = null;
 	globalThis.notifications = [];
-	
-	send_and_wait_response(msg).then ((result) => {
-		globalThis.game_started = result;
-		console.info (" - start_game result: ", result);
-	});
-	
+
+	worker.postMessage(msg);
 	return true;
 }
 
@@ -43,11 +70,7 @@ function stop_game () {
 	]);
 	
 	globalThis.game_started = null;
-
-	send_and_wait_response(msg).then ((result) => {
-		globalThis.game_started = false;
-		globalThis.notifications = [];
-	});
+	worker.postMessage(msg);
 }
 
 /// Return the server status
@@ -68,25 +91,26 @@ function get_next_notification () {
 		let kind = msg.get ("kind");
 		
 		// Forward the notification to Rust
-		if (kind == "buddy_notification") {
+		if (kind === "buddy_notification") {
 			console.info ("JS(Main) - Process Buddy Notification");
 			let json_content = msg.get ("notification");
 			wasm_exports.provide_next_notification (js_object(json_content));
 		}
-		
-		// Respond to the validation request (echo)
-		else if (kind == "validate") {
+
+		// Echo the "validate notification", to inform the worker all the previous messages
+		// have been processed.
+		else if (kind === "validate") {
 			console.info ("JS(Main) - Validate");
 			globalThis.worker.postMessage (msg);
 		}
 		
 		// End of game notification
-		else if (kind == "end_of_game") {
+		else if (kind === "end_of_game") {
 			globalThis.game_started = false;
 			globalThis.notifications = [];
 			console.info ("JS(Main) - End of Game Notification");
 		}
-		
+
 		else {
 			console.error ("Unknown notification: ", msg);
 		}
@@ -142,11 +166,42 @@ function send_and_wait_response (message) {
 
 /// Handler for the free notifications from the worker.
 function process_notifications (event) {
-	
-	// We collect them in a FIFO.
+
 	let msg = event.data;
-	globalThis.notifications.push (msg);
-	console.debug ("JS(Main) - push notification: ", msg);
+	let kind = msg.get ("kind");
+
+	// Response to a start game request
+	if (kind === "start_game") {
+		let result = msg.get ("result");
+		console.info (" - start_game result: ", result);
+		globalThis.game_started = result;
+	}
+
+	// Response to a stop game request
+	else if (kind === "stop_game") {
+		console.info (" - stop_game confirmation");
+		globalThis.game_started = false;
+		globalThis.notifications = [];
+	}
+
+	// NN model loading progress
+	else if (kind === "nn_model_loading_progress") {
+		let progress = msg.get ("progress_percent");
+		console.debug ("JS(Main) - NN loading progress ", progress);
+
+		globalThis.nn_model_loading_percent = progress;
+		if (progress === 100) {
+			globalThis.num_nn_model_loading -= 1;
+			globalThis.nn_model_loading_percent = 0;
+		}
+	}
+
+	// Notification
+	else {
+		// We collect them in a FIFO.
+		globalThis.notifications.push(msg);
+		console.debug("JS(Main) - push notification: ", msg);
+	}
 }
 
 /// Plugin registration (https://macroquad.rs/articles/wasm/)
@@ -155,6 +210,8 @@ register_plugin = function (importObject) {
 	console.info ("JS(Main) - Loading miniquad pluging");
 	importObject.env.create_web_worker = create_web_worker;
 	importObject.env.start_game = start_game;
+	importObject.env.load_nn_model = load_nn_model;
+	importObject.env.get_nn_model_loading_percent = get_nn_model_loading_percent;
 	importObject.env.stop_game = stop_game;
 	importObject.env.get_next_notification = get_next_notification;
 	importObject.env.send_action = send_action;

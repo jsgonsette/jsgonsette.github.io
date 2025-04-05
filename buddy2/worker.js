@@ -17,7 +17,8 @@ self.schedule_notification = function(notification) {
 	self.postMessage(msg);	
 };
 
-/// Called by Rust to ask for validation before continuing scheduling the game
+/// Called by Rust to ask for validation before continuing scheduling the game.
+/// The validation mechanism ensures the scheduler runs at the same pace as the game HMI.
 self.validate = function () {
 
     console.debug("JS(Worker) - Ask for validation");
@@ -27,7 +28,8 @@ self.validate = function () {
 	self.postMessage(msg);
 }
 
-/// Called by Rust to inform the end of a game
+/// Called by Rust to inform the end of a game.
+/// * reason: A string describing the reason the game ended.
 self.end_of_game = function (reason) {
 
     console.debug("JS(Worker) - End of Game");
@@ -43,7 +45,7 @@ self.end_of_game = function (reason) {
 
 // ################################################################################################
 
-/// Called after init to indicate the WASM module and associated server are loaded and ready
+/// Called after init to indicate that the WASM module and the associated server are loaded and ready
 let serverReady = new Promise((resolve) => {
     globalThis.serverReadyResolver = resolve;
 });
@@ -58,6 +60,38 @@ async function run() {
 	globalThis.server = new Server ();
 	globalThis.serverReadyResolver();
 	globalThis.game_started = false;
+	globalThis.start_game_msg = null;
+
+	globalThis.downloading_num = 0;
+	globalThis.downloading_size = 0;
+	globalThis.downloading_left = 0;
+}
+
+/// Process a message of kind: msg.get ("kind") === "start_game"
+/// This processing is delayed until all the requested NN models are loaded.
+function process_start_game_msg () {
+
+	if (globalThis.start_game_msg === null) return;
+	if (globalThis.downloading_num > 0) return;
+
+	let msg = globalThis.start_game_msg;
+	globalThis.start_game_msg = null;
+
+	// Request to start the game at the Rust worker side
+	let game = msg.get ("game");
+	let seed = BigInt (msg.get ("seed"));
+	let agents = msg.get ("agents");
+	let result = globalThis.server.start_game (game, agents, seed);
+
+	// Send the result back
+	globalThis.game_started = result;
+	msg.set ("result", result);
+	self.postMessage(msg);
+
+	// If the game is started, launch immediately a first scheduling round
+	if (result == true) {
+		globalThis.server.schedule ();
+	}
 }
 
 // ################################################################################################
@@ -65,32 +99,32 @@ async function run() {
 /// Process messages sent by the main application thread 
 self.onmessage = async (event) => {
 	
-	// Ensure we are ready and running
+	// Ensure we are ready and running before processing any incoming notification
 	await serverReady;
-	
 	console.debug('JS(Worker) - Incoming message: ', event.data);
-	
+
+	// Request to start a new game
 	let msg = event.data;
-	if (msg.get ("kind") == "start_game") {
+	if (msg.get ("kind") === "start_game") {
 
-		// Request to start the game at the Rust worker side
-		let game = msg.get ("game");
-		let seed = BigInt (msg.get ("seed"));
-		let agents = msg.get ("agents");
-		let result = globalThis.server.start_game (game, agents, seed);
-
-		// Send the result back
-		globalThis.game_started = result;
-		msg.set ("result", result);
-		self.postMessage(msg);
-		
-		// If the game is started, launch immediately a first schedule round
-		if (result == true) {
-			globalThis.server.schedule ();
-		}
+		// Store the message and process now if possible.
+		// Otherwise, the processing will be done when all the NN models are loaded.
+		globalThis.start_game_msg = msg;
+		process_start_game_msg ();
 	}
-	
-	else if (msg.get ("kind") == "stop_game") {
+
+	// Request to load a NN model
+	else if (msg.get ("kind") === "load_nn_model") {
+
+		let uri = msg.get ("uri");
+		let model_name = msg.get ("nn_name");
+		console.log ("Loading NN ", model_name, "from ", uri);
+
+		await load_nn_model(uri, model_name);
+		process_start_game_msg ();
+	}
+
+	else if (msg.get ("kind") === "stop_game") {
 
 		// Request to stop the game at the Rust worker side
 		globalThis.server.stop_game ();
@@ -101,14 +135,14 @@ self.onmessage = async (event) => {
 		self.postMessage(msg);		
 	}
 	
-	else if (msg.get ("kind") == "validate") {
+	else if (msg.get ("kind") === "validate") {
 		// Schedule the next round when the validation message has been validated
 		if (globalThis.game_started == true) {
 			globalThis.server.schedule ();
 		}
 	}
 	
-	else if (msg.get ("kind") == "send_action") {
+	else if (msg.get ("kind") === "send_action") {
 
 		// Transmit the action to the Rust side
 		let action_json = msg.get ("action");
@@ -123,6 +157,70 @@ self.onmessage = async (event) => {
 		console.error ("JS(Worker) - Invalid message: ", msg);
 	}
 };
+
+/// Download a NN model, provided its `uri`
+async function load_nn_model (uri, model_name) {
+
+	globalThis.downloading_num += 1;
+
+	const response = await fetch(uri);
+	if (!response.ok) {
+		console.error("Cannot access model at ${uri}: ${response.statusText}");
+		globalThis.downloading_num -= 1;
+		return;
+	}
+
+	const contentLength = response.headers.get("Content-Length");
+	const totalSize = contentLength ? parseInt(contentLength, 10) : null;
+	console.log ("Total size ", totalSize);
+
+	const reader = response.body.getReader();
+	let receivedLength = 0;
+	let chunks = [];
+	globalThis.downloading_size += totalSize;
+	globalThis.downloading_left += totalSize;
+
+	// Downloading loop
+	while (true) {
+
+		// Get the next chunk of data
+		const { done, value } = await reader.read();
+		if (done) break;
+		chunks.push(value);
+
+		// Update the current progress
+		receivedLength += value.length;
+		globalThis.downloading_left -= value.length;
+
+		// And notify the main app
+		let progress = 100 - 100 * globalThis.downloading_left / globalThis.downloading_size;
+		let reply = new Map([
+			["kind", "nn_model_loading_progress"],
+			["progress_percent", progress]
+		]);
+		self.postMessage(reply);
+
+		//await new Promise(r => setTimeout(r, 10));
+	}
+
+	// Make a binary array from all those chunks
+	let fullArray = new Uint8Array(receivedLength);
+	let position = 0;
+	for (let chunk of chunks) {
+		fullArray.set(chunk, position);
+		position += chunk.length;
+	}
+
+	// Open it at the Rust side
+	server.load_nn_model(model_name, fullArray);
+
+	// Housekeeping
+	globalThis.downloading_num -= 1;
+	if (globalThis.downloading_num == 0) {
+		globalThis.downloading_left = 0;
+		globalThis.downloading_size = 0;
+	}
+}
 
 // ################################################################################################
 

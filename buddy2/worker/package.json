@@ -4,7 +4,7 @@
   "collaborators": [
     "Jean-Sébastien Gonsette"
   ],
-  "description": "Bubbdy",
+  "description": "Web Worker supporting the 'Buddy-Game' application when compiled in WASM",
   "version": "0.1.0",
   "files": [
     "buddy_worker_bg.wasm",
