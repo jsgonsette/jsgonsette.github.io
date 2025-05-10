@@ -22,13 +22,13 @@ export class Server {
    * Called by the JS side to schedule a new turn of the game.
    * This will trigger calls to function [process_notification](Self::process_notification).
    */
-  schedule(): void;
+  schedule(): Promise<void>;
   /**
    * Start a new game provided the following configuration:
    * * `game`: the name of the game.
    * * `agent_configs`: a JSON string describing the configuration of the different agents.
    */
-  start_game(game: string, agent_configs: string, seed: bigint): boolean;
+  start_game(game: string, agent_configs: string, seed: bigint): Promise<boolean>;
   /**
    * Stop the current game.
    */
@@ -43,8 +43,8 @@ export interface InitOutput {
   readonly server_new: () => number;
   readonly server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly server_send_action: (a: number, b: number, c: number, d: number) => void;
-  readonly server_schedule: (a: number) => void;
-  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint) => number;
+  readonly server_schedule: (a: number) => any;
+  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint) => any;
   readonly server_stop_game: (a: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
@@ -52,6 +52,10 @@ export interface InitOutput {
   readonly __wbindgen_free: (a: number, b: number, c: number) => void;
   readonly __wbindgen_malloc: (a: number, b: number) => number;
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
+  readonly __wbindgen_export_6: WebAssembly.Table;
+  readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0c856b91a60c030b: (a: number, b: number) => void;
+  readonly closure135_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure4294_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 

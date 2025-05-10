@@ -7,7 +7,7 @@ import init, {Server} from './worker/buddy_worker.js';
 /// * 'notification': a Rust BuddyNotification in JSON string
 self.schedule_notification = function(notification) {
 
-    console.debug("JS(Worker) - Incoming schedule notification: ", notification);
+    console.debug("JS(Worker) - 'schedule_notification': ", notification);
 
 	let msg = new Map([
 	  ["kind", "buddy_notification"],
@@ -17,11 +17,25 @@ self.schedule_notification = function(notification) {
 	self.postMessage(msg);	
 };
 
+/// Called by Rust to send a tuple (player, llm message) to the main application.
+/// * 'notification': JSON-encoded data
+self.llm_message = function (notification) {
+
+	console.debug("JS(Worker) - 'llm_message': ", notification);
+	
+	let msg = new Map([
+		["kind", "llm_message"],
+		["notification", notification],
+	]);
+
+	self.postMessage(msg);
+}
+
 /// Called by Rust to ask for validation before continuing scheduling the game.
 /// The validation mechanism ensures the scheduler runs at the same pace as the game HMI.
 self.validate = function () {
 
-    console.debug("JS(Worker) - Ask for validation");
+    console.debug("JS(Worker) - 'validate'");
 	let msg = new Map([
 	  ["kind", "validate"],
 	]);
@@ -32,7 +46,7 @@ self.validate = function () {
 /// * reason: A string describing the reason the game ended.
 self.end_of_game = function (reason) {
 
-    console.debug("JS(Worker) - End of Game");
+    console.debug("JS(Worker) - 'end_of_game'");
 	globalThis.game_started = false;
 	
 	let msg = new Map([
@@ -69,7 +83,7 @@ async function run() {
 
 /// Process a message of kind: msg.get ("kind") === "start_game"
 /// This processing is delayed until all the requested NN models are loaded.
-function process_start_game_msg () {
+async function process_start_game_msg () {
 
 	if (globalThis.start_game_msg === null) return;
 	if (globalThis.downloading_num > 0) return;
@@ -81,16 +95,16 @@ function process_start_game_msg () {
 	let game = msg.get ("game");
 	let seed = BigInt (msg.get ("seed"));
 	let agents = msg.get ("agents");
-	let result = globalThis.server.start_game (game, agents, seed);
+	let result = await globalThis.server.start_game (game, agents, seed);
 
 	// Send the result back
 	globalThis.game_started = result;
 	msg.set ("result", result);
 	self.postMessage(msg);
 
-	// If the game is started, launch immediately a first scheduling round
+	// If the game is started, immediately launch a first scheduling round
 	if (result == true) {
-		globalThis.server.schedule ();
+		await globalThis.server.schedule ();
 	}
 }
 
@@ -101,7 +115,7 @@ self.onmessage = async (event) => {
 	
 	// Ensure we are ready and running before processing any incoming notification
 	await serverReady;
-	console.debug('JS(Worker) - Incoming message: ', event.data);
+	console.debug('JS(Worker) - Incoming Event: ', event.data);
 
 	// Request to start a new game
 	let msg = event.data;
@@ -110,7 +124,7 @@ self.onmessage = async (event) => {
 		// Store the message and process now if possible.
 		// Otherwise, the processing will be done when all the NN models are loaded.
 		globalThis.start_game_msg = msg;
-		process_start_game_msg ();
+		await process_start_game_msg ();
 	}
 
 	// Request to load a NN model
@@ -118,10 +132,9 @@ self.onmessage = async (event) => {
 
 		let uri = msg.get ("uri");
 		let model_name = msg.get ("nn_name");
-		console.log ("Loading NN ", model_name, "from ", uri);
 
 		await load_nn_model(uri, model_name);
-		process_start_game_msg ();
+		await process_start_game_msg ();
 	}
 
 	else if (msg.get ("kind") === "stop_game") {
@@ -138,7 +151,7 @@ self.onmessage = async (event) => {
 	else if (msg.get ("kind") === "validate") {
 		// Schedule the next round when the validation message has been validated
 		if (globalThis.game_started == true) {
-			globalThis.server.schedule ();
+			await globalThis.server.schedule ();
 		}
 	}
 	
@@ -150,7 +163,7 @@ self.onmessage = async (event) => {
 		globalThis.server.send_action (agent_handle, action_json);
 		
 		// continue scheduling the current turn
-		globalThis.server.schedule ();
+		await globalThis.server.schedule ();
 	}
 	
 	else {
@@ -165,14 +178,13 @@ async function load_nn_model (uri, model_name) {
 
 	const response = await fetch(uri);
 	if (!response.ok) {
-		console.error("Cannot access model at ${uri}: ${response.statusText}");
+		console.error(`JS(Worker) - Cannot access model at ${uri}: ${response.statusText}`);
 		globalThis.downloading_num -= 1;
 		return;
 	}
 
 	const contentLength = response.headers.get("Content-Length");
 	const totalSize = contentLength ? parseInt(contentLength, 10) : null;
-	console.log ("Total size ", totalSize);
 
 	const reader = response.body.getReader();
 	let receivedLength = 0;
