@@ -61,6 +61,14 @@
 	<script src="https://not-fl3.github.io/miniquad-samples/sapp_jsutils.js"></script>
 	<script src="buddy.js"></script>
     <script>
+	
+		function resizeCanvas() {
+			let canvas = document.querySelector('glcanvas');
+			canvas.style.width = window.innerWidth + "px";
+			canvas.style.height = window.innerHeight + "px";
+			canvas.width = window.innerWidth;
+			canvas.height = window.innerHeight;
+		}
         
         function updateProgress(progress) {
             document.getElementById("loading-bar").style.width = progress + "%";
@@ -104,6 +112,11 @@
         loadWasmWithProgress("buddy.wasm").then(() => {
             load("buddy.wasm"); 
         });
+		
+		
+		window.addEventListener("resize", resizeCanvas);
+		window.addEventListener("orientationchange", resizeCanvas);
+		window.addEventListener("load", resizeCanvas);
 
     </script>
 </body>
