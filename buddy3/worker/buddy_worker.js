@@ -213,7 +213,7 @@ function __wbg_adapter_31(arg0, arg1, arg2) {
 }
 
 function __wbg_adapter_144(arg0, arg1, arg2, arg3) {
-    wasm.closure4310_externref_shim(arg0, arg1, arg2, arg3);
+    wasm.closure4271_externref_shim(arg0, arg1, arg2, arg3);
 }
 
 const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
