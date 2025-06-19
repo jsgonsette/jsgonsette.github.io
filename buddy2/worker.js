@@ -57,6 +57,18 @@ self.end_of_game = function (reason) {
 	self.postMessage(msg);
 }
 
+/// Called by Rust to save the license in a persistent storage.
+self.save_license_content = function (token, key, mail) {
+
+	let msg = new Map([
+		["kind", "save_license_content"],
+		["token", token],
+		["key", key],
+		["mail", mail],
+	]);
+	self.postMessage(msg);
+}
+
 // ################################################################################################
 
 /// Called after init to indicate that the WASM module and the associated server are loaded and ready
@@ -102,7 +114,7 @@ async function process_start_game_msg () {
 	msg.set ("result", result);
 	self.postMessage(msg);
 
-	// If the game is started, immediately launch a first scheduling round
+	// If the game is started, immediately launch the first scheduling round
 	if (result == true) {
 		await globalThis.server.schedule ();
 	}
@@ -125,6 +137,33 @@ self.onmessage = async (event) => {
 		// Otherwise, the processing will be done when all the NN models are loaded.
 		globalThis.start_game_msg = msg;
 		await process_start_game_msg ();
+	}
+
+	// Request to activate a license key
+	else if (msg.get ("kind") === "activate_license") {
+
+		let license_key = msg.get ("license_key");
+		let email = msg.get ("email");
+		
+		console.info("JS(Worker) - 'activate_license': ", license_key, email);
+		let fingerprint = get_browser_fingerprint();
+		let json_activation_status = await globalThis.server.activate_license (license_key, email, fingerprint);
+		msg.set ("result", json_activation_status);
+		self.postMessage(msg);
+	}
+
+	// Request to check the current license validity
+	else if (msg.get ("kind") === "check_current_license") {
+		console.info("JS(Worker) - 'check_current_license'");
+
+		let token = msg.get ("token");
+		let key = msg.get ("key");
+		let mail = msg.get ("mail");
+		let fingerprint = get_browser_fingerprint();
+
+		let json_activation_status = await globalThis.server.check_current_license (token, key, mail, fingerprint);
+		msg.set ("result", json_activation_status);
+		self.postMessage(msg);
 	}
 
 	// Request to load a NN model
@@ -232,6 +271,17 @@ async function load_nn_model (uri, model_name) {
 		globalThis.downloading_left = 0;
 		globalThis.downloading_size = 0;
 	}
+}
+
+function get_browser_fingerprint () {
+	return [
+		navigator.userAgent,
+		navigator.language,
+//		screen.width + 'x' + screen.height,
+//		screen.colorDepth,
+		new Date().getTimezoneOffset(),
+		navigator.hardwareConcurrency
+	].join('|');
 }
 
 // ################################################################################################

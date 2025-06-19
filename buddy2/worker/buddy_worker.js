@@ -209,11 +209,11 @@ function __wbg_adapter_28(arg0, arg1) {
 }
 
 function __wbg_adapter_31(arg0, arg1, arg2) {
-    wasm.closure135_externref_shim(arg0, arg1, arg2);
+    wasm.closure158_externref_shim(arg0, arg1, arg2);
 }
 
-function __wbg_adapter_144(arg0, arg1, arg2, arg3) {
-    wasm.closure4294_externref_shim(arg0, arg1, arg2, arg3);
+function __wbg_adapter_148(arg0, arg1, arg2, arg3) {
+    wasm.closure4287_externref_shim(arg0, arg1, arg2, arg3);
 }
 
 const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
@@ -224,7 +224,7 @@ const ServerFinalization = (typeof FinalizationRegistry === 'undefined')
     ? { register: () => {}, unregister: () => {} }
     : new FinalizationRegistry(ptr => wasm.__wbg_server_free(ptr >>> 0, 1));
 /**
- * Schedules the game under control of the main application.
+ * Schedules the game under the control of the main application.
  */
 export class Server {
 
@@ -247,6 +247,53 @@ export class Server {
         this.__wbg_ptr = ret >>> 0;
         ServerFinalization.register(this, this.__wbg_ptr, this);
         return this;
+    }
+    /**
+     * Called by the JS side to check the validity of a `license_token_b64` (Browser from the local storage).
+     *
+     * * Contact the *Buddy Server* and submit the provided token
+     * * If the *Buddy Server* or the license server (lemonsqueezy) is down, assume ok to not penalize the user
+     *
+     * This function returns a [LicenseStatus] that is serialized into a JSON string.
+     * @param {string} license_token_b64
+     * @param {string} license_key_b64
+     * @param {string} mail
+     * @param {string} _fingerprint
+     * @returns {Promise<string>}
+     */
+    check_current_license(license_token_b64, license_key_b64, mail, _fingerprint) {
+        const ptr0 = passStringToWasm0(license_token_b64, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len0 = WASM_VECTOR_LEN;
+        const ptr1 = passStringToWasm0(license_key_b64, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len1 = WASM_VECTOR_LEN;
+        const ptr2 = passStringToWasm0(mail, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len2 = WASM_VECTOR_LEN;
+        const ptr3 = passStringToWasm0(_fingerprint, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len3 = WASM_VECTOR_LEN;
+        const ret = wasm.server_check_current_license(this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2, ptr3, len3);
+        return ret;
+    }
+    /**
+     * Called by the JS side to activate a `license_key` / `email` pair.
+     * The parameter `fingerprint` is used to bind the generated license material to the Browser` (not used for now).
+     *
+     * * Contact the *Buddy Server* with the provided key and email
+     * * If valid license content is received, save it in the Browser Local Storage.
+     * * Return the new [LicenseStatus] (valid or error) serialized into a JSON string.
+     * @param {string} license_key
+     * @param {string} email
+     * @param {string} _fingerprint
+     * @returns {Promise<string>}
+     */
+    activate_license(license_key, email, _fingerprint) {
+        const ptr0 = passStringToWasm0(license_key, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len0 = WASM_VECTOR_LEN;
+        const ptr1 = passStringToWasm0(email, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len1 = WASM_VECTOR_LEN;
+        const ptr2 = passStringToWasm0(_fingerprint, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len2 = WASM_VECTOR_LEN;
+        const ret = wasm.server_activate_license(this.__wbg_ptr, ptr0, len0, ptr1, len1, ptr2, len2);
+        return ret;
     }
     /**
      * Called by the JS side to open a ONNX NN model from `raw_onnx_data` and to store it
@@ -477,7 +524,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_144(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_148(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -553,6 +600,27 @@ function __wbg_get_imports() {
     imports.wbg.__wbg_resolve_4851785c9c5f573d = function(arg0) {
         const ret = Promise.resolve(arg0);
         return ret;
+    };
+    imports.wbg.__wbg_savelicensecontent_cca3147ba303f1e7 = function(arg0, arg1, arg2, arg3, arg4, arg5) {
+        let deferred0_0;
+        let deferred0_1;
+        let deferred1_0;
+        let deferred1_1;
+        let deferred2_0;
+        let deferred2_1;
+        try {
+            deferred0_0 = arg0;
+            deferred0_1 = arg1;
+            deferred1_0 = arg2;
+            deferred1_1 = arg3;
+            deferred2_0 = arg4;
+            deferred2_1 = arg5;
+            save_license_content(getStringFromWasm0(arg0, arg1), getStringFromWasm0(arg2, arg3), getStringFromWasm0(arg4, arg5));
+        } finally {
+            wasm.__wbindgen_free(deferred0_0, deferred0_1, 1);
+            wasm.__wbindgen_free(deferred1_0, deferred1_1, 1);
+            wasm.__wbindgen_free(deferred2_0, deferred2_1, 1);
+        }
     };
     imports.wbg.__wbg_schedulenotification_8304e9e380e71ff5 = function(arg0, arg1) {
         let deferred0_0;
@@ -667,12 +735,12 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper367 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 102, __wbg_adapter_28);
+    imports.wbg.__wbindgen_closure_wrapper424 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 122, __wbg_adapter_28);
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper414 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 136, __wbg_adapter_31);
+    imports.wbg.__wbindgen_closure_wrapper475 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 159, __wbg_adapter_31);
         return ret;
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {

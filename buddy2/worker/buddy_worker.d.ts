@@ -1,7 +1,7 @@
 /* tslint:disable */
 /* eslint-disable */
 /**
- * Schedules the game under control of the main application.
+ * Schedules the game under the control of the main application.
  */
 export class Server {
   free(): void;
@@ -9,6 +9,24 @@ export class Server {
    * Called by the JS side to create a new Server.
    */
   constructor();
+  /**
+   * Called by the JS side to check the validity of a `license_token_b64` (Browser from the local storage).
+   *
+   * * Contact the *Buddy Server* and submit the provided token
+   * * If the *Buddy Server* or the license server (lemonsqueezy) is down, assume ok to not penalize the user
+   *
+   * This function returns a [LicenseStatus] that is serialized into a JSON string.
+   */
+  check_current_license(license_token_b64: string, license_key_b64: string, mail: string, _fingerprint: string): Promise<string>;
+  /**
+   * Called by the JS side to activate a `license_key` / `email` pair.
+   * The parameter `fingerprint` is used to bind the generated license material to the Browser` (not used for now).
+   *
+   * * Contact the *Buddy Server* with the provided key and email
+   * * If valid license content is received, save it in the Browser Local Storage.
+   * * Return the new [LicenseStatus] (valid or error) serialized into a JSON string.
+   */
+  activate_license(license_key: string, email: string, _fingerprint: string): Promise<string>;
   /**
    * Called by the JS side to open a ONNX NN model from `raw_onnx_data` and to store it
    * under the model key `model_name`.
@@ -41,6 +59,8 @@ export interface InitOutput {
   readonly memory: WebAssembly.Memory;
   readonly __wbg_server_free: (a: number, b: number) => void;
   readonly server_new: () => number;
+  readonly server_check_current_license: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => any;
+  readonly server_activate_license: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => any;
   readonly server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly server_send_action: (a: number, b: number, c: number, d: number) => void;
   readonly server_schedule: (a: number) => any;
@@ -54,8 +74,8 @@ export interface InitOutput {
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_6: WebAssembly.Table;
   readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0c856b91a60c030b: (a: number, b: number) => void;
-  readonly closure135_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure4294_externref_shim: (a: number, b: number, c: any, d: any) => void;
+  readonly closure158_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure4287_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 

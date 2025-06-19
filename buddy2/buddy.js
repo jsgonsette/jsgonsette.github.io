@@ -39,6 +39,79 @@ function load_nn_model (model_uri, model_name) {
 	worker.postMessage(msg);
 }
 
+/// Called from the main Rust app to activate a license
+/// `license_key`: the license key (string)
+/// `email`: the email of the user (string)
+function activate_license (license_key, email) {
+	console.debug ("JS(Main) - 'activate_license'");
+
+	let msg = new Map([
+		["kind", "activate_license"],
+		["license_key", consume_js_object(license_key)],
+		["email", consume_js_object(email)],
+	]);
+
+	worker.postMessage(msg);
+}
+
+/// Called from the main Rust app to check the current license validity
+function check_current_license () {
+	console.debug ("JS(Main) - 'check_current_license'");
+
+	// Check if the auto-activation is set in the local storage
+	// If so, activate the license automatically instead of checking it
+	let auto_activation_key = localStorage.getItem("auto_activation_key")
+	let auto_activation_mail = localStorage.getItem("auto_activation_mail")
+
+	if (auto_activation_key !== null && auto_activation_mail !== null) {
+		localStorage.removeItem("auto_activation_key")
+		localStorage.removeItem("auto_activation_mail")
+
+		let msg = new Map([
+			["kind", "activate_license"],
+			["license_key", auto_activation_key],
+			["email", auto_activation_mail],
+		]);
+
+		worker.postMessage(msg);
+	}
+
+	// Normal check of the current license
+	else {
+		let token = localStorage.getItem("token");
+		let key = localStorage.getItem("key");
+		let mail = localStorage.getItem("mail");
+
+		let msg = new Map([
+			["kind", "check_current_license"],
+			["token", token ? token : ""],
+			["key", key ? key : ""],
+			["mail", mail ? mail : ""],
+		]);
+
+		worker.postMessage(msg);
+	}
+}
+
+/// Called from the main Rust app to drop the current license
+function drop_current_license () {
+	console.debug ("JS(Main) - 'drop_current_license'");
+
+	localStorage.setItem("token", "");
+	localStorage.setItem("key", "");
+	localStorage.setItem("mail", "");
+
+	// Calling check with an empty license key and email will trigger a "no license" status
+	let msg = new Map([
+		["kind", "check_current_license"],
+		["token", ""],
+		["key", ""],
+		["mail", ""],
+	]);
+
+	worker.postMessage(msg);
+}
+
 /// Called from the main Rust app to start a new game
 /// `game_name`: the name of the game (e.g. Connect_4)
 /// `agent_configs`: JSON string of a vector of [(agent_type, agent_name, parameters)]
@@ -149,8 +222,20 @@ function process_notifications (event) {
 
 	// Response to a start game request
 	if (kind === "start_game") {
-		let result = msg.get ("result");
-		globalThis.game_started = result;
+		globalThis.game_started = msg.get ("result");
+	}
+
+	// Response to a license activation request
+	else if (kind === "activate_license" || kind === "check_current_license") {
+		let json_activation_status = msg.get ("result");
+		wasm_exports.provide_license_status(js_object(json_activation_status));
+	}
+
+	/// Worker asking for the license content to be saved in the local storage
+	else if (kind === "save_license_content") {
+		localStorage.setItem("token", msg.get ("token"));
+		localStorage.setItem("key", msg.get ("key"));
+		localStorage.setItem("mail", msg.get ("mail"));
 	}
 
 	// Response to a stop game request
@@ -181,12 +266,31 @@ function process_notifications (event) {
 	}
 }
 
+on_init = function () {
+
+	// Check if the URL contains a license key and email for auto-activation
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	if (urlParams.has ('key') && urlParams.has ('mail')) {
+		console.debug ("JS(Main) - License key and email found in URL parameters");
+		let key = urlParams.get('key')
+		let mail = urlParams.get('mail')
+
+		localStorage.setItem("auto_activation_key", key);
+		localStorage.setItem("auto_activation_mail", mail);
+	}
+}
+
 /// Plugin registration (https://macroquad.rs/articles/wasm/)
 register_plugin = function (importObject) {
 	
 	console.debug ("JS(Main) - Loading miniquad plugin");
 	importObject.env.create_web_worker = create_web_worker;
 	importObject.env.start_game = start_game;
+	importObject.env.activate_license = activate_license;
+	importObject.env.check_current_license = check_current_license;
+	importObject.env.drop_current_license = drop_current_license;
 	importObject.env.load_nn_model = load_nn_model;
 	importObject.env.get_nn_model_loading_percent = get_nn_model_loading_percent;
 	importObject.env.stop_game = stop_game;
@@ -199,4 +303,4 @@ register_plugin = function (importObject) {
 // ################################################################################################
 
 // miniquad_add_plugin receive an object with two fields: register_plugin and on_init. Both are functions, both are optional.
-miniquad_add_plugin({register_plugin});
+miniquad_add_plugin({register_plugin, on_init});

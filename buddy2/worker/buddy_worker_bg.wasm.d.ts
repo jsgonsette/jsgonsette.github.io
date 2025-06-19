@@ -3,6 +3,8 @@
 export const memory: WebAssembly.Memory;
 export const __wbg_server_free: (a: number, b: number) => void;
 export const server_new: () => number;
+export const server_check_current_license: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number) => any;
+export const server_activate_license: (a: number, b: number, c: number, d: number, e: number, f: number, g: number) => any;
 export const server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
 export const server_send_action: (a: number, b: number, c: number, d: number) => void;
 export const server_schedule: (a: number) => any;
@@ -16,6 +18,6 @@ export const __wbindgen_malloc: (a: number, b: number) => number;
 export const __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
 export const __wbindgen_export_6: WebAssembly.Table;
 export const _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0c856b91a60c030b: (a: number, b: number) => void;
-export const closure135_externref_shim: (a: number, b: number, c: any) => void;
-export const closure4294_externref_shim: (a: number, b: number, c: any, d: any) => void;
+export const closure158_externref_shim: (a: number, b: number, c: any) => void;
+export const closure4287_externref_shim: (a: number, b: number, c: any, d: any) => void;
 export const __wbindgen_start: () => void;
