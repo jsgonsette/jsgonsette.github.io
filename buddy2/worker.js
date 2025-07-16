@@ -69,6 +69,11 @@ self.save_license_content = function (token, key, mail) {
 	self.postMessage(msg);
 }
 
+/// Called by Rust to get the current timestamp in seconds
+self.get_current_timestamp = function () {
+	return Date.now() / 1000.0
+}
+
 // ################################################################################################
 
 /// Called after init to indicate that the WASM module and the associated server are loaded and ready
@@ -107,7 +112,8 @@ async function process_start_game_msg () {
 	let game = msg.get ("game");
 	let seed = BigInt (msg.get ("seed"));
 	let agents = msg.get ("agents");
-	let result = await globalThis.server.start_game (game, agents, seed);
+	let language = msg.get ("language");
+	let result = await globalThis.server.start_game (game, agents, seed, language);
 
 	// Send the result back
 	globalThis.game_started = result;
@@ -115,7 +121,7 @@ async function process_start_game_msg () {
 	self.postMessage(msg);
 
 	// If the game is started, immediately launch the first scheduling round
-	if (result == true) {
+	if (result === true) {
 		await globalThis.server.schedule ();
 	}
 }

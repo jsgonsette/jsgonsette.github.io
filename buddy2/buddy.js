@@ -116,7 +116,7 @@ function drop_current_license () {
 /// `game_name`: the name of the game (e.g. Connect_4)
 /// `agent_configs`: JSON string of a vector of [(agent_type, agent_name, parameters)]
 /// `seed`: Game seed for PRNG
-function start_game (game_name, agent_configs, seed) {
+function start_game (game_name, agent_configs, seed, language) {
 
 	console.debug ("JS(Main) - 'start_game'");
 	if (globalThis.game_started == true || globalThis.game_started === null) return false;
@@ -126,6 +126,7 @@ function start_game (game_name, agent_configs, seed) {
 	  ["game", consume_js_object(game_name)],
 	  ["agents", consume_js_object(agent_configs)],
 	  ["seed", seed],
+	  ["language", consume_js_object(language)],
 	]);
 	
 	globalThis.game_started = null;

@@ -209,11 +209,11 @@ function __wbg_adapter_28(arg0, arg1) {
 }
 
 function __wbg_adapter_31(arg0, arg1, arg2) {
-    wasm.closure158_externref_shim(arg0, arg1, arg2);
+    wasm.closure169_externref_shim(arg0, arg1, arg2);
 }
 
-function __wbg_adapter_148(arg0, arg1, arg2, arg3) {
-    wasm.closure4287_externref_shim(arg0, arg1, arg2, arg3);
+function __wbg_adapter_150(arg0, arg1, arg2, arg3) {
+    wasm.closure4308_externref_shim(arg0, arg1, arg2, arg3);
 }
 
 const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
@@ -331,17 +331,22 @@ export class Server {
      * Start a new game provided the following configuration:
      * * `game`: the name of the game.
      * * `agent_configs`: a JSON string describing the configuration of the different agents.
+     * * `seed`: a seed to initialize all the PRNGs
+     * * `language_str`: the chosen language ('en' or 'fr')
      * @param {string} game
      * @param {string} agent_configs
      * @param {bigint} seed
+     * @param {string} language_str
      * @returns {Promise<boolean>}
      */
-    start_game(game, agent_configs, seed) {
+    start_game(game, agent_configs, seed, language_str) {
         const ptr0 = passStringToWasm0(game, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len0 = WASM_VECTOR_LEN;
         const ptr1 = passStringToWasm0(agent_configs, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
         const len1 = WASM_VECTOR_LEN;
-        const ret = wasm.server_start_game(this.__wbg_ptr, ptr0, len0, ptr1, len1, seed);
+        const ptr2 = passStringToWasm0(language_str, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len2 = WASM_VECTOR_LEN;
+        const ret = wasm.server_start_game(this.__wbg_ptr, ptr0, len0, ptr1, len1, seed, ptr2, len2);
         return ret;
     }
     /**
@@ -466,6 +471,10 @@ function __wbg_get_imports() {
         const ret = Reflect.get(arg0, arg1);
         return ret;
     }, arguments) };
+    imports.wbg.__wbg_getcurrenttimestamp_34a3e52c1e44b6a4 = function() {
+        const ret = get_current_timestamp();
+        return ret;
+    };
     imports.wbg.__wbg_has_a5ea9117f258a0ec = function() { return handleError(function (arg0, arg1) {
         const ret = Reflect.has(arg0, arg1);
         return ret;
@@ -524,7 +533,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_148(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_150(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -735,12 +744,12 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper424 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 122, __wbg_adapter_28);
+    imports.wbg.__wbindgen_closure_wrapper451 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 133, __wbg_adapter_28);
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper475 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 159, __wbg_adapter_31);
+    imports.wbg.__wbindgen_closure_wrapper502 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 170, __wbg_adapter_31);
         return ret;
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {

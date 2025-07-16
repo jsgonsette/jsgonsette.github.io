@@ -45,8 +45,10 @@ export class Server {
    * Start a new game provided the following configuration:
    * * `game`: the name of the game.
    * * `agent_configs`: a JSON string describing the configuration of the different agents.
+   * * `seed`: a seed to initialize all the PRNGs
+   * * `language_str`: the chosen language ('en' or 'fr')
    */
-  start_game(game: string, agent_configs: string, seed: bigint): Promise<boolean>;
+  start_game(game: string, agent_configs: string, seed: bigint, language_str: string): Promise<boolean>;
   /**
    * Stop the current game.
    */
@@ -64,7 +66,7 @@ export interface InitOutput {
   readonly server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly server_send_action: (a: number, b: number, c: number, d: number) => void;
   readonly server_schedule: (a: number) => any;
-  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint) => any;
+  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint, g: number, h: number) => any;
   readonly server_stop_game: (a: number) => void;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
@@ -74,8 +76,8 @@ export interface InitOutput {
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_6: WebAssembly.Table;
   readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h0c856b91a60c030b: (a: number, b: number) => void;
-  readonly closure158_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure4287_externref_shim: (a: number, b: number, c: any, d: any) => void;
+  readonly closure169_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure4308_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 
