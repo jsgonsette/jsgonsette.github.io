@@ -3,23 +3,32 @@
 
 <head>
     <meta charset="utf-8">
-    <title>TITLE</title>
+    <title>Board Game Buddy</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+
     <style>
         html,
-        body,
-        canvas {
-            margin: 0px;
-            padding: 0px;
+        body {
+            margin: 0;
+            padding: 0;
             width: 100%;
             height: 100%;
             overflow: hidden;
-            position: absolute;
             background: black;
             color: #FFF;
+        }
+
+        canvas {
+            margin: 0;
+            padding: 0;
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: black;
             z-index: 0;
         }
 
-        /* Barre de chargement */
         #loading-container {
             position: absolute;
             top: 50%;
@@ -63,6 +72,25 @@
 	<script src="./buddy.js"></script>
     <script>
         
+        const render_canvas = document.getElementById("glcanvas");
+        
+        function resizeCanvas() {
+            let dpi = 1;//window.devicePixelRatio || 1;
+            console.debug ("DPI: " + dpi);
+
+            // Logical size (CSS pixels)
+            render_canvas.style.width = window.innerWidth + "px";
+            render_canvas.style.height = window.innerHeight + "px";
+
+            // Physical size (actual pixels for WebGL)
+            render_canvas.width = Math.floor(window.innerWidth * dpi);
+            render_canvas.height = Math.floor(window.innerHeight * dpi);
+        }
+
+        window.addEventListener("resize", resizeCanvas);
+        window.addEventListener("orientationchange", resizeCanvas);
+        resizeCanvas();
+
         function updateProgress(progress) {
             document.getElementById("loading-bar").style.width = progress + "%";
         }
