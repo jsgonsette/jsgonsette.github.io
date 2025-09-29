@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -59,7 +60,7 @@
     <script src="https://not-fl3.github.io/miniquad-samples/mq_js_bundle.js"></script> <!-- doens't work in v0.4.14 -->
 	<!-- <script src="mq_js_bundle.js"></script>-->
 	<script src="https://not-fl3.github.io/miniquad-samples/sapp_jsutils.js"></script>
-	<script src="buddy.js"></script>
+	<script src="./buddy.js"></script>
     <script>
         
         function updateProgress(progress) {
@@ -72,7 +73,8 @@
 
         async function loadWasmWithProgress(url) {
             const response = await fetch(url);
-            const total = response.headers.get("content-length");
+            let total = response.headers.get("content-length");
+			if (!total) { total = 13000000; }
             let loaded = 0;
 
             if (response.body && total) {
@@ -101,8 +103,8 @@
             return response;
         }
 
-        loadWasmWithProgress("buddy.wasm").then(() => {
-            load("buddy.wasm"); 
+        loadWasmWithProgress("./buddy.wasm").then(() => {
+            load("./buddy.wasm"); 
         });
 
     </script>

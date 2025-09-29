@@ -172,6 +172,12 @@ self.onmessage = async (event) => {
 		self.postMessage(msg);
 	}
 
+	// Request to refresh the list of available personas
+	else if (msg.get ("kind") === "refresh_available_personas") {
+		console.info("JS(Worker) - 'refresh_available_personas'");
+		let language = msg.get ("language");
+	}
+
 	// Request to load a NN model
 	else if (msg.get ("kind") === "load_nn_model") {
 

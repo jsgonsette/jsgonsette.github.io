@@ -5,7 +5,7 @@
     "Jean-Sébastien Gonsette"
   ],
   "description": "Web Worker supporting the 'Buddy-Game' application when compiled in WASM",
-  "version": "0.1.0",
+  "version": "0.1.10",
   "files": [
     "buddy_worker_bg.wasm",
     "buddy_worker.js",

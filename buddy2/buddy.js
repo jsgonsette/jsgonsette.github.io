@@ -5,7 +5,7 @@
 /// Called from the main Rust app to start the Web worker
 function create_web_worker () {
 	console.debug ("JS(Main) - Create web worker")
-	globalThis.worker = new Worker('worker.js', { type: 'module' });
+	globalThis.worker = new Worker('./worker.js', { type: 'module' });
 	globalThis.worker.onmessage = process_notifications;
 
 	globalThis.game_started = false;
@@ -22,6 +22,22 @@ function get_nn_model_loading_percent () {
 	}
 }
 
+/// Called from the main Rust app to retrieve the language specified in the address.
+/// If no language is specified, fallback to 'en' (English)
+/// This function calls back 'provide_default_language' to return the answer.
+function get_default_language () {
+
+	const queryString = window.location.search;
+	const urlParams = new URLSearchParams(queryString);
+
+	let default_language = "en";
+	if (urlParams.has ('lang')) {
+		default_language = urlParams.get('lang');
+	}
+
+	wasm_exports.provide_default_language (js_object(default_language));
+}
+
 /// Start the loading of some NN model asynchronously.
 /// The model must be located at the provided `model_uri`.
 function load_nn_model (model_uri, model_name) {
@@ -34,7 +50,7 @@ function load_nn_model (model_uri, model_name) {
 		["nn_name", consume_js_object(model_name)],
 	]);
 
-	globalThis.num_nn_model_loading += 1;""
+	globalThis.num_nn_model_loading += 1;
 
 	worker.postMessage(msg);
 }
@@ -49,6 +65,18 @@ function activate_license (license_key, email) {
 		["kind", "activate_license"],
 		["license_key", consume_js_object(license_key)],
 		["email", consume_js_object(email)],
+	]);
+
+	worker.postMessage(msg);
+}
+
+/// Called from the main Rust app to refresh the list of available personas on the server
+function refresh_available_personas (language) {
+	console.debug ("JS(Main) - 'refresh_available_personas'");
+
+	let msg = new Map([
+		["kind", "refresh_available_personas"],
+		["language", consume_js_object(language)],
 	]);
 
 	worker.postMessage(msg);
@@ -289,7 +317,9 @@ register_plugin = function (importObject) {
 	console.debug ("JS(Main) - Loading miniquad plugin");
 	importObject.env.create_web_worker = create_web_worker;
 	importObject.env.start_game = start_game;
+	importObject.env.get_default_language = get_default_language;
 	importObject.env.activate_license = activate_license;
+	importObject.env.refresh_available_personas = refresh_available_personas;
 	importObject.env.check_current_license = check_current_license;
 	importObject.env.drop_current_license = drop_current_license;
 	importObject.env.load_nn_model = load_nn_model;
