@@ -336,6 +336,9 @@ on_init = function () {
 		localStorage.setItem("auto_activation_key", key);
 		localStorage.setItem("auto_activation_mail", mail);
 	}
+	
+		const input = document.getElementById('wasm-input');
+		input.focus();
 }
 
 /// Plugin registration (https://macroquad.rs/articles/wasm/)
