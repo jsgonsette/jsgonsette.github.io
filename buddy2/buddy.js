@@ -9,6 +9,7 @@ function create_web_worker () {
 	globalThis.worker.onmessage = process_notifications;
 
 	globalThis.game_started = false;
+	globalThis.remaining_chat_sessions = 0;
 	globalThis.notifications = [];
 	globalThis.last_llm_message = null;
 	globalThis.num_nn_model_loading = 0;
@@ -239,6 +240,27 @@ function send_action (agent_handle, action) {
 	worker.postMessage(msg);
 }
 
+/// Called from the main Rust app to make the virtual keyboard appear or disappear on a touchpad device.
+/// This function returns false and do nothing for devices where a physical keyboard should be available.
+function show_keyboard(status, text) {
+
+	const ua = navigator.userAgent.toLowerCase();
+	let has_keyboard = !(/android|iphone|ipad|ipod|mobile/i.test(ua));
+	if (has_keyboard) { return false; }
+
+	const input = document.getElementById('wasm-input');
+	if (status === true) {
+		input.focus();
+		input.value = consume_js_object(text);
+	}
+	else {
+		input.blur();
+		input.value = '';
+	}
+
+	return true;
+}
+
 // ################################################################################################
 
 /// Process the messages sent by the worker
@@ -258,6 +280,11 @@ function process_notifications (event) {
 	else if (kind === "activate_license" || kind === "check_current_license") {
 		let json_activation_status = msg.get ("result");
 		wasm_exports.provide_license_status(js_object(json_activation_status));
+	}
+
+	else if (kind === "refresh_available_personas") {
+		let json_remaining = msg.get ("result");
+		wasm_exports.provide_personas(js_object(json_remaining));
 	}
 
 	/// Worker asking for the license content to be saved in the local storage
@@ -329,6 +356,7 @@ register_plugin = function (importObject) {
 	importObject.env.get_last_llm_message = get_last_llm_message;
 	importObject.env.send_action = send_action;
 	importObject.env.get_server_status = get_server_status;
+	importObject.env.show_keyboard = show_keyboard;
 }
 
 // ################################################################################################

@@ -205,15 +205,15 @@ function passArray8ToWasm0(arg, malloc) {
     return ptr;
 }
 function __wbg_adapter_28(arg0, arg1) {
-    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h9a57516000c7f95e(arg0, arg1);
+    wasm._dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__h482caea9aeed664d(arg0, arg1);
 }
 
 function __wbg_adapter_31(arg0, arg1, arg2) {
-    wasm.closure169_externref_shim(arg0, arg1, arg2);
+    wasm.closure173_externref_shim(arg0, arg1, arg2);
 }
 
-function __wbg_adapter_150(arg0, arg1, arg2, arg3) {
-    wasm.closure4501_externref_shim(arg0, arg1, arg2, arg3);
+function __wbg_adapter_151(arg0, arg1, arg2, arg3) {
+    wasm.closure4474_externref_shim(arg0, arg1, arg2, arg3);
 }
 
 const __wbindgen_enum_RequestCredentials = ["omit", "same-origin", "include"];
@@ -247,6 +247,20 @@ export class Server {
         this.__wbg_ptr = ret >>> 0;
         ServerFinalization.register(this, this.__wbg_ptr, this);
         return this;
+    }
+    /**
+     * Called by the JS side to refresh the list of available personas on the server.
+     *
+     * * Contact the *Buddy Server* and submit the provided token
+     * * Get back the list of personas and the remaining today limit
+     * @param {string} language_str
+     * @returns {Promise<string>}
+     */
+    refresh_available_personas(language_str) {
+        const ptr0 = passStringToWasm0(language_str, wasm.__wbindgen_malloc, wasm.__wbindgen_realloc);
+        const len0 = WASM_VECTOR_LEN;
+        const ret = wasm.server_refresh_available_personas(this.__wbg_ptr, ptr0, len0);
+        return ret;
     }
     /**
      * Called by the JS side to check the validity of a `license_token_b64` (Browser from the local storage).
@@ -431,7 +445,7 @@ function __wbg_get_imports() {
         const ret = arg0.done;
         return ret;
     };
-    imports.wbg.__wbg_endofgame_c4c1e6fe45c5c265 = function(arg0, arg1) {
+    imports.wbg.__wbg_endofgame_49840a11638e47c9 = function(arg0, arg1) {
         let deferred0_0;
         let deferred0_1;
         try {
@@ -471,7 +485,7 @@ function __wbg_get_imports() {
         const ret = Reflect.get(arg0, arg1);
         return ret;
     }, arguments) };
-    imports.wbg.__wbg_getcurrenttimestamp_c30cd3bdbc688e7f = function() {
+    imports.wbg.__wbg_getcurrenttimestamp_60d06cd9b0787352 = function() {
         const ret = get_current_timestamp();
         return ret;
     };
@@ -504,7 +518,7 @@ function __wbg_get_imports() {
         const ret = arg0.length;
         return ret;
     };
-    imports.wbg.__wbg_llmmessage_e46585e9a1fd36a0 = function(arg0, arg1) {
+    imports.wbg.__wbg_llmmessage_890dd691902f5f31 = function(arg0, arg1) {
         let deferred0_0;
         let deferred0_1;
         try {
@@ -533,7 +547,7 @@ function __wbg_get_imports() {
                 const a = state0.a;
                 state0.a = 0;
                 try {
-                    return __wbg_adapter_150(a, state0.b, arg0, arg1);
+                    return __wbg_adapter_151(a, state0.b, arg0, arg1);
                 } finally {
                     state0.a = a;
                 }
@@ -610,7 +624,7 @@ function __wbg_get_imports() {
         const ret = Promise.resolve(arg0);
         return ret;
     };
-    imports.wbg.__wbg_savelicensecontent_6552afe6133d4867 = function(arg0, arg1, arg2, arg3, arg4, arg5) {
+    imports.wbg.__wbg_savelicensecontent_dd4c42e74499a6d8 = function(arg0, arg1, arg2, arg3, arg4, arg5) {
         let deferred0_0;
         let deferred0_1;
         let deferred1_0;
@@ -631,7 +645,7 @@ function __wbg_get_imports() {
             wasm.__wbindgen_free(deferred2_0, deferred2_1, 1);
         }
     };
-    imports.wbg.__wbg_schedulenotification_e90869ed211a543b = function(arg0, arg1) {
+    imports.wbg.__wbg_schedulenotification_bfac765c959f0f29 = function(arg0, arg1) {
         let deferred0_0;
         let deferred0_1;
         try {
@@ -721,7 +735,7 @@ function __wbg_get_imports() {
         getDataViewMemory0().setInt32(arg0 + 4 * 1, len1, true);
         getDataViewMemory0().setInt32(arg0 + 4 * 0, ptr1, true);
     };
-    imports.wbg.__wbg_validate_6eb13ed73b0c3c0b = function() {
+    imports.wbg.__wbg_validate_780a45366be1d261 = function() {
         validate();
     };
     imports.wbg.__wbg_value_cd1ffa7b1ab794f1 = function(arg0) {
@@ -744,12 +758,12 @@ function __wbg_get_imports() {
         const ret = false;
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper480 = function(arg0, arg1, arg2) {
+    imports.wbg.__wbindgen_closure_wrapper475 = function(arg0, arg1, arg2) {
         const ret = makeMutClosure(arg0, arg1, 152, __wbg_adapter_28);
         return ret;
     };
-    imports.wbg.__wbindgen_closure_wrapper506 = function(arg0, arg1, arg2) {
-        const ret = makeMutClosure(arg0, arg1, 170, __wbg_adapter_31);
+    imports.wbg.__wbindgen_closure_wrapper519 = function(arg0, arg1, arg2) {
+        const ret = makeMutClosure(arg0, arg1, 174, __wbg_adapter_31);
         return ret;
     };
     imports.wbg.__wbindgen_debug_string = function(arg0, arg1) {

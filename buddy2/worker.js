@@ -96,6 +96,9 @@ async function run() {
 	globalThis.downloading_num = 0;
 	globalThis.downloading_size = 0;
 	globalThis.downloading_left = 0;
+
+	// Avoid concurrent access to the (mutable) Rust server from different async calls
+	globalThis.mutex = new Mutex();
 }
 
 /// Process a message of kind: msg.get ("kind") === "start_game"
@@ -113,7 +116,9 @@ async function process_start_game_msg () {
 	let seed = BigInt (msg.get ("seed"));
 	let agents = msg.get ("agents");
 	let language = msg.get ("language");
-	let result = await globalThis.server.start_game (game, agents, seed, language);
+	let result = await globalThis.mutex.runExclusive(() =>
+		globalThis.server.start_game (game, agents, seed, language)
+	);
 
 	// Send the result back
 	globalThis.game_started = result;
@@ -122,7 +127,9 @@ async function process_start_game_msg () {
 
 	// If the game is started, immediately launch the first scheduling round
 	if (result === true) {
-		await globalThis.server.schedule ();
+		await globalThis.mutex.runExclusive(() =>
+			globalThis.server.schedule ()
+		);
 	}
 }
 
@@ -153,7 +160,11 @@ self.onmessage = async (event) => {
 		
 		console.info("JS(Worker) - 'activate_license': ", license_key, email);
 		let fingerprint = get_browser_fingerprint();
-		let json_activation_status = await globalThis.server.activate_license (license_key, email, fingerprint);
+
+		let json_activation_status = await globalThis.mutex.runExclusive(() =>
+			globalThis.server.activate_license (license_key, email, fingerprint)
+		);
+
 		msg.set ("result", json_activation_status);
 		self.postMessage(msg);
 	}
@@ -167,15 +178,25 @@ self.onmessage = async (event) => {
 		let mail = msg.get ("mail");
 		let fingerprint = get_browser_fingerprint();
 
-		let json_activation_status = await globalThis.server.check_current_license (token, key, mail, fingerprint);
+		let json_activation_status = await globalThis.mutex.runExclusive(() =>
+			globalThis.server.check_current_license(token, key, mail, fingerprint)
+		);
+
 		msg.set ("result", json_activation_status);
 		self.postMessage(msg);
 	}
 
 	// Request to refresh the list of available personas
 	else if (msg.get ("kind") === "refresh_available_personas") {
-		console.info("JS(Worker) - 'refresh_available_personas'");
 		let language = msg.get ("language");
+		console.info("JS(Worker) - 'refresh_available_personas': ", language);
+
+		let remaining = await globalThis.mutex.runExclusive(() =>
+			globalThis.server.refresh_available_personas (language)
+		);
+
+		msg.set ("result", remaining);
+		self.postMessage(msg);
 	}
 
 	// Request to load a NN model
@@ -191,7 +212,9 @@ self.onmessage = async (event) => {
 	else if (msg.get ("kind") === "stop_game") {
 
 		// Request to stop the game at the Rust worker side
-		globalThis.server.stop_game ();
+		await globalThis.mutex.runExclusive(() =>
+			globalThis.server.stop_game ()
+		);
 
 		// Send the result back
 		globalThis.game_started = false;
@@ -202,7 +225,9 @@ self.onmessage = async (event) => {
 	else if (msg.get ("kind") === "validate") {
 		// Schedule the next round when the validation message has been validated
 		if (globalThis.game_started == true) {
-			await globalThis.server.schedule ();
+			await globalThis.mutex.runExclusive(() =>
+				globalThis.server.schedule ()
+			);
 		}
 	}
 	
@@ -275,7 +300,9 @@ async function load_nn_model (uri, model_name) {
 	}
 
 	// Open it at the Rust side
-	server.load_nn_model(model_name, fullArray);
+	await globalThis.mutex.runExclusive(() =>
+		globalThis.server.load_nn_model(model_name, fullArray)
+	);
 
 	// Housekeeping
 	globalThis.downloading_num -= 1;
@@ -294,6 +321,43 @@ function get_browser_fingerprint () {
 		new Date().getTimezoneOffset(),
 		navigator.hardwareConcurrency
 	].join('|');
+}
+
+// ################################################################################################
+
+class Mutex {
+	constructor() {
+		this._locked = false;
+		this._waiting = [];
+	}
+
+	async runExclusive(callback) {
+		await this.lock();
+		try {
+			return await callback();
+		} finally {
+			this.unlock();
+		}
+	}
+
+	async lock() {
+		if (!this._locked) {
+			this._locked = true;
+			return;
+		}
+
+		await new Promise(resolve => this._waiting.push(resolve));
+		this._locked = true;
+	}
+
+	unlock() {
+		if (this._waiting.length > 0) {
+			const resolve = this._waiting.shift();
+			resolve();
+		} else {
+			this._locked = false;
+		}
+	}
 }
 
 // ################################################################################################
