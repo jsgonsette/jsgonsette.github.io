@@ -36,6 +36,7 @@ function get_default_language () {
 		default_language = urlParams.get('lang');
 	}
 
+	default_language = navigator.userAgent.toLowerCase();
 	wasm_exports.provide_default_language (js_object(default_language));
 }
 
