@@ -36,7 +36,6 @@ function get_default_language () {
 		default_language = urlParams.get('lang');
 	}
 
-	default_language = navigator.userAgent.toLowerCase();
 	wasm_exports.provide_default_language (js_object(default_language));
 }
 
@@ -245,7 +244,7 @@ function send_action (agent_handle, action) {
 function is_android_device () {
 
 	const ua = navigator.userAgent.toLowerCase();
-	return (/Android/i.test(ua));
+	return !(/ipad|mac/i.test(ua));
 }
 
 // ################################################################################################
