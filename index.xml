@@ -312,33 +312,6 @@ Le pâtissier commande à son tour une boîte pour contenir le gâteau, en donna
     </item>
     
     <item>
-      <title>Partie 3: Agent Monte-Carlo Tree Search</title>
-      <link>https://jsgonsette.github.io/projects/buddy/part3/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/projects/buddy/part3/</guid>
-      <description>En cours de rédaction</description>
-    </item>
-    
-    <item>
-      <title>Ma tactique de course est évidente: j&#39;appuie sur l&#39;accélérateur et je fonce</title>
-      <link>https://jsgonsette.github.io/projects/wizium/part3/</link>
-      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/projects/wizium/part3/</guid>
-      <description>&lt;p&gt;Appliqué sans discernement, le &lt;em&gt;backtracking&lt;/em&gt; peut s&amp;rsquo;avérer redoutable de complexité, tant la voie qui mène à la solution peut être longue, tortueuse, pleine d&amp;rsquo;ornières, de pièges et de détours dans lesquels se perdre indéfiniment. Maitriser le problème permet néanmoins de tracer un chemin beaucoup plus direct vers la solution, nettoyé de tous ses obstacles et voies de traverses, et permettant finalement un gain de temps qu&amp;rsquo;aucune autre optimisation ou puissance de calcul herculéenne ne pourra jamais compenser. Grâce à la méthode exposée dans l&amp;rsquo;article précédent, nous avons à disposition une autoroute filant pratiquement en ligne droite vers la solution. Mais cela veut-il dire pour autant que nous désirons nous trainer le long de ce chemin à bord d&amp;rsquo;un vieux tacot fumant et tout cabossé ?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Partie 4: Agent AlphaZero</title>
-      <link>https://jsgonsette.github.io/projects/buddy/part4/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/projects/buddy/part4/</guid>
-      <description>En cours de rédaction</description>
-    </item>
-    
-    <item>
       <title>Pendule inversé, part 1</title>
       <link>https://jsgonsette.github.io/projects/ipendulum/part1/</link>
       <pubDate>Sat, 19 Oct 2019 00:00:00 +0000</pubDate>

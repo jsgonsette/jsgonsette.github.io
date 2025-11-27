@@ -71,30 +71,12 @@
     </item>
     
     <item>
-      <title>Part 3: Monte-Carlo Tree Search Agent</title>
-      <link>https://jsgonsette.github.io/en/projects/buddy/part3/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
+      <title>About</title>
+      <link>https://jsgonsette.github.io/en/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://jsgonsette.github.io/en/projects/buddy/part3/</guid>
-      <description>To be written</description>
-    </item>
-    
-    <item>
-      <title>My racing tactic is obvious: I press the accelerator and I rush</title>
-      <link>https://jsgonsette.github.io/en/projects/wizium/part3/</link>
-      <pubDate>Sun, 19 May 2019 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/en/projects/wizium/part3/</guid>
-      <description>&lt;p&gt;Appliqué sans discernement, le &lt;em&gt;backtracking&lt;/em&gt; peut s&amp;rsquo;avérer redoutable de complexité, tant la voie qui mène à la solution peut être longue, tortueuse, pleine d&amp;rsquo;ornières, de pièges et de détours dans lesquels se perdre indéfiniment. Maitriser le problème permet néanmoins de tracer un chemin beaucoup plus direct vers la solution, nettoyé de tous ses obstacles et voies de traverses, et permettant finalement un gain de temps qu&amp;rsquo;aucune autre optimisation ou puissance de calcul herculéenne ne pourra jamais compenser. Grâce à la méthode exposée dans l&amp;rsquo;article précédent, nous avons à disposition une autoroute filant pratiquement en ligne droite vers la solution. Mais cela veut-il dire pour autant que nous désirons nous trainer le long de ce chemin à bord d&amp;rsquo;un vieux tacot fumant et tout cabossé ?&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>Part 4: AlphaZero Agent</title>
-      <link>https://jsgonsette.github.io/en/projects/buddy/part4/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/en/projects/buddy/part4/</guid>
-      <description>To be written</description>
+      <guid>https://jsgonsette.github.io/en/contact/</guid>
+      <description>About Me I hold a Master&amp;rsquo;s degree in Civil Electrical Engineering from the Polytechnic Faculty of Mons in 2003, as well as a specialized Master&amp;rsquo;s degree in Control and Embedded Systems from ISAE-SUPAERO in 2004. I then worked for 6 years at Thales on the development of satellite control benches, including Galileo. In 2010, I left the aerospace field to enter the automotive world, at AW. This was also an opportunity for me to reconnect with my first loves by working, among other things, on artificial intelligence topics.</description>
     </item>
     
   </channel>

@@ -25,23 +25,5 @@
       <description>&lt;p&gt;Le but de ce projet tient plus dans la réalisation d&amp;rsquo;une plateforme générique pour jeux de société que dans l&amp;rsquo;implémentation ou l&amp;rsquo;étude du meilleur algorithme qui soit dans ce domaine. Il est donc important de bien définir les contraintes que l&amp;rsquo;on se donne pour esquisser la solution en conséquence.&lt;/p&gt;</description>
     </item>
     
-    <item>
-      <title>Partie 3: Agent Monte-Carlo Tree Search</title>
-      <link>https://jsgonsette.github.io/projects/buddy/part3/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/projects/buddy/part3/</guid>
-      <description>En cours de rédaction</description>
-    </item>
-    
-    <item>
-      <title>Partie 4: Agent AlphaZero</title>
-      <link>https://jsgonsette.github.io/projects/buddy/part4/</link>
-      <pubDate>Wed, 12 May 2021 00:00:00 +0000</pubDate>
-      
-      <guid>https://jsgonsette.github.io/projects/buddy/part4/</guid>
-      <description>En cours de rédaction</description>
-    </item>
-    
   </channel>
 </rss>
