@@ -51,15 +51,17 @@ export class Server {
   /**
    * Start a new game provided the following configuration:
    * * `game`: the name of the game.
-   * * `agent_configs`: a JSON string describing the configuration of the different agents.
+   * * `actors`: a JSON string describing the [actors](Actor) in the game.
+   * * `agent_configs`: a JSON string describing the [configuration of the different agents](CoreAgentConfig).
+   * * `game_config`: a JSON string describing the [configuration of the game](Parameters).
    * * `seed`: a seed to initialize all the PRNGs
    * * `language_str`: the chosen language ('en' or 'fr')
    */
-  start_game(game: string, agent_configs: string, seed: bigint, language_str: string): Promise<boolean>;
+  start_game(game: string, actors: string, agent_configs: string, game_config: string, seed: bigint, language_str: string): Promise<boolean>;
   /**
    * Stop the current game.
    */
-  stop_game(): void;
+  stop_game(): Promise<void>;
 }
 
 export type InitInput = RequestInfo | URL | Response | BufferSource | WebAssembly.Module;
@@ -74,8 +76,8 @@ export interface InitOutput {
   readonly server_load_nn_model: (a: number, b: number, c: number, d: number, e: number) => void;
   readonly server_send_action: (a: number, b: number, c: number, d: number) => void;
   readonly server_schedule: (a: number) => any;
-  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: bigint, g: number, h: number) => any;
-  readonly server_stop_game: (a: number) => void;
+  readonly server_start_game: (a: number, b: number, c: number, d: number, e: number, f: number, g: number, h: number, i: number, j: bigint, k: number, l: number) => any;
+  readonly server_stop_game: (a: number) => any;
   readonly __wbindgen_exn_store: (a: number) => void;
   readonly __externref_table_alloc: () => number;
   readonly __wbindgen_export_2: WebAssembly.Table;
@@ -84,8 +86,8 @@ export interface InitOutput {
   readonly __wbindgen_realloc: (a: number, b: number, c: number, d: number) => number;
   readonly __wbindgen_export_6: WebAssembly.Table;
   readonly _dyn_core__ops__function__FnMut_____Output___R_as_wasm_bindgen__closure__WasmClosure___describe__invoke__hac603c4ae5524f9b: (a: number, b: number) => void;
-  readonly closure174_externref_shim: (a: number, b: number, c: any) => void;
-  readonly closure4583_externref_shim: (a: number, b: number, c: any, d: any) => void;
+  readonly closure180_externref_shim: (a: number, b: number, c: any) => void;
+  readonly closure4595_externref_shim: (a: number, b: number, c: any, d: any) => void;
   readonly __wbindgen_start: () => void;
 }
 

@@ -115,9 +115,11 @@ async function process_start_game_msg () {
 	let game = msg.get ("game");
 	let seed = BigInt (msg.get ("seed"));
 	let agents = msg.get ("agents");
+	let actors = msg.get ("actors");
+	let game_config = msg.get ("game_config");
 	let language = msg.get ("language");
 	let result = await globalThis.mutex.runExclusive(() =>
-		globalThis.server.start_game (game, agents, seed, language)
+		globalThis.server.start_game (game, actors, agents, game_config, seed, language)
 	);
 
 	// Send the result back

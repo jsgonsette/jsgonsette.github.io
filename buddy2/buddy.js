@@ -143,9 +143,11 @@ function drop_current_license () {
 
 /// Called from the main Rust app to start a new game
 /// `game_name`: the name of the game (e.g. Connect_4)
+/// `actors`: JSON string of a vector of [Actor]
 /// `agent_configs`: JSON string of a vector of [(agent_type, agent_name, parameters)]
+/// `game_config`: JSON string of a Parameters object
 /// `seed`: Game seed for PRNG
-function start_game (game_name, agent_configs, seed, language) {
+function start_game (game_name, actors, agent_configs, game_config, seed, language) {
 
 	console.debug ("JS(Main) - 'start_game'");
 	if (globalThis.game_started == true || globalThis.game_started === null) return false;
@@ -153,7 +155,9 @@ function start_game (game_name, agent_configs, seed, language) {
 	let msg = new Map([
 	  ["kind", "start_game"],
 	  ["game", consume_js_object(game_name)],
+      ["actors", consume_js_object(actors)],
 	  ["agents", consume_js_object(agent_configs)],
+	  ["game_config", consume_js_object(game_config)],
 	  ["seed", seed],
 	  ["language", consume_js_object(language)],
 	]);
