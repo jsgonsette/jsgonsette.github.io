@@ -247,8 +247,23 @@ function send_action (agent_handle, action) {
 /// Return true on an Android device
 function is_android_device () {
 
+	// 1. Test via la nouvelle API (Chrome, Edge, navigateurs récents)
+	if (navigator.userAgentData && navigator.userAgentData.platform) {
+		return navigator.userAgentData.platform === "Android";
+	}
+
+	// 2. Test via l'ancienne chaîne (Fallback pour Firefox/Safari)
 	const ua = navigator.userAgent.toLowerCase();
-	return !(/ipad|mac/i.test(ua));
+	if (ua.includes("android")) return true;
+
+	// 3. Heuristique : Linux + Tactile (Spécifique aux mobiles Android)
+	// L'iPad renvoie "MacIntel" maintenant, donc "linux" cible bien Android.
+	const platform = navigator.platform.toLowerCase();
+	if (platform.includes("linux") && navigator.maxTouchPoints > 0) {
+		return true;
+	}
+
+	return false;
 }
 
 // ################################################################################################
